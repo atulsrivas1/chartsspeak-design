@@ -305,6 +305,54 @@
    "h": 900,
    "title": "37 \u00b7 Agent handoff",
    "expand": "fill"
+  },
+  "MultiChart.dc.html": {
+   "x": 0,
+   "y": 14228,
+   "w": 1440,
+   "h": 900,
+   "title": "38 \u00b7 Four-chart layout",
+   "expand": "fill"
+  },
+  "TemplatesScreen.dc.html": {
+   "x": 1560,
+   "y": 14228,
+   "w": 1440,
+   "h": 900,
+   "title": "39 \u00b7 Templates",
+   "expand": "fill"
+  },
+  "PhoneLayout.dc.html": {
+   "x": 3120,
+   "y": 14228,
+   "w": 390,
+   "h": 844,
+   "title": "40 \u00b7 Phone, one chart of four",
+   "expand": "fill"
+  },
+  "WatchlistScreen.dc.html": {
+   "x": 0,
+   "y": 15548,
+   "w": 1440,
+   "h": 900,
+   "title": "41 \u00b7 Watchlist and alerts",
+   "expand": "fill"
+  },
+  "AlertScreen.dc.html": {
+   "x": 1560,
+   "y": 15548,
+   "w": 1440,
+   "h": 900,
+   "title": "42 \u00b7 New alert",
+   "expand": "fill"
+  },
+  "Replay.dc.html": {
+   "x": 0,
+   "y": 16868,
+   "w": 1440,
+   "h": 900,
+   "title": "43 \u00b7 Bar replay",
+   "expand": "fill"
   }
  },
  "order": [
@@ -345,7 +393,13 @@
   "LightPhoneConversation.dc.html",
   "Review.dc.html",
   "Disagreement.dc.html",
-  "Handoff.dc.html"
+  "Handoff.dc.html",
+  "MultiChart.dc.html",
+  "TemplatesScreen.dc.html",
+  "PhoneLayout.dc.html",
+  "WatchlistScreen.dc.html",
+  "AlertScreen.dc.html",
+  "Replay.dc.html"
  ],
  "notes": {
   "t1": {
@@ -396,6 +450,27 @@
    "text": "Agents checking each other: review, disagreement, handoff",
    "kind": "title1",
    "maxW": 4560
+  },
+  "t8": {
+   "x": 0,
+   "y": 13928,
+   "text": "Layouts and templates",
+   "kind": "title1",
+   "maxW": 4560
+  },
+  "t9": {
+   "x": 0,
+   "y": 15248,
+   "text": "Watchlist and alerts (stored data only)",
+   "kind": "title1",
+   "maxW": 4560
+  },
+  "t10": {
+   "x": 0,
+   "y": 16568,
+   "text": "Replay",
+   "kind": "title1",
+   "maxW": 4560
   }
  },
  "designSystems": [
@@ -403,8 +478,8 @@
    "title": "ChartsSpeak",
    "namespace": "chartsspeak",
    "artifact": "https://claude.ai/artifact/NfgXu3N1SSWuLVURPwNbUs",
-   "version": "1793366714-c2e3",
-   "copiedAt": "2026-10-30T15:25:00Z"
+   "version": "1793368878-4e15",
+   "copiedAt": "2026-10-30T14:35:00Z"
   }
  ]
 }

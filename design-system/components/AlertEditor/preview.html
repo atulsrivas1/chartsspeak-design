@@ -1,0 +1,17 @@
+<!-- @dsCard group="Watchlist and alerts" height=580 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>preview</title><style>body{padding:16px;}</style></head>
+<body>
+<div style="position:relative;height:540px;border-radius:var(--radius-panel);overflow:hidden;background:var(--surface-000)">
+<div class="cs-scrim">
+<div class="cs-dialog" role="dialog" aria-modal="true" aria-labelledby="al" style="width:480px">
+<h2 class="cs-dialog__title" id="al">New alert</h2>
+<label class="cs-field"><span class="cs-field__label">Symbol</span><select class="cs-select cs-input"><option>NVDA · stored through 28 Oct</option></select></label>
+<div class="cs-field"><span class="cs-field__label">Condition</span><div class="cs-cond"><select class="cs-select cs-input" aria-label="Value"><option>Daily close</option></select><select class="cs-select cs-input" aria-label="Comparison"><option>crosses above</option></select><select class="cs-select cs-input" aria-label="Target"><option>SMA 50</option></select></div><span class="cs-field__hint">NVDA daily close crosses above SMA 50</span></div>
+<div class="cs-notice cs-notice--caution" role="note"><span class="cs-notice__glyph" aria-hidden="true">◷</span><span class="cs-notice__title"><span class="cs-notice__kind">Not real-time.</span> Checked after each daily update, about 21:00 ET.</span><span class="cs-notice__body">A move during the day counts only if the close confirms it.</span></div>
+<div class="cs-row" style="justify-content:space-between"><span class="cs-field__label">Ends after</span><div class="cs-seg" role="group" aria-label="Ends after"><button aria-pressed="false">1 week</button><button aria-pressed="true">1 month</button><button aria-pressed="false">3 months</button></div></div>
+<div class="cs-dialog__actions"><button class="cs-btn cs-btn--quiet">Cancel</button><button class="cs-btn cs-btn--primary">Create alert</button></div>
+</div></div></div>
+</body>
+</html>

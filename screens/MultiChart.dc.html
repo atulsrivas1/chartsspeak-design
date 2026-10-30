@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ChartsSpeak · four-chart layout</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/chartsspeak/tokens.css">
+<link rel="stylesheet" href="ds/chartsspeak/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+a{color:var(--accent-text)}a:hover{color:var(--ink)}
+</style>
+</helmet>
+<div class="cs-shell" data-theme="{{theme}}" style="width: 100%; height: 100vh; min-height: 760px;">
+  <header class="cs-topbar">
+    <span class="cs-wordmark" role="img" aria-label="ChartsSpeak"><span aria-hidden="true">Chart</span><svg class="cs-wordmark__ss" viewBox="0 0 76 100" aria-hidden="true"><path class="acc" d="M38 8C67 8 67 30 38 46C7 62 7 94 38 94"></path><path class="halo" d="M27 40.1L49 51.9"></path><path d="M38 8C9 8 9 30 38 46C69 62 69 94 38 94"></path></svg><span aria-hidden="true">peak</span></span>
+    <span class="cs-tag">Private</span>
+    <span class="cs-topbar__spacer"></span>
+    <span class="cs-conn" role="status"><span class="cs-conn__dot" aria-hidden="true"></span>Connected</span>
+    <span class="cs-avatar cs-avatar--person cs-avatar--lg" aria-label="You">MS</span>
+  </header>
+  <div class="cs-shell__body">
+    <main class="cs-shell__main">
+      <div class="cs-shell__titlerow">
+        <div class="cs-titleblock">
+          <span class="cs-eyebrow">Your analytical workspace</span>
+          <div class="cs-row" style="gap: 12px;"><h1 class="cs-title">Benchmark grid · 4 charts</h1><span class="cs-badge cs-badge--good"><span class="cs-badge__glyph" aria-hidden="true">✓</span>Saved</span></div>
+          <span class="small cs-muted">Stored daily OHLC, split-adjusted · crosshair, interval and date range in sync on your screen</span>
+        </div>
+      </div>
+      <section class="cs-stack" style="flex: 1; min-height: 0; gap: 8px;" aria-label="Charts">
+        <div class="cs-panel" style="flex: none;"><div class="cs-toolbar" role="toolbar" aria-label="Layout"><div class="cs-layouts" role="group" aria-label="Layout"><button aria-pressed="false" aria-label="One chart" title="One chart"><svg viewBox="0 0 20 14" aria-hidden="true"><rect x="1" y="1" width="18" height="12" rx="1.5"/></svg></button><button aria-pressed="false" aria-label="Two charts side by side" title="Two charts side by side"><svg viewBox="0 0 20 14" aria-hidden="true"><rect x="1" y="1" width="18" height="12" rx="1.5"/><path d="M10 1v12"/></svg></button><button aria-pressed="false" aria-label="Two charts stacked" title="Two charts stacked"><svg viewBox="0 0 20 14" aria-hidden="true"><rect x="1" y="1" width="18" height="12" rx="1.5"/><path d="M1 7h18"/></svg></button><button aria-pressed="true" aria-label="Four charts" title="Four charts"><svg viewBox="0 0 20 14" aria-hidden="true"><rect x="1" y="1" width="18" height="12" rx="1.5"/><path d="M10 1v12M1 7h18"/></svg></button></div><span class="cs-toolbar__sep" aria-hidden="true"></span><div class="cs-row" role="group" aria-label="Sync across charts" style="gap:6px"><span class="caption cs-muted">Sync</span><button class="cs-chip cs-chip--compact" aria-pressed="true"><span class="cs-chip__box" aria-hidden="true">✓</span>Crosshair</button><button class="cs-chip cs-chip--compact" aria-pressed="true"><span class="cs-chip__box" aria-hidden="true">✓</span>Interval</button><button class="cs-chip cs-chip--compact" aria-pressed="true"><span class="cs-chip__box" aria-hidden="true">✓</span>Date range</button><button class="cs-chip cs-chip--compact" aria-pressed="false"><span class="cs-chip__box" aria-hidden="true"></span>Symbol</button></div><span class="cs-toolbar__spacer"></span><button class="cs-btn cs-btn--compact" aria-haspopup="dialog">Templates<span class="cs-caret" aria-hidden="true"></span></button></div></div>
+        <div class="cs-mgrid cs-mgrid--4">
+          <div class="cs-slot cs-slot--active" aria-label="NVDA, active"><div class="cs-slot__head"><span class="cs-slot__sym">NVDA</span><span>1D · Stored daily · through 28 Oct</span><span class="cs-slot__spacer"></span><span class="cs-slot__tag">Active</span></div><div class="cs-chart" tabindex="0" aria-label="NVDA price chart"><dc-import name="ChartFrame" marker="{{no}}" hint-size="100%,100%"></dc-import></div></div>
+          <div class="cs-slot" aria-label="SPY"><div class="cs-slot__head"><span class="cs-slot__sym">SPY</span><span>1D · Stored daily · through 28 Oct</span><span class="cs-slot__spacer"></span></div><div class="cs-chart" tabindex="0" aria-label="SPY price chart"><dc-import name="ChartFrame" marker="{{no}}" hint-size="100%,100%"></dc-import></div></div>
+          <div class="cs-slot" aria-label="QQQ"><div class="cs-slot__head"><span class="cs-slot__sym">QQQ</span><span>1D · Stored daily · through 28 Oct</span><span class="cs-slot__spacer"></span></div><div class="cs-chart" tabindex="0" aria-label="QQQ price chart"><dc-import name="ChartFrame" marker="{{no}}" hint-size="100%,100%"></dc-import></div></div>
+          <div class="cs-slot" aria-label="PLTR"><div class="cs-slot__head"><span class="cs-slot__sym">PLTR</span><span>1D</span><span class="cs-slot__spacer"></span><span class="cs-badge cs-badge--refusal"><span class="cs-badge__glyph" aria-hidden="true">⨯</span>Not stored</span></div><div class="cs-empty" style="padding: 16px;"><span class="cs-empty__title">PLTR has no stored daily data</span><span class="cs-empty__body">Nothing is drawn or estimated in this slot. The other charts are unaffected.</span><span class="cs-cmd"><span class="cs-cmd__prompt" aria-hidden="true">$</span><code>chartsspeak-data add PLTR --daily</code></span></div></div>
+        </div>
+      </section>
+    </main>
+    <aside class="cs-rail" aria-label="Assistant">
+      <div class="cs-rail__head">
+        <span class="cs-avatar cs-avatar--lg" aria-hidden="true">M</span>
+        <span class="cs-rail__title">Mat</span>
+        <span class="caption cs-muted">Workspace assistant</span>
+      </div>
+      <div class="cs-tabs" role="tablist" aria-label="Rail">
+        <button class="cs-tab" role="tab" aria-selected="true">Conversation</button>
+        <button class="cs-tab" role="tab" aria-selected="false">Evidence<span class="cs-tab__count">1</span></button>
+        <button class="cs-tab" role="tab" aria-selected="false">Activity</button>
+        <button class="cs-tab" role="tab" aria-selected="false">Layers</button>
+        <button class="cs-tab" role="tab" aria-selected="false">Data</button>
+      </div>
+      <div class="cs-rail__body" role="tabpanel">
+<div class="cs-msg cs-msg--person"><span class="cs-attr">You · 19:52 ET</span><span class="cs-msg__body"><span class="cs-mention">@Mat</span> which of these held its 50-day average through October?</span></div>
+        <div class="cs-card">
+          <div class="cs-card__head"><span class="cs-task__state cs-task__state--done"><span aria-hidden="true">✓</span>Completed</span><span class="cs-card__title"></span><span class="cs-attr"><span class="cs-avatar" aria-hidden="true">M</span>Mat · 19:53 ET</span></div>
+          <div class="cs-result__part"><span class="cs-result__label">Calculated fact</span><span class="cs-result__text">NVDA and SPY closed above SMA 50 on every stored day in October. QQQ closed below it on 3 days.</span></div>
+          <div class="cs-result__part"><span class="cs-result__label">Limitations</span><span class="cs-result__text">PLTR isn't stored, so it isn't included. QQQ is stored through 28 Oct.</span></div>
+        </div>
+      </div>
+      <div class="cs-composer">
+        <label class="cs-sr" for="msg">Message</label>
+        <textarea id="msg" class="cs-textarea" rows="2" placeholder="Ask @Mat about this chart"></textarea>
+        <div class="cs-composer__foot"><span class="cs-composer__hint">Mat works on the active chart (NVDA) unless you name another.</span><button class="cs-btn cs-btn--primary cs-btn--compact">Send</button></div>
+      </div>
+    </aside>
+  </div>
+  <footer class="cs-footer" role="status" aria-live="polite"><span class="cs-footer__msg">Layout changed to 4 charts · Undo</span></footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["dark","light"],"default":"dark"},"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { theme: this.props.theme ?? 'dark', no: false };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ChartsSpeak · phone, four-chart layout</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/chartsspeak/tokens.css">
+<link rel="stylesheet" href="ds/chartsspeak/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+a{color:var(--accent-text)}a:hover{color:var(--ink)}
+</style>
+</helmet>
+<div class="cs-shell" data-theme="{{theme}}" data-screen="chart" style="width: 390px; height: 844px;">
+  <header class="cs-topbar">
+    <span class="cs-wordmark" role="img" aria-label="ChartsSpeak"><span aria-hidden="true">Chart</span><svg class="cs-wordmark__ss" viewBox="0 0 76 100" aria-hidden="true"><path class="acc" d="M38 8C67 8 67 30 38 46C7 62 7 94 38 94"></path><path class="halo" d="M27 40.1L49 51.9"></path><path d="M38 8C9 8 9 30 38 46C69 62 69 94 38 94"></path></svg><span aria-hidden="true">peak</span></span>
+    <span class="cs-tag">Private</span>
+    <span class="cs-topbar__spacer"></span>
+    <span class="cs-conn" role="status"><span class="cs-conn__dot" aria-hidden="true"></span>Connected</span>
+  </header>
+  <div class="cs-shell__body">
+    <main class="cs-shell__main">
+      <div class="cs-titleblock">
+        <div class="cs-row" style="gap: 8px;">
+          <h1 class="cs-title">Benchmark grid</h1>
+          <span class="cs-badge cs-badge--good"><span class="cs-badge__glyph" aria-hidden="true">✓</span>Saved</span>
+        </div>
+        <span class="small cs-muted">4 charts · your phone shows one at a time</span>
+      </div>
+      <div class="cs-tabs cs-tabs--switch" role="tablist" aria-label="Chart in this layout" style="margin: 0 0 8px;"><button class="cs-tab" role="tab" aria-selected="true">NVDA</button><button class="cs-tab" role="tab" aria-selected="false">SPY</button><button class="cs-tab" role="tab" aria-selected="false">QQQ</button><button class="cs-tab" role="tab" aria-selected="false">PLTR <span class="cs-muted" aria-label="not stored">⨯</span></button></div>
+      <section class="cs-panel" aria-label="Chart">
+        <div class="cs-toolbar" role="toolbar" aria-label="Chart">
+          <button class="cs-symbtn" aria-haspopup="listbox" aria-label="Symbol NVDA, change symbol" style="min-height: 44px;"><svg class="cs-symbtn__icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.5"></circle><path d="M10.5 10.5L14 14"></path></svg>NVDA<span class="cs-caret" aria-hidden="true"></span></button>
+          <div class="cs-seg" role="group" aria-label="Range"><button aria-pressed="false">1M</button><button aria-pressed="false">6M</button><button aria-pressed="true">YTD</button><button aria-pressed="false">1Y</button></div>
+          <button class="cs-btn cs-btn--compact"><span class="cs-btn__glyph" aria-hidden="true">+</span>Indicator</button>
+          <button class="cs-btn cs-btn--compact cs-btn--icon" aria-label="Undo add cross marker">↶</button>
+          <button class="cs-btn cs-btn--compact cs-btn--icon" aria-label="Chart settings"><svg class="cs-ico" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="2.2"></circle><path d="M8 1.5v2M8 12.5v2M1.5 8h2M12.5 8h2M3.4 3.4l1.4 1.4M11.2 11.2l1.4 1.4M3.4 12.6l1.4-1.4M11.2 4.8l1.4-1.4"></path></svg></button>
+        </div>
+        <div class="cs-meta cs-meta--split">
+          <div class="cs-legend">
+            <span class="cs-legend__item" style="color: var(--chart-series-1);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 50</span><span class="cs-legend__val">128.06</span></span>
+            <span class="cs-legend__item" style="color: var(--chart-series-2);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 200</span><span class="cs-legend__val">121.70</span></span>
+          </div>
+          <span>r12 · 19:58 ET</span>
+        </div>
+        <div class="cs-chart" tabindex="0" aria-label="Price chart. Drag to pan, pinch to zoom.">
+          <dc-import name="ChartFrame" hint-size="100%,100%"></dc-import>
+        </div>
+        <div class="cs-inforow">
+          <div class="cs-legend cs-legend__ohlc"><span class="cs-muted">14 Mar</span><span><b>O</b>131.42</span><span><b>H</b>134.10</span><span><b>L</b>130.88</span><span><b>C</b>133.97</span></div>
+        </div>
+        <div class="cs-strip" aria-label="On this chart">
+          <button class="cs-evchip"><span class="cs-avatar" aria-hidden="true">M</span>Golden cross · 14 Mar</button>
+          <button class="cs-evchip"><span class="cs-avatar" aria-hidden="true">M</span>SMA 50 / 200</button>
+        </div>
+      </section>
+    </main>
+    <aside class="cs-rail" aria-label="Assistant"></aside>
+  </div>
+  <footer class="cs-footer" role="status" aria-live="polite"><span class="cs-footer__msg cs-footer__msg--good">✓ Mat finished: compare with SPY</span><a href="PhoneConversation.dc.html" class="cs-btn cs-btn--compact cs-btn--quiet" style="text-decoration: none;">Read</a></footer>
+  <div class="cs-shell__switch">
+    <div class="cs-tabs cs-tabs--switch" role="tablist" aria-label="Screen">
+      <button class="cs-tab" role="tab" aria-selected="true">Chart</button>
+      <a class="cs-tab" role="tab" aria-selected="false" href="PhoneConversation.dc.html" style="display: grid; place-items: center; text-decoration: none;">Conversation<span class="cs-tab__count">1 new</span></a>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["dark","light"],"default":"dark"},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { theme: this.props.theme ?? 'dark' };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!-- @dsCard group="Layouts" height=420 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>preview</title><style>body{padding:16px;}</style></head>
+<body>
+<div class="cs-mgrid cs-mgrid--2h" style="height:360px">
+<div class="cs-slot cs-slot--active" aria-label="Chart 1, NVDA, active">
+<div class="cs-slot__head"><span class="cs-slot__sym">NVDA</span><span>1D · Stored daily</span><span class="cs-slot__spacer"></span><span class="cs-slot__tag">Active</span></div>
+<div class="cs-chart" style="background:var(--chart-bg)"><svg viewBox="0 0 300 200" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%"><polyline points="0,150 40,140 80,120 120,130 160,90 200,100 240,60 300,50" style="fill:none;stroke:var(--chart-series-1);stroke-width:1.5"/></svg></div>
+</div>
+<div class="cs-slot" aria-label="Chart 2, PLTR, not stored">
+<div class="cs-slot__head"><span class="cs-slot__sym">PLTR</span><span>1D</span><span class="cs-slot__spacer"></span><span class="cs-badge cs-badge--refusal"><span class="cs-badge__glyph" aria-hidden="true">⨯</span>Not stored</span></div>
+<div class="cs-empty" style="padding:16px"><span class="cs-empty__title">PLTR has no stored daily data</span><span class="cs-empty__body">Nothing is drawn or estimated. Add it with the data utility.</span><span class="cs-cmd"><span class="cs-cmd__prompt" aria-hidden="true">$</span><code>chartsspeak-data add PLTR --daily</code></span></div>
+</div>
+</div>
+</body>
+</html>
