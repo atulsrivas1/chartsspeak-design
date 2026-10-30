@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ChartsSpeak · keyboard shortcuts</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/chartsspeak/tokens.css">
+<link rel="stylesheet" href="ds/chartsspeak/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="cs-shell" data-theme="{{theme}}" style="width: 100%; height: 100vh; min-height: 760px;">
+  <header class="cs-topbar" aria-hidden="true"><span class="cs-wordmark" role="img" aria-label="ChartsSpeak"><span aria-hidden="true">Chart</span><svg class="cs-wordmark__ss" viewBox="0 0 76 100" aria-hidden="true"><path class="acc" d="M38 8C67 8 67 30 38 46C7 62 7 94 38 94"></path><path class="halo" d="M27 40.1L49 51.9"></path><path d="M38 8C9 8 9 30 38 46C69 62 69 94 38 94"></path></svg><span aria-hidden="true">peak</span></span><span class="cs-tag">Private</span><span class="cs-topbar__spacer"></span><span class="cs-conn"><span class="cs-conn__dot"></span>Connected</span></header>
+  <div class="cs-shell__body" aria-hidden="true">
+    <main class="cs-shell__main">
+      <div class="cs-titleblock"><span class="cs-eyebrow">Your analytical workspace</span><h1 class="cs-title">NVDA · 2 Jan – 28 Oct 2026</h1></div>
+      <section class="cs-panel"><div class="cs-toolbar"><span class="cs-toolbar__sym">NVDA</span></div><div class="cs-chart"><dc-import name="ChartFrame" hint-size="100%,100%"></dc-import></div></section>
+    </main>
+    <aside class="cs-rail"><div class="cs-rail__head"><span class="cs-rail__title">Mat</span></div></aside>
+  </div>
+  <footer class="cs-footer" aria-hidden="true"><span class="cs-footer__msg">Workspace saved</span></footer>
+
+  <div class="cs-scrim" style="z-index: 10;">
+    <div class="cs-dialog" role="dialog" aria-modal="true" aria-labelledby="ks" style="width: 720px;">
+      <div class="cs-row" style="justify-content: space-between;"><h2 class="cs-dialog__title" id="ks">Keyboard shortcuts</h2><button class="cs-btn cs-btn--compact cs-btn--quiet cs-btn--icon" aria-label="Close">×</button></div>
+      <div class="cs-keys">
+        <span class="cs-keys__group">Chart (when the chart has focus)</span>
+        <span class="cs-keys__row"><span>Pan</span><span class="cs-row" style="gap: 4px;"><kbd class="cs-kbd">←</kbd><kbd class="cs-kbd">→</kbd></span></span>
+        <span class="cs-keys__row"><span>Zoom in / out</span><span class="cs-row" style="gap: 4px;"><kbd class="cs-kbd">+</kbd><kbd class="cs-kbd">−</kbd></span></span>
+        <span class="cs-keys__row"><span>Move crosshair one bar</span><span class="cs-row" style="gap: 4px;"><kbd class="cs-kbd">,</kbd><kbd class="cs-kbd">.</kbd></span></span>
+        <span class="cs-keys__row"><span>Reset view</span><kbd class="cs-kbd">0</kbd></span>
+        <span class="cs-keys__row"><span>Clear crosshair, close view</span><kbd class="cs-kbd">Esc</kbd></span>
+        <span class="cs-keys__row"><span>Read values at crosshair</span><kbd class="cs-kbd">V</kbd></span>
+        <span class="cs-keys__group">Workspace</span>
+        <span class="cs-keys__row"><span>Undo / redo (names the action)</span><span class="cs-row" style="gap: 4px;"><kbd class="cs-kbd">⌘Z</kbd><kbd class="cs-kbd">⇧⌘Z</kbd></span></span>
+        <span class="cs-keys__row"><span>Symbol search</span><kbd class="cs-kbd">/</kbd></span>
+        <span class="cs-keys__row"><span>Add indicator</span><kbd class="cs-kbd">I</kbd></span>
+        <span class="cs-keys__row"><span>Focus composer</span><kbd class="cs-kbd">C</kbd></span>
+        <span class="cs-keys__row"><span>Next item that needs you</span><kbd class="cs-kbd">N</kbd></span>
+        <span class="cs-keys__row"><span>Show this sheet</span><kbd class="cs-kbd">?</kbd></span>
+        <span class="cs-keys__group">Drawing (with an item selected)</span>
+        <span class="cs-keys__row"><span>Nudge anchor</span><span class="cs-row" style="gap: 4px;"><kbd class="cs-kbd">⇧</kbd><kbd class="cs-kbd">←↑→↓</kbd></span></span>
+        <span class="cs-keys__row"><span>Next anchor</span><kbd class="cs-kbd">Tab</kbd></span>
+      </div>
+      <div class="cs-row" style="justify-content: space-between;"><span class="caption cs-muted">Single-key shortcuts are off while you type. Escape never stops a task.</span><label class="cs-check" style="min-height: 0;"><input type="checkbox" checked> Single-key shortcuts on</label></div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["dark","light"],"default":"dark"},"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { theme: this.props.theme ?? 'dark' };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,31 +1,410 @@
 {
  "v": 3,
- "createdOnFiles": {"v": 1, "at": "2026-10-30T00:16:01Z"},
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-30T00:16:01Z"
+ },
  "title": "ChartsSpeak screens",
- "launch": {"view": "canvas"},
+ "launch": {
+  "view": "canvas"
+ },
  "pages": [],
  "boards": {
-  "Main.dc.html": {"x": 0, "y": 0, "w": 1440, "h": 900, "title": "1 · Working session", "expand": "fill"},
-  "Reconnecting.dc.html": {"x": 1520, "y": 0, "w": 1440, "h": 900, "title": "2 · Reconnecting (retained frame)", "expand": "fill"},
-  "Refusal.dc.html": {"x": 3040, "y": 0, "w": 1440, "h": 900, "title": "3 · Refusal: not stored", "expand": "fill"},
-  "Snapshot.dc.html": {"x": 0, "y": 1020, "w": 1440, "h": 900, "title": "4 · Evidence reopened as snapshot", "expand": "fill"},
-  "SignIn.dc.html": {"x": 1520, "y": 1020, "w": 1440, "h": 900, "title": "5 · Sign-in needed", "expand": "fill"},
-  "ChartFrame.dc.html": {"x": 3040, "y": 1020, "w": 990, "h": 495, "title": "Chart stand-in (the engine draws the real canvas)"},
-  "ChartControls.dc.html": {"x": 0, "y": 2340, "w": 1440, "h": 900, "title": "6 · Chart controls: symbol search, interval, type, range, scale, panes", "expand": "fill"},
-  "DrawingTools.dc.html": {"x": 1520, "y": 2340, "w": 1440, "h": 900, "title": "7 · Drawing tools and object list", "expand": "fill"},
-  "Together.dc.html": {"x": 3040, "y": 2340, "w": 1440, "h": 900, "title": "8 · Working together (W2): presence, follow, shared vs private", "expand": "fill"},
-  "PhoneChart.dc.html": {"x": 0, "y": 3660, "w": 390, "h": 844, "title": "9 · Phone · Chart", "is_interactive": true},
-  "PhoneConversation.dc.html": {"x": 470, "y": 3660, "w": 390, "h": 844, "title": "10 · Phone · Conversation", "is_interactive": true},
-  "TabletDrawer.dc.html": {"x": 940, "y": 3660, "w": 960, "h": 720, "title": "11 · Tablet · assistant drawer open"},
-  "BrandF2.dc.html": {"x": 1980, "y": 3660, "w": 1200, "h": 760, "title": "12 · Brand: plain-type logo, woven SS for display headings"}
+  "Main.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 900,
+   "title": "1 \u00b7 Working session",
+   "expand": "fill"
+  },
+  "Reconnecting.dc.html": {
+   "x": 1520,
+   "y": 0,
+   "w": 1440,
+   "h": 900,
+   "title": "2 \u00b7 Reconnecting (retained frame)",
+   "expand": "fill"
+  },
+  "Refusal.dc.html": {
+   "x": 3040,
+   "y": 0,
+   "w": 1440,
+   "h": 900,
+   "title": "3 \u00b7 Refusal: not stored",
+   "expand": "fill"
+  },
+  "Snapshot.dc.html": {
+   "x": 0,
+   "y": 1020,
+   "w": 1440,
+   "h": 900,
+   "title": "4 \u00b7 Evidence reopened as snapshot",
+   "expand": "fill"
+  },
+  "SignIn.dc.html": {
+   "x": 1520,
+   "y": 1020,
+   "w": 1440,
+   "h": 900,
+   "title": "5 \u00b7 Sign-in needed",
+   "expand": "fill"
+  },
+  "ChartFrame.dc.html": {
+   "x": 3040,
+   "y": 1020,
+   "w": 990,
+   "h": 495,
+   "title": "Chart stand-in (the engine draws the real canvas)"
+  },
+  "ChartControls.dc.html": {
+   "x": 0,
+   "y": 2340,
+   "w": 1440,
+   "h": 900,
+   "title": "6 \u00b7 Chart controls: symbol search, interval, type, range, scale, panes",
+   "expand": "fill"
+  },
+  "DrawingTools.dc.html": {
+   "x": 1520,
+   "y": 2340,
+   "w": 1440,
+   "h": 900,
+   "title": "7 \u00b7 Drawing tools and object list",
+   "expand": "fill"
+  },
+  "Together.dc.html": {
+   "x": 3040,
+   "y": 2340,
+   "w": 1440,
+   "h": 900,
+   "title": "8 \u00b7 Working together (W2): presence, follow, shared vs private",
+   "expand": "fill"
+  },
+  "PhoneChart.dc.html": {
+   "x": 0,
+   "y": 3660,
+   "w": 390,
+   "h": 844,
+   "title": "9 \u00b7 Phone \u00b7 Chart",
+   "is_interactive": true
+  },
+  "PhoneConversation.dc.html": {
+   "x": 470,
+   "y": 3660,
+   "w": 390,
+   "h": 844,
+   "title": "10 \u00b7 Phone \u00b7 Conversation",
+   "is_interactive": true
+  },
+  "TabletDrawer.dc.html": {
+   "x": 940,
+   "y": 3660,
+   "w": 960,
+   "h": 720,
+   "title": "11 \u00b7 Tablet \u00b7 assistant drawer open"
+  },
+  "BrandF2.dc.html": {
+   "x": 1980,
+   "y": 3660,
+   "w": 1200,
+   "h": 760,
+   "title": "12 \u00b7 Brand: plain-type logo, woven SS for display headings"
+  },
+  "Team.dc.html": {
+   "x": 0,
+   "y": 5024,
+   "w": 1440,
+   "h": 900,
+   "title": "13 \u00b7 Team roster: people vs agents, status, author filter",
+   "expand": "fill"
+  },
+  "Proposal.dc.html": {
+   "x": 1520,
+   "y": 5024,
+   "w": 1440,
+   "h": 900,
+   "title": "14 \u00b7 Proposal awaiting approval: what will change",
+   "expand": "fill"
+  },
+  "LiveConflict.dc.html": {
+   "x": 3040,
+   "y": 5024,
+   "w": 1440,
+   "h": 900,
+   "title": "15 \u00b7 Watching an agent work, stale-base and undo refusals",
+   "expand": "fill"
+  },
+  "FirstRun.dc.html": {
+   "x": 0,
+   "y": 6044,
+   "w": 1440,
+   "h": 900,
+   "title": "16 \u00b7 First run: only stored data",
+   "expand": "fill"
+  },
+  "NoData.dc.html": {
+   "x": 1520,
+   "y": 6044,
+   "w": 1440,
+   "h": 900,
+   "title": "17 \u00b7 Symbol not stored, and partial coverage",
+   "expand": "fill"
+  },
+  "Invite.dc.html": {
+   "x": 3040,
+   "y": 6044,
+   "w": 1440,
+   "h": 900,
+   "title": "18 \u00b7 Invite and roles",
+   "expand": "fill"
+  },
+  "AgentGrantsScreen.dc.html": {
+   "x": 0,
+   "y": 7064,
+   "w": 1440,
+   "h": 1080,
+   "title": "19 \u00b7 Agent grants and limits",
+   "expand": "fill"
+  },
+  "PhonePairingScreen.dc.html": {
+   "x": 1520,
+   "y": 7064,
+   "w": 1040,
+   "h": 900,
+   "title": "20 \u00b7 Phone pairing: QR on desktop, confirm on phone"
+  },
+  "DemoWelcome.dc.html": {
+   "x": 2640,
+   "y": 7064,
+   "w": 1440,
+   "h": 900,
+   "title": "21 \u00b7 Demo visitor welcome",
+   "expand": "fill"
+  },
+  "Export.dc.html": {
+   "x": 0,
+   "y": 8484,
+   "w": 1440,
+   "h": 900,
+   "title": "22 \u00b7 Export image: honesty stamp always on",
+   "expand": "fill"
+  },
+  "Share.dc.html": {
+   "x": 1520,
+   "y": 8484,
+   "w": 1440,
+   "h": 900,
+   "title": "23 \u00b7 Share a link: snapshot, audience, expiry",
+   "expand": "fill"
+  },
+  "Activity.dc.html": {
+   "x": 3040,
+   "y": 8484,
+   "w": 1440,
+   "h": 900,
+   "title": "24 \u00b7 Activity feed, attention badge, toasts",
+   "expand": "fill"
+  },
+  "Settings.dc.html": {
+   "x": 0,
+   "y": 9504,
+   "w": 1440,
+   "h": 900,
+   "title": "25 \u00b7 Settings: appearance, data defaults, notifications",
+   "expand": "fill"
+  },
+  "Shortcuts.dc.html": {
+   "x": 1520,
+   "y": 9504,
+   "w": 1440,
+   "h": 900,
+   "title": "26 \u00b7 Keyboard shortcuts",
+   "expand": "fill"
+  },
+  "IndicatorStyleScreen.dc.html": {
+   "x": 3040,
+   "y": 9504,
+   "w": 1440,
+   "h": 900,
+   "title": "27 \u00b7 Indicator style: palette only",
+   "expand": "fill"
+  },
+  "PhoneTouch.dc.html": {
+   "x": 0,
+   "y": 10524,
+   "w": 390,
+   "h": 844,
+   "title": "28 \u00b7 Phone: press-and-hold crosshair, gestures"
+  },
+  "PhoneLandscape.dc.html": {
+   "x": 470,
+   "y": 10524,
+   "w": 844,
+   "h": 390,
+   "title": "29 \u00b7 Phone landscape: chart only"
+  },
+  "LightMain.dc.html": {
+   "x": 0,
+   "y": 11888,
+   "w": 1440,
+   "h": 900,
+   "title": "30 \u00b7 Light \u00b7 Working session",
+   "expand": "fill"
+  },
+  "LightTogether.dc.html": {
+   "x": 1520,
+   "y": 11888,
+   "w": 1440,
+   "h": 900,
+   "title": "31 \u00b7 Light \u00b7 Working together",
+   "expand": "fill"
+  },
+  "LightReconnecting.dc.html": {
+   "x": 3040,
+   "y": 11888,
+   "w": 1440,
+   "h": 900,
+   "title": "32 \u00b7 Light \u00b7 Reconnecting",
+   "expand": "fill"
+  },
+  "LightPhoneChart.dc.html": {
+   "x": 4560,
+   "y": 11888,
+   "w": 390,
+   "h": 844,
+   "title": "33 \u00b7 Light \u00b7 Phone chart"
+  },
+  "LightPhoneConversation.dc.html": {
+   "x": 5030,
+   "y": 11888,
+   "w": 390,
+   "h": 844,
+   "title": "34 \u00b7 Light \u00b7 Phone conversation"
+  },
+  "Review.dc.html": {
+   "x": 0,
+   "y": 12908,
+   "w": 1440,
+   "h": 900,
+   "title": "35 \u00b7 Agent review",
+   "expand": "fill"
+  },
+  "Disagreement.dc.html": {
+   "x": 1560,
+   "y": 12908,
+   "w": 1440,
+   "h": 900,
+   "title": "36 \u00b7 Two answers, side by side",
+   "expand": "fill"
+  },
+  "Handoff.dc.html": {
+   "x": 3120,
+   "y": 12908,
+   "w": 1440,
+   "h": 900,
+   "title": "37 \u00b7 Agent handoff",
+   "expand": "fill"
+  }
  },
- "order": ["Main.dc.html", "Reconnecting.dc.html", "Refusal.dc.html", "Snapshot.dc.html", "SignIn.dc.html", "ChartFrame.dc.html", "ChartControls.dc.html", "DrawingTools.dc.html", "Together.dc.html", "PhoneChart.dc.html", "PhoneConversation.dc.html", "TabletDrawer.dc.html", "BrandF2.dc.html"],
+ "order": [
+  "Main.dc.html",
+  "Reconnecting.dc.html",
+  "Refusal.dc.html",
+  "Snapshot.dc.html",
+  "SignIn.dc.html",
+  "ChartFrame.dc.html",
+  "ChartControls.dc.html",
+  "DrawingTools.dc.html",
+  "Together.dc.html",
+  "PhoneChart.dc.html",
+  "PhoneConversation.dc.html",
+  "TabletDrawer.dc.html",
+  "BrandF2.dc.html",
+  "Team.dc.html",
+  "Proposal.dc.html",
+  "LiveConflict.dc.html",
+  "FirstRun.dc.html",
+  "NoData.dc.html",
+  "Invite.dc.html",
+  "AgentGrantsScreen.dc.html",
+  "PhonePairingScreen.dc.html",
+  "DemoWelcome.dc.html",
+  "Export.dc.html",
+  "Share.dc.html",
+  "Activity.dc.html",
+  "Settings.dc.html",
+  "Shortcuts.dc.html",
+  "IndicatorStyleScreen.dc.html",
+  "PhoneTouch.dc.html",
+  "PhoneLandscape.dc.html",
+  "LightMain.dc.html",
+  "LightTogether.dc.html",
+  "LightReconnecting.dc.html",
+  "LightPhoneChart.dc.html",
+  "LightPhoneConversation.dc.html",
+  "Review.dc.html",
+  "Disagreement.dc.html",
+  "Handoff.dc.html"
+ ],
  "notes": {
-  "t1": {"x": 0, "y": -300, "text": "ChartsSpeak · core screens in the app shell", "kind": "title1", "maxW": 4480},
-  "t2": {"x": 0, "y": 2040, "text": "Closing the TradingView gaps · and W2", "kind": "title1", "maxW": 4480},
-  "t3": {"x": 0, "y": 3360, "text": "Phone, tablet and brand", "kind": "title1", "maxW": 3180}
+  "t1": {
+   "x": 0,
+   "y": -300,
+   "text": "ChartsSpeak \u00b7 core screens in the app shell",
+   "kind": "title1",
+   "maxW": 4480
+  },
+  "t2": {
+   "x": 0,
+   "y": 2040,
+   "text": "Closing the TradingView gaps \u00b7 and W2",
+   "kind": "title1",
+   "maxW": 4480
+  },
+  "t3": {
+   "x": 0,
+   "y": 3360,
+   "text": "Phone, tablet and brand",
+   "kind": "title1",
+   "maxW": 3180
+  },
+  "t4": {
+   "x": 0,
+   "y": 4724,
+   "text": "Round 2 \u00b7 Batch A: team, conflicts, first run, access",
+   "kind": "title1",
+   "maxW": 4480
+  },
+  "t5": {
+   "x": 0,
+   "y": 8184,
+   "text": "Round 2 \u00b7 Batch B: export, share, activity, settings, touch",
+   "kind": "title1",
+   "maxW": 4480
+  },
+  "t6": {
+   "x": 0,
+   "y": 11588,
+   "text": "Light theme on the app screens",
+   "kind": "title1",
+   "maxW": 5420
+  },
+  "t7": {
+   "x": 0,
+   "y": 12608,
+   "text": "Agents checking each other: review, disagreement, handoff",
+   "kind": "title1",
+   "maxW": 4560
+  }
  },
  "designSystems": [
-  {"title": "ChartsSpeak", "namespace": "chartsspeak", "artifact": "https://claude.ai/artifact/NfgXu3N1SSWuLVURPwNbUs", "version": "1793319874-7d32", "copiedAt": "2026-10-30T00:25:00Z"}
+  {
+   "title": "ChartsSpeak",
+   "namespace": "chartsspeak",
+   "artifact": "https://claude.ai/artifact/NfgXu3N1SSWuLVURPwNbUs",
+   "version": "1793366714-c2e3",
+   "copiedAt": "2026-10-30T15:25:00Z"
+  }
  ]
 }

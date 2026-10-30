@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ChartsSpeak · invite and roles</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/chartsspeak/tokens.css">
+<link rel="stylesheet" href="ds/chartsspeak/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+a{color:var(--accent-text)}a:hover{color:var(--ink)}
+</style>
+</helmet>
+<div class="cs-shell" data-theme="{{theme}}" style="width: 100%; height: 100vh; min-height: 760px;">
+  <header class="cs-topbar" aria-hidden="true">
+    <span class="cs-wordmark" role="img" aria-label="ChartsSpeak"><span aria-hidden="true">Chart</span><svg class="cs-wordmark__ss" viewBox="0 0 76 100" aria-hidden="true"><path class="acc" d="M38 8C67 8 67 30 38 46C7 62 7 94 38 94"></path><path class="halo" d="M27 40.1L49 51.9"></path><path d="M38 8C9 8 9 30 38 46C69 62 69 94 38 94"></path></svg><span aria-hidden="true">peak</span></span>
+    <span class="cs-tag">Private</span>
+    <span class="cs-topbar__spacer"></span>
+    <span class="cs-conn"><span class="cs-conn__dot"></span>Connected</span>
+    <span class="cs-avatar cs-avatar--person cs-avatar--lg">MS</span>
+  </header>
+  <div class="cs-shell__body" aria-hidden="true">
+    <main class="cs-shell__main">
+      <div class="cs-titleblock">
+        <span class="cs-eyebrow">Your analytical workspace</span>
+        <div class="cs-row" style="gap: 12px;"><h1 class="cs-title">NVDA · 2 Jan – 28 Oct 2026</h1></div>
+        <span class="small cs-muted">Stored daily OHLC, split-adjusted, not dividend-adjusted · stored through 28 Oct 2026</span>
+      </div>
+      <section class="cs-panel">
+        <div class="cs-toolbar"><span class="cs-toolbar__sym">NVDA</span><span class="cs-badge">1D</span></div>
+        <div class="cs-chart"><dc-import name="ChartFrame" hint-size="100%,100%"></dc-import></div>
+      </section>
+    </main>
+    <aside class="cs-rail"><div class="cs-rail__head"><span class="cs-rail__title">People and agents</span></div></aside>
+  </div>
+  <footer class="cs-footer" aria-hidden="true"><span class="cs-footer__msg">Workspace saved · 20:30 ET</span></footer>
+
+  <div class="cs-scrim" style="z-index: 10;">
+    <div class="cs-dialog" role="dialog" aria-modal="true" aria-labelledby="inv" style="width: 520px;">
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <span class="cs-eyebrow" style="display: block;">Share this workspace</span>
+        <h2 class="cs-dialog__title" id="inv">Invite to NVDA workspace</h2>
+      </div>
+      <label class="cs-field"><span class="cs-field__label">Email</span><input class="cs-input" type="email" value="ana.r@example.com"><span class="cs-field__hint">One person per invite. They sign in with this email.</span></label>
+      <fieldset class="cs-choice">
+        <legend class="cs-field__label" style="margin-bottom: 6px;">Role (proposed set, final roles are the PO's call)</legend>
+        <label class="cs-choice__opt"><input type="radio" name="r"><span class="cs-choice__name">Viewer</span><span class="cs-choice__desc">Sees the shared chart, evidence and shared conversation. Can't edit or ask agents.</span></label>
+        <label class="cs-choice__opt"><input type="radio" name="r" checked><span class="cs-choice__name">Editor</span><span class="cs-choice__desc">Adds and changes shared analysis, asks agents, approves proposals on their own items.</span></label>
+        <label class="cs-choice__opt"><input type="radio" name="r"><span class="cs-choice__name">Owner</span><span class="cs-choice__desc">Everything an editor can do, plus invite, change roles and set agent grants.</span></label>
+      </fieldset>
+      <label class="cs-check" style="min-height: 0;"><input type="checkbox" checked> Let their agents join as "propose only"</label>
+      <p class="caption cs-muted" style="margin: 0;">The invite expires in 7 days. They'll see stored data only, with the same data labels you see. You can change their role or remove them at any time from People.</p>
+      <div class="cs-dialog__actions"><button class="cs-btn cs-btn--quiet">Cancel</button><button class="cs-btn cs-btn--primary">Send invite</button></div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["dark","light"],"default":"dark"},"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { theme: this.props.theme ?? 'dark' };
+  }
+}
+</script>
+</body>
+</html>

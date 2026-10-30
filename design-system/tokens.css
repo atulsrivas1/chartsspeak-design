@@ -9,7 +9,7 @@
   --chart-bg: #0c0f13; --chart-grid: #1a2128; --chart-axis: #89969f; --chart-crosshair: #c5ced4;
   --chart-up: #56b4e9; --chart-down: #e69f00;
   --chart-up-conventional: #3fb68b; --chart-down-conventional: #f0616d;
-  --presence-1: #9aa6ff; --presence-2: #cc79a7; --presence-3: #f0e442;
+  --presence-1: #9aa6ff; --presence-2: #cc79a7; --presence-3: #f0e442; --presence-4: #f6745a;
   --chart-series-1: #e4e9ed; --chart-series-2: #cc79a7; --chart-series-3: #f0e442; --chart-series-4: #009e73; --chart-series-5: #9aa6ff;
   --chart-event-split: #9aa6ae; --chart-event-dividend: #6bd4a8; --chart-event-earnings: #f2a07b;
   --chart-selection: #72ded5; --chart-anchor: #f1c76b;
@@ -25,7 +25,7 @@
   --chart-bg: #ffffff; --chart-grid: #e9edf0; --chart-axis: #55616a; --chart-crosshair: #3a444c;
   --chart-up: #0072b2; --chart-down: #d55e00;
   --chart-up-conventional: #13855e; --chart-down-conventional: #c43d3d;
-  --presence-1: #4a55c8; --presence-2: #a8507f; --presence-3: #7a6f00;
+  --presence-1: #4a55c8; --presence-2: #a8507f; --presence-3: #7a6f00; --presence-4: #7d0624;
   --chart-series-1: #12171c; --chart-series-2: #a8507f; --chart-series-3: #7a6f00; --chart-series-4: #007a59; --chart-series-5: #4a55c8;
   --chart-event-split: #6b7780; --chart-event-dividend: #1a7a4c; --chart-event-earnings: #a2402a;
   --chart-selection: #0b7a71; --chart-anchor: #8a5a00;

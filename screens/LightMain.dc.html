@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ChartsSpeak · working session, light</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/chartsspeak/tokens.css">
+<link rel="stylesheet" href="ds/chartsspeak/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+a{color:var(--accent-text)}a:hover{color:var(--ink)}
+</style>
+</helmet>
+<div class="cs-shell" data-theme="{{theme}}" style="width: 100%; height: 100vh; min-height: 760px;">
+  <header class="cs-topbar">
+    <span class="cs-wordmark" role="img" aria-label="ChartsSpeak"><span aria-hidden="true">Chart</span><svg class="cs-wordmark__ss" viewBox="0 0 76 100" aria-hidden="true"><path class="acc" d="M38 8C67 8 67 30 38 46C7 62 7 94 38 94"></path><path class="halo" d="M27 40.1L49 51.9"></path><path d="M38 8C9 8 9 30 38 46C69 62 69 94 38 94"></path></svg><span aria-hidden="true">peak</span></span>
+    <span class="cs-tag">Private</span>
+    <span class="cs-topbar__spacer"></span>
+    <span class="cs-conn" role="status"><span class="cs-conn__dot" aria-hidden="true"></span>Connected</span>
+    <span class="cs-avatar cs-avatar--person cs-avatar--lg" aria-label="You">MS</span>
+  </header>
+  <div class="cs-shell__body">
+    <main class="cs-shell__main">
+      <div class="cs-shell__titlerow">
+        <div class="cs-titleblock">
+          <span class="cs-eyebrow">Your analytical workspace</span>
+          <div class="cs-row" style="gap: 12px;">
+            <h1 class="cs-title">NVDA · 2 Jan – 28 Oct 2026</h1>
+            <span class="cs-badge cs-badge--good"><span class="cs-badge__glyph" aria-hidden="true">✓</span>Saved</span>
+          </div>
+          <span class="small cs-muted">Stored daily OHLC, split-adjusted, not dividend-adjusted · stored through 28 Oct 2026</span>
+        </div>
+      </div>
+      <section class="cs-panel" aria-label="Chart">
+        <div class="cs-toolbar" role="toolbar" aria-label="Chart">
+          <span class="cs-toolbar__sym">NVDA</span>
+          <span class="cs-badge">1D</span>
+          <span class="cs-badge">Candles</span>
+          <span class="cs-badge"><span class="cs-badge__glyph" aria-hidden="true">▤</span>Stored daily</span>
+          <span class="cs-badge" title="Data run 2026-10-28T21:04Z">Split-adjusted, not dividend-adjusted</span>
+          <span class="cs-toolbar__sep" aria-hidden="true"></span>
+          <button class="cs-btn cs-btn--compact"><span class="cs-btn__glyph" aria-hidden="true">+</span>Indicator</button>
+          <button class="cs-btn cs-btn--compact">Compare</button>
+          <span class="cs-toolbar__spacer"></span>
+          <button class="cs-btn cs-btn--compact cs-btn--quiet" aria-label="Undo add cross marker"><span class="cs-btn__glyph" aria-hidden="true">↶</span>Undo add cross marker</button>
+          <button class="cs-btn cs-btn--compact cs-btn--quiet cs-btn--icon" disabled aria-label="Redo, nothing to redo">↷</button>
+        </div>
+        <div class="cs-meta cs-meta--split">
+          <div class="cs-legend">
+            <span class="cs-legend__item" style="color: var(--chart-series-1);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 50</span><span class="cs-legend__val">128.06</span></span>
+            <span class="cs-legend__item" style="color: var(--chart-series-2);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 200</span><span class="cs-legend__val">121.70</span></span>
+          </div>
+          <span>Rendered r12 · 19:58:02 ET</span>
+        </div>
+        <div class="cs-chart" tabindex="0" aria-label="Price chart. Arrow keys pan, plus and minus zoom, Escape clears the crosshair.">
+          <dc-import name="ChartFrame" hint-size="100%,100%"></dc-import>
+        </div>
+        <div class="cs-inforow">
+          <div class="cs-legend cs-legend__ohlc"><span class="cs-muted">14 Mar 2026</span><span><b>O</b>131.42</span><span><b>H</b>134.10</span><span><b>L</b>130.88</span><span><b>C</b>133.97</span></div>
+          <div class="cs-legend"><span class="cs-legend__item"><span class="cs-marker cs-marker--split" aria-hidden="true">S</span><span class="cs-legend__name">Split</span></span></div>
+        </div>
+        <div class="cs-strip" aria-label="On this chart">
+          <span class="caption cs-muted cs-strip__label">On this chart</span>
+          <button class="cs-evchip"><span class="cs-avatar" aria-hidden="true">M</span>Golden cross · 14 Mar</button>
+          <button class="cs-evchip"><span class="cs-avatar" aria-hidden="true">M</span>SMA 50 / SMA 200</button>
+          <button class="cs-evchip"><span class="cs-avatar cs-avatar--person" aria-hidden="true">MS</span>Split 10:1 · 10 Jun</button>
+        </div>
+      </section>
+    </main>
+    <aside class="cs-rail" aria-label="Assistant">
+      <div class="cs-rail__head">
+        <span class="cs-avatar cs-avatar--lg" aria-hidden="true">M</span>
+        <span class="cs-rail__title">Mat</span>
+        <span class="caption cs-muted">Workspace assistant</span>
+      </div>
+      <div class="cs-tabs" role="tablist" aria-label="Rail">
+        <button class="cs-tab" role="tab" aria-selected="true">Conversation</button>
+        <button class="cs-tab" role="tab" aria-selected="false">Evidence<span class="cs-tab__count">1</span></button>
+        <button class="cs-tab" role="tab" aria-selected="false">Activity</button>
+        <button class="cs-tab" role="tab" aria-selected="false">Layers</button>
+        <button class="cs-tab" role="tab" aria-selected="false">Data</button>
+      </div>
+      <div class="cs-rail__body" role="tabpanel">
+        <div class="cs-msg cs-msg--person"><span class="cs-attr">You · 19:40 ET</span><span class="cs-msg__body"><span class="cs-mention">@Mat</span> where did SMA 50 cross SMA 200 this year?</span></div>
+        <div class="cs-card">
+          <div class="cs-card__head"><span class="cs-task__state cs-task__state--done"><span aria-hidden="true">✓</span>Completed</span><span class="cs-card__title"></span><span class="cs-attr"><span class="cs-avatar" aria-hidden="true">M</span>Mat · 19:41 ET</span></div>
+          <div class="cs-result__part"><span class="cs-result__label">Calculated fact</span><span class="cs-result__text">On the stored daily series, SMA 50 closed above SMA 200 on 14 Mar 2026 (128.06 vs 127.91).</span></div>
+          <div class="cs-result__part"><span class="cs-result__label">Interpretation</span><span class="cs-result__text">The only upward cross in 2026. I marked it on the chart.</span></div>
+          <div class="cs-result__part"><span class="cs-result__label">Limitations</span><span class="cs-result__text">Split-adjusted, not dividend-adjusted. Stored through 28 Oct 2026.</span></div>
+          <div class="cs-card__foot"><button class="cs-btn cs-btn--compact">Open evidence</button><button class="cs-btn cs-btn--compact cs-btn--quiet">Undo add cross marker</button></div>
+        </div>
+        <div class="cs-msg cs-msg--person"><span class="cs-attr">You · 19:46 ET</span><span class="cs-msg__body"><span class="cs-mention">@Mat</span> compare with SPY over the same range</span></div>
+        <div class="cs-card">
+          <div class="cs-card__head"><span class="cs-task__state cs-task__state--running"><span aria-hidden="true">●</span>Running</span><span class="cs-card__title"></span><button class="cs-btn cs-btn--compact">Stop</button></div>
+          <span>Compare NVDA with SPY, 2 Jan – 28 Oct 2026</span>
+          <span class="cs-attr"><span class="cs-avatar" aria-hidden="true">M</span>Mat · started 19:46 ET</span>
+        </div>
+      </div>
+      <div class="cs-composer">
+        <label class="cs-sr" for="msg">Message</label>
+        <textarea id="msg" class="cs-textarea" rows="2" placeholder="Ask @Mat about this chart"></textarea>
+        <div class="cs-composer__foot"><span class="cs-composer__hint">Mention <span class="cs-mention">@Mat</span> to start a task. Other messages are chat only.</span><button class="cs-btn cs-btn--primary cs-btn--compact">Send</button></div>
+      </div>
+    </aside>
+  </div>
+  <footer class="cs-footer" role="status" aria-live="polite"><span class="cs-footer__msg cs-footer__msg--good">✓ Workspace saved · 19:44 ET</span></footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["dark","light"],"default":"light"},"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { theme: this.props.theme ?? 'light' };
+  }
+}
+</script>
+</body>
+</html>

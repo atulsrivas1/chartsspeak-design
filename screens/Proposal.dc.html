@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ChartsSpeak · proposal awaiting approval</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/chartsspeak/tokens.css">
+<link rel="stylesheet" href="ds/chartsspeak/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+a{color:var(--accent-text)}a:hover{color:var(--ink)}
+</style>
+</helmet>
+<div class="cs-shell" data-theme="{{theme}}" style="width: 100%; height: 100vh; min-height: 760px;">
+  <header class="cs-topbar">
+    <span class="cs-wordmark" role="img" aria-label="ChartsSpeak"><span aria-hidden="true">Chart</span><svg class="cs-wordmark__ss" viewBox="0 0 76 100" aria-hidden="true"><path class="acc" d="M38 8C67 8 67 30 38 46C7 62 7 94 38 94"></path><path class="halo" d="M27 40.1L49 51.9"></path><path d="M38 8C9 8 9 30 38 46C69 62 69 94 38 94"></path></svg><span aria-hidden="true">peak</span></span>
+    <span class="cs-tag">Private</span>
+    <span class="cs-topbar__spacer"></span>
+    <span class="cs-conn" role="status"><span class="cs-conn__dot" aria-hidden="true"></span>Connected</span>
+    <span class="cs-avatar cs-avatar--person cs-avatar--lg" aria-label="You">MS</span>
+  </header>
+  <div class="cs-shell__body">
+    <main class="cs-shell__main">
+      <div class="cs-titleblock">
+        <span class="cs-eyebrow">Your analytical workspace</span>
+        <div class="cs-row" style="gap: 12px;"><h1 class="cs-title">NVDA · 2 Jan – 28 Oct 2026</h1><span class="cs-badge cs-badge--caution"><span class="cs-badge__glyph" aria-hidden="true">!</span>1 proposal waiting</span></div>
+        <span class="small cs-muted">Stored daily OHLC, split-adjusted, not dividend-adjusted · stored through 28 Oct 2026</span>
+      </div>
+      <section class="cs-panel" aria-label="Chart">
+        <div class="cs-toolbar" role="toolbar" aria-label="Chart">
+          <span class="cs-toolbar__sym">NVDA</span>
+          <span class="cs-badge">1D</span>
+          <span class="cs-badge"><span class="cs-badge__glyph" aria-hidden="true">▤</span>Stored daily</span>
+          <span class="cs-badge">Split-adjusted, not dividend-adjusted</span>
+          <span class="cs-toolbar__spacer"></span>
+          <button class="cs-btn cs-btn--compact cs-btn--quiet" aria-pressed="true">Show proposal on chart</button>
+        </div>
+        <div class="cs-meta cs-meta--split">
+          <div class="cs-legend">
+            <span class="cs-legend__item" style="color: var(--chart-series-1);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 50</span><span class="cs-legend__val">128.06</span></span>
+            <span class="cs-legend__item" style="color: var(--chart-series-2);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 200</span><span class="cs-legend__val">121.70</span></span>
+            <span class="cs-legend__item" style="color: var(--chart-selection);"><span class="cs-legend__swatch cs-legend__swatch--dashed"></span><span class="cs-legend__name">EMA 21 · Proposed</span><span class="cs-legend__val">—</span></span>
+          </div>
+          <span>Rendered r16 · 20:41:30 ET · proposal not applied</span>
+        </div>
+        <div class="cs-chart" tabindex="0" aria-label="Price chart with Mat's proposed EMA 21 shown dashed. Not applied.">
+          <dc-import name="ChartFrame" crosshair="{{no}}" marker="{{no}}" hint-size="100%,100%"></dc-import>
+          <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: calc(100% - 64px); height: 100%; pointer-events: none;">
+            <polyline points="0,78 8,77 16,75 24,76 32,70 40,58 48,46 56,40 62,39 70,41 78,40 86,33 94,26 100,24" style="fill: none; stroke: var(--chart-selection); stroke-width: 2; stroke-dasharray: 6 4; vector-effect: non-scaling-stroke;"></polyline>
+            <line x1="40" x2="40" y1="8" y2="96" style="stroke: var(--chart-selection); stroke-width: 1.5; stroke-dasharray: 4 3; vector-effect: non-scaling-stroke;"></line>
+            <line x1="63" x2="63" y1="8" y2="96" style="stroke: var(--chart-selection); stroke-width: 1.5; stroke-dasharray: 4 3; vector-effect: non-scaling-stroke;"></line>
+            <line x1="86" x2="86" y1="8" y2="96" style="stroke: var(--chart-selection); stroke-width: 1.5; stroke-dasharray: 4 3; vector-effect: non-scaling-stroke;"></line>
+          </svg>
+          <span class="cs-ghost-tag" style="position: absolute; top: 12px; left: 12px;">Proposed by Mat · not applied</span>
+        </div>
+        <div class="cs-inforow">
+          <div class="cs-legend cs-legend__ohlc"><span class="cs-muted">14 Mar 2026</span><span><b>O</b>131.42</span><span><b>H</b>134.10</span><span><b>L</b>130.88</span><span><b>C</b>133.97</span></div>
+          <span class="caption cs-muted">Dashed items are a preview. Nothing changes until you apply.</span>
+        </div>
+      </section>
+    </main>
+    <aside class="cs-rail" aria-label="Assistant">
+      <div class="cs-rail__head">
+        <span class="cs-avatar cs-avatar--lg cs-avatar--agent" aria-hidden="true">M</span>
+        <span class="cs-rail__title">Mat</span>
+        <span class="caption cs-muted">Agent · propose only</span>
+      </div>
+      <div class="cs-tabs" role="tablist" aria-label="Rail">
+        <button class="cs-tab" role="tab" aria-selected="true">Conversation</button>
+        <button class="cs-tab" role="tab" aria-selected="false">Evidence</button>
+        <button class="cs-tab" role="tab" aria-selected="false">Activity</button>
+        <button class="cs-tab" role="tab" aria-selected="false">Layers</button>
+        <button class="cs-tab" role="tab" aria-selected="false">Data</button>
+      </div>
+      <div class="cs-rail__body" role="tabpanel">
+        <div class="cs-msg cs-msg--person"><span class="cs-attr">You · 20:40 ET</span><span class="cs-msg__body"><span class="cs-mention">@Mat</span> swap SMA 20 for EMA 21 and mark where price crossed it</span></div>
+        <div class="cs-card" style="border-color: var(--caution);">
+          <div class="cs-card__head"><span class="cs-task__state cs-task__state--attention"><span aria-hidden="true">!</span>Awaiting your approval</span><span class="cs-card__title"></span><span class="cs-attr"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">M</span>20:41 ET</span></div>
+          <span class="cs-result__label">What will change on the shared chart</span>
+          <ul class="cs-diff">
+            <li><span class="cs-diff__op cs-diff__op--add">Add</span><span>EMA 21 overlay (stored through 28 Oct)</span></li>
+            <li><span class="cs-diff__op cs-diff__op--add">Add</span><span>3 markers where close crossed EMA 21</span></li>
+            <li><span class="cs-diff__op cs-diff__op--remove">Remove</span><span>SMA 20 (yours, added 19:10 ET)</span></li>
+            <li><span class="cs-diff__unchanged">Unchanged: SMA 50, SMA 200, your trend line</span></li>
+          </ul>
+          <span class="caption cs-muted">Based on r16, the current revision.</span>
+          <div class="cs-card__foot"><button class="cs-btn cs-btn--compact cs-btn--primary">Apply 3 changes</button><button class="cs-btn cs-btn--compact">Keep SMA 20</button><button class="cs-btn cs-btn--compact cs-btn--quiet">Decline</button></div>
+        </div>
+        <div class="cs-card">
+          <div class="cs-card__head"><span class="cs-task__state"><span aria-hidden="true">⨯</span>Not permitted</span></div>
+          <div class="cs-notice" role="status">
+            <span class="cs-notice__glyph" aria-hidden="true">⨯</span>
+            <span class="cs-notice__title"><span class="cs-notice__kind">Not permitted, nothing changed.</span> Delete Ana's notes</span>
+            <span class="cs-notice__body">Mat can only propose changes to your own items. Ana's notes stay as they are.</span>
+          </div>
+        </div>
+      </div>
+      <div class="cs-composer">
+        <label class="cs-sr" for="msg">Message</label>
+        <textarea id="msg" class="cs-textarea" rows="2" placeholder="Ask @Mat about this chart"></textarea>
+        <div class="cs-composer__foot"><span class="cs-composer__hint">Mention <span class="cs-mention">@Mat</span> to start a task.</span><button class="cs-btn cs-btn--primary cs-btn--compact">Send</button></div>
+      </div>
+    </aside>
+  </div>
+  <footer class="cs-footer" role="status" aria-live="polite"><span class="cs-footer__msg cs-footer__msg--caution">! 1 proposal waiting for you · nothing applied</span></footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["dark","light"],"default":"light"},"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { theme: this.props.theme ?? 'light', no: false };
+  }
+}
+</script>
+</body>
+</html>

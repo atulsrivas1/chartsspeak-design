@@ -1,0 +1,18 @@
+<!-- @dsCard group="Access" height=520 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>preview</title><style>body{padding:16px;}</style></head>
+<body>
+<div class="cs-dialog" role="dialog" aria-modal="true" aria-labelledby="inv" style="width:460px">
+<h2 class="cs-dialog__title" id="inv">Invite to NVDA workspace</h2>
+<label class="cs-field"><span class="cs-field__label">Email</span><input class="cs-input" type="email" value="dev.k@example.com"></label>
+<fieldset class="cs-choice"><legend class="cs-field__label" style="margin-bottom:6px">Role</legend>
+<label class="cs-choice__opt"><input type="radio" name="r"><span class="cs-choice__name">Viewer</span><span class="cs-choice__desc">Sees the shared chart, evidence and shared conversation. Can't edit or ask agents.</span></label>
+<label class="cs-choice__opt"><input type="radio" name="r" checked><span class="cs-choice__name">Editor</span><span class="cs-choice__desc">Adds and changes shared analysis, asks agents, approves proposals on their own items.</span></label>
+<label class="cs-choice__opt"><input type="radio" name="r"><span class="cs-choice__name">Owner</span><span class="cs-choice__desc">Everything an editor can do, plus invite, change roles and set agent grants.</span></label>
+</fieldset>
+<p class="caption cs-muted" style="margin:0">The invite expires in 7 days. They'll see stored data only, with the same data labels you see.</p>
+<div class="cs-dialog__actions"><button class="cs-btn cs-btn--quiet">Cancel</button><button class="cs-btn cs-btn--primary">Send invite</button></div>
+</div>
+</body>
+</html>

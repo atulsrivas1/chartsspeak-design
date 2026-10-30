@@ -1,0 +1,23 @@
+<!-- @dsCard group="Settings" height=600 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>preview</title><style>body{padding:16px;}</style></head>
+<body>
+<div class="cs-settings">
+<nav class="cs-settings__nav" aria-label="Settings"><a href="#">Profile</a><a href="#" aria-current="page">Appearance</a><a href="#">Data defaults</a><a href="#">Notifications</a><a href="#">Shortcuts</a><a href="#">Phones</a></nav>
+<div class="cs-stack" style="gap:24px">
+<section class="cs-settings__section"><h2 class="cs-settings__h">Appearance</h2>
+<div class="cs-setting"><span class="cs-setting__text"><span class="cs-setting__name">Theme</span><span class="cs-setting__hint">System follows your device and switches with it</span></span><div class="cs-seg" role="group" aria-label="Theme"><button aria-pressed="true">System</button><button aria-pressed="false">Dark</button><button aria-pressed="false">Light</button></div></div>
+<div class="cs-setting"><span class="cs-setting__text"><span class="cs-setting__name">Candle colours</span><span class="cs-setting__hint">Up hollow, down filled in both</span></span><div class="cs-seg" role="group" aria-label="Candle colours"><button aria-pressed="true">Blue / orange</button><button aria-pressed="false">Green / red</button></div></div>
+</section>
+<section class="cs-settings__section"><h2 class="cs-settings__h">Data defaults for new charts</h2>
+<div class="cs-setting"><span class="cs-setting__text"><span class="cs-setting__name">Price adjustment</span><span class="cs-setting__hint">Only bases that are stored can be shown</span></span><div class="cs-seg" role="group" aria-label="Adjustment"><button aria-pressed="true">Split-adjusted</button><button aria-pressed="false">Raw</button></div></div>
+<div class="cs-setting"><span class="cs-setting__text"><span class="cs-setting__name">Default range</span></span><select class="cs-select" style="width:140px"><option>YTD</option><option>1Y</option><option>All stored</option></select></div>
+</section>
+<section class="cs-settings__section"><h2 class="cs-settings__h">Notifications</h2>
+<div class="cs-setting"><span class="cs-setting__text"><span class="cs-setting__name">Quiet mode</span><span class="cs-setting__hint">Only things that need you. Good when you work alone.</span></span><label class="cs-check" style="min-height:0"><input type="checkbox" checked> On</label></div>
+<div class="cs-setting"><span class="cs-setting__text"><span class="cs-setting__name">Daily digest email</span><span class="cs-setting__hint">Who changed what, never data values</span></span><label class="cs-check" style="min-height:0"><input type="checkbox"> On</label></div>
+</section>
+</div></div>
+</body>
+</html>

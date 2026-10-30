@@ -88,12 +88,22 @@ Never draw a substitute or decorative chart, and never clear the frame on a tran
 
 Nothing in this section appears until a second person is invited. The single-person screen stays exactly as it is.
 
+- **Person or agent is shown by shape:** people are circles, agents are squircles with the accent ring and a badge with the initials of the person they act for (`ParticipantRoster`). Colour separates up to four people (`presence-1…4`). From the fifth on, rings are neutral with a number. Status always has a glyph and a word.
+- **Shared edits are never silently merged.** A stale base gets `StaleBaseNotice`, a blocked undo gets `UndoRefused`, and an agent's change waits in `ProposalPreview` with an explicit list of what will change, drawn dashed on the chart as "Proposed". Watching an agent work (`AgentLiveWork`) never locks anything.
+- **Empty is honest:** `FirstRunChecklist`, `EmptyState`, `CoverageBar` and `CommandCopy` say what is not stored and give the exact utility command. They never estimate or fetch.
+- **Access:** `InviteDialog` (Viewer, Editor, Owner, as proposed), `AgentGrants` (propose-only by default, with data scope, step/time/spend limits, expiry and revoke) and `PhonePairing` (one-time QR with a countdown).
+- **Exports and links stay honest:** `ExportDialog` burns the data label, adjustment and "as of" date into every image (this can't be turned off), and `ShareDialog` defaults to a frozen snapshot with an audience and an expiry.
+- **What needs you:** `ActivityFeed` (filters, with "Needs me" first) and `Toast` (only for things that need action or that you asked for). Quiet mode keeps solo work silent. Neither ever shows data values.
+- **Personal settings:** `SettingsPage` (System/Dark/Light, candles, data defaults, notifications), `ShortcutSheet`, `TouchGestures` (press and hold for the crosshair) and `IndicatorStyle` (chart palette only, no free colour picker).
 - **Who is here:** `Presence` in the top bar. Each invited person gets a `presence-1…3` ring, which is used only for their avatar, their cursor and the `FollowBanner` edge, always next to their initials and name.
 - **Shared and personal are different layers.** Indicators, drawings, notes and evidence are shared and attributed (`AttributionChip`, `ObjectList`). Pan, zoom, crosshair, pane heights, scale, theme and hidden items are personal, are never part of undo, and never change anyone else's screen.
 - **Following** someone moves only your personal view, shown by `FollowBanner`. Any gesture of your own stops following and says so. Independent view is the default.
 - **Conversation** is Shared or Private (`ConversationScope`). Every message says which. A private task result stays private until you share it with one action.
 - **Shared undo** names the person whose action it reverses ("Undo Ana's add EMA 21"), and it refuses, with that reason, if someone edited after it.
 - **Several assistants (W3)** each get a name and initial in the accent ring, and their own row in `ObjectList`. Peer review appears as a second `ResultCard` attached to the first, never merged into it.
+- **Agents checking each other (W3):** only a person can ask one agent to review another (`ReviewRequest`). The review is computed on the same `PinnedSnapshot`, attaches under the original, and ends in Agrees, Differs or Couldn't check. "Agrees" means the fact was reproduced, not that the interpretation is endorsed.
+- **Disagreements are decided by people:** `DisagreementView` puts both answers side by side (fact, interpretation, limitations), names the kind of difference (definition, data, method, interpretation) and offers Use Mat's, Use Grace's, Keep both, or Ask. Agents never vote or settle it themselves.
+- **Handoffs say what travels:** `HandoffCard` lists what moves to the next agent (question, pin, evidence, steps left, open questions) and what stays behind (private messages, personal view, the sender's grants). Nothing runs until the receiving agent's person accepts.
 
 ## Iconography
 

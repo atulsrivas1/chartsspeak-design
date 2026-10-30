@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ChartsSpeak · live agent work and conflicts</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/chartsspeak/tokens.css">
+<link rel="stylesheet" href="ds/chartsspeak/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+a{color:var(--accent-text)}a:hover{color:var(--ink)}
+</style>
+</helmet>
+<div class="cs-shell" data-theme="{{theme}}" style="width: 100%; height: 100vh; min-height: 760px;">
+  <header class="cs-topbar">
+    <span class="cs-wordmark" role="img" aria-label="ChartsSpeak"><span aria-hidden="true">Chart</span><svg class="cs-wordmark__ss" viewBox="0 0 76 100" aria-hidden="true"><path class="acc" d="M38 8C67 8 67 30 38 46C7 62 7 94 38 94"></path><path class="halo" d="M27 40.1L49 51.9"></path><path d="M38 8C9 8 9 30 38 46C69 62 69 94 38 94"></path></svg><span aria-hidden="true">peak</span></span>
+    <span class="cs-tag">Shared · 3 people, 2 agents</span>
+    <span class="cs-topbar__spacer"></span>
+    <span class="cs-conn" role="status"><span class="cs-conn__dot" aria-hidden="true"></span>Connected</span>
+    <span class="cs-rosterstrip" aria-label="Participants: Monika S., Ana R.; agents Mat (working) and Grace (working)">
+      <span class="cs-avatar cs-avatar--lg cs-avatar--person" aria-hidden="true">MS</span>
+      <span class="cs-avatar cs-avatar--lg cs-avatar--p1" aria-hidden="true" style="background: var(--surface-200);">AR</span>
+      <span class="cs-avatar-wrap"><span class="cs-avatar cs-avatar--lg cs-avatar--agent" aria-hidden="true">M</span><span class="cs-avatar__via" aria-hidden="true">MS</span></span>
+      <span class="cs-avatar-wrap"><span class="cs-avatar cs-avatar--lg cs-avatar--agent" aria-hidden="true">G</span><span class="cs-avatar__via" aria-hidden="true">AR</span></span>
+    </span>
+  </header>
+  <div class="cs-shell__body">
+    <main class="cs-shell__main">
+      <div class="cs-titleblock">
+        <span class="cs-eyebrow">Shared analytical workspace</span>
+        <div class="cs-row" style="gap: 12px;"><h1 class="cs-title">NVDA · 2 Jan – 28 Oct 2026</h1><span class="cs-badge cs-badge--caution"><span class="cs-badge__glyph" aria-hidden="true">!</span>Needs attention</span></div>
+        <span class="small cs-muted">Stored daily OHLC, split-adjusted, not dividend-adjusted · stored through 28 Oct 2026</span>
+      </div>
+      <section class="cs-panel" aria-label="Chart">
+        <div class="cs-notice cs-notice--caution" role="alert" style="border-radius: 0; border-bottom: 1px solid var(--border-200);">
+          <span class="cs-notice__glyph" aria-hidden="true">!</span>
+          <span class="cs-notice__title"><span class="cs-notice__kind">Changed while you were editing.</span> Your move of the trend line was not applied.</span>
+          <span class="cs-notice__body" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px;"><span>You started from <span class="cs-revs"><b>r14</b></span>; the chart is now <span class="cs-revs"><b>r16</b></span>. Ana R. removed SMA 200 and Grace added a review note in between.</span><span class="cs-row"><button class="cs-btn cs-btn--compact cs-btn--primary">Review and reapply</button><button class="cs-btn cs-btn--compact cs-btn--quiet">Discard my edit</button></span></span>
+        </div>
+        <div class="cs-toolbar" role="toolbar" aria-label="Chart">
+          <span class="cs-toolbar__sym">NVDA</span>
+          <span class="cs-badge">1D</span>
+          <span class="cs-badge"><span class="cs-badge__glyph" aria-hidden="true">▤</span>Stored daily</span>
+          <span class="cs-toolbar__spacer"></span>
+          <button class="cs-btn cs-btn--compact cs-btn--quiet" disabled aria-describedby="undo-why"><span class="cs-btn__glyph" aria-hidden="true">↶</span>Undo add EMA 21</button>
+          <span id="undo-why" class="caption" style="color: var(--caution);">Can't undo: Ana R. changed EMA 21 after you (20:44 ET)</span>
+        </div>
+        <div class="cs-meta cs-meta--split">
+          <div class="cs-legend">
+            <span class="cs-legend__item" style="color: var(--chart-series-1);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 50</span><span class="cs-legend__val">128.06</span></span>
+            <span class="cs-legend__item" style="color: var(--chart-series-3);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">EMA 21</span><span class="cs-legend__val">130.40</span></span>
+          </div>
+          <span>Rendered r16 · 20:46:11 ET</span>
+        </div>
+        <div class="cs-chart" tabindex="0" aria-label="Price chart at revision 16.">
+          <dc-import name="ChartFrame" crosshair="{{no}}" hint-size="100%,100%"></dc-import>
+          <span class="cs-ghost-tag" style="position: absolute; top: 12px; left: 12px;"><span class="cs-avatar cs-avatar--agent" aria-hidden="true" style="width: 16px; height: 16px; font-size: 9px; border-width: 1.5px;">M</span>Mat is drawing a comparison · proposal, not applied</span>
+        </div>
+      </section>
+    </main>
+    <aside class="cs-rail" aria-label="Assistant">
+      <div class="cs-rail__head">
+        <span class="cs-rail__title">Agents at work</span>
+        <span class="caption cs-muted">2 working</span>
+      </div>
+      <div class="cs-tabs" role="tablist" aria-label="Rail">
+        <button class="cs-tab" role="tab" aria-selected="true">Conversation</button>
+        <button class="cs-tab" role="tab" aria-selected="false">People<span class="cs-tab__count">4</span></button>
+        <button class="cs-tab" role="tab" aria-selected="false">Evidence</button>
+        <button class="cs-tab" role="tab" aria-selected="false">Activity</button>
+      </div>
+      <div class="cs-rail__body" role="tabpanel">
+        <div class="cs-card" aria-live="polite">
+          <div class="cs-card__head"><span class="cs-task__state cs-task__state--running"><span aria-hidden="true">●</span>Working</span><span class="cs-card__title"></span><button class="cs-btn cs-btn--compact">Stop</button></div>
+          <span>Compare NVDA with SPY and QQQ, 2 Jan to 28 Oct 2026</span>
+          <ol class="cs-steps">
+            <li data-state="done"><span class="cs-steps__g" aria-hidden="true">✓</span><span>Checked SPY and QQQ are stored daily, split-adjusted</span><span class="cs-steps__t">20:46:02</span></li>
+            <li data-state="done"><span class="cs-steps__g" aria-hidden="true">✓</span><span>Rebased all three to 2 Jan</span><span class="cs-steps__t">20:46:05</span></li>
+            <li data-state="now"><span class="cs-steps__g" aria-hidden="true">●</span><span>Drawing comparison (proposed, not applied)</span><span class="cs-steps__t">now</span></li>
+            <li data-state="next"><span class="cs-steps__g" aria-hidden="true">○</span><span>Write fact, interpretation, limitations</span><span></span></li>
+          </ol>
+          <span class="cs-attr"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">M</span>Mat · for you · nothing is locked</span>
+        </div>
+        <div class="cs-card">
+          <div class="cs-card__head"><span class="cs-task__state cs-task__state--running"><span aria-hidden="true">●</span>Working</span><span class="cs-card__title"></span><span class="cs-attr"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">G</span>for Ana R.</span></div>
+          <span>Review Mat's golden-cross finding against the r12 snapshot</span>
+          <ol class="cs-steps">
+            <li data-state="done"><span class="cs-steps__g" aria-hidden="true">✓</span><span>Opened snapshot r12 (fixed, not the live chart)</span><span class="cs-steps__t">20:45:40</span></li>
+            <li data-state="now"><span class="cs-steps__g" aria-hidden="true">●</span><span>Recomputing the cross date from stored SMA values</span><span class="cs-steps__t">now</span></li>
+          </ol>
+          <span class="caption cs-muted">Only Ana R. can stop Grace.</span>
+        </div>
+      </div>
+      <div class="cs-composer">
+        <label class="cs-sr" for="msg">Message</label>
+        <textarea id="msg" class="cs-textarea" rows="2" placeholder="Message everyone, or ask @Mat"></textarea>
+        <div class="cs-composer__foot"><span class="cs-composer__hint">Writing to everyone in this workspace.</span><button class="cs-btn cs-btn--primary cs-btn--compact">Send</button></div>
+      </div>
+    </aside>
+  </div>
+  <footer class="cs-footer" role="status" aria-live="polite"><span class="cs-footer__msg cs-footer__msg--caution">! Outcome unknown: "Rename workspace" may not have been saved.</span><button class="cs-btn cs-btn--compact">Check again</button><button class="cs-btn cs-btn--compact cs-btn--quiet">Resolve</button></footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["dark","light"],"default":"dark"},"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { theme: this.props.theme ?? 'dark', no: false };
+  }
+}
+</script>
+</body>
+</html>

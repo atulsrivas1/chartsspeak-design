@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ChartsSpeak · phone pairing</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/chartsspeak/tokens.css">
+<link rel="stylesheet" href="ds/chartsspeak/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div data-theme="{{theme}}" style="width: 1040px; height: 900px; box-sizing: border-box; padding: 40px; display: grid; grid-template-columns: minmax(0, 1fr) 390px; gap: 40px; align-items: center; background: var(--surface-000); color: var(--ink); font-family: var(--font-sans);">
+
+  <section aria-label="On the desktop" style="display: flex; flex-direction: column; gap: 12px; align-items: center;">
+    <span class="cs-eyebrow" style="display: block;">1 · On the desktop: People › Pair phone</span>
+    <div class="cs-card" style="width: 380px; align-items: center; text-align: center;">
+      <span class="cs-eyebrow" style="display: block;">Pair your phone</span>
+      <svg viewBox="0 0 21 21" role="img" aria-label="Pairing code, generated per session" style="width: 168px; height: 168px; padding: 12px; border-radius: var(--radius-panel); background: #ffffff; shape-rendering: crispEdges;">
+        <g style="fill: #12171c;">
+          <path d="M0 0h7v7h-7zM1 1v5h5v-5zM2 2h3v3h-3z" fill-rule="evenodd"></path>
+          <path d="M14 0h7v7h-7zM15 1v5h5v-5zM16 2h3v3h-3z" fill-rule="evenodd"></path>
+          <path d="M0 14h7v7h-7zM1 15v5h5v-5zM2 16h3v3h-3z" fill-rule="evenodd"></path>
+          <path d="M8 0h1v1h-1zM10 1h2v1h-2zM9 3h1v2h-1zM11 4h2v1h-2zM8 6h1v1h-1zM10 6h1v2h-1zM12 7h1v1h-1zM0 8h2v1h-2zM3 8h1v1h-1zM5 9h2v1h-2zM8 9h3v1h-3zM13 9h1v2h-1zM15 8h2v1h-2zM18 9h3v1h-3zM1 11h2v1h-2zM4 11h1v2h-1zM6 12h3v1h-3zM10 11h2v1h-2zM14 12h1v1h-1zM16 11h1v2h-1zM19 12h2v1h-2zM8 14h1v2h-1zM10 15h3v1h-3zM14 14h2v1h-2zM17 15h1v1h-1zM19 14h1v2h-1zM9 17h2v1h-2zM12 18h1v2h-1zM14 17h3v1h-3zM18 18h2v1h-2zM8 19h1v2h-1zM10 20h1v1h-1zM15 19h1v2h-1zM17 20h3v1h-3z"></path>
+        </g>
+      </svg>
+      <span class="cs-countdown">4:52</span>
+      <span class="small cs-muted">Scan with your phone's camera. The code works once and expires in 5 minutes. Your phone gets view and conversation access to this workspace only.</span>
+      <div class="cs-row" style="justify-content: center;"><button class="cs-btn cs-btn--compact">New code</button><button class="cs-btn cs-btn--compact cs-btn--quiet">Cancel</button></div>
+    </div>
+    <span class="caption cs-muted">The countdown is announced at 1 minute and at expiry, not every second.</span>
+  </section>
+
+  <section aria-label="On the phone" style="display: flex; flex-direction: column; gap: 12px; align-items: center;">
+    <span class="cs-eyebrow" style="display: block;">2 · On the phone after scanning</span>
+    <div class="cs-shell" style="width: 390px; height: 760px; border: 1px solid var(--border-200); border-radius: 24px;">
+      <header class="cs-topbar"><span class="cs-wordmark" role="img" aria-label="ChartsSpeak"><span aria-hidden="true">Chart</span><svg class="cs-wordmark__ss" viewBox="0 0 76 100" aria-hidden="true"><path class="acc" d="M38 8C67 8 67 30 38 46C7 62 7 94 38 94"></path><path class="halo" d="M27 40.1L49 51.9"></path><path d="M38 8C9 8 9 30 38 46C69 62 69 94 38 94"></path></svg><span aria-hidden="true">peak</span></span><span class="cs-topbar__spacer"></span><span class="caption cs-muted">Code expires in 4:41</span></header>
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 16px; padding: 24px 16px; overflow: auto;">
+        <h1 class="cs-title" style="font-size: 21px; line-height: 26px;">Pair this phone with Monika S.'s workspace?</h1>
+        <dl class="cs-facts" style="padding: 12px; border-radius: var(--radius-panel); background: var(--surface-100); border: 1px solid var(--border-200);">
+          <dt>Workspace</dt><dd>NVDA · stored daily</dd>
+          <dt>Requested by</dt><dd>Monika S. on a desktop, 20:52 ET</dd>
+          <dt>This phone gets</dt><dd>View the chart and evidence, read and send messages</dd>
+          <dt>Not allowed</dt><dd>Change grants, invite people, export</dd>
+        </dl>
+        <p class="small cs-muted" style="margin: 0;">Only pair if you started this on your own desktop just now. You can unpair from People at any time.</p>
+        <div style="flex: 1;"></div>
+        <button class="cs-btn cs-btn--primary" style="width: 100%;">Pair this phone</button>
+        <button class="cs-btn cs-btn--quiet" style="width: 100%;">Cancel</button>
+      </div>
+    </div>
+  </section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["dark","light"],"default":"dark"},"$preview":{"width":1040,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { theme: this.props.theme ?? 'dark' };
+  }
+}
+</script>
+</body>
+</html>

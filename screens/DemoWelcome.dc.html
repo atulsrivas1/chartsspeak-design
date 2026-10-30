@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ChartsSpeak · demo welcome</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/chartsspeak/tokens.css">
+<link rel="stylesheet" href="ds/chartsspeak/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+a{color:var(--accent-text)}a:hover{color:var(--ink)}
+</style>
+</helmet>
+<div class="cs-shell" data-theme="{{theme}}" style="width: 100%; height: 100vh; min-height: 760px;">
+  <header class="cs-topbar">
+    <span class="cs-wordmark" role="img" aria-label="ChartsSpeak"><span aria-hidden="true">Chart</span><svg class="cs-wordmark__ss" viewBox="0 0 76 100" aria-hidden="true"><path class="acc" d="M38 8C67 8 67 30 38 46C7 62 7 94 38 94"></path><path class="halo" d="M27 40.1L49 51.9"></path><path d="M38 8C9 8 9 30 38 46C69 62 69 94 38 94"></path></svg><span aria-hidden="true">peak</span></span>
+    <span class="cs-tag">Read-only demo</span>
+    <span class="cs-topbar__spacer"></span>
+    <span class="cs-conn" role="status"><span class="cs-conn__dot" aria-hidden="true"></span>Connected</span>
+    <a href="#" class="cs-btn cs-btn--compact" style="text-decoration: none;">Sign in</a>
+  </header>
+  <div class="cs-banner" role="note">
+    <span class="cs-badge"><span class="cs-badge__glyph" aria-hidden="true">◷</span>Delayed</span>
+    <span>Delayed, stored daily data, read-only, for demonstration only. Not investment advice.</span>
+    <label class="cs-row" style="gap: 6px; margin-left: auto;"><span class="cs-muted">Chart</span><select class="cs-select" style="min-height: 32px;"><option>NVDA</option><option>SPY</option><option>QQQ</option></select></label>
+  </div>
+  <div class="cs-shell__body">
+    <main class="cs-shell__main">
+      <div class="cs-titleblock">
+        <span class="cs-eyebrow">Demo workspace</span>
+        <h1 class="cs-title">NVDA · 2 Jan – 28 Oct 2026</h1>
+        <span class="small cs-muted">Delayed OHLC, split-adjusted, not dividend-adjusted · stored through 28 Oct 2026</span>
+      </div>
+      <section class="cs-panel" aria-label="Chart">
+        <div class="cs-toolbar" role="toolbar" aria-label="Chart">
+          <span class="cs-toolbar__sym">NVDA</span>
+          <span class="cs-badge">1D</span>
+          <span class="cs-badge"><span class="cs-badge__glyph" aria-hidden="true">◷</span>Delayed</span>
+          <span class="cs-badge">Split-adjusted, not dividend-adjusted</span>
+        </div>
+        <div class="cs-meta cs-meta--split">
+          <div class="cs-legend">
+            <span class="cs-legend__item" style="color: var(--chart-series-1);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 50</span><span class="cs-legend__val">128.06</span></span>
+            <span class="cs-legend__item" style="color: var(--chart-series-2);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 200</span><span class="cs-legend__val">121.70</span></span>
+          </div>
+          <span>Rendered r12 · 19:58:02 ET</span>
+        </div>
+        <div class="cs-chart" tabindex="0" aria-label="Demo price chart. Hover, drag to pan, scroll to zoom.">
+          <dc-import name="ChartFrame" hint-size="100%,100%"></dc-import>
+          <div class="cs-card" role="dialog" aria-labelledby="dw-t" style="position: absolute; left: 16px; bottom: 16px; width: 380px; box-shadow: var(--shadow-overlay);">
+            <span class="cs-eyebrow">Welcome</span>
+            <h2 class="cs-empty__title" id="dw-t" style="text-align: left;">This is what ChartsSpeak shows its work on</h2>
+            <dl class="cs-facts">
+              <dt>You can</dt><dd>Hover for values, drag to pan, scroll to zoom</dd>
+              <dt>You can't</dt><dd>Change the chart, save, export or ask the assistant</dd>
+              <dt>The data</dt><dd>Delayed, stored daily. Never live.</dd>
+            </dl>
+            <div class="cs-card__foot"><button class="cs-btn cs-btn--compact cs-btn--primary">Explore the chart</button><a href="#" class="cs-btn cs-btn--compact cs-btn--quiet" style="text-decoration: none;">Sign in for your own workspace</a></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <aside class="cs-rail" aria-label="Assistant">
+      <div class="cs-rail__head">
+        <span class="cs-avatar cs-avatar--lg cs-avatar--agent" aria-hidden="true">M</span>
+        <span class="cs-rail__title">Mat</span>
+        <span class="caption cs-muted">Agent · read-only demo</span>
+      </div>
+      <div class="cs-tabs" role="tablist" aria-label="Rail">
+        <button class="cs-tab" role="tab" aria-selected="true">Conversation</button>
+        <button class="cs-tab" role="tab" aria-selected="false">Evidence</button>
+      </div>
+      <div class="cs-rail__body" role="tabpanel">
+        <span class="cs-eyebrow">A saved example</span>
+        <div class="cs-msg cs-msg--person"><span class="cs-attr">Example question</span><span class="cs-msg__body"><span class="cs-mention">@Mat</span> where did SMA 50 cross SMA 200 this year?</span></div>
+        <div class="cs-card">
+          <div class="cs-card__head"><span class="cs-task__state cs-task__state--done"><span aria-hidden="true">✓</span>Completed</span><span class="cs-card__title"></span><span class="cs-badge cs-badge--snapshot">Saved example</span></div>
+          <div class="cs-result__part"><span class="cs-result__label">Calculated fact</span><span class="cs-result__text">SMA 50 closed above SMA 200 on 14 Mar 2026 (128.06 vs 127.91).</span></div>
+          <div class="cs-result__part"><span class="cs-result__label">Interpretation</span><span class="cs-result__text">The only upward cross in 2026.</span></div>
+          <div class="cs-result__part"><span class="cs-result__label">Limitations</span><span class="cs-result__text">Delayed, stored daily. Split-adjusted, not dividend-adjusted.</span></div>
+        </div>
+      </div>
+      <div class="cs-rail__readonly">Messaging is off in the read-only demo. Sign in to ask your own questions.</div>
+    </aside>
+  </div>
+  <footer class="cs-footer" role="status" aria-live="polite"><span class="cs-footer__msg">Read-only. Nothing you do here is saved.</span></footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["dark","light"],"default":"light"},"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { theme: this.props.theme ?? 'light' };
+  }
+}
+</script>
+</body>
+</html>

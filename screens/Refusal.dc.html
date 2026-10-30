@@ -18,7 +18,7 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
 </helmet>
 <div class="cs-shell" data-theme="{{theme}}" style="width: 100%; height: 100vh; min-height: 760px;">
   <header class="cs-topbar">
-    <span class="cs-topbar__brand">ChartsSpeak</span>
+    <span class="cs-wordmark" role="img" aria-label="ChartsSpeak"><span aria-hidden="true">Chart</span><svg class="cs-wordmark__ss" viewBox="0 0 76 100" aria-hidden="true"><path class="acc" d="M38 8C67 8 67 30 38 46C7 62 7 94 38 94"></path><path class="halo" d="M27 40.1L49 51.9"></path><path d="M38 8C9 8 9 30 38 46C69 62 69 94 38 94"></path></svg><span aria-hidden="true">peak</span></span>
     <span class="cs-tag">Private</span>
     <span class="cs-topbar__spacer"></span>
     <span class="cs-conn" role="status"><span class="cs-conn__dot" aria-hidden="true"></span>Connected</span>
@@ -92,8 +92,9 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
           <div class="cs-notice" role="status">
             <span class="cs-notice__glyph" aria-hidden="true">⨯</span>
             <span class="cs-notice__title"><span class="cs-notice__kind">Not stored.</span> SMA 30 for NVDA</span>
-            <span class="cs-notice__body">Nothing was calculated or drawn. Only stored presets can be shown. To create it, run the feature utility: <code>features add NVDA sma_30</code></span>
+            <span class="cs-notice__body">Nothing was calculated or drawn. Only stored presets can be shown. To create it, run the data utility:</span>
           </div>
+          <span class="cs-cmd"><span class="cs-cmd__prompt" aria-hidden="true">$</span><code>chartsspeak-data add NVDA --features sma_30</code></span>
           <div class="cs-result__part"><span class="cs-result__label">What I can do instead</span><span class="cs-result__text">Use a stored average for the same question.</span></div>
           <div class="cs-card__foot">
             <button class="cs-btn cs-btn--compact">Use SMA 20</button>

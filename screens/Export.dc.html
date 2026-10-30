@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ChartsSpeak · export image</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/chartsspeak/tokens.css">
+<link rel="stylesheet" href="ds/chartsspeak/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="cs-shell" data-theme="{{theme}}" style="width: 100%; height: 100vh; min-height: 760px;">
+  <header class="cs-topbar" aria-hidden="true"><span class="cs-wordmark" role="img" aria-label="ChartsSpeak"><span aria-hidden="true">Chart</span><svg class="cs-wordmark__ss" viewBox="0 0 76 100" aria-hidden="true"><path class="acc" d="M38 8C67 8 67 30 38 46C7 62 7 94 38 94"></path><path class="halo" d="M27 40.1L49 51.9"></path><path d="M38 8C9 8 9 30 38 46C69 62 69 94 38 94"></path></svg><span aria-hidden="true">peak</span></span><span class="cs-tag">Private</span><span class="cs-topbar__spacer"></span><span class="cs-conn"><span class="cs-conn__dot"></span>Connected</span></header>
+  <div class="cs-shell__body" aria-hidden="true">
+    <main class="cs-shell__main">
+      <div class="cs-titleblock"><span class="cs-eyebrow">Your analytical workspace</span><h1 class="cs-title">NVDA · 2 Jan – 28 Oct 2026</h1></div>
+      <section class="cs-panel"><div class="cs-toolbar"><span class="cs-toolbar__sym">NVDA</span></div><div class="cs-chart"><dc-import name="ChartFrame" hint-size="100%,100%"></dc-import></div></section>
+    </main>
+    <aside class="cs-rail"><div class="cs-rail__head"><span class="cs-rail__title">Mat</span></div></aside>
+  </div>
+  <footer class="cs-footer" aria-hidden="true"><span class="cs-footer__msg">Workspace saved</span></footer>
+
+  <div class="cs-scrim" style="z-index: 10;">
+    <div class="cs-dialog" role="dialog" aria-modal="true" aria-labelledby="ex" style="width: 860px;">
+      <h2 class="cs-dialog__title" id="ex">Export image</h2>
+      <div class="cs-export" style="grid-template-columns: minmax(0, 1fr) 280px;">
+        <div class="cs-export__preview" role="img" aria-label="Export preview. Stamp: NVDA 1D, stored daily, split-adjusted not dividend-adjusted, as of 28 Oct 2026, golden cross caption, ChartsSpeak." style="height: 380px;">
+          <div style="position: absolute; left: 0; right: 0; top: 0; bottom: 56px;"><dc-import name="ChartFrame" crosshair="{{no}}" hint-size="100%,100%"></dc-import></div>
+          <div class="cs-stamp"><b>NVDA · 1D</b><span>Stored daily · split-adjusted, not dividend-adjusted</span><span>As of 28 Oct 2026</span><span class="cs-stamp__wm">ChartsSpeak</span><span class="cs-stamp__caption">Golden cross 14 Mar 2026 · SMA 50 128.06 vs SMA 200 127.91 · found by Mat, approved by Monika S.</span></div>
+        </div>
+        <div class="cs-stack" style="gap: 8px;">
+          <label class="cs-field"><span class="cs-field__label">Format</span><select class="cs-select"><option>PNG · 2× (2400 × 1350)</option><option>PNG · 1× (1200 × 675)</option></select></label>
+          <label class="cs-field"><span class="cs-field__label">Range</span><select class="cs-select"><option>As shown (YTD)</option><option>All stored</option></select></label>
+          <label class="cs-check"><input type="checkbox" checked disabled> Data label and "as of" date</label>
+          <span class="caption cs-muted" style="margin-top: -10px; padding-left: 26px;">Always on, so a picture can't pass for live data</span>
+          <label class="cs-check"><input type="checkbox" checked> Evidence caption</label>
+          <label class="cs-check"><input type="checkbox" checked> Wordmark</label>
+          <label class="cs-check"><input type="checkbox"> Include my hidden items (2)</label>
+          <label class="cs-check"><input type="checkbox"> Light theme for print</label>
+        </div>
+      </div>
+      <div class="cs-dialog__actions"><button class="cs-btn cs-btn--quiet">Cancel</button><button class="cs-btn">Copy image</button><button class="cs-btn cs-btn--primary">Export PNG</button></div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["dark","light"],"default":"dark"},"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { theme: this.props.theme ?? 'dark', no: false };
+  }
+}
+</script>
+</body>
+</html>

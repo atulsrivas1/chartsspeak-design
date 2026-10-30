@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ChartsSpeak · team roster</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/chartsspeak/tokens.css">
+<link rel="stylesheet" href="ds/chartsspeak/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+a{color:var(--accent-text)}a:hover{color:var(--ink)}
+</style>
+</helmet>
+<div class="cs-shell" data-theme="{{theme}}" style="width: 100%; height: 100vh; min-height: 760px;">
+  <header class="cs-topbar">
+    <span class="cs-wordmark" role="img" aria-label="ChartsSpeak"><span aria-hidden="true">Chart</span><svg class="cs-wordmark__ss" viewBox="0 0 76 100" aria-hidden="true"><path class="acc" d="M38 8C67 8 67 30 38 46C7 62 7 94 38 94"></path><path class="halo" d="M27 40.1L49 51.9"></path><path d="M38 8C9 8 9 30 38 46C69 62 69 94 38 94"></path></svg><span aria-hidden="true">peak</span></span>
+    <span class="cs-tag">Shared · 3 people, 2 agents</span>
+    <span class="cs-topbar__spacer"></span>
+    <span class="cs-conn" role="status"><span class="cs-conn__dot" aria-hidden="true"></span>Connected</span>
+    <span class="cs-rosterstrip" aria-label="Participants: Monika S., Ana R., Dev K.; agents Mat and Grace">
+      <span class="cs-avatar cs-avatar--lg cs-avatar--person" aria-hidden="true">MS</span>
+      <span class="cs-avatar cs-avatar--lg cs-avatar--p1" aria-hidden="true" style="background: var(--surface-200);">AR</span>
+      <span class="cs-avatar cs-avatar--lg cs-avatar--p2" aria-hidden="true" style="background: var(--surface-200);">DK</span>
+      <span class="cs-avatar-wrap"><span class="cs-avatar cs-avatar--lg cs-avatar--agent" aria-hidden="true">M</span><span class="cs-avatar__via" aria-hidden="true">MS</span></span>
+      <span class="cs-avatar-wrap"><span class="cs-avatar cs-avatar--lg cs-avatar--agent" aria-hidden="true">G</span><span class="cs-avatar__via" aria-hidden="true">AR</span></span>
+    </span>
+    <button class="cs-btn cs-btn--compact">Invite</button>
+  </header>
+  <div class="cs-shell__body">
+    <main class="cs-shell__main">
+      <div class="cs-titleblock">
+        <span class="cs-eyebrow">Shared analytical workspace</span>
+        <div class="cs-row" style="gap: 12px;"><h1 class="cs-title">NVDA · 2 Jan – 28 Oct 2026</h1><span class="cs-badge cs-badge--good"><span class="cs-badge__glyph" aria-hidden="true">✓</span>Saved</span></div>
+        <span class="small cs-muted">Stored daily OHLC, split-adjusted, not dividend-adjusted · stored through 28 Oct 2026</span>
+      </div>
+      <section class="cs-panel" aria-label="Chart">
+        <div class="cs-toolbar" role="toolbar" aria-label="Chart">
+          <span class="cs-toolbar__sym">NVDA</span>
+          <span class="cs-badge">1D</span>
+          <span class="cs-badge"><span class="cs-badge__glyph" aria-hidden="true">▤</span>Stored daily</span>
+          <span class="cs-badge">Split-adjusted, not dividend-adjusted</span>
+          <span class="cs-toolbar__spacer"></span>
+          <button class="cs-btn cs-btn--compact cs-btn--quiet" aria-label="Undo add EMA 21"><span class="cs-btn__glyph" aria-hidden="true">↶</span>Undo add EMA 21</button>
+        </div>
+        <div class="cs-meta cs-meta--split">
+          <div class="cs-legend">
+            <span class="cs-legend__item" style="color: var(--chart-series-1);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 50</span><span class="cs-legend__val">128.06</span></span>
+            <span class="cs-legend__item" style="color: var(--chart-series-2);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 200</span><span class="cs-legend__val">121.70</span></span>
+          </div>
+          <span>Rendered r16 · 20:44:10 ET</span>
+        </div>
+        <div class="cs-chart" tabindex="0" aria-label="Price chart. Items by Ana R. are hidden in your view.">
+          <dc-import name="ChartFrame" hint-size="100%,100%"></dc-import>
+        </div>
+        <div class="cs-inforow">
+          <div class="cs-authors" role="group" aria-label="Show drawings by author">
+            <span class="caption cs-muted">Drawn by</span>
+            <button class="cs-authorchip" aria-pressed="true"><span class="cs-avatar cs-avatar--person" aria-hidden="true">MS</span>You<span class="cs-authorchip__n">3</span></button>
+            <button class="cs-authorchip" aria-pressed="true"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">M</span>Mat<span class="cs-authorchip__n">4</span></button>
+            <button class="cs-authorchip" aria-pressed="false"><span class="cs-avatar cs-avatar--p1" aria-hidden="true" style="background: var(--surface-200);">AR</span>Ana R.<span class="cs-authorchip__n">2 · Hidden in your view</span></button>
+            <button class="cs-authorchip" aria-pressed="true"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">G</span>Grace<span class="cs-authorchip__n">1</span></button>
+          </div>
+          <span class="caption cs-muted">Hiding changes only your view</span>
+        </div>
+      </section>
+    </main>
+    <aside class="cs-rail" aria-label="People">
+      <div class="cs-rail__head">
+        <span class="cs-rail__title">People and agents</span>
+        <button class="cs-btn cs-btn--compact">Invite</button>
+      </div>
+      <div class="cs-tabs" role="tablist" aria-label="Rail">
+        <button class="cs-tab" role="tab" aria-selected="false">Conversation</button>
+        <button class="cs-tab" role="tab" aria-selected="true">People<span class="cs-tab__count">5</span></button>
+        <button class="cs-tab" role="tab" aria-selected="false">Evidence</button>
+        <button class="cs-tab" role="tab" aria-selected="false">Activity</button>
+        <button class="cs-tab" role="tab" aria-selected="false">Layers</button>
+      </div>
+      <div class="cs-rail__body" role="tabpanel">
+        <ul class="cs-roster" aria-label="Participants">
+          <li class="cs-roster__group" role="presentation">People · 3</li>
+          <li class="cs-roster__row"><span class="cs-avatar cs-avatar--lg cs-avatar--person" aria-hidden="true">MS</span><span class="cs-roster__main"><span class="cs-roster__name">Monika S. (you)</span><span class="cs-roster__role">Owner · phone paired</span></span><span class="cs-status cs-status--working"><span class="cs-status__g" aria-hidden="true">●</span>Active</span></li>
+          <li class="cs-roster__row"><span class="cs-avatar cs-avatar--lg cs-avatar--p1" aria-hidden="true" style="background: var(--surface-200);">AR</span><span class="cs-roster__main"><span class="cs-roster__name">Ana R.</span><span class="cs-roster__role">Editor</span></span><span class="cs-status"><span class="cs-status__g" aria-hidden="true">○</span>Idle</span></li>
+          <li class="cs-roster__row"><span class="cs-avatar cs-avatar--lg cs-avatar--p2" aria-hidden="true" style="background: var(--surface-200);">DK</span><span class="cs-roster__main"><span class="cs-roster__name">Dev K.</span><span class="cs-roster__role">Viewer</span></span><span class="cs-status cs-status--away"><span class="cs-status__g" aria-hidden="true">◌</span>Away</span></li>
+          <li class="cs-roster__row"><span class="cs-avatar cs-avatar--lg cs-avatar--overflow" aria-hidden="true" style="background: var(--surface-200);">LP</span><span class="cs-roster__main"><span class="cs-roster__name">lee.p@example.com</span><span class="cs-roster__role">Invited · Viewer · expires in 6 days</span></span><button class="cs-btn cs-btn--compact cs-btn--quiet">Resend</button></li>
+          <li class="cs-roster__group" role="presentation">Agents · 2</li>
+          <li class="cs-roster__row"><span class="cs-avatar-wrap"><span class="cs-avatar cs-avatar--lg cs-avatar--agent" aria-hidden="true">M</span><span class="cs-avatar__via" aria-hidden="true">MS</span></span><span class="cs-roster__main"><span class="cs-roster__name">Mat</span><span class="cs-roster__role">Agent · analyst · for Monika S. · propose only</span></span><span class="cs-status cs-status--working"><span class="cs-status__g" aria-hidden="true">●</span>Working</span></li>
+          <li class="cs-roster__row"><span class="cs-avatar-wrap"><span class="cs-avatar cs-avatar--lg cs-avatar--agent" aria-hidden="true">G</span><span class="cs-avatar__via" aria-hidden="true">AR</span></span><span class="cs-roster__main"><span class="cs-roster__name">Grace</span><span class="cs-roster__role">Agent · reviewer · for Ana R. · propose only</span></span><span class="cs-status cs-status--waiting"><span class="cs-status__g" aria-hidden="true">!</span>Waiting for approval</span></li>
+        </ul>
+        <p class="caption cs-muted" style="margin: 0;">Circles are people. Rounded squares are agents; the small badge shows who each agent works for.</p>
+      </div>
+    </aside>
+  </div>
+  <footer class="cs-footer" role="status" aria-live="polite"><span class="cs-footer__msg">Grace is waiting for Ana R. to approve a review note</span></footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["dark","light"],"default":"dark"},"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { theme: this.props.theme ?? 'dark' };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ChartsSpeak · partial coverage and symbol not stored</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/chartsspeak/tokens.css">
+<link rel="stylesheet" href="ds/chartsspeak/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+a{color:var(--accent-text)}a:hover{color:var(--ink)}
+</style>
+</helmet>
+<div class="cs-shell" data-theme="{{theme}}" style="width: 100%; height: 100vh; min-height: 760px;">
+  <header class="cs-topbar">
+    <span class="cs-wordmark" role="img" aria-label="ChartsSpeak"><span aria-hidden="true">Chart</span><svg class="cs-wordmark__ss" viewBox="0 0 76 100" aria-hidden="true"><path class="acc" d="M38 8C67 8 67 30 38 46C7 62 7 94 38 94"></path><path class="halo" d="M27 40.1L49 51.9"></path><path d="M38 8C9 8 9 30 38 46C69 62 69 94 38 94"></path></svg><span aria-hidden="true">peak</span></span>
+    <span class="cs-tag">Private</span>
+    <span class="cs-topbar__spacer"></span>
+    <span class="cs-conn" role="status"><span class="cs-conn__dot" aria-hidden="true"></span>Connected</span>
+    <span class="cs-avatar cs-avatar--person cs-avatar--lg" aria-label="You">MS</span>
+  </header>
+  <div class="cs-shell__body">
+    <main class="cs-shell__main">
+      <div class="cs-titleblock">
+        <span class="cs-eyebrow">Your analytical workspace</span>
+        <div class="cs-row" style="gap: 12px;"><h1 class="cs-title">QQQ · 2 Jan – 28 Oct 2026</h1><span class="cs-badge cs-badge--caution"><span class="cs-badge__glyph" aria-hidden="true">!</span>Partial coverage</span></div>
+        <span class="small cs-muted">Stored daily OHLC, split-adjusted · missing 19 Jul – 4 Aug · stored through 3 Oct 2026</span>
+      </div>
+      <section class="cs-panel" aria-label="Chart">
+        <div class="cs-toolbar" role="toolbar" aria-label="Chart">
+          <span class="cs-toolbar__sym">QQQ</span>
+          <span class="cs-badge">1D</span>
+          <span class="cs-badge"><span class="cs-badge__glyph" aria-hidden="true">▤</span>Stored daily</span>
+          <span class="cs-badge">Split-adjusted, not dividend-adjusted</span>
+          <span class="cs-toolbar__spacer"></span>
+          <button class="cs-btn cs-btn--compact"><span class="cs-btn__glyph" aria-hidden="true">+</span>Indicator</button>
+          <button class="cs-btn cs-btn--compact">Compare</button>
+        </div>
+        <div class="cs-meta cs-meta--split">
+          <div class="cs-legend">
+            <span class="cs-legend__item" style="color: var(--chart-series-1);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 50</span><span class="cs-legend__val">—</span></span>
+          </div>
+          <span>Rendered r3 · 21:02:15 ET · line breaks at gaps, nothing filled in</span>
+        </div>
+        <div class="cs-chart" tabindex="0" aria-label="QQQ price chart. No data from 19 July to 4 August, and none after 3 October.">
+          <dc-import name="ChartFrame" crosshair="{{no}}" marker="{{no}}" hint-size="100%,100%"></dc-import>
+          <div class="cs-gapband" style="left: calc((100% - 64px) * 0.54); width: calc((100% - 64px) * 0.06);"><span class="cs-badge cs-badge--caution cs-gapband__label">No data 19 Jul – 4 Aug</span></div>
+          <div class="cs-gapband" style="left: calc((100% - 64px) * 0.88); width: calc((100% - 64px) * 0.12); border-right: 0;"><span class="cs-badge cs-badge--caution cs-gapband__label" style="left: auto; right: 8px; transform: none;">Not stored after 3 Oct</span></div>
+        </div>
+        <div class="cs-inforow" style="flex-direction: column; align-items: stretch;">
+          <div class="cs-coverage" role="img" aria-label="Coverage for QQQ: stored 2 Jan to 18 Jul and 5 Aug to 3 Oct 2026; missing 19 Jul to 4 Aug; not stored after 3 Oct.">
+            <div class="cs-coverage__bar"><span class="cs-coverage__seg" style="left: 0; width: 54%;"></span><span class="cs-coverage__gap" style="left: 54%; width: 6%;"></span><span class="cs-coverage__seg" style="left: 60%; width: 28%;"></span></div>
+            <div class="cs-coverage__axis"><span>2 Jan</span><span>missing 19 Jul – 4 Aug</span><span>stored through 3 Oct</span><span>28 Oct</span></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <aside class="cs-rail" aria-label="Assistant">
+      <div class="cs-rail__head">
+        <span class="cs-avatar cs-avatar--lg cs-avatar--agent" aria-hidden="true">M</span>
+        <span class="cs-rail__title">Mat</span>
+        <span class="caption cs-muted">Agent · propose only</span>
+      </div>
+      <div class="cs-tabs" role="tablist" aria-label="Rail">
+        <button class="cs-tab" role="tab" aria-selected="true">Conversation</button>
+        <button class="cs-tab" role="tab" aria-selected="false">Evidence</button>
+        <button class="cs-tab" role="tab" aria-selected="false">Activity</button>
+        <button class="cs-tab" role="tab" aria-selected="false">Data</button>
+      </div>
+      <div class="cs-rail__body" role="tabpanel">
+        <div class="cs-msg cs-msg--person"><span class="cs-attr">You · 21:01 ET</span><span class="cs-msg__body"><span class="cs-mention">@Mat</span> compare QQQ with PLTR this year</span></div>
+        <div class="cs-card">
+          <div class="cs-card__head"><span class="cs-task__state cs-task__state--failed"><span aria-hidden="true">⨯</span>Not done</span><span class="cs-card__title"></span><span class="cs-attr"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">M</span>21:01 ET</span></div>
+          <div class="cs-notice" role="status">
+            <span class="cs-notice__glyph" aria-hidden="true">⨯</span>
+            <span class="cs-notice__title"><span class="cs-notice__kind">Not stored.</span> PLTR has no daily data</span>
+            <span class="cs-notice__body" style="display: flex; flex-direction: column; gap: 8px;"><span>Nothing was fetched or estimated. Add it with the data utility, then ask again:</span><span class="cs-cmd"><span class="cs-cmd__prompt" aria-hidden="true">$</span><code>chartsspeak-data add PLTR --daily</code><button class="cs-btn cs-btn--compact cs-btn--quiet" aria-label="Copy command">Copy</button></span></span>
+          </div>
+        </div>
+        <div class="cs-msg cs-msg--person"><span class="cs-attr">You · 21:03 ET</span><span class="cs-msg__body"><span class="cs-mention">@Mat</span> what was QQQ's high in July?</span></div>
+        <div class="cs-card">
+          <div class="cs-card__head"><span class="cs-task__state cs-task__state--done"><span aria-hidden="true">✓</span>Completed</span><span class="cs-card__title"></span><span class="cs-attr"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">M</span>21:03 ET</span></div>
+          <div class="cs-result__part"><span class="cs-result__label">Calculated fact</span><span class="cs-result__text">Highest stored daily high in July: 538.20 on 10 Jul 2026.</span></div>
+          <div class="cs-result__part"><span class="cs-result__label">Limitations</span><span class="cs-result__text">July is only partly stored: 19–31 Jul are missing, so the true July high may be higher. Split-adjusted, not dividend-adjusted.</span></div>
+          <div class="cs-card__foot"><span class="cs-cmd" style="flex: 1;"><span class="cs-cmd__prompt" aria-hidden="true">$</span><code>chartsspeak-data fill QQQ --from 2026-07-19 --to 2026-08-04</code><button class="cs-btn cs-btn--compact cs-btn--quiet" aria-label="Copy command">Copy</button></span></div>
+        </div>
+      </div>
+      <div class="cs-composer">
+        <label class="cs-sr" for="msg">Message</label>
+        <textarea id="msg" class="cs-textarea" rows="2" placeholder="Ask @Mat about this chart"></textarea>
+        <div class="cs-composer__foot"><span class="cs-composer__hint">Mention <span class="cs-mention">@Mat</span> to start a task.</span><button class="cs-btn cs-btn--primary cs-btn--compact">Send</button></div>
+      </div>
+    </aside>
+  </div>
+  <footer class="cs-footer" role="status" aria-live="polite"><span class="cs-footer__msg">Not stored: PLTR. Nothing changed on the chart.</span></footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["dark","light"],"default":"dark"},"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { theme: this.props.theme ?? 'dark', no: false };
+  }
+}
+</script>
+</body>
+</html>
