@@ -42,7 +42,22 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
           <div class="cs-legend">
             <span class="cs-legend__item" style="color: var(--chart-series-1);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 50</span><span class="cs-legend__val">128.06</span></span>
             <span class="cs-legend__item" style="color: var(--chart-series-2);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 200</span><span class="cs-legend__val">121.70</span></span>
-            <span class="cs-legend__item" style="color: var(--chart-selection);"><span class="cs-legend__swatch cs-legend__swatch--dashed"></span><span class="cs-legend__name">EMA 21 · Proposed</span><span class="cs-legend__val">—</span></span></div><div class="cs-legend cs-legend__ohlc" style="margin-right: auto;"><span class="cs-muted">14 Mar 2026</span><span><b>O</b>131.42</span><span><b>H</b>134.10</span><span><b>L</b>130.88</span><span><b>C</b>133.97</span></div>
+            <span class="cs-legend__item" style="color: var(--chart-selection);"><span class="cs-legend__swatch cs-legend__swatch--dashed"></span><span class="cs-legend__name">EMA 21 · Proposed</span><span class="cs-legend__val">—</span></span>
+          </div>
+          <span>Rendered r16 · 20:41:30 ET · proposal not applied</span>
+        </div>
+        <div class="cs-chart" tabindex="0" aria-label="Price chart with Mat's proposed EMA 21 shown dashed. Not applied.">
+          <dc-import name="ChartFrame" crosshair="{{no}}" marker="{{no}}" hint-size="100%,100%"></dc-import>
+          <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: calc(100% - 64px); height: 100%; pointer-events: none;">
+            <polyline points="0,78 8,77 16,75 24,76 32,70 40,58 48,46 56,40 62,39 70,41 78,40 86,33 94,26 100,24" style="fill: none; stroke: var(--chart-selection); stroke-width: 2; stroke-dasharray: 6 4; vector-effect: non-scaling-stroke;"></polyline>
+            <line x1="40" x2="40" y1="8" y2="96" style="stroke: var(--chart-selection); stroke-width: 1.5; stroke-dasharray: 4 3; vector-effect: non-scaling-stroke;"></line>
+            <line x1="63" x2="63" y1="8" y2="96" style="stroke: var(--chart-selection); stroke-width: 1.5; stroke-dasharray: 4 3; vector-effect: non-scaling-stroke;"></line>
+            <line x1="86" x2="86" y1="8" y2="96" style="stroke: var(--chart-selection); stroke-width: 1.5; stroke-dasharray: 4 3; vector-effect: non-scaling-stroke;"></line>
+          </svg>
+          <span class="cs-ghost-tag" style="position: absolute; top: 12px; left: 12px;">Proposed by Mat · not applied</span>
+        </div>
+        <div class="cs-inforow">
+          <div class="cs-legend cs-legend__ohlc"><span class="cs-muted">14 Mar 2026</span><span><b>O</b>131.42</span><span><b>H</b>134.10</span><span><b>L</b>130.88</span><span><b>C</b>133.97</span></div>
           <span class="caption cs-muted">Dashed items are a preview. Nothing changes until you apply.</span>
         </div>
       </section>
@@ -73,17 +88,6 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
           </ul>
           <span class="caption cs-muted">Based on r16, the current revision.</span>
           <div class="cs-card__foot"><button class="cs-btn cs-btn--compact cs-btn--primary">Apply 3 changes</button><button class="cs-btn cs-btn--compact">Keep SMA 20</button><button class="cs-btn cs-btn--compact cs-btn--quiet">Decline</button></div>
-          <span>Rendered r16 · 20:41:30 ET · proposal not applied</span>
-        </div>
-        <div class="cs-chart" tabindex="0" aria-label="Price chart with Mat's proposed EMA 21 shown dashed. Not applied.">
-          <dc-import name="ChartFrame" crosshair="{{no}}" marker="{{no}}" hint-size="100%,100%"></dc-import>
-          <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: calc(100% - 64px); height: 100%; pointer-events: none;">
-            <polyline points="0,78 8,77 16,75 24,76 32,70 40,58 48,46 56,40 62,39 70,41 78,40 86,33 94,26 100,24" style="fill: none; stroke: var(--chart-selection); stroke-width: 2; stroke-dasharray: 6 4; vector-effect: non-scaling-stroke;"></polyline>
-            <line x1="40" x2="40" y1="8" y2="96" style="stroke: var(--chart-selection); stroke-width: 1.5; stroke-dasharray: 4 3; vector-effect: non-scaling-stroke;"></line>
-            <line x1="63" x2="63" y1="8" y2="96" style="stroke: var(--chart-selection); stroke-width: 1.5; stroke-dasharray: 4 3; vector-effect: non-scaling-stroke;"></line>
-            <line x1="86" x2="86" y1="8" y2="96" style="stroke: var(--chart-selection); stroke-width: 1.5; stroke-dasharray: 4 3; vector-effect: non-scaling-stroke;"></line>
-          </svg>
-          <span class="cs-ghost-tag" style="position: absolute; top: 12px; left: 12px;">Proposed by Mat · not applied</span>
         </div>
         <div class="cs-card">
           <div class="cs-card__head"><span class="cs-task__state"><span aria-hidden="true">⨯</span>Not permitted</span></div>

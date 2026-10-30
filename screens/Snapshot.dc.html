@@ -29,10 +29,9 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
   </header>
   <div class="cs-shell__body">
     <main class="cs-shell__main">
-      <p class="cs-pageline">As of 19:41 ET, 29 Oct 2026 · NVDA stored daily, split-adjusted, not dividend-adjusted · data run 2026-10-28T21:04Z</p>
       <section class="cs-panel" aria-label="Chart snapshot">
         <div role="note" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; padding: 10px 12px; background: var(--surface-200); border-bottom: 1px solid var(--border-200);">
-          <span class="cs-badge cs-badge--snapshot" style="background: var(--surface-100);">As of 19:41 ET</span>
+          <span class="cs-badge cs-badge--snapshot" style="background: var(--surface-100);" title="Data run 2026-10-28T21:04Z">As of 19:41 ET, 29 Oct</span>
           <span style="flex: 1 1 320px; font-size: 13px; line-height: 20px;">You are looking at this observation exactly as it was saved. It is not the current chart, and nothing here can be edited.</span>
           <button class="cs-btn cs-btn--compact cs-btn--quiet">Show on current chart</button>
           <button class="cs-btn cs-btn--compact cs-btn--primary">Back to current chart</button>
@@ -49,7 +48,15 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
         <div class="cs-meta cs-meta--split">
           <div class="cs-legend">
             <span class="cs-legend__item" style="color: var(--chart-series-1);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 50</span><span class="cs-legend__val">128.06</span></span>
-            <span class="cs-legend__item" style="color: var(--chart-series-2);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 200</span><span class="cs-legend__val">127.91</span></span></div><div class="cs-legend cs-legend__ohlc" style="margin-right: auto;"><span class="cs-muted">14 Mar 2026</span><span><b>O</b>131.42</span><span><b>H</b>134.10</span><span><b>L</b>130.88</span><span><b>C</b>133.97</span></div>
+            <span class="cs-legend__item" style="color: var(--chart-series-2);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 200</span><span class="cs-legend__val">127.91</span></span>
+          </div>
+          <span>Snapshot r9 · saved 19:41:12 ET</span>
+        </div>
+        <div class="cs-chart" tabindex="0" aria-label="Saved chart snapshot from 19:41 ET. Arrow keys pan, plus and minus zoom.">
+          <dc-import name="ChartFrame" crosshair="{{no}}" hint-size="100%,100%"></dc-import>
+        </div>
+        <div class="cs-inforow">
+          <div class="cs-legend cs-legend__ohlc"><span class="cs-muted">14 Mar 2026</span><span><b>O</b>131.42</span><span><b>H</b>134.10</span><span><b>L</b>130.88</span><span><b>C</b>133.97</span></div>
           <span class="cs-attr"><span class="cs-avatar" aria-hidden="true">M</span>Saved by Mat · 19:41 ET</span>
         </div>
       </section>
@@ -76,10 +83,6 @@ fast         sma_50   128.06
 slow         sma_200  127.91
 run          2026-10-28T21:04Z</pre>
           <div class="cs-card__foot"><span class="cs-attr"><span class="cs-avatar" aria-hidden="true">M</span>Mat · 19:41 ET</span></div>
-          <span>Snapshot r9 · saved 19:41:12 ET</span>
-        </div>
-        <div class="cs-chart" tabindex="0" aria-label="Saved chart snapshot from 19:41 ET. Arrow keys pan, plus and minus zoom.">
-          <dc-import name="ChartFrame" crosshair="{{no}}" hint-size="100%,100%"></dc-import>
         </div>
         <div class="cs-card">
           <div class="cs-card__head"><span class="cs-card__title">Close below SMA 200, 5 Aug 2026</span></div>
