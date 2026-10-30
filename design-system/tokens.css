@@ -12,7 +12,7 @@
   --presence-1: #9aa6ff; --presence-2: #cc79a7; --presence-3: #f0e442; --presence-4: #f6745a;
   --chart-series-1: #e4e9ed; --chart-series-2: #cc79a7; --chart-series-3: #f0e442; --chart-series-4: #009e73; --chart-series-5: #9aa6ff;
   --chart-event-split: #9aa6ae; --chart-event-dividend: #6bd4a8; --chart-event-earnings: #f2a07b;
-  --chart-selection: #72ded5; --chart-anchor: #f1c76b;
+  --chart-selection: #72ded5; --chart-drawing: #9aa6ff; --chart-anchor: #e4e9ed;
   --shadow-dialog: 0 16px 48px rgba(0, 0, 0, 0.55); --shadow-overlay: 0 4px 16px rgba(0, 0, 0, 0.45);
 }
 [data-theme="light"] {
@@ -28,7 +28,7 @@
   --presence-1: #4a55c8; --presence-2: #a8507f; --presence-3: #7a6f00; --presence-4: #7d0624;
   --chart-series-1: #12171c; --chart-series-2: #a8507f; --chart-series-3: #7a6f00; --chart-series-4: #007a59; --chart-series-5: #4a55c8;
   --chart-event-split: #6b7780; --chart-event-dividend: #1a7a4c; --chart-event-earnings: #a2402a;
-  --chart-selection: #0b7a71; --chart-anchor: #8a5a00;
+  --chart-selection: #0b7a71; --chart-drawing: #4a55c8; --chart-anchor: #12171c;
   --shadow-dialog: 0 16px 40px rgba(18, 23, 28, 0.18); --shadow-overlay: 0 4px 14px rgba(18, 23, 28, 0.14);
 }
 :root {

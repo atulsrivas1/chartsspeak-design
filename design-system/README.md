@@ -10,6 +10,8 @@ When a choice is unclear, take the more honest option over the more polished one
 4. **Accent is for agents and the primary action only** (see Colour).
 5. **Teach without covering.** Hints and welcomes sit beside the thing they explain (one line, or the top of the rail), never over it.
 
+Drawings use `chart-drawing` (or the author's presence colour), never a state hue; only a handle being dragged turns the caution colour. Options that need data that isn't stored (1m, 5m) are shown disabled and struck through, with the reason.
+
 And two that follow from them: say a fact once per screen (a coverage gap is shown by the chart band and the coverage bar, not also in a note), and never show the same news twice at once (no toast while the Activity feed is open).
 
 ## Content fundamentals

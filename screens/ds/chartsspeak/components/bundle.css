@@ -642,3 +642,18 @@ kbd.cs-kbd { display: inline-grid; place-items: center; min-width: 22px; height:
 .cs-touchhint { display: flex; align-items: center; gap: var(--space-8); min-height: 32px; padding: 0 var(--space-12); font: 500 12px/16px var(--font-sans); color: var(--ink-muted); border-top: 1px solid var(--border-100); }
 .cs-touchhint b { color: var(--ink); font-weight: 600; }
 .cs-touchhint__x { margin-left: auto; }
+/* Drawings: a settled handle is ink like any selection; only a handle being dragged is "not settled" (anchor = caution hue) */
+.cs-handle { border-color: var(--chart-anchor); }
+.cs-handle::after { background: var(--chart-anchor); }
+.cs-handle[aria-grabbed="true"] { border-color: var(--anchor); }
+.cs-handle[aria-grabbed="true"]::after { background: var(--anchor); }
+.cs-seg button:disabled { color: var(--ink-muted); opacity: 0.5; cursor: not-allowed; text-decoration: line-through; }
+/* EventStrip: "On this chart" doubles as a time map. Ticks sit at each item's date on the chart's own time axis. */
+.cs-strip--timeline { flex-wrap: wrap; row-gap: var(--space-6); padding-top: 0; }
+.cs-eventtrack { position: relative; flex-basis: 100%; height: 18px; margin-right: 52px; border-bottom: 1px solid var(--border-100); }
+.cs-eventtrack__window { position: absolute; top: 4px; bottom: 4px; border-radius: var(--radius-xs); background: var(--surface-200); }
+.cs-eventtrack__tick { position: absolute; top: 3px; width: 2px; height: 12px; margin-left: -1px; border-radius: 1px; background: var(--ink-muted); }
+.cs-eventtrack__tick[data-active="true"] { background: var(--ink); width: 3px; }
+.cs-eventtrack__end { position: absolute; top: 2px; font: 500 11px/14px var(--font-sans); color: var(--ink-muted); }
+.cs-evchip__date { font-variant-numeric: tabular-nums; color: var(--ink-muted); }
+.cs-evchip[aria-pressed="true"] { background: var(--surface-200); border-color: var(--ink); }
