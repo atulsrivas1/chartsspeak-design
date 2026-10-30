@@ -6,3 +6,5 @@ Tablet width (761–1023px): the chart keeps the width, and the rail is reached 
 
 - The strip is always visible, so the assistant is one tap away and the chart is never squeezed below a usable width.
 - See `AppShellDrawer` for the drawer open.
+
+- With the drawer open the toolbar keeps only symbol, range and icon buttons; the data label moves to its own row directly under the toolbar, so it is never covered or dropped.

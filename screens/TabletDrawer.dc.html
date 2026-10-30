@@ -32,12 +32,12 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
       <section class="cs-panel" aria-label="Chart">
         <div class="cs-toolbar" role="toolbar" aria-label="Chart">
           <button class="cs-symbtn" aria-haspopup="listbox" aria-label="Symbol NVDA, change symbol"><svg class="cs-symbtn__icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.5"></circle><path d="M10.5 10.5L14 14"></path></svg>NVDA<span class="cs-caret" aria-hidden="true"></span></button>
-          <div class="cs-seg" role="group" aria-label="Range"><button aria-pressed="false">1M</button><button aria-pressed="false">6M</button><button aria-pressed="true">YTD</button><button aria-pressed="false">1Y</button></div>
-          <span class="cs-badge">Split-adjusted, not dividend-adjusted</span>
-          <button class="cs-btn cs-btn--compact"><span class="cs-btn__glyph" aria-hidden="true">+</span>Indicator</button>
+          <div class="cs-seg" role="group" aria-label="Range"><button aria-pressed="false">6M</button><button aria-pressed="true">YTD</button><button aria-pressed="false">1Y</button></div>
+          <button class="cs-btn cs-btn--compact cs-btn--icon" aria-label="Add indicator" title="Add indicator">+</button>
           <span class="cs-toolbar__spacer"></span>
           <button class="cs-btn cs-btn--compact cs-btn--quiet cs-btn--icon" aria-label="Undo add cross marker" title="Undo add cross marker">↶</button>
         </div>
+        <div class="cs-meta" aria-label="Data"><span class="cs-badge"><span class="cs-badge__glyph" aria-hidden="true">▤</span>Stored daily · through 28 Oct</span><span class="cs-badge">Split-adjusted, not dividend-adjusted</span></div>
         <div class="cs-meta cs-meta--split">
           <div class="cs-legend">
             <span class="cs-legend__item" style="color: var(--chart-series-1);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 50</span><span class="cs-legend__val">128.06</span></span>

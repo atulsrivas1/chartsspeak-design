@@ -38,10 +38,10 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
           <span class="cs-badge"><span class="cs-badge__glyph" aria-hidden="true">▤</span>Stored daily · through 28 Oct</span>
           <span class="cs-badge" title="Data run 2026-10-28T21:04Z">Split-adjusted, not dividend-adjusted</span>
           <span class="cs-toolbar__sep" aria-hidden="true"></span>
-          <button class="cs-btn cs-btn--compact"><span class="cs-btn__glyph" aria-hidden="true">+</span>Indicator</button>
-          <button class="cs-btn cs-btn--compact">Compare</button>
+          <button class="cs-btn cs-btn--compact" disabled title="Exit replay to edit"><span class="cs-btn__glyph" aria-hidden="true">+</span>Indicator</button>
+          <button class="cs-btn cs-btn--compact" disabled title="Exit replay to edit">Compare</button>
           <span class="cs-toolbar__spacer"></span>
-          <button class="cs-btn cs-btn--compact cs-btn--quiet" aria-label="Undo add cross marker" title="Undo add cross marker"><span class="cs-btn__glyph" aria-hidden="true">↶</span>Undo marker</button>
+          <button class="cs-btn cs-btn--compact cs-btn--quiet" aria-label="Undo add cross marker. Exit replay to edit." title="Exit replay to edit" disabled><span class="cs-btn__glyph" aria-hidden="true">↶</span>Undo marker</button>
           <button class="cs-btn cs-btn--compact cs-btn--quiet cs-btn--icon" disabled aria-label="Redo, nothing to redo">↷</button>
         </div>
         <div class="cs-meta cs-meta--split">
@@ -49,7 +49,7 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
             <span class="cs-legend__item" style="color: var(--chart-series-1);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 50</span><span class="cs-legend__val">128.06</span></span>
             <span class="cs-legend__item" style="color: var(--chart-series-2);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 200</span><span class="cs-legend__val">121.70</span></span>
           </div>
-          <span>Replay of r12 · bars to 14 Mar 2026</span>
+          <span>Replay of r12 · bars to 14 Mar 2026 · editing off until you exit</span>
         </div>
         <div class="cs-chart" tabindex="0" aria-label="Price chart. Arrow keys pan, plus and minus zoom, Escape clears the crosshair.">
           <dc-import name="ChartFrame" crosshair="{{no}}" hint-size="100%,100%"></dc-import>
