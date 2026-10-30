@@ -609,3 +609,36 @@ kbd.cs-kbd { display: inline-grid; place-items: center; min-width: 22px; height:
 .cs-chart__replaytag { position: absolute; top: var(--space-8); left: var(--space-8); display: inline-flex; align-items: center; gap: var(--space-4); min-height: 24px; padding: 0 var(--space-8); border-radius: var(--radius-xs); background: var(--caution-wash); color: var(--caution); font: 600 12px/16px var(--font-sans); }
 .cs-cmd code { white-space: pre-wrap; overflow-wrap: anywhere; }
 .cs-cmd code { min-width: 0; }
+
+/* Council pass: one data label, quiet status labels, chart-first shell, accent discipline */
+/* Status labels are text with a glyph, not boxes. Only states that need attention keep a fill. */
+.cs-badge { border-color: transparent; padding: 0 var(--space-4); }
+.cs-badge--synthetic { border-color: var(--border-control); padding: 0 var(--space-6); }
+.cs-badge--snapshot, .cs-badge--good, .cs-badge--caution, .cs-badge--refusal { padding: 0 var(--space-6); }
+/* The workspace title lives in the top bar once a workspace is open. */
+.cs-topbar__sep { flex: none; width: 1px; height: 20px; background: var(--border-200); }
+.cs-topbar__title { margin: 0; min-width: 0; font: 600 15px/20px var(--font-sans); color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cs-pageline { margin: 0; font: 500 12px/16px var(--font-sans); color: var(--ink-muted); }
+/* Accent means two things only: an agent, or the primary action. Selection and "current" are ink. */
+.cs-chip[aria-pressed="true"] { background: var(--surface-200); border-color: var(--ink); }
+.cs-chip__box { color: var(--surface-100); }
+.cs-chip[aria-pressed="true"] .cs-chip__box { background: var(--ink); border-color: var(--ink); }
+.cs-tab[aria-selected="true"]::after { background: var(--ink); }
+.cs-tabs--switch .cs-tab[aria-selected="true"] { background: var(--surface-200); box-shadow: inset 0 0 0 1px var(--border-control); }
+.cs-check input, .cs-choice__opt input { accent-color: var(--ink); }
+.cs-seg button[aria-pressed="true"] { background: var(--surface-200); box-shadow: inset 0 -2px 0 var(--ink); }
+.cs-railbtn[aria-pressed="true"] { background: var(--surface-200); color: var(--ink); }
+.cs-option[aria-selected="true"], .cs-objrow[aria-selected="true"], .cs-watch__row[aria-current="true"] { background: var(--surface-200); box-shadow: inset 2px 0 0 var(--ink); }
+.cs-splitter:hover::before, .cs-splitter:focus-visible::before { background: var(--ink-muted); }
+.cs-steps li[data-state="now"] .cs-steps__g, .cs-checklist li[data-state="now"] .cs-checklist__n { color: var(--ink); border-color: var(--ink); }
+.cs-choice__opt:has(input:checked) { border-color: var(--ink); background: var(--surface-200); }
+.cs-meter__fill { background: var(--ink-muted); }
+.cs-feed__item[data-unread="true"] .cs-feed__text::before { color: var(--ink); }
+.cs-settings__nav a[aria-current="page"] { background: var(--surface-200); box-shadow: inset 2px 0 0 var(--ink); }
+.cs-layouts button[aria-pressed="true"] { background: var(--surface-200); color: var(--ink); box-shadow: inset 0 0 0 1px var(--border-control); }
+.cs-slot--active { border-color: var(--ink); box-shadow: 0 0 0 1px var(--ink); }
+.cs-slot__tag { color: var(--ink); }
+/* One-line touch hint above the chart tabs on phone */
+.cs-touchhint { display: flex; align-items: center; gap: var(--space-8); min-height: 32px; padding: 0 var(--space-12); font: 500 12px/16px var(--font-sans); color: var(--ink-muted); border-top: 1px solid var(--border-100); }
+.cs-touchhint b { color: var(--ink); font-weight: 600; }
+.cs-touchhint__x { margin-left: auto; }

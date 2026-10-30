@@ -36,14 +36,10 @@ body{margin:0}
           <span aria-hidden="true" style="position: absolute; left: calc((100% - 64px) * 0.58 - 22px); top: calc(38% + 18px); width: 44px; height: 44px; border-radius: var(--radius-round); background: var(--ink); opacity: 0.18;"></span>
         </div>
       </section>
-      <div class="cs-card" role="note" aria-labelledby="tips" style="gap: 0;">
-        <div class="cs-row" style="justify-content: space-between;"><span class="cs-result__label" id="tips">Touch the chart</span><button class="cs-btn cs-btn--compact cs-btn--quiet cs-btn--icon" aria-label="Dismiss tips">×</button></div>
-        <div class="cs-gesture" style="border-top: 0;"><span class="cs-gesture__icon"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3"></circle><circle cx="10" cy="10" r="7" stroke-dasharray="2 2"></circle></svg></span><span><b>Press and hold</b> for values</span></div>
-        <div class="cs-gesture"><span class="cs-gesture__icon"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10h14M6 7l-3 3 3 3M14 7l3 3-3 3"></path></svg></span><span><b>Drag</b> to pan · <b>pinch</b> to zoom</span></div>
-      </div>
     </main>
     <aside class="cs-rail" aria-label="Assistant"></aside>
   </div>
+  <div class="cs-touchhint" role="note"><span><b>Hold</b> for values · <b>drag</b> to pan · <b>pinch</b> to zoom</span><button class="cs-btn cs-btn--compact cs-btn--quiet cs-btn--icon cs-touchhint__x" aria-label="Dismiss tip">×</button></div>
   <div class="cs-shell__switch">
     <div class="cs-tabs cs-tabs--switch" role="tablist" aria-label="Screen"><button class="cs-tab" role="tab" aria-selected="true">Chart</button><button class="cs-tab" role="tab" aria-selected="false">Conversation</button></div>
   </div>

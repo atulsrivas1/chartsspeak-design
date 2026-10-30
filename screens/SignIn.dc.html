@@ -19,6 +19,9 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
 <div class="cs-shell" data-theme="{{theme}}" style="width: 100%; height: 100vh; min-height: 760px;">
   <header class="cs-topbar" aria-hidden="true">
     <span class="cs-wordmark" role="img" aria-label="ChartsSpeak"><span aria-hidden="true">Chart</span><svg class="cs-wordmark__ss" viewBox="0 0 76 100" aria-hidden="true"><path class="acc" d="M38 8C67 8 67 30 38 46C7 62 7 94 38 94"></path><path class="halo" d="M27 40.1L49 51.9"></path><path d="M38 8C9 8 9 30 38 46C69 62 69 94 38 94"></path></svg><span aria-hidden="true">peak</span></span>
+    <span class="cs-topbar__sep" aria-hidden="true"></span>
+    <h1 class="cs-topbar__title">NVDA · 2 Jan – 28 Oct 2026</h1>
+    <span class="cs-badge cs-badge--caution"><span class="cs-badge__glyph">!</span>Needs attention</span>
     <span class="cs-tag">Private</span>
     <span class="cs-topbar__spacer"></span>
     <span class="cs-conn cs-conn--signin"><span class="cs-conn__dot"></span>Sign-in needed</span>
@@ -26,21 +29,11 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
   </header>
   <div class="cs-shell__body" aria-hidden="true">
     <main class="cs-shell__main">
-      <div class="cs-shell__titlerow">
-        <div class="cs-titleblock">
-          <span class="cs-eyebrow">Your analytical workspace</span>
-          <div class="cs-row" style="gap: 12px;">
-            <h1 class="cs-title">NVDA · 2 Jan – 28 Oct 2026</h1>
-            <span class="cs-badge cs-badge--caution"><span class="cs-badge__glyph">!</span>Needs attention</span>
-          </div>
-          <span class="small cs-muted">Stored daily OHLC, split-adjusted, not dividend-adjusted · stored through 28 Oct 2026</span>
-        </div>
-      </div>
       <section class="cs-panel">
         <div class="cs-toolbar">
           <span class="cs-toolbar__sym">NVDA</span>
-          <span class="cs-badge">1D</span>
-          <span class="cs-badge">Candles</span>
+          <button class="cs-btn cs-btn--compact" aria-haspopup="listbox" aria-label="Interval: 1 day">1D<span class="cs-caret" aria-hidden="true"></span></button>
+          <button class="cs-btn cs-btn--compact" aria-haspopup="listbox" aria-label="Chart type: candles">Candles<span class="cs-caret" aria-hidden="true"></span></button>
           <span class="cs-badge"><span class="cs-badge__glyph">▤</span>Stored daily</span>
           <span class="cs-badge">Split-adjusted, not dividend-adjusted</span>
           <span class="cs-toolbar__spacer"></span>
@@ -48,16 +41,12 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
         <div class="cs-meta cs-meta--split">
           <div class="cs-legend">
             <span class="cs-legend__item" style="color: var(--chart-series-1);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 50</span><span class="cs-legend__val">128.06</span></span>
-            <span class="cs-legend__item" style="color: var(--chart-series-2);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 200</span><span class="cs-legend__val">121.70</span></span>
-          </div>
+            <span class="cs-legend__item" style="color: var(--chart-series-2);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 200</span><span class="cs-legend__val">121.70</span></span></div><div class="cs-legend cs-legend__ohlc" style="margin-right: auto;"><span class="cs-muted">Last bar 28 Oct 2026</span><span><b>O</b>146.20</span><span><b>H</b>148.02</span><span><b>L</b>145.11</span><span><b>C</b>147.36</span></div>
           <span><span class="cs-meta__status--stale">Not current</span> · frame from 20:11:47 ET</span>
         </div>
         <div class="cs-chart">
           <dc-import name="ChartFrame" crosshair="{{no}}" hint-size="100%,100%"></dc-import>
           <div class="cs-chart__veil"></div>
-        </div>
-        <div class="cs-inforow">
-          <div class="cs-legend cs-legend__ohlc"><span class="cs-muted">Last bar 28 Oct 2026</span><span><b>O</b>146.20</span><span><b>H</b>148.02</span><span><b>L</b>145.11</span><span><b>C</b>147.36</span></div>
         </div>
       </section>
     </main>

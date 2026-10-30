@@ -1,6 +1,6 @@
 # TouchGestures
 
-The touch model for the canvas on phone and tablet, shown once on first chart open and kept in Settings › Shortcuts.
+The touch model for the canvas on phone and tablet, kept in Settings › Shortcuts. On first chart open, phone shows only a one-line `cs-touchhint` above the Chart/Conversation tabs ("Hold for values · drag to pan · pinch to zoom", dismissable), never a card over the chart it is teaching.
 
 **Consumer provides:** a list of `cs-gesture` rows (icon, gesture in bold, what it does).
 

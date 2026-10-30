@@ -2,6 +2,14 @@ ChartsSpeak is an assistant-first chart workspace. You ask an assistant ("Mat") 
 
 When a choice is unclear, take the more honest option over the more polished one.
 
+## Council pass (30 Oct): five rules that keep the chart first
+
+1. **One home for the data label: the chart toolbar.** "Stored daily · through 28 Oct" and the adjustment appear once per screen, never again in a subtitle or footer. Evidence, exports and the demo banner repeat it only because they leave the chart.
+2. **Status labels are text with a glyph, not boxes.** Borders belong to things you can operate. Interval and chart type are buttons with a caret; data class and adjustment are borderless labels.
+3. **The workspace title lives in the top bar.** Desktop and tablet workspaces have no page title block; OHLC values sit in the legend row. The chart gains about 120px of height.
+4. **Accent is for agents and the primary action only** (see Colour).
+5. **Teach without covering.** Hints are one line beside the thing they explain, never a card over it.
+
 ## Content fundamentals
 
 - **Voice:** plain, exact, calm. Say what happened and what to do next, in that order. "SMA 50 for SPY is not stored. Run the feature utility to create it." Avoid "Oops", "Unfortunately" and exclamation marks.
@@ -29,7 +37,7 @@ Data class and connection are **different axes in different places**. A healthy 
 
 ## Visual foundations
 
-**Colour.** The product is neutral first, with one hue. Build every screen from `surface-000` (page), `surface-100` (panels), `surface-150` (rail, toolbars, cards in the rail) and `surface-200` (hover/pressed only). Use `border-200` for panel edges, `border-100` for hairlines inside and `border-control` for anything you can operate. Text is `ink`, with `ink-muted` for secondary text. Spend `accent` on the next action, the selected tab and "on" states; one accent fill per region. Selected rows get `accent-wash` with `ink` text. State hues are only `caution` (stale, reconnecting, needs attention, proposed), `good` (saved, connected, completed) and `refusal` (refused, failed, not permitted), each on its `-wash`. Every state also carries a word and a glyph, never colour alone.
+**Colour.** The product is neutral first, with one hue. Build every screen from `surface-000` (page), `surface-100` (panels), `surface-150` (rail, toolbars, cards in the rail) and `surface-200` (hover/pressed only). Use `border-200` for panel edges, `border-100` for hairlines inside and `border-control` for anything you can operate. Text is `ink`, with `ink-muted` for secondary text. **`accent` means two things only: an agent (its squircle ring, its running state, its proposals) or the primary action.** Selection, "on" and "current" are neutral: `surface-200` with an `ink` mark (a 2px underline on tabs and segments, a 2px inset edge on selected rows, an `ink` outline on the active chart slot). If accent also meant selection, a selected agent would be indistinguishable from a selected anything. State hues are only `caution` (stale, reconnecting, needs attention, proposed), `good` (saved, connected, completed) and `refusal` (refused, failed, not permitted), each on its `-wash`. Every state also carries a word and a glyph, never colour alone.
 
 **Themes.** Dark is shipped and stays the first theme; light is an equal. Set `data-theme="dark|light"` on `<html>`. Every token is defined in both themes, and you never hard-code a hex value.
 

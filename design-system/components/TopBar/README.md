@@ -1,9 +1,10 @@
 # TopBar
 
-The app's top row: the `cs-wordmark` (the name with the woven SS), a Private/Demo tag, the `ConnectionIndicator` and the owner avatar.
+The app's top row: the `cs-wordmark`, then (once a workspace is open) the workspace title and its save state, the Private/Shared/Demo tag, the `ConnectionIndicator` and the owner avatar.
 
-**Consumer provides:** the tag text ("Private", or "Read-only demo"), the connection state and the person's initials. The bar is `surface-100` with a `border-200` bottom edge and `space-30` gutters (`space-16` on phone).
+**Consumer provides:** the workspace title, the save state, the tag text ("Private", "Shared · 3 people", "Read-only demo"), the connection state and the person's initials. The bar is `surface-100` with a `border-200` bottom edge and `space-30` gutters (`space-16` on phone).
 
-- Connection state lives here and nowhere else. The data class never appears in this bar.
+- **The workspace title lives here on desktop and tablet**, as `cs-topbar__title` (15/20 semibold, truncates with an ellipsis), after a `cs-topbar__sep`. This replaces the page-level `TitleBlock` on workspace screens, giving the chart about 80px more height.
+- Connection state lives here and nowhere else. The data class never appears in this bar: it lives in the chart toolbar only.
 - The name is always the `cs-wordmark` markup, with `role="img"` and `aria-label="ChartsSpeak"`. There is no separate logo mark or icon.
-- Symbol search, when it comes, goes between the tag and the spacer.
+- On phone the bar has no room for the title, so phone screens keep `TitleBlock`.
