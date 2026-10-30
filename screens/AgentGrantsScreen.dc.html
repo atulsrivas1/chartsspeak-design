@@ -24,20 +24,30 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
     <span class="cs-conn" role="status"><span class="cs-conn__dot" aria-hidden="true"></span>Connected</span>
     <span class="cs-avatar cs-avatar--person cs-avatar--lg" aria-label="You">MS</span>
   </header>
-  <div class="cs-shell__body">
+  <div class="cs-shell__body" style="grid-template-columns: minmax(0, 1fr);">
     <main class="cs-shell__main" style="overflow-y: auto;">
-      <div class="cs-titleblock">
+      <div class="cs-titleblock" style="width: min(978px, 100%); margin: 0 auto;">
         <span class="cs-eyebrow">NVDA workspace · agents</span>
         <h1 class="cs-title">What agents may do</h1>
         <span class="small cs-muted">Only owners can change grants. Every change is logged in Activity with who made it.</span>
       </div>
-      <div style="display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 18px; align-items: start;">
-        <nav class="cs-card" aria-label="Agents" style="gap: 4px;">
+      <div style="display: grid; grid-template-columns: 320px minmax(0, 640px); gap: 18px; align-items: start; justify-content: center;">
+        <div class="cs-stack" style="gap: 18px;"><nav class="cs-card" aria-label="Agents" style="gap: 4px;">
           <span class="cs-result__label">Agents · 2</span>
-          <a href="#" class="cs-roster__row" style="border-top: 0; border-radius: var(--radius-control); background: var(--accent-wash); text-decoration: none; color: var(--ink); padding: 6px 8px;" aria-current="page"><span class="cs-avatar-wrap"><span class="cs-avatar cs-avatar--lg cs-avatar--agent" aria-hidden="true">M</span><span class="cs-avatar__via" aria-hidden="true">MS</span></span><span class="cs-roster__main"><span class="cs-roster__name">Mat</span><span class="cs-roster__role">for Monika S. · expires 6 Nov</span></span></a>
+          <a href="#" class="cs-roster__row" style="border-top: 0; border-radius: var(--radius-control); background: var(--surface-200); box-shadow: inset 2px 0 0 var(--ink); text-decoration: none; color: var(--ink); padding: 6px 8px;" aria-current="page"><span class="cs-avatar-wrap"><span class="cs-avatar cs-avatar--lg cs-avatar--agent" aria-hidden="true">M</span><span class="cs-avatar__via" aria-hidden="true">MS</span></span><span class="cs-roster__main"><span class="cs-roster__name">Mat</span><span class="cs-roster__role">for Monika S. · expires 6 Nov</span></span></a>
           <a href="#" class="cs-roster__row" style="border-top: 0; border-radius: var(--radius-control); text-decoration: none; color: var(--ink); padding: 6px 8px;"><span class="cs-avatar-wrap"><span class="cs-avatar cs-avatar--lg cs-avatar--agent" aria-hidden="true">G</span><span class="cs-avatar__via" aria-hidden="true">AR</span></span><span class="cs-roster__main"><span class="cs-roster__name">Grace</span><span class="cs-roster__role">for Ana R. · expires 2 Nov</span></span></a>
           <button class="cs-btn cs-btn--compact cs-btn--quiet" style="justify-content: flex-start; margin-top: 4px;"><span class="cs-btn__glyph" aria-hidden="true">+</span>Add an agent</button>
         </nav>
+          <section class="cs-card" aria-labelledby="gh" style="gap: 8px;">
+            <span class="cs-result__label" id="gh">Grant history</span>
+            <ol class="cs-steps">
+          <li data-state="done"><span class="cs-steps__g" aria-hidden="true">·</span><span>You set spend limit to $20</span><span class="cs-steps__t">28 Oct</span></li>
+          <li data-state="done"><span class="cs-steps__g" aria-hidden="true">·</span><span>You extended expiry to 6 Nov</span><span class="cs-steps__t">30 Oct</span></li>
+          <li data-state="done"><span class="cs-steps__g" aria-hidden="true">·</span><span>Mat paused: step limit reached on "Find all crosses since 2020"</span><span class="cs-steps__t">29 Oct</span></li>
+          <li data-state="done"><span class="cs-steps__g" aria-hidden="true">·</span><span>Ana R. asked for Apply access for Grace (declined by you)</span><span class="cs-steps__t">27 Oct</span></li>
+        </ol>
+            <span class="caption cs-muted">Who changed what, never data values.</span>
+          </section></div>
         <div class="cs-stack">
           <div class="cs-card">
             <div class="cs-card__head"><span class="cs-avatar-wrap"><span class="cs-avatar cs-avatar--lg cs-avatar--agent" aria-hidden="true">M</span><span class="cs-avatar__via" aria-hidden="true">MS</span></span><span class="cs-card__title" style="font-size: 15px;">Mat</span><span class="cs-badge">Expires 6 Nov 2026</span></div>
@@ -67,18 +77,6 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
         </div>
       </div>
     </main>
-    <aside class="cs-rail" aria-label="Activity">
-      <div class="cs-rail__head"><span class="cs-rail__title">Grant history</span></div>
-      <div class="cs-rail__body">
-        <ol class="cs-steps">
-          <li data-state="done"><span class="cs-steps__g" aria-hidden="true">·</span><span>You set spend limit to $20</span><span class="cs-steps__t">28 Oct</span></li>
-          <li data-state="done"><span class="cs-steps__g" aria-hidden="true">·</span><span>You extended expiry to 6 Nov</span><span class="cs-steps__t">30 Oct</span></li>
-          <li data-state="done"><span class="cs-steps__g" aria-hidden="true">·</span><span>Mat paused: step limit reached on "Find all crosses since 2020"</span><span class="cs-steps__t">29 Oct</span></li>
-          <li data-state="done"><span class="cs-steps__g" aria-hidden="true">·</span><span>Ana R. asked for Apply access for Grace (declined by you)</span><span class="cs-steps__t">27 Oct</span></li>
-        </ol>
-        <p class="caption cs-muted" style="margin: 0;">History shows who changed what, never data values.</p>
-      </div>
-    </aside>
   </div>
   <footer class="cs-footer" role="status" aria-live="polite"><span class="cs-footer__msg cs-footer__msg--caution">! Mat is at 78% of this month's spend limit</span></footer>
 </div>

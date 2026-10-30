@@ -15,3 +15,4 @@ When to use what:
 
 - Toasts never carry data values, and never auto-dismiss when they need an action.
 - Under reduced motion they appear without sliding and stay until dismissed.
+- No toast for anything already on screen: while the Activity tab is open, new items appear in the feed only. Toasts are for when the feed is closed.

@@ -38,7 +38,7 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
           <span class="caption cs-muted">Chart controls appear once a chart is open</span>
         </div>
         <div style="flex: 1; min-height: 0; overflow: auto; display: grid; place-items: center; padding: 24px; background: var(--chart-bg);">
-          <div class="cs-card" style="width: min(520px, 100%);">
+          <div class="cs-stack" style="width: min(560px, 100%); gap: 12px;">
             <span class="cs-eyebrow">Get started</span>
             <h2 class="cs-empty__title">Your workspace shows only stored data</h2>
             <ol class="cs-checklist">
@@ -47,7 +47,7 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
               <li><span class="cs-checklist__n" aria-hidden="true">3</span><span class="cs-checklist__title">Open your first chart</span><span class="cs-checklist__body">Stored symbols appear in symbol search with how far they're stored.</span></li>
               <li><span class="cs-checklist__n" aria-hidden="true">4</span><span class="cs-checklist__title">Ask Mat a question</span><span class="cs-checklist__body">Mention @Mat to start a task. Answers come as fact, interpretation and limitations.</span></li>
             </ol>
-            <div class="cs-card__foot" style="justify-content: space-between;"><button class="cs-btn cs-btn--compact cs-btn--quiet">Open the read-only demo instead</button><span class="caption cs-muted">Step 2 of 4</span></div>
+            <div class="cs-row" style="justify-content: space-between;"><button class="cs-btn cs-btn--compact cs-btn--quiet">Open the read-only demo instead</button><span class="caption cs-muted">Step 2 of 4</span></div>
           </div>
         </div>
       </section>
@@ -65,11 +65,7 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
         <button class="cs-tab" role="tab" aria-selected="false">Data</button>
       </div>
       <div class="cs-rail__body" role="tabpanel">
-        <div class="cs-msg"><span class="cs-attr"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">M</span>Mat</span><span class="cs-msg__body">I work only with what's stored, and I'll tell you when something isn't. Once a chart is open, mention me with a question about it.</span></div>
-        <div class="cs-card">
-          <span class="cs-result__label">What I can't do</span>
-          <span class="cs-result__text">Recommend trades, predict prices, or calculate indicators that aren't stored.</span>
-        </div>
+        <div class="cs-msg"><span class="cs-attr"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">M</span>Mat</span><span class="cs-msg__body">I work only with what's stored, and I'll tell you when something isn't. I don't recommend trades or predict prices. Once a chart is open, mention me with a question about it.</span></div>
       </div>
       <div class="cs-composer">
         <label class="cs-sr" for="msg">Message</label>

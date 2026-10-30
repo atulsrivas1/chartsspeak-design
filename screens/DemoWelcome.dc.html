@@ -49,16 +49,6 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
         </div>
         <div class="cs-chart" tabindex="0" aria-label="Demo price chart. Hover, drag to pan, scroll to zoom.">
           <dc-import name="ChartFrame" hint-size="100%,100%"></dc-import>
-          <div class="cs-card" role="dialog" aria-labelledby="dw-t" style="position: absolute; left: 16px; bottom: 16px; width: 380px; box-shadow: var(--shadow-overlay);">
-            <span class="cs-eyebrow">Welcome</span>
-            <h2 class="cs-empty__title" id="dw-t" style="text-align: left;">This is what ChartsSpeak shows its work on</h2>
-            <dl class="cs-facts">
-              <dt>You can</dt><dd>Hover for values, drag to pan, scroll to zoom</dd>
-              <dt>You can't</dt><dd>Change the chart, save, export or ask the assistant</dd>
-              <dt>The data</dt><dd>Delayed, stored daily. Never live.</dd>
-            </dl>
-            <div class="cs-card__foot"><button class="cs-btn cs-btn--compact cs-btn--primary">Explore the chart</button><a href="#" class="cs-btn cs-btn--compact cs-btn--quiet" style="text-decoration: none;">Sign in for your own workspace</a></div>
-          </div>
         </div>
       </section>
     </main>
@@ -73,6 +63,16 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
         <button class="cs-tab" role="tab" aria-selected="false">Evidence</button>
       </div>
       <div class="cs-rail__body" role="tabpanel">
+        <div class="cs-card" role="region" aria-labelledby="dw-t">
+          <span class="cs-eyebrow">Welcome</span>
+          <h2 class="cs-card__title" id="dw-t">This is what ChartsSpeak shows its work on</h2>
+          <dl class="cs-facts">
+            <dt>You can</dt><dd>Hover for values, drag to pan, scroll to zoom</dd>
+            <dt>You can't</dt><dd>Change the chart, save, export or ask Mat</dd>
+          </dl>
+          <div class="cs-card__foot"><a href="#" class="cs-btn cs-btn--compact cs-btn--primary" style="text-decoration: none;">Sign in for your own workspace</a></div>
+        </div>
+        
         <span class="cs-eyebrow">A saved example</span>
         <div class="cs-msg cs-msg--person"><span class="cs-attr">Example question</span><span class="cs-msg__body"><span class="cs-mention">@Mat</span> where did SMA 50 cross SMA 200 this year?</span></div>
         <div class="cs-card">

@@ -8,7 +8,9 @@ When a choice is unclear, take the more honest option over the more polished one
 2. **Status labels are text with a glyph, not boxes.** Borders belong to things you can operate. Interval and chart type are buttons with a caret; data class and adjustment are borderless labels.
 3. **The workspace title lives in the top bar.** Desktop and tablet workspaces have no page title block; OHLC values sit in the legend row. The chart gains about 120px of height.
 4. **Accent is for agents and the primary action only** (see Colour).
-5. **Teach without covering.** Hints are one line beside the thing they explain, never a card over it.
+5. **Teach without covering.** Hints and welcomes sit beside the thing they explain (one line, or the top of the rail), never over it.
+
+And two that follow from them: say a fact once per screen (a coverage gap is shown by the chart band and the coverage bar, not also in a note), and never show the same news twice at once (no toast while the Activity feed is open).
 
 ## Content fundamentals
 
