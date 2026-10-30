@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ChartsSpeak · drawing tools</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/chartsspeak/tokens.css">
+<link rel="stylesheet" href="ds/chartsspeak/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+a{color:var(--accent-text)}a:hover{color:var(--ink)}
+</style>
+</helmet>
+<div class="cs-shell" data-theme="{{theme}}" style="width: 100%; height: 100vh; min-height: 760px;">
+  <header class="cs-topbar">
+    <span class="cs-topbar__brand">ChartsSpeak</span>
+    <span class="cs-tag">Private</span>
+    <span class="cs-topbar__spacer"></span>
+    <span class="cs-conn" role="status"><span class="cs-conn__dot" aria-hidden="true"></span>Connected</span>
+    <span class="cs-avatar cs-avatar--person cs-avatar--lg" aria-label="You">MS</span>
+  </header>
+  <div class="cs-shell__body">
+    <main class="cs-shell__main" style="padding-top: 12px;">
+      <section class="cs-panel" aria-label="Chart">
+        <div class="cs-toolbar" role="toolbar" aria-label="Chart">
+          <button class="cs-symbtn" aria-haspopup="listbox" aria-label="Symbol NVDA, change symbol"><svg class="cs-symbtn__icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.5"></circle><path d="M10.5 10.5L14 14"></path></svg>NVDA<span class="cs-caret" aria-hidden="true"></span></button>
+          <div class="cs-seg" role="group" aria-label="Interval"><button aria-pressed="true">1D</button></div>
+          <span class="cs-badge"><span class="cs-badge__glyph" aria-hidden="true">▤</span>Stored daily</span>
+          <span class="cs-badge">Split-adjusted, not dividend-adjusted</span>
+          <span class="cs-toolbar__spacer"></span>
+          <button class="cs-btn cs-btn--compact cs-btn--quiet" aria-label="Undo move trend line anchor"><span class="cs-btn__glyph" aria-hidden="true">↶</span>Undo move anchor</button>
+          <button class="cs-btn cs-btn--compact cs-btn--quiet cs-btn--icon" disabled aria-label="Redo, nothing to redo">↷</button>
+        </div>
+        <div class="cs-meta cs-meta--split">
+          <div class="cs-legend">
+            <span class="cs-legend__item" style="color: var(--chart-series-1);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 50</span><span class="cs-legend__val">128.06</span></span>
+            <span class="cs-legend__item" style="color: var(--chart-series-2);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 200</span><span class="cs-legend__val">121.70</span></span>
+          </div>
+          <span>Trend line selected · anchor 2: 14 Mar 2026, 133.97</span>
+        </div>
+        <div style="flex: 1; min-height: 0; display: flex;">
+          <nav class="cs-drawbar" aria-label="Drawing tools">
+            <button class="cs-railbtn" aria-label="Pointer" title="Pointer" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 2l9.5 5.5-4 1-2 4z"></path></svg></button>
+            <span class="cs-railbar__sep" aria-hidden="true"></span>
+            <button class="cs-railbtn" aria-label="Trend line" title="Trend line" aria-pressed="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 13.5l11-11"></path><circle cx="2.5" cy="13.5" r="1.3"></circle><circle cx="13.5" cy="2.5" r="1.3"></circle></svg></button>
+            <button class="cs-railbtn" aria-label="Ray" title="Ray" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 12l11-8"></path><circle cx="3" cy="12" r="1.3"></circle></svg></button>
+            <button class="cs-railbtn" aria-label="Horizontal line" title="Horizontal line" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 8h13"></path><circle cx="8" cy="8" r="1.3"></circle></svg></button>
+            <button class="cs-railbtn" aria-label="Fibonacci retracement" title="Fibonacci retracement" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 3h12M2 6.5h12M2 9.5h12M2 13h12"></path></svg></button>
+            <button class="cs-railbtn" aria-label="Rectangle" title="Rectangle" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.5" y="4" width="11" height="8" rx="1"></rect></svg></button>
+            <button class="cs-railbtn" aria-label="Text note" title="Text note" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 3.5h9M8 3.5v9"></path></svg></button>
+            <button class="cs-railbtn" aria-label="Measure" title="Measure" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 10.5l8.5-8.5 3.5 3.5L5.5 14z"></path><path d="M5 7.5l1.5 1.5M7 5.5l1.5 1.5M9 3.5l1.5 1.5"></path></svg></button>
+            <span class="cs-railbar__sep" aria-hidden="true"></span>
+            <button class="cs-railbtn" aria-label="Snap to bars" title="Snap to bars" aria-pressed="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v5a4 4 0 0 0 8 0v-5"></path><path d="M4 5h2.5M9.5 5H12"></path></svg></button>
+            <button class="cs-railbtn" aria-label="Lock all drawings" title="Lock all drawings" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3.5" y="7" width="9" height="6.5" rx="1"></rect><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2"></path></svg></button>
+            <button class="cs-railbtn" aria-label="Hide all drawings in your view" title="Hide all drawings in your view" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 8s2.4-4.5 6.5-4.5S14.5 8 14.5 8s-2.4 4.5-6.5 4.5S1.5 8 1.5 8z"></path><circle cx="8" cy="8" r="2"></circle></svg></button>
+          </nav>
+          <div class="cs-chart" style="flex: 1;" tabindex="0" aria-label="Price chart with a selected trend line. Arrow keys nudge the selected anchor.">
+            <dc-import name="ChartFrame" marker="{{no}}" crosshair="{{no}}" hint-size="100%,100%"></dc-import>
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: calc(100% - 64px); height: 100%;">
+              <line x1="12" y1="83" x2="58" y2="22" style="stroke: var(--chart-anchor); stroke-width: 2; vector-effect: non-scaling-stroke;"></line>
+            </svg>
+            <button class="cs-handle" aria-label="Anchor 1 of trend line, 20 Jan 2026 at 116.40. Arrow keys nudge." style="position: absolute; left: calc((100% - 64px) * 0.12); top: 83%; transform: translate(-50%, -50%);"></button>
+            <button class="cs-handle" aria-grabbed="true" aria-label="Anchor 2 of trend line, 14 Mar 2026 at 133.97, selected. Arrow keys nudge." style="position: absolute; left: calc((100% - 64px) * 0.58); top: 22%; transform: translate(-50%, -50%);"></button>
+            <div role="toolbar" aria-label="Trend line" style="position: absolute; left: calc((100% - 64px) * 0.58 + 32px); top: calc(22% - 22px); display: flex; align-items: center; gap: 4px; padding: 4px 4px 4px 10px; border-radius: var(--radius-control); border: 1px solid var(--border-200); background: var(--surface-100); box-shadow: var(--shadow-overlay);">
+              <span class="cs-attr" style="margin-right: 4px;"><span class="cs-avatar cs-avatar--person" aria-hidden="true">MS</span>Trend line · you</span>
+              <button class="cs-btn cs-btn--compact cs-btn--quiet cs-btn--icon" aria-label="Nudge anchor left">←</button>
+              <button class="cs-btn cs-btn--compact cs-btn--quiet cs-btn--icon" aria-label="Nudge anchor right">→</button>
+              <button class="cs-btn cs-btn--compact cs-btn--quiet cs-btn--icon" aria-label="Nudge anchor up">↑</button>
+              <button class="cs-btn cs-btn--compact cs-btn--quiet cs-btn--icon" aria-label="Nudge anchor down">↓</button>
+              <span class="cs-toolbar__sep" aria-hidden="true"></span>
+              <button class="cs-btn cs-btn--compact cs-btn--quiet cs-btn--icon" aria-label="Lock trend line"><svg class="cs-ico" viewBox="0 0 16 16" aria-hidden="true"><rect x="3.5" y="7" width="9" height="6.5" rx="1"></rect><path d="M5.5 7V5a2.5 2.5 0 0 1 4.9-.7"></path></svg></button>
+              <button class="cs-btn cs-btn--compact cs-btn--quiet cs-btn--icon" aria-label="Delete trend line"><svg class="cs-ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 4.5h11M6 4.5V3h4v1.5M4 4.5l.7 9h6.6l.7-9"></path></svg></button>
+            </div>
+          </div>
+        </div>
+        <div class="cs-inforow">
+          <div class="cs-legend cs-legend__ohlc"><span class="cs-muted">14 Mar 2026</span><span><b>O</b>131.42</span><span><b>H</b>134.10</span><span><b>L</b>130.88</span><span><b>C</b>133.97</span></div>
+          <span class="caption cs-muted">Snap to bars is on: anchors land on a bar's close</span>
+        </div>
+      </section>
+    </main>
+    <aside class="cs-rail" aria-label="Assistant">
+      <div class="cs-rail__head">
+        <span class="cs-avatar cs-avatar--lg" aria-hidden="true">M</span>
+        <span class="cs-rail__title">Mat</span>
+        <span class="caption cs-muted">Workspace assistant</span>
+      </div>
+      <div class="cs-tabs" role="tablist" aria-label="Rail">
+        <button class="cs-tab" role="tab" aria-selected="false">Conversation</button>
+        <button class="cs-tab" role="tab" aria-selected="false">Evidence<span class="cs-tab__count">1</span></button>
+        <button class="cs-tab" role="tab" aria-selected="false">Activity</button>
+        <button class="cs-tab" role="tab" aria-selected="true">Layers</button>
+        <button class="cs-tab" role="tab" aria-selected="false">Data</button>
+      </div>
+      <div class="cs-rail__body" role="tabpanel">
+        <span class="cs-eyebrow">On this chart · shared</span>
+        <ul class="cs-objlist" aria-label="On this chart">
+          <li class="cs-objrow" aria-selected="true"><span class="cs-objrow__swatch" style="color: var(--chart-anchor);"></span><span class="cs-objrow__main"><span class="cs-objrow__name">Trend line, 20 Jan to 14 Mar</span><span class="cs-objrow__by">You · 20:22 ET</span></span><button class="cs-btn cs-btn--quiet cs-btn--icon" aria-pressed="true" aria-label="Visible, hide trend line in your view"><svg class="cs-ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 8s2.4-4.5 6.5-4.5S14.5 8 14.5 8s-2.4 4.5-6.5 4.5S1.5 8 1.5 8z"></path><circle cx="8" cy="8" r="2"></circle></svg></button><button class="cs-btn cs-btn--quiet cs-btn--icon" aria-pressed="false" aria-label="Lock trend line"><svg class="cs-ico" viewBox="0 0 16 16" aria-hidden="true"><rect x="3.5" y="7" width="9" height="6.5" rx="1"></rect><path d="M5.5 7V5a2.5 2.5 0 0 1 4.9-.7"></path></svg></button></li>
+          <li class="cs-objrow"><span class="cs-objrow__swatch" style="color: var(--chart-series-1);"></span><span class="cs-objrow__main"><span class="cs-objrow__name">SMA 50</span><span class="cs-objrow__by">Mat · 19:41 ET</span></span><button class="cs-btn cs-btn--quiet cs-btn--icon" aria-pressed="true" aria-label="Visible, hide SMA 50 in your view"><svg class="cs-ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 8s2.4-4.5 6.5-4.5S14.5 8 14.5 8s-2.4 4.5-6.5 4.5S1.5 8 1.5 8z"></path><circle cx="8" cy="8" r="2"></circle></svg></button><button class="cs-btn cs-btn--quiet cs-btn--icon" aria-pressed="true" aria-label="Locked, unlock SMA 50"><svg class="cs-ico" viewBox="0 0 16 16" aria-hidden="true"><rect x="3.5" y="7" width="9" height="6.5" rx="1"></rect><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2"></path></svg></button></li>
+          <li class="cs-objrow"><span class="cs-objrow__swatch" style="color: var(--chart-series-2);"></span><span class="cs-objrow__main"><span class="cs-objrow__name">SMA 200</span><span class="cs-objrow__by">Mat · 19:41 ET</span></span><button class="cs-btn cs-btn--quiet cs-btn--icon" aria-pressed="true" aria-label="Visible, hide SMA 200 in your view"><svg class="cs-ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 8s2.4-4.5 6.5-4.5S14.5 8 14.5 8s-2.4 4.5-6.5 4.5S1.5 8 1.5 8z"></path><circle cx="8" cy="8" r="2"></circle></svg></button><button class="cs-btn cs-btn--quiet cs-btn--icon" aria-pressed="true" aria-label="Locked, unlock SMA 200"><svg class="cs-ico" viewBox="0 0 16 16" aria-hidden="true"><rect x="3.5" y="7" width="9" height="6.5" rx="1"></rect><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2"></path></svg></button></li>
+          <li class="cs-objrow cs-objrow--hidden"><span class="cs-objrow__swatch" style="color: var(--chart-selection);"></span><span class="cs-objrow__main"><span class="cs-objrow__name">Golden cross marker</span><span class="cs-objrow__by">Mat · Hidden in your view</span></span><button class="cs-btn cs-btn--quiet cs-btn--icon" aria-pressed="false" aria-label="Hidden in your view, show golden cross marker"><svg class="cs-ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 2.5l11 11"></path><path d="M6.3 4C6.8 3.7 7.4 3.5 8 3.5c4.1 0 6.5 4.5 6.5 4.5s-.6 1.1-1.7 2.3M10.6 11.9c-.8.4-1.7.6-2.6.6-4.1 0-6.5-4.5-6.5-4.5s.8-1.5 2.3-2.8"></path></svg></button><button class="cs-btn cs-btn--quiet cs-btn--icon" aria-pressed="false" aria-label="Lock golden cross marker"><svg class="cs-ico" viewBox="0 0 16 16" aria-hidden="true"><rect x="3.5" y="7" width="9" height="6.5" rx="1"></rect><path d="M5.5 7V5a2.5 2.5 0 0 1 4.9-.7"></path></svg></button></li>
+          <li class="cs-objrow"><span class="cs-objrow__swatch" style="color: var(--chart-event-split);"></span><span class="cs-objrow__main"><span class="cs-objrow__name">Split 10:1 · 10 Jun</span><span class="cs-objrow__by">From stored events</span></span><button class="cs-btn cs-btn--quiet cs-btn--icon" aria-pressed="true" aria-label="Visible, hide split marker in your view"><svg class="cs-ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 8s2.4-4.5 6.5-4.5S14.5 8 14.5 8s-2.4 4.5-6.5 4.5S1.5 8 1.5 8z"></path><circle cx="8" cy="8" r="2"></circle></svg></button></li>
+        </ul>
+        <p class="caption cs-muted" style="margin: 0;">Hiding changes only your view. Locked items can't be moved by anyone, including Mat.</p>
+      </div>
+    </aside>
+  </div>
+  <footer class="cs-footer" role="status" aria-live="polite"><span class="cs-footer__msg cs-footer__msg--good">✓ Trend line saved · 20:22 ET</span></footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["dark","light"],"default":"light"},"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { theme: this.props.theme ?? 'light', no: false };
+  }
+}
+</script>
+</body>
+</html>

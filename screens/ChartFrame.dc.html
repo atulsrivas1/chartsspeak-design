@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Chart stand-in</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/chartsspeak/tokens.css">
+<link rel="stylesheet" href="ds/chartsspeak/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+.csf-svg path,.csf-svg polyline,.csf-svg line,.csf-svg rect{vector-effect:non-scaling-stroke}
+</style>
+</helmet>
+<div style="position: absolute; inset: 0; background: var(--chart-bg); overflow: hidden; font-family: var(--font-sans);">
+  <svg class="csf-svg" viewBox="0 0 990 495" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: calc(100% - 64px); height: 100%; display: block;">
+    <path d="{{grid}}" style="stroke: var(--chart-grid); stroke-width: 1; fill: none;"></path>
+    <path d="{{upWicks}}" style="stroke: var(--chart-up); stroke-width: 1; fill: none;"></path>
+    <path d="{{downWicks}}" style="stroke: var(--chart-down); stroke-width: 1; fill: none;"></path>
+    <path d="{{upBodies}}" style="fill: var(--chart-bg); stroke: var(--chart-up); stroke-width: 1.2;"></path>
+    <path d="{{downBodies}}" style="fill: var(--chart-down); stroke: none;"></path>
+    <polyline points="{{fast}}" style="fill: none; stroke: var(--chart-series-1); stroke-width: 1.5;"></polyline>
+    <polyline points="{{slow}}" style="fill: none; stroke: var(--chart-series-2); stroke-width: 1.5;"></polyline>
+    <sc-if value="{{marker}}" hint-placeholder-val="{{ true }}">
+      <rect x="{{markX}}" y="24" width="30" height="447" style="fill: none; stroke: var(--chart-selection); stroke-width: 1.5; stroke-dasharray: 4 3;"></rect>
+    </sc-if>
+    <sc-if value="{{crosshair}}" hint-placeholder-val="{{ true }}">
+      <path d="{{cross}}" style="stroke: var(--chart-crosshair); stroke-width: 1; stroke-dasharray: 3 3; fill: none;"></path>
+    </sc-if>
+  </svg>
+  <div aria-hidden="true" style="position: absolute; top: 0; right: 0; bottom: 0; width: 64px; border-left: 1px solid var(--chart-grid);">
+    <sc-for list="{{axis}}" as="a" hint-placeholder-count="7">
+      <span style="position: absolute; right: 10px; top: {{a.top}}; transform: translateY(-50%); font-size: 11px; line-height: 16px; font-weight: 500; color: var(--chart-axis); font-variant-numeric: tabular-nums;">{{a.label}}</span>
+    </sc-for>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"marker":{"editor":"boolean","default":true},"crosshair":{"editor":"boolean","default":true},"$preview":{"width":990,"height":495}}'>
+class Component extends DCLogic {
+  renderVals() {
+    var W = 990, H = 495, N = 90, seed = 21;
+    function rnd() { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }
+    var bars = [], p = 120, closes = [];
+    for (var i = 0; i < N; i++) {
+      var o = p, c = o + (rnd() * 5.6 - 2.6), hi = Math.max(o, c) + rnd() * 1.4 + 0.2, lo = Math.min(o, c) - rnd() * 1.4 - 0.2;
+      p = c; bars.push([o, c, hi, lo]); closes.push(c);
+    }
+    var L = Infinity, Hh = -Infinity;
+    bars.forEach(function (b) { L = Math.min(L, b[3]); Hh = Math.max(Hh, b[2]); });
+    L -= 3; Hh += 3;
+    var cw = W / N;
+    function y(v) { return H - 16 - (v - L) / (Hh - L) * (H - 32); }
+    var uw = '', dw = '', ub = '', db = '';
+    bars.forEach(function (b, i) {
+      var x = i * cw + cw / 2, up = b[1] >= b[0];
+      var top = y(Math.max(b[0], b[1])), bh = Math.max(1.5, Math.abs(y(b[0]) - y(b[1]))), bw = cw * 0.64;
+      var wick = 'M' + x.toFixed(1) + ' ' + y(b[2]).toFixed(1) + 'V' + y(b[3]).toFixed(1);
+      var body = 'M' + (x - bw / 2).toFixed(1) + ' ' + top.toFixed(1) + 'h' + bw.toFixed(1) + 'v' + bh.toFixed(1) + 'h-' + bw.toFixed(1) + 'Z';
+      if (up) { uw += wick; ub += body; } else { dw += wick; db += body; }
+    });
+    function ma(k) {
+      var pts = [];
+      for (var i = k - 1; i < N; i++) {
+        var s = 0; for (var j = i - k + 1; j <= i; j++) s += closes[j];
+        pts.push((i * cw + cw / 2).toFixed(1) + ',' + y(s / k).toFixed(1));
+      }
+      return pts.join(' ');
+    }
+    var grid = '', axis = [];
+    for (var g = 40; g < H; g += 70) {
+      grid += 'M0 ' + g + 'H' + W;
+      axis.push({ top: (g / H * 100).toFixed(2) + '%', label: (L + (Hh - L) * (H - 16 - g) / (H - 32)).toFixed(2) });
+    }
+    var mx = Math.floor(N * 0.55) * cw + cw / 2 - 15;
+    var cx = (mx + 15 + cw * 14).toFixed(1), cy = (H * 0.42).toFixed(0);
+    return {
+      grid: grid, upWicks: uw, downWicks: dw, upBodies: ub, downBodies: db,
+      fast: ma(8), slow: ma(24), axis: axis,
+      marker: this.props.marker ?? true, crosshair: this.props.crosshair ?? true,
+      markX: mx.toFixed(1), cross: 'M' + cx + ' 0V' + H + 'M0 ' + cy + 'H' + W
+    };
+  }
+}
+</script>
+</body>
+</html>

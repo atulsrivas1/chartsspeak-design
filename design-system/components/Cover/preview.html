@@ -1,0 +1,52 @@
+<!-- @dsCard height=288 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ChartsSpeak</title>
+<style>
+  html, body { margin:0; height:100%; padding:0; }
+  body { background:var(--surface-000); color:var(--ink); font-family:var(--font-sans); overflow:hidden; }
+  .cover { position:relative; width:960px; height:288px; overflow:hidden; }
+  .art { position:absolute; top:0; left:480px; width:480px; height:288px; overflow:hidden; }
+  .art svg { display:block; width:480px; height:288px; }
+  .accent { fill:var(--accent); } .up { fill:var(--chart-up); } .down { fill:var(--chart-down); } .ink { fill:var(--ink); }
+  .r { rx:var(--radius-xs); }
+  .wick { stroke-width:2; }
+  .wa { stroke:var(--accent); } .wu { stroke:var(--chart-up); } .wd { stroke:var(--chart-down); } .wi { stroke:var(--ink); }
+  .upl { stroke:var(--chart-up); } .dnl { stroke:var(--chart-down); }
+  .sup { fill:var(--surface-000); stroke:var(--chart-up); stroke-width:2; }
+  .sdn { fill:var(--chart-down); }
+  .words { position:absolute; left:var(--space-30); bottom:var(--space-30); max-width:440px; }
+  .name { margin:0; font-size:64px; line-height:.95; font-weight:600; letter-spacing:-.02em; color:var(--ink); }
+  .name { display:flex; align-items:baseline; }
+  .v8 { height:.73em; width:.555em; margin:0 .03em; overflow:visible; fill:none; stroke:var(--ink); stroke-width:13; stroke-linecap:round; stroke-linejoin:round; }
+  .v8 .acc { stroke:var(--accent-text); }
+  .v8 .halo { stroke:var(--surface-000); stroke-width:23; stroke-linecap:butt; }
+  .tag { margin:var(--space-8) 0 0 2px; font-size:14px; line-height:20px; color:var(--ink-muted); }
+</style>
+</head>
+<body>
+<div class="cover">
+<div class="art" aria-hidden="true">
+<svg viewBox="0 0 480 288" width="480" height="288">
+<!--
+  blocks      four candle bodies 96 wide: accent 96x184 (the one brand hue, tallest), chart-down 96x112, ink 96x152, chart-up 96x200 bleeding off the top; about 30% of 960x288
+  arrangement a staggered run of candles like a price series, bodies at uneven heights, each with a 2px wick in its own colour, space-24 gutters
+  pattern     a strip of 15 small candles (space-12 wide, space-30 pitch) along the bottom: up hollow in chart-up, down filled in chart-down, from "hollow up, filled down" in the chart tokens
+  scales      widths space-12 multiples; gutters space-24; pitch space-30; corners radius-xs
+-->
+<line class="wick wa" x1="72" x2="72" y1="12" y2="226"/><rect class="accent r" x="24" y="28" width="96" height="184"/>
+<line class="wick wd" x1="192" x2="192" y1="64" y2="228"/><rect class="down r" x="144" y="88" width="96" height="112"/>
+<line class="wick wi" x1="312" x2="312" y1="36" y2="220"/><rect class="ink r" x="264" y="52" width="96" height="152"/>
+<line class="wick wu" x1="432" x2="432" y1="0" y2="226"/><rect class="up r" x="384" y="-8" width="96" height="200"/>
+<line class="wick dnl" x1="30" x2="30" y1="246" y2="270"/><rect class="sdn r" x="24" y="252" width="12" height="12"/><line class="wick upl" x1="60" x2="60" y1="246" y2="282"/><rect class="sup r" x="54" y="252" width="12" height="24"/><line class="wick dnl" x1="90" x2="90" y1="250" y2="270"/><rect class="sdn r" x="84" y="256" width="12" height="8"/><line class="wick upl" x1="120" x2="120" y1="254" y2="282"/><rect class="sup r" x="114" y="260" width="12" height="16"/><line class="wick upl" x1="150" x2="150" y1="252" y2="276"/><rect class="sup r" x="144" y="258" width="12" height="12"/><line class="wick upl" x1="180" x2="180" y1="254" y2="282"/><rect class="sup r" x="174" y="260" width="12" height="16"/><line class="wick dnl" x1="210" x2="210" y1="254" y2="282"/><rect class="sdn r" x="204" y="260" width="12" height="16"/><line class="wick upl" x1="240" x2="240" y1="254" y2="282"/><rect class="sup r" x="234" y="260" width="12" height="16"/><line class="wick dnl" x1="270" x2="270" y1="246" y2="270"/><rect class="sdn r" x="264" y="252" width="12" height="12"/><line class="wick dnl" x1="300" x2="300" y1="242" y2="270"/><rect class="sdn r" x="294" y="248" width="12" height="16"/><line class="wick upl" x1="330" x2="330" y1="242" y2="270"/><rect class="sup r" x="324" y="248" width="12" height="16"/><line class="wick dnl" x1="360" x2="360" y1="252" y2="276"/><rect class="sdn r" x="354" y="258" width="12" height="12"/><line class="wick dnl" x1="390" x2="390" y1="242" y2="270"/><rect class="sdn r" x="384" y="248" width="12" height="16"/><line class="wick dnl" x1="420" x2="420" y1="248" y2="276"/><rect class="sdn r" x="414" y="254" width="12" height="16"/><line class="wick upl" x1="450" x2="450" y1="234" y2="276"/><rect class="sup r" x="444" y="240" width="12" height="30"/>
+</svg>
+</div>
+<div class="words">
+<h1 class="name" aria-label="ChartsSpeak"><span aria-hidden="true">Chart</span><svg class="v8" viewBox="0 0 76 100" aria-hidden="true"><path class="acc" d="M38 8C67 8 67 30 38 46C7 62 7 94 38 94"/><path class="halo" d="M27 40.1L49 51.9"/><path d="M38 8C9 8 9 30 38 46C69 62 69 94 38 94"/></svg><span aria-hidden="true">peak</span></h1>
+<p class="tag">Visible, attributable, checkable chart work.</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{
+ "v": 3,
+ "createdOnFiles": {"v": 1, "at": "2026-10-30T00:16:01Z"},
+ "title": "ChartsSpeak screens",
+ "launch": {"view": "canvas"},
+ "pages": [],
+ "boards": {
+  "Main.dc.html": {"x": 0, "y": 0, "w": 1440, "h": 900, "title": "1 · Working session", "expand": "fill"},
+  "Reconnecting.dc.html": {"x": 1520, "y": 0, "w": 1440, "h": 900, "title": "2 · Reconnecting (retained frame)", "expand": "fill"},
+  "Refusal.dc.html": {"x": 3040, "y": 0, "w": 1440, "h": 900, "title": "3 · Refusal: not stored", "expand": "fill"},
+  "Snapshot.dc.html": {"x": 0, "y": 1020, "w": 1440, "h": 900, "title": "4 · Evidence reopened as snapshot", "expand": "fill"},
+  "SignIn.dc.html": {"x": 1520, "y": 1020, "w": 1440, "h": 900, "title": "5 · Sign-in needed", "expand": "fill"},
+  "ChartFrame.dc.html": {"x": 3040, "y": 1020, "w": 990, "h": 495, "title": "Chart stand-in (the engine draws the real canvas)"},
+  "ChartControls.dc.html": {"x": 0, "y": 2340, "w": 1440, "h": 900, "title": "6 · Chart controls: symbol search, interval, type, range, scale, panes", "expand": "fill"},
+  "DrawingTools.dc.html": {"x": 1520, "y": 2340, "w": 1440, "h": 900, "title": "7 · Drawing tools and object list", "expand": "fill"},
+  "Together.dc.html": {"x": 3040, "y": 2340, "w": 1440, "h": 900, "title": "8 · Working together (W2): presence, follow, shared vs private", "expand": "fill"},
+  "PhoneChart.dc.html": {"x": 0, "y": 3660, "w": 390, "h": 844, "title": "9 · Phone · Chart", "is_interactive": true},
+  "PhoneConversation.dc.html": {"x": 470, "y": 3660, "w": 390, "h": 844, "title": "10 · Phone · Conversation", "is_interactive": true},
+  "TabletDrawer.dc.html": {"x": 940, "y": 3660, "w": 960, "h": 720, "title": "11 · Tablet · assistant drawer open"},
+  "BrandF2.dc.html": {"x": 1980, "y": 3660, "w": 1200, "h": 760, "title": "12 · Brand: plain-type logo, woven SS for display headings"}
+ },
+ "order": ["Main.dc.html", "Reconnecting.dc.html", "Refusal.dc.html", "Snapshot.dc.html", "SignIn.dc.html", "ChartFrame.dc.html", "ChartControls.dc.html", "DrawingTools.dc.html", "Together.dc.html", "PhoneChart.dc.html", "PhoneConversation.dc.html", "TabletDrawer.dc.html", "BrandF2.dc.html"],
+ "notes": {
+  "t1": {"x": 0, "y": -300, "text": "ChartsSpeak · core screens in the app shell", "kind": "title1", "maxW": 4480},
+  "t2": {"x": 0, "y": 2040, "text": "Closing the TradingView gaps · and W2", "kind": "title1", "maxW": 4480},
+  "t3": {"x": 0, "y": 3360, "text": "Phone, tablet and brand", "kind": "title1", "maxW": 3180}
+ },
+ "designSystems": [
+  {"title": "ChartsSpeak", "namespace": "chartsspeak", "artifact": "https://claude.ai/artifact/NfgXu3N1SSWuLVURPwNbUs", "version": "1793319874-7d32", "copiedAt": "2026-10-30T00:25:00Z"}
+ ]
+}
