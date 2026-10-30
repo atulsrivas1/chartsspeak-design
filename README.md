@@ -12,7 +12,7 @@ Design system and screen designs for ChartsSpeak, the assistant-first chart work
 | `design-system/components/bundle.css` | All component styles as framework-agnostic `cs-*` classes. Load it after `tokens.css`. |
 | `design-system/components/<Name>/` | One folder per component: `README.md` (when and how to use it) and `preview.html` (a live example). |
 | `design-system/engine-theme.md` | How the `chart-*` tokens are compiled into the theme object the GPU chart engine receives. |
-| `screens/` | The screen designs: 42 app screens (dark, plus light versions of the main ones), the brand board and a shared chart stand-in, as `.dc.html` files plus `canvas.json` (layout). |
+| `screens/` | The screen designs: 43 app screens (dark, plus light versions of the main ones), the brand board and a shared chart stand-in, as `.dc.html` files plus `canvas.json` (layout). |
 | `design-system/engineering-answers.md` | Answers to engineering's questions, plus the interface contrast audit. |
 | `docs/designer-overview.md` | The original designer brief the work was built from. |
 

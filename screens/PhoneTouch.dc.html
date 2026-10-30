@@ -26,13 +26,13 @@ body{margin:0}
           <button class="cs-btn cs-btn--compact cs-btn--icon" aria-label="Reset view"><svg class="cs-ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8a5 5 0 1 0 1.5-3.5"></path><path d="M3 2.5v3h3"></path></svg></button>
           <button class="cs-btn cs-btn--compact"><span class="cs-btn__glyph" aria-hidden="true">+</span>Indicator</button>
         </div>
-        <div class="cs-meta cs-meta--split"><span>Crosshair · 14 Mar 2026</span><span>lift to keep, tap to clear</span></div>
-        <div class="cs-chart" tabindex="0" aria-label="Price chart. Crosshair at 14 March 2026: open 131.42, high 134.10, low 130.88, close 133.97.">
+        <div class="cs-meta cs-meta--split"><span>Crosshair · hold</span><span>lift to keep, tap to clear</span></div>
+        <div class="cs-meta"><div class="cs-legend cs-legend__ohlc"><span class="cs-muted">14 Mar</span><span><b>O</b>131.42</span><span><b>H</b>134.10</span><span><b>L</b>130.88</span><span><b>C</b>133.97</span></div></div>
+        <div class="cs-chart" data-hold="true" tabindex="0" aria-label="Price chart. Crosshair at 14 March 2026: open 131.42, high 134.10, low 130.88, close 133.97.">
           <dc-import name="ChartFrame" crosshair="{{no}}" marker="{{no}}" hint-size="100%,100%"></dc-import>
           <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: 0; top: 0; width: calc(100% - 64px); height: 100%; pointer-events: none;">
             <path d="M58 0V100M0 38H100" style="stroke: var(--chart-crosshair); stroke-width: 1; stroke-dasharray: 3 3; vector-effect: non-scaling-stroke; fill: none;"></path>
           </svg>
-          <div class="cs-readout" style="left: calc((100% - 64px) * 0.58 - 70px); top: 8px;"><span><b>14 Mar</b></span><span><b>O</b>131.42 <b>H</b>134.10</span><span><b>L</b>130.88 <b>C</b>133.97</span><span><b>SMA 50</b>128.06</span></div>
           <span aria-hidden="true" style="position: absolute; left: calc((100% - 64px) * 0.58 - 22px); top: calc(38% + 18px); width: 44px; height: 44px; border-radius: var(--radius-round); background: var(--ink); opacity: 0.18;"></span>
         </div>
       </section>

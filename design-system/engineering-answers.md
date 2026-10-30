@@ -82,7 +82,7 @@ The rule: preview means "you are moving it, it will catch up", while the veil me
 
 ## 6. Should the local crosshair look different from the engine-drawn one?
 
-No. If the local crosshair is approved, it should look identical (`chart-crosshair`, 1px, dash 3 3), so people don't see two crosshairs. The difference shows only in the axis tags: the local crosshair's value tags read from browser-held data. If the value at that bar isn't in the browser yet, the tag shows "—" rather than an estimate. The engine-drawn crosshair is then retired, never both at once.
+No. It looks identical (`chart-crosshair`, 1px, dash 3 3), so when the engine's point frame paints, the two lines coincide and people never see two crosshairs. **Corrected 30 Oct:** an earlier version of this answer gave the local crosshair its own axis value tags. That breaks the content rules in `ARCH-geometry-zoom-px.md` section 5: the local overlay shows no price, time or value of any kind. Values appear only in the engine read-out. See `LocalCrosshair` and board 44.
 
 ## 7. Which components can ship hidden, and which need a disabled state with an explanation?
 

@@ -353,6 +353,13 @@
    "h": 900,
    "title": "43 \u00b7 Bar replay",
    "expand": "fill"
+  },
+  "LocalCrosshair.dc.html": {
+   "x": 0,
+   "y": 18188,
+   "w": 1600,
+   "h": 2560,
+   "title": "44 \u00b7 Local crosshair and keyboard edges (R1 A-G2, A-G4)"
   }
  },
  "order": [
@@ -399,7 +406,8 @@
   "PhoneLayout.dc.html",
   "WatchlistScreen.dc.html",
   "AlertScreen.dc.html",
-  "Replay.dc.html"
+  "Replay.dc.html",
+  "LocalCrosshair.dc.html"
  ],
  "notes": {
   "t1": {
@@ -471,6 +479,13 @@
    "text": "Replay",
    "kind": "title1",
    "maxW": 4560
+  },
+  "t11": {
+   "x": 0,
+   "y": 17888,
+   "text": "Release 1: local crosshair",
+   "kind": "title1",
+   "maxW": 4560
   }
  },
  "designSystems": [
@@ -478,8 +493,8 @@
    "title": "ChartsSpeak",
    "namespace": "chartsspeak",
    "artifact": "https://claude.ai/artifact/NfgXu3N1SSWuLVURPwNbUs",
-   "version": "1793379641-cc12",
-   "copiedAt": "2026-10-30T17:12:00Z"
+   "version": "1793399080-e52b",
+   "copiedAt": "2026-10-30T22:42:00Z"
   }
  ]
 }

@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ChartsSpeak · local crosshair</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/chartsspeak/tokens.css">
+<link rel="stylesheet" href="ds/chartsspeak/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div data-theme="{{theme}}" style="box-sizing: border-box; width: 100%; min-height: 100vh; padding: 40px; background: var(--surface-000); color: var(--ink); font-family: var(--font-sans); display: flex; flex-direction: column; gap: 16px;">
+  <div class="cs-stack" style="gap: 6px;">
+    <span class="cs-eyebrow">R1 · A-G2 local crosshair · A-G4 keyboard to the data edges</span>
+    <h1 class="cs-title" style="margin: 0;">Two lines that never show a value</h1>
+    <span class="small cs-muted" style="max-width: 980px;">Source: ARCH-geometry-zoom-px section 5 (six honesty rules), R1 STORIES A-G2 and A-G4, ADR 0065. The overlay says only where the pointer is; the engine read-out is the only place a value appears.</span>
+  </div>
+  <div class="cs-stack" style="gap: 4px; margin-top: 12px;"><span class="cs-eyebrow">Shown: every one of the six rules holds</span><span class="small" style="color: var(--ink); max-width: 980px;">Desktop, dark and light. The lines arrive at once under the pointer; the read-out row catches up when the engine frame paints, and the engine’s own lines land exactly on the local ones.</span></div>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;"><div data-theme="dark" style="background: var(--surface-000); color: var(--ink); padding: 12px; border-radius: var(--radius-panel); border: 1px solid var(--border-200);">
+      <section class="cs-panel" style="height: 380px;">
+        <div class="cs-meta cs-meta--split" style="min-height: 32px;"><div class="cs-legend cs-legend__ohlc"><span class="cs-muted">14 Jul 2026</span><span><b>O</b>145.57</span><span><b>H</b>146.47</span><span><b>L</b>143.29</span><span><b>C</b>144.87</span></div><span>Rendered r12 · 19:58:02 ET</span></div>
+        <div class="cs-chart" style="flex: 1; min-height: 0;">
+          <dc-import name="ChartFrame" marker="{{no}}" crosshair="{{no}}" hint-size="100%,100%"></dc-import>
+          <div class="cs-xhair" aria-hidden="true"><span class="cs-xhair__v" style="left: 67.22%;"></span><span class="cs-xhair__h" style="top: 40%;"></span></div><svg aria-hidden="true" viewBox="0 0 16 16" style="position: absolute; width: 16px; height: 16px; left: calc((100% - 64px) * 0.6722); top: 40%; pointer-events: none;"><path d="M2 1l11 7-5 1-2 5z" style="fill: var(--ink); stroke: var(--chart-bg); stroke-width: 1;"></path></svg>
+        </div>
+      </section>
+    </div><div data-theme="light" style="background: var(--surface-000); color: var(--ink); padding: 12px; border-radius: var(--radius-panel); border: 1px solid var(--border-200);">
+      <section class="cs-panel" style="height: 380px;">
+        <div class="cs-meta cs-meta--split" style="min-height: 32px;"><div class="cs-legend cs-legend__ohlc"><span class="cs-muted">14 Jul 2026</span><span><b>O</b>145.57</span><span><b>H</b>146.47</span><span><b>L</b>143.29</span><span><b>C</b>144.87</span></div><span>Rendered r12 · 19:58:02 ET</span></div>
+        <div class="cs-chart" style="flex: 1; min-height: 0;">
+          <dc-import name="ChartFrame" marker="{{no}}" crosshair="{{no}}" hint-size="100%,100%"></dc-import>
+          <div class="cs-xhair" aria-hidden="true"><span class="cs-xhair__v" style="left: 67.22%;"></span><span class="cs-xhair__h" style="top: 40%;"></span></div><svg aria-hidden="true" viewBox="0 0 16 16" style="position: absolute; width: 16px; height: 16px; left: calc((100% - 64px) * 0.6722); top: 40%; pointer-events: none;"><path d="M2 1l11 7-5 1-2 5z" style="fill: var(--ink); stroke: var(--chart-bg); stroke-width: 1;"></path></svg>
+        </div>
+      </section>
+    </div></div>
+  <div class="cs-stack" style="gap: 4px; margin-top: 12px;"><span class="cs-eyebrow">Hidden: removed at once when any rule fails</span><span class="small" style="color: var(--ink); max-width: 980px;">No fade and no placeholder. What the person sees in each case is the state the system already shows, never a hint of the lines.</span></div>
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;"><div class="cs-stack" style="gap: 8px;"><div data-theme="dark" style="background: var(--surface-000); color: var(--ink); padding: 12px; border-radius: var(--radius-panel); border: 1px solid var(--border-200);">
+      <section class="cs-panel" style="height: 220px;">
+        <div class="cs-meta cs-meta--split" style="min-height: 32px;"><span></span></div>
+        <div class="cs-chart" style="flex: 1; min-height: 0;">
+          <dc-import name="ChartFrame" marker="{{no}}" crosshair="{{no}}" hint-size="100%,100%"></dc-import>
+          
+        </div>
+      </section>
+    </div><div class="cs-stack" style="gap: 4px;"><span class="cs-card__title" style="color: var(--ink);">1 · No geometry for the painted frame</span><span class="small cs-muted">Engine below interaction version 3, or geometry missing or not yet verified. No overlay at all: only the engine crosshair after each point frame.</span></div></div>
+<div class="cs-stack" style="gap: 8px;"><div data-theme="light" style="background: var(--surface-000); color: var(--ink); padding: 12px; border-radius: var(--radius-panel); border: 1px solid var(--border-200);">
+      <section class="cs-panel" style="height: 220px;">
+        <div class="cs-meta cs-meta--split" style="min-height: 32px;"><span></span></div>
+        <div class="cs-chart" style="flex: 1; min-height: 0;">
+          <dc-import name="ChartFrame" marker="{{no}}" crosshair="{{no}}" hint-size="100%,100%"></dc-import>
+          <div class="cs-chart__veil"></div><div class="cs-overlay" role="status"><span class="cs-overlay__state">Updating</span><span class="cs-overlay__title">Drawing the chart…</span></div>
+        </div>
+      </section>
+    </div><div class="cs-stack" style="gap: 4px;"><span class="cs-card__title" style="color: var(--ink);">2 · Viewer not ready</span><span class="small cs-muted">Rendering, reconnecting or error. The Updating card is the engine status, not the overlay.</span></div></div>
+<div class="cs-stack" style="gap: 8px;"><div data-theme="dark" style="background: var(--surface-000); color: var(--ink); padding: 12px; border-radius: var(--radius-panel); border: 1px solid var(--border-200);">
+      <section class="cs-panel" style="height: 220px;">
+        <div class="cs-meta cs-meta--split" style="min-height: 32px;"><span></span></div>
+        <div class="cs-chart" style="flex: 1; min-height: 0;">
+          <dc-import name="ChartFrame" marker="{{no}}" crosshair="{{no}}" hint-size="100%,100%"></dc-import>
+          <div class="cs-chart__veil"></div><div class="cs-overlay cs-overlay--caution" role="status"><span class="cs-overlay__state"><span aria-hidden="true">!</span>Not current</span><span class="cs-overlay__title">Reconnecting…</span><span class="cs-overlay__frame-time">Frame from 19:58:02 ET</span></div>
+        </div>
+      </section>
+    </div><div class="cs-stack" style="gap: 4px;"><span class="cs-card__title" style="color: var(--ink);">3 · Frame not current</span><span class="small cs-muted">Stale, superseded or historical frame (also Snapshot and Replay). The veil and "Not current" card speak; no lines.</span></div></div>
+<div class="cs-stack" style="gap: 8px;"><div data-theme="light" style="background: var(--surface-000); color: var(--ink); padding: 12px; border-radius: var(--radius-panel); border: 1px solid var(--border-200);">
+      <section class="cs-panel" style="height: 220px;">
+        <div class="cs-meta cs-meta--split" style="min-height: 32px;"><span></span></div>
+        <div class="cs-chart" style="flex: 1; min-height: 0;">
+          <dc-import name="ChartFrame" marker="{{no}}" crosshair="{{no}}" hint-size="100%,100%"></dc-import>
+          <span class="cs-chart__preview cs-badge cs-badge--snapshot">Preview</span>
+        </div>
+      </section>
+    </div><div class="cs-stack" style="gap: 4px;"><span class="cs-card__title" style="color: var(--ink);">4 · Gesture pending</span><span class="small cs-muted">A pan_px or zoom_px in flight, or the pan bridge is moving pixels. The existing Preview tag shows; lines return on the next painted frame.</span></div></div>
+<div class="cs-stack" style="gap: 8px;"><div data-theme="dark" style="background: var(--surface-000); color: var(--ink); padding: 12px; border-radius: var(--radius-panel); border: 1px solid var(--border-200);">
+      <section class="cs-panel" style="height: 220px;">
+        <div class="cs-meta cs-meta--split" style="min-height: 32px;"><span></span></div>
+        <div class="cs-chart" style="flex: 1; min-height: 0;">
+          <dc-import name="ChartFrame" marker="{{no}}" crosshair="{{no}}" hint-size="100%,100%"></dc-import>
+          <svg aria-hidden="true" viewBox="0 0 16 16" style="position: absolute; width: 16px; height: 16px; left: calc(100% - 40px); top: 46%; pointer-events: none;"><path d="M2 1l11 7-5 1-2 5z" style="fill: var(--ink); stroke: var(--chart-bg); stroke-width: 1;"></path></svg>
+        </div>
+      </section>
+    </div><div class="cs-stack" style="gap: 4px;"><span class="cs-card__title" style="color: var(--ink);">5 · Pointer outside the plot</span><span class="small cs-muted">Over the price axis or margin, another pane, or the window lost focus or the tab is hidden.</span></div></div>
+<div class="cs-stack" style="gap: 8px;"><div data-theme="light" style="background: var(--surface-000); color: var(--ink); padding: 12px; border-radius: var(--radius-panel); border: 1px solid var(--border-200);">
+      <section class="cs-panel" style="height: 220px;">
+        <div class="cs-meta cs-meta--split" style="min-height: 32px;"><span></span></div>
+        <div class="cs-chart" style="flex: 1; min-height: 0;">
+          <dc-import name="ChartFrame" marker="{{no}}" crosshair="{{no}}" hint-size="100%,100%"></dc-import>
+          
+        </div>
+      </section>
+    </div><div class="cs-stack" style="gap: 4px;"><span class="cs-card__title" style="color: var(--ink);">6 · Resize in flight</span><span class="small cs-muted">The frame size no longer matches the container. Lines return once a frame at the new size paints.</span></div></div></div>
+  <div class="cs-stack" style="gap: 4px; margin-top: 12px;"><span class="cs-eyebrow">Keyboard to the data edges (A-G4)</span><span class="small" style="color: var(--ink); max-width: 980px;">The keyboard crosshair is the engine’s, drawn the same way. With geometry, stepping reaches the first and last stored bar instead of stopping at the clamped centre.</span></div>
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;"><div class="cs-stack" style="gap: 8px;"><div data-theme="dark" style="background: var(--surface-000); color: var(--ink); padding: 12px; border-radius: var(--radius-panel); border: 1px solid var(--border-200);">
+      <section class="cs-panel" style="height: 260px;">
+        <div class="cs-meta cs-meta--split" style="min-height: 32px;"><div class="cs-legend cs-legend__ohlc"><span class="cs-muted">1 Jun 2026</span><span><b>O</b>137.25</span><span><b>H</b>138.14</span><span><b>L</b>135.11</span><span><b>C</b>135.44</span></div><span>Keyboard</span></div>
+        <div class="cs-chart" style="flex: 1; min-height: 0;">
+          <dc-import name="ChartFrame" marker="{{no}}" crosshair="{{no}}" hint-size="100%,100%"></dc-import>
+          <div class="cs-xhair" aria-hidden="true"><span class="cs-xhair__v" style="left: 50.56%;"></span><span class="cs-xhair__h" style="top: 52.24%;"></span></div>
+        </div>
+      </section>
+    </div><div class="cs-stack" style="gap: 4px;"><span class="cs-card__title" style="color: var(--ink);">Mid-range: arrows pan one row; the crosshair sits on the centre bar.</span><span class="small cs-muted">← one bar · Shift+← ten</span></div></div>
+<div class="cs-stack" style="gap: 8px;"><div data-theme="dark" style="background: var(--surface-000); color: var(--ink); padding: 12px; border-radius: var(--radius-panel); border: 1px solid var(--border-200);">
+      <section class="cs-panel" style="height: 260px;">
+        <div class="cs-meta cs-meta--split" style="min-height: 32px;"><div class="cs-legend cs-legend__ohlc"><span class="cs-muted">12 Jan 2026</span><span><b>O</b>120.20</span><span><b>H</b>120.97</span><span><b>L</b>116.62</span><span><b>C</b>117.89</span></div><span>Keyboard</span></div>
+        <div class="cs-chart" style="flex: 1; min-height: 0;">
+          <dc-import name="ChartFrame" marker="{{no}}" crosshair="{{no}}" hint-size="100%,100%"></dc-import>
+          <div class="cs-xhair" aria-hidden="true"><span class="cs-xhair__v" style="left: 7.22%;"></span><span class="cs-xhair__h" style="top: 87.04%;"></span></div>
+        </div>
+      </section>
+    </div><div class="cs-stack" style="gap: 4px;"><span class="cs-card__title" style="color: var(--ink);">View can't pan further left (engine clamp): the crosshair now walks from the centre towards the edge, one bar per press.</span><span class="small cs-muted">← keeps stepping</span></div></div>
+<div class="cs-stack" style="gap: 8px;"><div data-theme="dark" style="background: var(--surface-000); color: var(--ink); padding: 12px; border-radius: var(--radius-panel); border: 1px solid var(--border-200);">
+      <section class="cs-panel" style="height: 260px;">
+        <div class="cs-meta cs-meta--split" style="min-height: 32px;"><div class="cs-legend cs-legend__ohlc"><span class="cs-muted">2 Jan 2026</span><span><b>O</b>120.00</span><span><b>H</b>121.27</span><span><b>L</b>115.99</span><span><b>C</b>117.40</span></div><span>Keyboard</span></div>
+        <div class="cs-chart" style="flex: 1; min-height: 0;">
+          <dc-import name="ChartFrame" marker="{{no}}" crosshair="{{no}}" hint-size="100%,100%"></dc-import>
+          <div class="cs-xhair" aria-hidden="true"><span class="cs-xhair__v" style="left: 0.56%;"></span><span class="cs-xhair__h" style="top: 88.01%;"></span></div>
+        </div>
+      </section>
+    </div><div class="cs-stack" style="gap: 4px;"><span class="cs-card__title" style="color: var(--ink);">First stored bar. Another ← does nothing: no wrap, no sound, no movement. Home jumps here from anywhere; End to the last bar.</span><span class="small cs-muted">Home · End</span></div></div></div>
+  <div class="cs-row" style="gap: 12px;"><span class="cs-kbdline"><kbd class="cs-kbd">←</kbd><kbd class="cs-kbd">→</kbd> one bar</span><span class="cs-kbdline"><kbd class="cs-kbd">Shift</kbd><kbd class="cs-kbd">←</kbd> ten bars</span><span class="cs-kbdline"><kbd class="cs-kbd">Home</kbd> first stored bar</span><span class="cs-kbdline"><kbd class="cs-kbd">End</kbd> last stored bar</span><span class="cs-kbdline"><kbd class="cs-kbd">Esc</kbd> clear</span><span class="cs-sronly-note"><b style="color: var(--ink);">Screen reader</b> "First stored bar. 2 Jan 2026. Open 120.00, high 121.27, low 115.99, close 117.40."</span></div>
+  <div class="cs-stack" style="gap: 4px; margin-top: 12px;"><span class="cs-eyebrow">Phone: press and hold</span><span class="small" style="color: var(--ink); max-width: 980px;">Dark and light. 450 ms hold inside the 10 px slop starts the scrub (ADR 0065). The dashed hold outline marks the mode; the read-out row sits above the chart, away from the finger.</span></div>
+  <div style="display: grid; grid-template-columns: 390px 390px 1fr; gap: 20px; align-items: start;"><div data-theme="dark" style="width: 390px; background: var(--surface-000); border-radius: 18px; border: 1px solid var(--border-200); overflow: hidden;">
+      <section class="cs-panel" style="height: 470px; border-radius: 0; border: 0;">
+        <div class="cs-meta cs-meta--split" style="min-height: 36px;"><span>Crosshair · hold</span><span>lift to keep · tap to clear</span></div>
+        <div class="cs-meta" style="min-height: 36px; justify-content: space-between;"><div class="cs-legend cs-legend__ohlc"><span class="cs-muted">14 Jul 2026</span><span><b>O</b>145.57</span><span><b>H</b>146.47</span><span><b>L</b>143.29</span><span><b>C</b>144.87</span></div></div>
+        <div class="cs-chart" data-hold="true" style="flex: 1; min-height: 0;">
+          <dc-import name="ChartFrame" marker="{{no}}" crosshair="{{no}}" hint-size="100%,100%"></dc-import>
+          <div class="cs-xhair" aria-hidden="true"><span class="cs-xhair__v" style="left: 67.22%;"></span><span class="cs-xhair__h" style="top: 40%;"></span></div>
+          <span aria-hidden="true" style="position: absolute; left: calc((100% - 64px) * 0.6722 - 22px); top: calc(40% + 20px); width: 44px; height: 44px; border-radius: var(--radius-round); background: var(--ink); opacity: 0.16;"></span>
+        </div>
+      </section>
+    </div><div data-theme="light" style="width: 390px; background: var(--surface-000); border-radius: 18px; border: 1px solid var(--border-200); overflow: hidden;">
+      <section class="cs-panel" style="height: 470px; border-radius: 0; border: 0;">
+        <div class="cs-meta cs-meta--split" style="min-height: 36px;"><span>Crosshair · hold</span><span>lift to keep · tap to clear</span></div>
+        <div class="cs-meta" style="min-height: 36px; justify-content: space-between;"><div class="cs-legend cs-legend__ohlc"><span class="cs-muted">14 Jul 2026</span><span><b>O</b>145.57</span><span><b>H</b>146.47</span><span><b>L</b>143.29</span><span><b>C</b>144.87</span></div></div>
+        <div class="cs-chart" data-hold="true" style="flex: 1; min-height: 0;">
+          <dc-import name="ChartFrame" marker="{{no}}" crosshair="{{no}}" hint-size="100%,100%"></dc-import>
+          <div class="cs-xhair" aria-hidden="true"><span class="cs-xhair__v" style="left: 67.22%;"></span><span class="cs-xhair__h" style="top: 40%;"></span></div>
+          <span aria-hidden="true" style="position: absolute; left: calc((100% - 64px) * 0.6722 - 22px); top: calc(40% + 20px); width: 44px; height: 44px; border-radius: var(--radius-round); background: var(--ink); opacity: 0.16;"></span>
+        </div>
+      </section>
+    </div><div class="cs-card" style="gap: 10px;">
+  <span class="cs-result__label">Spec</span>
+  <dl class="cs-facts" style="grid-template-columns: 150px 1fr;">
+    <dt>Lines</dt><dd>Two, 1px, <code>chart-crosshair</code>, dash 3 on 3 off. Identical to the engine's crosshair, so when the engine's point frame paints they coincide and nothing jumps.</dd>
+    <dt>Never on the overlay</dt><dd>No price, time, bar value, axis tag, tooltip, label, dot or "live" styling. No animation, no fade: shown or removed at once.</dd>
+    <dt>Values</dt><dd>Only the engine read-out (the OHLC row above the chart). It updates when the engine frame paints and always carries its own date, so it never claims a bar it isn't for.</dd>
+    <dt>Placement</dt><dd>Vertical snaps to the nearest engine <code>bar_x</code> (follows the pointer pixel in the reduced regime). Horizontal follows the pointer. Clipped to the pane's plot rect: never over the price or time axis.</dd>
+    <dt>Layer</dt><dd>Above the canvas, below every DOM card (state cards, Preview tag, popovers). <code>pointer-events: none</code>, <code>aria-hidden</code>.</dd>
+    <dt>Keyboard (A-G4)</dt><dd>Engine-driven, not the overlay. ← → step one bar (Shift: ten); near an edge the crosshair walks to the first or last stored bar. Home / End jump there. The live region says "First stored bar" or "Last stored bar" once, with the bar's date and stored values.</dd>
+    <dt>Phone</dt><dd>Hold 450 ms inside the 10 px slop: the chart gets the dashed hold outline and the lines follow the finger. Values stay in the read-out row, never in a bubble under the finger. Lift keeps the engine crosshair; tap clears.</dd>
+    <dt>Themes</dt><dd><code>chart-crosshair</code> is #c5ced4 on dark (12.0:1 on chart-bg) and #3a444c on light (10.0:1).</dd>
+  </dl>
+</div></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["dark","light"],"default":"dark"},"$preview":{"width":1600,"height":2560}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { theme: this.props.theme ?? 'dark', no: false };
+  }
+}
+</script>
+</body>
+</html>
