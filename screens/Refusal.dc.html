@@ -52,17 +52,18 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
         <div class="cs-chart" tabindex="0" aria-label="Price chart. Arrow keys pan, plus and minus zoom, Escape clears the crosshair.">
           <dc-import name="ChartFrame" hint-size="100%,100%"></dc-import>
         </div>
-        <div class="cs-strip" aria-label="On this chart">
+        <div class="cs-strip cs-strip--timeline" aria-label="On this chart. Choose an item to move the chart to it.">
+          <div class="cs-eventtrack" aria-hidden="true"><span class="cs-eventtrack__tick" data-active="true" style="left: 55%;"></span><span class="cs-eventtrack__tick" style="left: 80%;"></span></div>
           <span class="caption cs-muted cs-strip__label">On this chart</span>
-          <button class="cs-evchip"><span class="cs-avatar" aria-hidden="true">M</span>Golden cross · 14 Mar</button>
-          <button class="cs-evchip"><span class="cs-avatar" aria-hidden="true">M</span>SMA 50 / SMA 200</button>
-          <button class="cs-evchip"><span class="cs-avatar cs-avatar--person" aria-hidden="true">MS</span>Split 10:1 · 10 Jun</button>
+          <button class="cs-evchip" aria-pressed="true"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">M</span><span class="cs-evchip__date">14 Mar</span>Golden cross</button>
+          <button class="cs-evchip"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">M</span><span class="cs-evchip__date">Range</span>SMA 50 / SMA 200</button>
+          <button class="cs-evchip"><span class="cs-avatar cs-avatar--person" aria-hidden="true">MS</span><span class="cs-evchip__date">10 Jun</span>Split 10:1</button>
         </div>
       </section>
     </main>
     <aside class="cs-rail" aria-label="Assistant">
       <div class="cs-rail__head">
-        <span class="cs-avatar cs-avatar--lg" aria-hidden="true">M</span>
+        <span class="cs-avatar cs-avatar--lg cs-avatar--agent" aria-hidden="true">M</span>
         <span class="cs-rail__title">Mat</span>
         <span class="caption cs-muted">Workspace assistant</span>
       </div>
@@ -76,7 +77,7 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
       <div class="cs-rail__body" role="tabpanel">
         <div class="cs-msg cs-msg--person"><span class="cs-attr">You · 20:03 ET</span><span class="cs-msg__body"><span class="cs-mention">@Mat</span> add SMA 30 and show where price closed below it</span></div>
         <div class="cs-card">
-          <div class="cs-card__head"><span class="cs-task__state cs-task__state--failed"><span aria-hidden="true">⨯</span>Not done</span><span class="cs-card__title"></span><span class="cs-attr"><span class="cs-avatar" aria-hidden="true">M</span>Mat · 20:03 ET</span></div>
+          <div class="cs-card__head"><span class="cs-task__state cs-task__state--failed"><span aria-hidden="true">⨯</span>Not done</span><span class="cs-card__title"></span><span class="cs-attr"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">M</span>Mat · 20:03 ET</span></div>
           <div class="cs-notice" role="status">
             <span class="cs-notice__glyph" aria-hidden="true">⨯</span>
             <span class="cs-notice__title"><span class="cs-notice__kind">Not stored.</span> SMA 30 for NVDA</span>
@@ -92,7 +93,7 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
         </div>
         <div class="cs-msg cs-msg--person"><span class="cs-attr">You · 20:05 ET</span><span class="cs-msg__body"><span class="cs-mention">@Mat</span> and RSI 14 for QQQ as a benchmark pane?</span></div>
         <div class="cs-card">
-          <div class="cs-card__head"><span class="cs-task__state cs-task__state--failed"><span aria-hidden="true">⨯</span>Not done</span><span class="cs-card__title"></span><span class="cs-attr"><span class="cs-avatar" aria-hidden="true">M</span>Mat · 20:05 ET</span></div>
+          <div class="cs-card__head"><span class="cs-task__state cs-task__state--failed"><span aria-hidden="true">⨯</span>Not done</span><span class="cs-card__title"></span><span class="cs-attr"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">M</span>Mat · 20:05 ET</span></div>
           <div class="cs-notice" role="status">
             <span class="cs-notice__glyph" aria-hidden="true">⨯</span>
             <span class="cs-notice__title"><span class="cs-notice__kind">Stale.</span> RSI 14 for QQQ</span>

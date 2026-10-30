@@ -36,7 +36,7 @@ Colours are resolved hex/rgba strings; lengths are CSS px at 1× (the engine mul
     "marker":   { "size": 18, "radius": 4, "glyphColor": "background", "font": "600 11px Inter, system-ui, sans-serif" }
   },
   "selection": { "color": "#72ded5", "width": 1.5, "dash": [4, 3] },
-  "drawing": { "color": "#9aa6ff" },
+  "drawing": { "color": "#a351f6" },
   "anchor": { "color": "#e4e9ed", "radius": 5, "hitRadius": 22 },
   "reference": { "color": "#303940", "dash": [2, 3], "width": 1 }
 }

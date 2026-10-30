@@ -100,7 +100,7 @@ Never draw a substitute or decorative chart, and never clear the frame on a tran
 
 Nothing in this section appears until a second person is invited. The single-person screen stays exactly as it is.
 
-- **Person or agent is shown by shape:** people are circles, agents are squircles with the accent ring and a badge with the initials of the person they act for (`ParticipantRoster`). Colour separates up to four people (`presence-1…4`). From the fifth on, rings are neutral with a number. Status always has a glyph and a word.
+- **Person or agent is shown by shape, everywhere:** people are circles, agents are squircles with the accent ring (`cs-avatar--agent`), in every size and place: the rail head, result cards, attribution chips, the event strip and the presence row. A plain round `cs-avatar` is never an agent and a badge with the initials of the person they act for (`ParticipantRoster`). Colour separates up to four people (`presence-1…4`). From the fifth on, rings are neutral with a number. Status always has a glyph and a word.
 - **Shared edits are never silently merged.** A stale base gets `StaleBaseNotice`, a blocked undo gets `UndoRefused`, and an agent's change waits in `ProposalPreview` with an explicit list of what will change, drawn dashed on the chart as "Proposed". Watching an agent work (`AgentLiveWork`) never locks anything.
 - **Empty is honest:** `FirstRunChecklist`, `EmptyState`, `CoverageBar` and `CommandCopy` say what is not stored and give the exact utility command. They never estimate or fetch.
 - **Access:** `InviteDialog` (Viewer, Editor, Owner, as proposed), `AgentGrants` (propose-only by default, with data scope, step/time/spend limits, expiry and revoke) and `PhonePairing` (one-time QR with a countdown).

@@ -657,3 +657,4 @@ kbd.cs-kbd { display: inline-grid; place-items: center; min-width: 22px; height:
 .cs-eventtrack__end { position: absolute; top: 2px; font: 500 11px/14px var(--font-sans); color: var(--ink-muted); }
 .cs-evchip__date { font-variant-numeric: tabular-nums; color: var(--ink-muted); }
 .cs-evchip[aria-pressed="true"] { background: var(--surface-200); border-color: var(--ink); }
+.cs-eventtrack { margin-left: calc(-1 * var(--space-12)); }

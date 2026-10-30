@@ -29,7 +29,7 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
       <span class="cs-avatar cs-avatar--lg cs-avatar--person" aria-hidden="true">MS</span>
       <span class="cs-avatar cs-avatar--lg cs-avatar--p1" aria-hidden="true">AR</span>
       <span class="cs-avatar cs-avatar--lg cs-avatar--p2" aria-hidden="true">DK</span>
-      <span class="cs-avatar cs-avatar--lg" aria-hidden="true" style="background: var(--accent-wash); color: var(--accent-text); border-color: var(--accent);">M</span>
+      <span class="cs-avatar cs-avatar--lg cs-avatar--agent" aria-hidden="true">M</span>
     </span>
     <button class="cs-btn cs-btn--compact">Invite</button>
   </header>
@@ -43,7 +43,7 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
         </div>
         <div class="cs-toolbar" role="toolbar" aria-label="Chart">
           <button class="cs-symbtn" aria-haspopup="listbox" aria-label="Symbol NVDA, change symbol"><svg class="cs-symbtn__icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.5"></circle><path d="M10.5 10.5L14 14"></path></svg>NVDA<span class="cs-caret" aria-hidden="true"></span></button>
-          <div class="cs-seg" role="group" aria-label="Interval"><button aria-pressed="true">1D</button></div>
+          <button class="cs-btn cs-btn--compact" aria-haspopup="listbox" aria-label="Interval: 1 day">1D<span class="cs-caret" aria-hidden="true"></span></button>
           <span class="cs-badge"><span class="cs-badge__glyph" aria-hidden="true">▤</span>Stored daily · through 28 Oct</span>
           <span class="cs-badge">Split-adjusted, not dividend-adjusted</span>
           <span class="cs-toolbar__sep" aria-hidden="true"></span>
@@ -66,17 +66,18 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
             <span style="padding: 1px 6px; border-radius: var(--radius-xs); background: var(--presence-1); color: var(--chart-bg); font-size: 11px; line-height: 16px; font-weight: 600;">Ana R.</span>
           </div>
         </div>
-        <div class="cs-strip" aria-label="On this chart">
+        <div class="cs-strip cs-strip--timeline" aria-label="On this chart. Choose an item to move the chart to it.">
+          <div class="cs-eventtrack" aria-hidden="true"><span class="cs-eventtrack__tick" data-active="true" style="left: 55%;"></span><span class="cs-eventtrack__tick" style="left: 83%;"></span><span class="cs-eventtrack__tick" style="left: 84%;"></span><span class="cs-eventtrack__tick" style="left: 85%;"></span><span class="cs-eventtrack__tick" style="left: 93%;"></span></div>
           <span class="caption cs-muted cs-strip__label">On this chart</span>
-          <button class="cs-evchip"><span class="cs-avatar cs-avatar--p1" aria-hidden="true" style="background: var(--surface-200); color: var(--ink);">AR</span>Golden cross · 14 Mar</button>
-          <button class="cs-evchip"><span class="cs-avatar" aria-hidden="true">M</span>SMA 50 / SMA 200</button>
-          <button class="cs-evchip"><span class="cs-avatar cs-avatar--p2" aria-hidden="true" style="background: var(--surface-200); color: var(--ink);">DK</span>Closes below SMA 200 · 4</button>
+          <button class="cs-evchip" aria-pressed="true"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">M</span><span class="cs-evchip__date">14 Mar</span>Golden cross</button>
+          <button class="cs-evchip"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">M</span><span class="cs-evchip__date">Range</span>SMA 50 / SMA 200</button>
+          <button class="cs-evchip"><span class="cs-avatar cs-avatar--p2" aria-hidden="true" style="background: var(--surface-200); color: var(--ink);">DK</span><span class="cs-evchip__date">Aug–Sep</span>Closes below SMA 200 · 4</button>
         </div>
       </section>
     </main>
     <aside class="cs-rail" aria-label="Conversation">
       <div class="cs-rail__head">
-        <span class="cs-avatar cs-avatar--lg" aria-hidden="true">M</span>
+        <span class="cs-avatar cs-avatar--lg cs-avatar--agent" aria-hidden="true">M</span>
         <span class="cs-rail__title">Mat</span>
         <span class="caption cs-muted">Workspace assistant</span>
       </div>
@@ -93,7 +94,7 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
       <div class="cs-rail__body" role="tabpanel">
         <div class="cs-msg"><span class="cs-attr"><span class="cs-avatar cs-avatar--p1" aria-hidden="true" style="background: var(--surface-200); color: var(--ink);">AR</span><span class="cs-scope cs-scope--shared">Shared</span> · Ana R. · 20:31 ET</span><span class="cs-msg__body"><span class="cs-mention">@Mat</span> mark every close below SMA 200 since June</span></div>
         <div class="cs-card">
-          <div class="cs-card__head"><span class="cs-task__state cs-task__state--done"><span aria-hidden="true">✓</span>Completed</span><span class="cs-card__title"></span><span class="cs-attr"><span class="cs-avatar" aria-hidden="true">M</span>Mat · for Ana R.</span></div>
+          <div class="cs-card__head"><span class="cs-task__state cs-task__state--done"><span aria-hidden="true">✓</span>Completed</span><span class="cs-card__title"></span><span class="cs-attr"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">M</span>Mat · for Ana R.</span></div>
           <div class="cs-result__part"><span class="cs-result__label">Calculated fact</span><span class="cs-result__text">4 daily closes below SMA 200 since 1 Jun 2026: 5, 6, 7 Aug and 12 Sep.</span></div>
           <div class="cs-result__part"><span class="cs-result__label">Limitations</span><span class="cs-result__text">Split-adjusted, not dividend-adjusted. Stored through 28 Oct 2026.</span></div>
           <div class="cs-card__foot"><span class="cs-attr"><span class="cs-avatar cs-avatar--p2" aria-hidden="true" style="background: var(--surface-200); color: var(--ink);">DK</span>Dev K. added these to the chart</span></div>
