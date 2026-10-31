@@ -1,7 +1,7 @@
 <!-- @dsCard height=288 -->
 <!doctype html>
 <html lang="en">
-<head>
+<head><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
 <meta charset="utf-8">
 <title>ChartsSpeak</title>
 <style>
@@ -18,8 +18,9 @@
   .sup { fill:var(--surface-000); stroke:var(--chart-up); stroke-width:2; }
   .sdn { fill:var(--chart-down); }
   .words { position:absolute; left:var(--space-30); bottom:var(--space-30); max-width:440px; }
-  .name { margin:0; font-size:64px; line-height:.95; font-weight:600; letter-spacing:-.02em; color:var(--ink); }
+  .name { margin:0; font-family:var(--font-display); font-size:64px; line-height:.95; font-weight:700; letter-spacing:-.02em; color:var(--ink); }
   .name { display:flex; align-items:baseline; }
+  .name b { color:var(--accent-text); font-weight:700; }
   .v8 { height:.73em; width:.555em; margin:0 .03em; overflow:visible; fill:none; stroke:var(--ink); stroke-width:13; stroke-linecap:round; stroke-linejoin:round; }
   .v8 .acc { stroke:var(--accent-text); }
   .v8 .halo { stroke:var(--surface-000); stroke-width:23; stroke-linecap:butt; }
@@ -44,7 +45,7 @@
 </svg>
 </div>
 <div class="words">
-<h1 class="name" aria-label="ChartsSpeak"><span aria-hidden="true">Chart</span><svg class="v8" viewBox="0 0 76 100" aria-hidden="true"><path class="acc" d="M38 8C67 8 67 30 38 46C7 62 7 94 38 94"/><path class="halo" d="M27 40.1L49 51.9"/><path d="M38 8C9 8 9 30 38 46C69 62 69 94 38 94"/></svg><span aria-hidden="true">peak</span></h1>
+<h1 class="name" aria-label="ChartsSpeak"><span aria-hidden="true">Charts</span><b aria-hidden="true">Speak</b></h1>
 <p class="tag">Visible, attributable, checkable chart work.</p>
 </div>
 </div>
