@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ChartsSpeak · common shell</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/chartsspeak/tokens.css">
+<link rel="stylesheet" href="ds/chartsspeak/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0}
+.disp{font-family:var(--font-display);font-weight:700;font-size:19px;line-height:24px;letter-spacing:-0.01em;margin:4px 0 0;color:var(--ink)}
+.opt{display:flex;flex-direction:column;gap:12px;background:var(--surface-100);border:1px solid var(--border-200);border-radius:var(--radius-panel);padding:16px 18px;box-sizing:border-box;min-width:0}
+.wire{position:relative;flex:1;min-height:0;border:1px solid var(--border-200);border-radius:var(--radius-control);background:var(--surface-000);padding:6px;display:flex;flex-direction:column;gap:6px;overflow:hidden}
+.bar{height:14px;border-radius:4px;background:var(--surface-200);flex:none}
+.row{position:relative;flex:1;display:flex;gap:6px;min-height:0}
+.p{border-radius:6px;border:1px solid var(--border-200);display:grid;place-items:center;font:600 11px/14px var(--font-sans);color:var(--ink-muted);background:var(--surface-150);min-width:0}
+.p.chart{background:var(--chart-bg);color:var(--ink);border-color:var(--accent)}
+.p.chat{background:var(--surface-100)}
+.p.drawer{background:var(--surface-200);color:var(--ink);box-shadow:var(--shadow-overlay);z-index:2;border-style:dashed}
+.rules{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.rules div{display:flex;flex-direction:column;gap:4px}
+.rules b{font:600 13px/18px var(--font-sans);color:var(--ink)}
+</style>
+</helmet>
+<div data-theme="dark" style="width: 1200px; height: 760px; box-sizing: border-box; padding: 28px 40px; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; gap: 16px; background: var(--surface-000); color: var(--ink); font-family: var(--font-sans);">
+  <div style="display:flex;flex-direction:column;gap:6px;">
+    <span class="cs-eyebrow" style="display:block">Common shell · the one frame for every work page</span>
+    <h1 class="disp" style="font-size:27px;line-height:32px;margin:0">Every work page uses one of these four shells</h1>
+    <span class="body cs-muted">The shell sets where the menu, chat and chart sit. Pages only fill the panes. The pane order is each person's own view setting and never changes what others see.</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;min-height:0;">
+    <section class="opt"><div class="hd"><span class="cs-eyebrow" style="display:block">1 · Default</span><h2 class="disp">Menu | Chat | Chart</h2></div><div class="wire"><div class="bar"></div><div class="row"><div class="p menu" style="width:22%"><span>Menu</span></div><div class="p chat" style="width:26%"><span>Chat</span></div><div class="p chart" style="flex:1"><span>Chart</span></div></div></div><p class="small cs-muted" style="margin:0">The chart sits next to the conversation that drives it. Best on wide screens.</p></section>
+    <section class="opt"><div class="hd"><span class="cs-eyebrow" style="display:block">2 · Chart in the middle</span><h2 class="disp">Menu | Chart | Chat</h2></div><div class="wire"><div class="bar"></div><div class="row"><div class="p menu" style="width:20%"><span>Menu</span></div><div class="p chart" style="flex:1"><span>Chart</span></div><div class="p chat" style="width:28%"><span>Chat</span></div></div></div><p class="small cs-muted" style="margin:0">The familiar editor layout. Cap the side panes on a 1280px laptop.</p></section>
+    <section class="opt"><div class="hd"><span class="cs-eyebrow" style="display:block">3 · Chat on the left</span><h2 class="disp">Chat | Chart | Menu</h2></div><div class="wire"><div class="bar"></div><div class="row"><div class="p chat" style="width:28%"><span>Chat</span></div><div class="p chart" style="flex:1"><span>Chart</span></div><div class="p menu" style="width:20%"><span>Menu</span></div></div></div><p class="small cs-muted" style="margin:0">For people who want the assistant at the left edge. Arrows flip with the side.</p></section>
+    <section class="opt"><div class="hd"><span class="cs-eyebrow" style="display:block">4 · Menu as a drawer</span><h2 class="disp">Chart | Chat + drawer</h2></div><div class="wire"><div class="bar"></div><div class="row"><div class="p chart" style="flex:1"><span>Chart</span></div><div class="p chat" style="width:34%"><span>Chat</span></div><div class="p drawer" style="position:absolute;left:3%;top:6%;bottom:6%;width:34%;"><span>Menu drawer</span></div></div></div><p class="small cs-muted" style="margin:0">Most room for chart and chat. Menu opens from the top bar.</p></section>
+  </div>
+  <div class="rules">
+    <div><b>Rules for all four</b><span class="small cs-muted">Chart pane never collapses. Menu and chat each collapse to a 56px rail. People row stays on top and collapses.</span></div>
+    <div><b>Focus order = visual order</b><span class="small cs-muted">Reorder the panes in the DOM, not with CSS only, so Tab follows what people see.</span></div>
+    <div><b>Small screens ignore the setting</b><span class="small cs-muted">Tablet keeps the drawer for chat. Phone shows one pane at a time with the Menu / Chat / Chart switch.</span></div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1200,"height":760}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

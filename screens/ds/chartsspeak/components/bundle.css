@@ -793,3 +793,16 @@ kbd.cs-kbd { display: inline-grid; place-items: center; min-width: 22px; height:
 /* older boards keep the toolbar inside .cs-panel: wrap there too */
 .cs-wpane--chart .cs-panel > .cs-toolbar { flex-wrap: wrap; overflow: visible; row-gap: var(--space-4); }
 .cs-wpane--chart > .cs-titleblock { padding: var(--space-12) var(--space-16) var(--space-8); }
+
+/* Pane order is a per-person view setting: data-layout on .cs-shell--panes.
+   Default (menu-chat-chart) needs no attribute. Reorder the DOM to match the visual order (focus order). */
+.cs-menutoggle { display: none; }
+.cs-shell--panes[data-layout="chat-chart-menu"] .cs-wpane--menu .cs-wpane__hide svg,
+.cs-shell--panes[data-layout="chat-chart-menu"] .cs-wpane--chat .cs-wpane__hide svg { transform: scaleX(-1); }
+.cs-shell--panes[data-layout="chat-chart-menu"] .cs-wpane--chat.cs-rail { border-left: 1px solid var(--border-200); }
+.cs-shell--panes[data-layout="chart-chat"] .cs-menutoggle { display: inline-grid; }
+.cs-shell--panes[data-layout="chart-chat"] .cs-wpanes { position: relative; }
+.cs-shell--panes[data-layout="chart-chat"] .cs-wpane--menu { display: none; position: absolute; z-index: 8; left: var(--space-16); top: var(--space-8); bottom: var(--space-8); width: 280px; box-shadow: var(--shadow-overlay); }
+.cs-shell--panes[data-layout="chart-chat"][data-menu="open"] .cs-wpane--menu { display: flex; }
+.cs-shell--panes[data-layout="chart-chat"][data-menu="open"] .cs-wpanes::after { content: ""; position: absolute; inset: 0; z-index: 7; background: var(--scrim); opacity: .5; pointer-events: none; }
+.cs-shell--panes[data-layout="chart-chat"][data-menu="open"] .cs-wpane--menu { z-index: 9; }
