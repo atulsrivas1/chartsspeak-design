@@ -20,7 +20,7 @@ Colours are resolved hex/rgba strings; lengths are CSS px at 1× (the engine mul
   "candleMode": "blue-orange",
   "background": "#0b0f15",
   "grid": { "color": "#19212b", "width": 1, "lines": "horizontal" },
-  "axis": { "text": "#97a3b1", "font": "500 11px "IBM Plex Sans", system-ui, sans-serif", "tickLength": 4 },
+  "axis": { "text": "#a8b3c1", "font": "500 11px "IBM Plex Sans", system-ui, sans-serif", "tickLength": 4 },
   "crosshair": { "color": "#c5ced4", "width": 1, "dash": [3, 3], "tagFill": "#c5ced4", "tagText": "#0b0f15" },
   "candle": {
     "up":   { "stroke": "#56b4e9", "fill": "background", "wickWidth": 1, "bodyStroke": 1.2 },
