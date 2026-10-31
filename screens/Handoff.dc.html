@@ -16,7 +16,7 @@ body{margin:0}
 a{color:var(--accent-text)}a:hover{color:var(--ink)}
 </style>
 </helmet>
-<div class="cs-shell" data-theme="{{theme}}" style="width: 100%; height: 100vh; min-height: 760px;">
+<div class="cs-shell cs-shell--panes" data-theme="{{theme}}" style="width: 100%; height: 100vh; min-height: 760px;">
   <header class="cs-topbar">
     <span class="cs-wordmark" role="img" aria-label="ChartsSpeak"><span aria-hidden="true">Charts</span><b aria-hidden="true">Speak</b></span>
     <span class="cs-topbar__sep" aria-hidden="true"></span>
@@ -33,8 +33,71 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
     </span>
     <button class="cs-btn cs-btn--compact">Invite</button>
   </header>
-  <div class="cs-shell__body">
-    <main class="cs-shell__main">
+  <div class="cs-wpanes">
+    <nav class="cs-wpane cs-wpane--menu" data-collapsed="false" aria-label="Workspace menu">
+      <div class="cs-wpane__head">
+        <button class="cs-iconbtn" aria-expanded="true" aria-label="Collapse menu" title="Menu ( [ )"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h9"/></svg></button>
+        <h2 class="cs-wpane__title">Workspace</h2>
+        <button class="cs-iconbtn cs-wpane__hide" aria-label="Collapse menu"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12 4 6 10l6 6"/></svg></button>
+        <span class="cs-wpane__railtitle">Menu</span>
+      </div>
+      <div class="cs-wpane__body">
+        <div class="cs-menusec"><span class="label">Charts</span>
+          <button class="cs-navrow" aria-current="true"><span class="cs-navrow__sym">NVDA</span><span class="cs-navrow__sub">NVIDIA</span><span class="cs-navrow__end"><b>151.38</b>−0.21%</span></button>
+          <button class="cs-navrow"><span class="cs-navrow__sym">QQQ</span><span class="cs-navrow__sub">Invesco QQQ</span><span class="cs-navrow__end"><b>512.40</b>+0.34%</span></button>
+          <button class="cs-navrow"><span class="cs-navrow__sym">SPY</span><span class="cs-navrow__sub">SPDR S&amp;P 500</span><span class="cs-navrow__end"><b>618.22</b>+0.18%</span></button>
+          <div class="cs-menunote">Closes on 28 Oct, stored daily.</div>
+        </div>
+        <div class="cs-menusec"><span class="label">On this chart</span>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 3h7l3 3v11H5z"/><path d="M12 3v3h3M8 10h4M8 13h4"/></svg>Evidence<span class="cs-navrow__n cs-navrow__n--agent">1</span></button>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2 10h3l2-6 3 12 2.5-8L14 10h4"/></svg>Activity</button>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 3 7 4-7 4-7-4zM3 11l7 4 7-4"/></svg>Layers<span class="cs-navrow__n">2</span></button>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><ellipse cx="10" cy="5" rx="6" ry="2.5"/><path d="M4 5v10c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5V5M4 10c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5"/></svg>Data</button>
+        </div>
+        <div class="cs-menusec"><span class="label">Alerts</span>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 14V9a5 5 0 0 1 10 0v5l1.5 2h-13zM8.5 18h3"/></svg>Close above 135<span class="cs-navrow__n">Armed</span></button>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 14V9a5 5 0 0 1 10 0v5l1.5 2h-13zM8.5 18h3"/></svg>Close below 120<span class="cs-navrow__n">Armed</span></button>
+        </div>
+      </div>
+    </nav>
+    <aside class="cs-wpane cs-wpane--chat cs-rail" aria-label="Conversation" data-collapsed="false">
+      <div class="cs-wpane__head">
+        <button class="cs-iconbtn" aria-expanded="true" aria-label="Collapse chat" title="Chat ( ] )"><svg viewBox="0 0 20 20" aria-hidden="true">PhoneConversation</svg></button>
+        <span class="cs-avatar cs-avatar--lg cs-avatar--agent cs-wpane__hide" aria-hidden="true">M</span>
+        <h2 class="cs-wpane__title">Mat <span class="caption cs-muted">Workspace assistant</span></h2>
+        <button class="cs-iconbtn cs-wpane__hide" aria-label="Collapse chat"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m8 4 6 6-6 6"/></svg></button>
+        <span class="cs-wpane__railtitle">Chat</span>
+      </div>
+      <div class="cs-tabs" role="tablist" aria-label="Rail">
+        <button class="cs-tab" role="tab" aria-selected="true">Conversation</button>
+        <button class="cs-tab" role="tab" aria-selected="false">Evidence<span class="cs-tab__count">2</span></button>
+        <button class="cs-tab" role="tab" aria-selected="false">Activity</button>
+        <button class="cs-tab" role="tab" aria-selected="false">Layers</button>
+        <button class="cs-tab" role="tab" aria-selected="false">Data</button>
+      </div>
+      <div style="padding: 12px 12px 0;">
+        <div class="cs-tabs cs-tabs--switch" role="tablist" aria-label="Conversation scope"><button class="cs-tab" role="tab" aria-selected="true">Shared</button><button class="cs-tab" role="tab" aria-selected="false">Private</button></div>
+      </div>
+      <div class="cs-rail__body" role="tabpanel">
+<div class="cs-msg"><span class="cs-attr"><span class="cs-avatar cs-avatar--person" aria-hidden="true">MS</span><span class="cs-scope cs-scope--shared">Shared</span> · Monika S. · 21:02 ET</span><span class="cs-msg__body">Going offline. <span class="cs-mention">@Mat</span> hand the comparison to Grace.</span></div>
+<div class="cs-card">
+<div class="cs-card__head"><span class="cs-task__state cs-task__state--attention"><span aria-hidden="true">!</span>Handoff pending</span><span class="cs-card__title"></span><span class="cs-attr"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">M</span> Mat → <span class="cs-avatar cs-avatar--agent" aria-hidden="true">G</span> Grace</span></div>
+<div class="cs-result__part"><span class="cs-result__label">Task</span><span class="cs-result__text">"Compare NVDA with SPY and QQQ since June." Monika went offline at 21:02 ET. 2 of 3 steps done.</span></div>
+<div class="cs-travel">
+<div class="cs-stack" style="gap:4px"><span class="cs-result__label">Travels to Grace</span><ul class="cs-travel__list cs-travel__list--goes"><li><span aria-hidden="true">✓</span><span>The question, in Monika's words</span></li><li><span aria-hidden="true">✓</span><span>Pin r16 and 2 evidence items</span></li><li><span aria-hidden="true">✓</span><span>Step left: rebase QQQ to 1 Jun</span></li><li><span aria-hidden="true">✓</span><span>Open question: include dividends?</span></li></ul></div>
+<div class="cs-stack" style="gap:4px"><span class="cs-result__label">Stays with Mat</span><ul class="cs-travel__list"><li><span aria-hidden="true">–</span><span>Monika's private messages</span></li><li><span aria-hidden="true">–</span><span>Monika's zoom and hidden items</span></li><li><span aria-hidden="true">–</span><span>Mat's grants. Grace can propose, not apply.</span></li></ul></div>
+</div>
+<div class="cs-row" style="gap:8px; flex-wrap:wrap"><span class="cs-pin"><span class="cs-pin__glyph" aria-hidden="true">⌖</span>Pinned to r16 · 20:31 ET</span><span class="caption cs-muted">Waiting for Ana R. to accept. Nothing runs until then.</span></div>
+<div class="cs-card__foot"><button class="cs-btn cs-btn--compact cs-btn--primary">Accept for Grace</button><button class="cs-btn cs-btn--compact cs-btn--quiet">Decline, return to Mat paused</button></div>
+</div>
+      </div>
+      <div class="cs-composer">
+        <label class="cs-sr" for="msg">Message</label>
+        <textarea id="msg" class="cs-textarea" rows="2" placeholder="Message everyone, or ask @Mat"></textarea>
+        <div class="cs-composer__foot"><span class="cs-composer__hint">Writing to everyone in this workspace.</span><button class="cs-btn cs-btn--primary cs-btn--compact">Send</button></div>
+      </div>
+    </aside>
+    <main class="cs-wpane cs-wpane--chart" aria-label="Chart">
       <section class="cs-panel" aria-label="Chart">
         <div class="cs-follow" role="status">
           <span class="cs-follow__who"><span class="cs-avatar cs-avatar--p1" aria-hidden="true" style="background: var(--surface-100);">AR</span>Following Ana R.</span>
@@ -75,41 +138,6 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
         </div>
       </section>
     </main>
-    <aside class="cs-rail" aria-label="Conversation">
-      <div class="cs-rail__head">
-        <span class="cs-avatar cs-avatar--lg cs-avatar--agent" aria-hidden="true">M</span>
-        <span class="cs-rail__title">Mat</span>
-        <span class="caption cs-muted">Workspace assistant</span>
-      </div>
-      <div class="cs-tabs" role="tablist" aria-label="Rail">
-        <button class="cs-tab" role="tab" aria-selected="true">Conversation</button>
-        <button class="cs-tab" role="tab" aria-selected="false">Evidence<span class="cs-tab__count">2</span></button>
-        <button class="cs-tab" role="tab" aria-selected="false">Activity</button>
-        <button class="cs-tab" role="tab" aria-selected="false">Layers</button>
-        <button class="cs-tab" role="tab" aria-selected="false">Data</button>
-      </div>
-      <div style="padding: 12px 12px 0;">
-        <div class="cs-tabs cs-tabs--switch" role="tablist" aria-label="Conversation scope"><button class="cs-tab" role="tab" aria-selected="true">Shared</button><button class="cs-tab" role="tab" aria-selected="false">Private</button></div>
-      </div>
-      <div class="cs-rail__body" role="tabpanel">
-<div class="cs-msg"><span class="cs-attr"><span class="cs-avatar cs-avatar--person" aria-hidden="true">MS</span><span class="cs-scope cs-scope--shared">Shared</span> · Monika S. · 21:02 ET</span><span class="cs-msg__body">Going offline. <span class="cs-mention">@Mat</span> hand the comparison to Grace.</span></div>
-<div class="cs-card">
-<div class="cs-card__head"><span class="cs-task__state cs-task__state--attention"><span aria-hidden="true">!</span>Handoff pending</span><span class="cs-card__title"></span><span class="cs-attr"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">M</span> Mat → <span class="cs-avatar cs-avatar--agent" aria-hidden="true">G</span> Grace</span></div>
-<div class="cs-result__part"><span class="cs-result__label">Task</span><span class="cs-result__text">"Compare NVDA with SPY and QQQ since June." Monika went offline at 21:02 ET. 2 of 3 steps done.</span></div>
-<div class="cs-travel">
-<div class="cs-stack" style="gap:4px"><span class="cs-result__label">Travels to Grace</span><ul class="cs-travel__list cs-travel__list--goes"><li><span aria-hidden="true">✓</span><span>The question, in Monika's words</span></li><li><span aria-hidden="true">✓</span><span>Pin r16 and 2 evidence items</span></li><li><span aria-hidden="true">✓</span><span>Step left: rebase QQQ to 1 Jun</span></li><li><span aria-hidden="true">✓</span><span>Open question: include dividends?</span></li></ul></div>
-<div class="cs-stack" style="gap:4px"><span class="cs-result__label">Stays with Mat</span><ul class="cs-travel__list"><li><span aria-hidden="true">–</span><span>Monika's private messages</span></li><li><span aria-hidden="true">–</span><span>Monika's zoom and hidden items</span></li><li><span aria-hidden="true">–</span><span>Mat's grants. Grace can propose, not apply.</span></li></ul></div>
-</div>
-<div class="cs-row" style="gap:8px; flex-wrap:wrap"><span class="cs-pin"><span class="cs-pin__glyph" aria-hidden="true">⌖</span>Pinned to r16 · 20:31 ET</span><span class="caption cs-muted">Waiting for Ana R. to accept. Nothing runs until then.</span></div>
-<div class="cs-card__foot"><button class="cs-btn cs-btn--compact cs-btn--primary">Accept for Grace</button><button class="cs-btn cs-btn--compact cs-btn--quiet">Decline, return to Mat paused</button></div>
-</div>
-      </div>
-      <div class="cs-composer">
-        <label class="cs-sr" for="msg">Message</label>
-        <textarea id="msg" class="cs-textarea" rows="2" placeholder="Message everyone, or ask @Mat"></textarea>
-        <div class="cs-composer__foot"><span class="cs-composer__hint">Writing to everyone in this workspace.</span><button class="cs-btn cs-btn--primary cs-btn--compact">Send</button></div>
-      </div>
-    </aside>
   </div>
   <footer class="cs-footer" role="status" aria-live="polite"><span class="cs-footer__msg">Handoff pending: waiting for Ana R. to accept for Grace</span></footer>
 </div>

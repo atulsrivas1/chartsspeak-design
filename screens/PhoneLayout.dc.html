@@ -16,15 +16,15 @@ body{margin:0}
 a{color:var(--accent-text)}a:hover{color:var(--ink)}
 </style>
 </helmet>
-<div class="cs-shell" data-theme="{{theme}}" data-screen="chart" style="width: 390px; height: 844px;">
+<div class="cs-shell cs-shell--panes" data-theme="{{theme}}" data-screen="chart" style="width: 390px; height: 844px;">
   <header class="cs-topbar">
     <span class="cs-wordmark" role="img" aria-label="ChartsSpeak"><span aria-hidden="true">Charts</span><b aria-hidden="true">Speak</b></span>
     <span class="cs-tag">Private</span>
     <span class="cs-topbar__spacer"></span>
     <span class="cs-conn" role="status"><span class="cs-conn__dot" aria-hidden="true"></span>Connected</span>
   </header>
-  <div class="cs-shell__body">
-    <main class="cs-shell__main">
+  <div class="cs-wpanes">
+    <main class="cs-wpane cs-wpane--chart" aria-label="Chart">
       <div class="cs-titleblock">
         <div class="cs-row" style="gap: 8px;">
           <h1 class="cs-title">Benchmark grid</h1>
@@ -59,15 +59,10 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
         </div>
       </section>
     </main>
-    <aside class="cs-rail" aria-label="Assistant"></aside>
   </div>
   <footer class="cs-footer" role="status" aria-live="polite"><span class="cs-footer__msg cs-footer__msg--good">✓ Mat finished: compare with SPY</span><a href="PhoneConversation.dc.html" class="cs-btn cs-btn--compact cs-btn--quiet" style="text-decoration: none;">Read</a></footer>
-  <div class="cs-shell__switch">
-    <div class="cs-tabs cs-tabs--switch" role="tablist" aria-label="Screen">
-      <button class="cs-tab" role="tab" aria-selected="true">Chart</button>
-      <a class="cs-tab" role="tab" aria-selected="false" href="PhoneConversation.dc.html" style="display: grid; place-items: center; text-decoration: none;">Conversation<span class="cs-tab__count">1 new</span></a>
-    </div>
-  </div>
+  <nav class="cs-tabbar3" aria-label="Panes"><a href="PhoneMenu.dc.html" aria-selected="false"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h9"/></svg>Menu</a><a href="PhoneConversation.dc.html" aria-selected="false"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 4.5h13v9h-7.5l-3.5 3v-3h-2z"/></svg>Chat<span class="cs-iconbtn__count" aria-label="1 item needs your review">1</span></a><a href="PhoneChart.dc.html" aria-selected="true"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 16V4M3 16h14M6 12l3.5-3.5 2.5 2.5 5-6"/></svg>Chart</a></nav>
+
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["dark","light"],"default":"dark"},"$preview":{"width":390,"height":844}}'>

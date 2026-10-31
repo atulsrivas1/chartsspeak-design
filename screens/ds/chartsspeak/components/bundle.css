@@ -790,3 +790,6 @@ kbd.cs-kbd { display: inline-grid; place-items: center; min-width: 22px; height:
 }
 
 .cs-wordmark b { color: var(--accent-text); font-weight: 700; }
+/* older boards keep the toolbar inside .cs-panel: wrap there too */
+.cs-wpane--chart .cs-panel > .cs-toolbar { flex-wrap: wrap; overflow: visible; row-gap: var(--space-4); }
+.cs-wpane--chart > .cs-titleblock { padding: var(--space-12) var(--space-16) var(--space-8); }

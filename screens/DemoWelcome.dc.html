@@ -16,7 +16,7 @@ body{margin:0}
 a{color:var(--accent-text)}a:hover{color:var(--ink)}
 </style>
 </helmet>
-<div class="cs-shell" data-theme="{{theme}}" style="width: 100%; height: 100vh; min-height: 760px;">
+<div class="cs-shell cs-shell--panes" data-theme="{{theme}}" style="width: 100%; height: 100vh; min-height: 760px;">
   <header class="cs-topbar">
     <span class="cs-wordmark" role="img" aria-label="ChartsSpeak"><span aria-hidden="true">Charts</span><b aria-hidden="true">Speak</b></span>
     <span class="cs-topbar__sep" aria-hidden="true"></span>
@@ -31,32 +31,40 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
     <span>Delayed, stored daily data, read-only, for demonstration only. Not investment advice.</span>
     <label class="cs-row" style="gap: 6px; margin-left: auto;"><span class="cs-muted">Chart</span><select class="cs-select" style="min-height: 32px;"><option>NVDA</option><option>SPY</option><option>QQQ</option></select></label>
   </div>
-  <div class="cs-shell__body">
-    <main class="cs-shell__main">
-      <section class="cs-panel" aria-label="Chart">
-        <div class="cs-toolbar" role="toolbar" aria-label="Chart">
-          <span class="cs-toolbar__sym">NVDA</span>
-          <button class="cs-btn cs-btn--compact" aria-haspopup="listbox" aria-label="Interval: 1 day" disabled>1D<span class="cs-caret" aria-hidden="true"></span></button>
-          <span class="cs-badge"><span class="cs-badge__glyph" aria-hidden="true">◷</span>Delayed</span>
-          <span class="cs-badge">Split-adjusted, not dividend-adjusted</span>
+  <div class="cs-wpanes">
+    <nav class="cs-wpane cs-wpane--menu" data-collapsed="false" aria-label="Workspace menu">
+      <div class="cs-wpane__head">
+        <button class="cs-iconbtn" aria-expanded="true" aria-label="Collapse menu" title="Menu ( [ )"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h9"/></svg></button>
+        <h2 class="cs-wpane__title">Workspace</h2>
+        <button class="cs-iconbtn cs-wpane__hide" aria-label="Collapse menu"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12 4 6 10l6 6"/></svg></button>
+        <span class="cs-wpane__railtitle">Menu</span>
+      </div>
+      <div class="cs-wpane__body">
+        <div class="cs-menusec"><span class="label">Charts</span>
+          <button class="cs-navrow" aria-current="true"><span class="cs-navrow__sym">NVDA</span><span class="cs-navrow__sub">NVIDIA</span><span class="cs-navrow__end"><b>151.38</b>−0.21%</span></button>
+          <button class="cs-navrow"><span class="cs-navrow__sym">QQQ</span><span class="cs-navrow__sub">Invesco QQQ</span><span class="cs-navrow__end"><b>512.40</b>+0.34%</span></button>
+          <button class="cs-navrow"><span class="cs-navrow__sym">SPY</span><span class="cs-navrow__sub">SPDR S&amp;P 500</span><span class="cs-navrow__end"><b>618.22</b>+0.18%</span></button>
+          <div class="cs-menunote">Closes on 28 Oct, stored daily.</div>
         </div>
-        <div class="cs-meta cs-meta--split">
-          <div class="cs-legend">
-            <span class="cs-legend__item" style="color: var(--chart-series-1);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 50</span><span class="cs-legend__val">128.06</span></span>
-            <span class="cs-legend__item" style="color: var(--chart-series-2);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 200</span><span class="cs-legend__val">121.70</span></span>
-          </div>
-          <span>Rendered r12 · 19:58:02 ET</span>
+        <div class="cs-menusec"><span class="label">On this chart</span>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 3h7l3 3v11H5z"/><path d="M12 3v3h3M8 10h4M8 13h4"/></svg>Evidence<span class="cs-navrow__n cs-navrow__n--agent">1</span></button>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2 10h3l2-6 3 12 2.5-8L14 10h4"/></svg>Activity</button>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 3 7 4-7 4-7-4zM3 11l7 4 7-4"/></svg>Layers<span class="cs-navrow__n">2</span></button>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><ellipse cx="10" cy="5" rx="6" ry="2.5"/><path d="M4 5v10c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5V5M4 10c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5"/></svg>Data</button>
         </div>
-        <div class="cs-chart" tabindex="0" aria-label="Demo price chart. Hover, drag to pan, scroll to zoom.">
-          <dc-import name="ChartFrame" hint-size="100%,100%"></dc-import>
+        <div class="cs-menusec"><span class="label">Alerts</span>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 14V9a5 5 0 0 1 10 0v5l1.5 2h-13zM8.5 18h3"/></svg>Close above 135<span class="cs-navrow__n">Armed</span></button>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 14V9a5 5 0 0 1 10 0v5l1.5 2h-13zM8.5 18h3"/></svg>Close below 120<span class="cs-navrow__n">Armed</span></button>
         </div>
-      </section>
-    </main>
-    <aside class="cs-rail" aria-label="Assistant">
-      <div class="cs-rail__head">
-        <span class="cs-avatar cs-avatar--lg cs-avatar--agent" aria-hidden="true">M</span>
-        <span class="cs-rail__title">Mat</span>
-        <span class="caption cs-muted">Agent · read-only demo</span>
+      </div>
+    </nav>
+    <aside class="cs-wpane cs-wpane--chat cs-rail" aria-label="Assistant" data-collapsed="false">
+      <div class="cs-wpane__head">
+        <button class="cs-iconbtn" aria-expanded="true" aria-label="Collapse chat" title="Chat ( ] )"><svg viewBox="0 0 20 20" aria-hidden="true">PhoneConversation</svg></button>
+        <span class="cs-avatar cs-avatar--lg cs-avatar--agent cs-wpane__hide" aria-hidden="true">M</span>
+        <h2 class="cs-wpane__title">Mat <span class="caption cs-muted">Agent · read-only demo</span></h2>
+        <button class="cs-iconbtn cs-wpane__hide" aria-label="Collapse chat"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m8 4 6 6-6 6"/></svg></button>
+        <span class="cs-wpane__railtitle">Chat</span>
       </div>
       <div class="cs-tabs" role="tablist" aria-label="Rail">
         <button class="cs-tab" role="tab" aria-selected="true">Conversation</button>
@@ -84,6 +92,26 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
       </div>
       <div class="cs-rail__readonly">Messaging is off in the read-only demo. Sign in to ask your own questions.</div>
     </aside>
+    <main class="cs-wpane cs-wpane--chart" aria-label="Chart">
+      <section class="cs-panel" aria-label="Chart">
+        <div class="cs-toolbar" role="toolbar" aria-label="Chart">
+          <span class="cs-toolbar__sym">NVDA</span>
+          <button class="cs-btn cs-btn--compact" aria-haspopup="listbox" aria-label="Interval: 1 day" disabled>1D<span class="cs-caret" aria-hidden="true"></span></button>
+          <span class="cs-badge"><span class="cs-badge__glyph" aria-hidden="true">◷</span>Delayed</span>
+          <span class="cs-badge">Split-adjusted, not dividend-adjusted</span>
+        </div>
+        <div class="cs-meta cs-meta--split">
+          <div class="cs-legend">
+            <span class="cs-legend__item" style="color: var(--chart-series-1);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 50</span><span class="cs-legend__val">128.06</span></span>
+            <span class="cs-legend__item" style="color: var(--chart-series-2);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 200</span><span class="cs-legend__val">121.70</span></span>
+          </div>
+          <span>Rendered r12 · 19:58:02 ET</span>
+        </div>
+        <div class="cs-chart" tabindex="0" aria-label="Demo price chart. Hover, drag to pan, scroll to zoom.">
+          <dc-import name="ChartFrame" hint-size="100%,100%"></dc-import>
+        </div>
+      </section>
+    </main>
   </div>
   <footer class="cs-footer" role="status" aria-live="polite"><span class="cs-footer__msg">Read-only. Nothing you do here is saved.</span></footer>
 </div>

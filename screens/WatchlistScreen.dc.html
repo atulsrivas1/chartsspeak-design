@@ -17,7 +17,7 @@ body{margin:0}
 a{color:var(--accent-text)}a:hover{color:var(--ink)}
 </style>
 </helmet>
-<div class="cs-shell" data-theme="{{theme}}" style="width: 100%; height: 100vh; min-height: 760px;">
+<div class="cs-shell cs-shell--panes" data-theme="{{theme}}" style="width: 100%; height: 100vh; min-height: 760px;">
   <header class="cs-topbar">
     <span class="cs-wordmark" role="img" aria-label="ChartsSpeak"><span aria-hidden="true">Charts</span><b aria-hidden="true">Speak</b></span>
     <span class="cs-topbar__sep" aria-hidden="true"></span>
@@ -26,10 +26,69 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
     <span class="cs-tag">Private</span>
     <span class="cs-topbar__spacer"></span>
     <span class="cs-conn" role="status"><span class="cs-conn__dot" aria-hidden="true"></span>Connected</span>
-    <span class="cs-avatar cs-avatar--person cs-avatar--lg" aria-label="You">MS</span>
+    <button class="cs-peoplebtn" aria-expanded="false" aria-controls="people" aria-label="People in this workspace: Monika, Atul, Priya and Mat"><span class="cs-avstack" aria-hidden="true"><span class="cs-avatar cs-avatar--person cs-avatar--p1">MS</span><span class="cs-avatar cs-avatar--person cs-avatar--p2">AS</span><span class="cs-avatar cs-avatar--person cs-avatar--p3">PK</span><span class="cs-avatar cs-avatar--agent">M</span></span>People</button>
+    <button class="cs-btn cs-btn--compact" aria-pressed="false" title="Hide menu and chat"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 8V3h5M12 3h5v5M17 12v5h-5M8 17H3v-5"/></svg>Focus</button>
   </header>
-  <div class="cs-shell__body">
-    <main class="cs-shell__main">
+  <section class="cs-people" id="people" aria-label="People in this workspace" hidden>
+      <div class="cs-people__row">
+        <div class="cs-person"><span class="cs-avatar cs-avatar--person cs-avatar--lg cs-avatar--p1" aria-hidden="true">MS</span><div><div class="cs-person__name">Monika (you)</div><div class="cs-person__sub">Looking at NVDA</div></div></div>
+        <div class="cs-person"><span class="cs-avatar cs-avatar--person cs-avatar--lg cs-avatar--p2" aria-hidden="true">AS</span><div><div class="cs-person__name">Atul</div><div class="cs-person__sub">Looking at QQQ</div></div></div>
+        <div class="cs-person"><span class="cs-avatar cs-avatar--person cs-avatar--lg cs-avatar--p3" aria-hidden="true">PK</span><div><div class="cs-person__name">Priya</div><div class="cs-person__sub">Idle for 12 min</div></div></div>
+        <div class="cs-person"><span class="cs-avatar cs-avatar--agent cs-avatar--lg" aria-hidden="true">M</span><div><div class="cs-person__name">Mat</div><div class="cs-person__sub">Assistant · watching 2 alerts</div></div></div>
+        <span class="cs-teamvideo"><span id="vl">Team video</span><button class="cs-teamvideo__sw" role="switch" aria-checked="false" aria-labelledby="vl"></button><span><b>Off.</b> Set by the workspace owner.</span></span>
+      </div>
+      <div class="cs-tiles" aria-label="Sample video tiles. Camera off for everyone." hidden>
+        <div class="cs-tile"><span class="cs-avatar cs-avatar--person cs-avatar--lg cs-avatar--p1">MS</span><span class="cs-tile__label">Monika · camera off</span></div>
+        <div class="cs-tile"><span class="cs-avatar cs-avatar--person cs-avatar--lg cs-avatar--p2">AS</span><span class="cs-tile__label">Atul · camera off</span></div>
+        <div class="cs-tile"><span class="cs-avatar cs-avatar--person cs-avatar--lg cs-avatar--p3">PK</span><span class="cs-tile__label">Priya · camera off</span></div>
+        <div class="cs-tile"><span class="caption cs-muted" style="padding:0 12px;text-align:center">Mat has no camera.</span></div>
+      </div>
+    </section>
+  <div class="cs-wpanes">
+    <nav class="cs-wpane cs-wpane--menu" data-collapsed="false" aria-label="Workspace menu">
+      <div class="cs-wpane__head">
+        <button class="cs-iconbtn" aria-expanded="true" aria-label="Collapse menu" title="Menu ( [ )"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h9"/></svg></button>
+        <h2 class="cs-wpane__title">Workspace</h2>
+        <button class="cs-iconbtn cs-wpane__hide" aria-label="Collapse menu"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12 4 6 10l6 6"/></svg></button>
+        <span class="cs-wpane__railtitle">Menu</span>
+      </div>
+      <div class="cs-wpane__body">
+        <div class="cs-menusec"><span class="label">Charts</span>
+          <button class="cs-navrow" aria-current="true"><span class="cs-navrow__sym">NVDA</span><span class="cs-navrow__sub">NVIDIA</span><span class="cs-navrow__end"><b>151.38</b>−0.21%</span></button>
+          <button class="cs-navrow"><span class="cs-navrow__sym">QQQ</span><span class="cs-navrow__sub">Invesco QQQ</span><span class="cs-navrow__end"><b>512.40</b>+0.34%</span></button>
+          <button class="cs-navrow"><span class="cs-navrow__sym">SPY</span><span class="cs-navrow__sub">SPDR S&amp;P 500</span><span class="cs-navrow__end"><b>618.22</b>+0.18%</span></button>
+          <div class="cs-menunote">Closes on 28 Oct, stored daily.</div>
+        </div>
+        <div class="cs-menusec"><span class="label">On this chart</span>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 3h7l3 3v11H5z"/><path d="M12 3v3h3M8 10h4M8 13h4"/></svg>Evidence<span class="cs-navrow__n cs-navrow__n--agent">1</span></button>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2 10h3l2-6 3 12 2.5-8L14 10h4"/></svg>Activity</button>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 3 7 4-7 4-7-4zM3 11l7 4 7-4"/></svg>Layers<span class="cs-navrow__n">2</span></button>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><ellipse cx="10" cy="5" rx="6" ry="2.5"/><path d="M4 5v10c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5V5M4 10c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5"/></svg>Data</button>
+        </div>
+        <div class="cs-menusec"><span class="label">Alerts</span>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 14V9a5 5 0 0 1 10 0v5l1.5 2h-13zM8.5 18h3"/></svg>Close above 135<span class="cs-navrow__n">Armed</span></button>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 14V9a5 5 0 0 1 10 0v5l1.5 2h-13zM8.5 18h3"/></svg>Close below 120<span class="cs-navrow__n">Armed</span></button>
+        </div>
+      </div>
+    </nav>
+    <aside class="cs-wpane cs-wpane--chat cs-rail" aria-label="Watchlist" data-collapsed="false"><div class="cs-wpane__head">
+        <button class="cs-iconbtn" aria-expanded="true" aria-label="Collapse chat" title="Chat ( ] )"><svg viewBox="0 0 20 20" aria-hidden="true">PhoneConversation</svg></button>
+        <span class="cs-avatar cs-avatar--lg cs-avatar--agent cs-wpane__hide" aria-hidden="true">M</span>
+        <h2 class="cs-wpane__title">Mat <span class="caption cs-muted">Workspace assistant</span></h2>
+        <button class="cs-iconbtn cs-wpane__hide" aria-label="Collapse chat"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m8 4 6 6-6 6"/></svg></button>
+        <span class="cs-wpane__railtitle">Chat</span>
+      </div>
+      <div class="cs-rail__head">
+        <div class="cs-tabs cs-tabs--switch" role="tablist" aria-label="Rail" style="flex: 1;"><button class="cs-tab" role="tab" aria-selected="false">Assistant</button><button class="cs-tab" role="tab" aria-selected="true">Watchlist<span class="cs-tab__count">1</span></button></div>
+      </div>
+      <div class="cs-rail__body" role="tabpanel">
+        <div class="cs-watch" aria-label="Watchlist"><div class="cs-watch__head"><span class="cs-result__label">Watchlist · 5</span><span class="caption cs-muted">Last stored close, not real-time</span></div><ul class="cs-list" style="gap:0"><li class="cs-watch__row" aria-current="true"><span class="cs-stack" style="gap:0;min-width:0"><span class="cs-watch__sym">NVDA</span><span class="cs-watch__name">NVIDIA</span></span><span class="cs-watch__vals"><span>138.42 <span class="cs-chg cs-chg--up"><span class="cs-chg__g" aria-hidden="true">▲</span>+1.8%</span></span><span class="cs-watch__thru">through 28 Oct</span></span></li><li class="cs-watch__row"><span class="cs-stack" style="gap:0;min-width:0"><span class="cs-watch__sym">SPY</span><span class="cs-watch__name">SPDR S&amp;P 500 ETF</span></span><span class="cs-watch__vals"><span>598.11 <span class="cs-chg cs-chg--up"><span class="cs-chg__g" aria-hidden="true">▲</span>+0.4%</span></span><span class="cs-watch__thru">through 28 Oct</span></span></li><li class="cs-watch__row"><span class="cs-stack" style="gap:0;min-width:0"><span class="cs-watch__sym">QQQ</span><span class="cs-watch__name">Invesco QQQ</span></span><span class="cs-watch__vals"><span>512.07 <span class="cs-chg cs-chg--down"><span class="cs-chg__g" aria-hidden="true">▼</span>−0.3%</span></span><span class="cs-watch__thru cs-watch__thru--stale">! through 3 Oct</span></span></li><li class="cs-watch__row"><span class="cs-stack" style="gap:0;min-width:0"><span class="cs-watch__sym">IWM</span><span class="cs-watch__name">iShares Russell 2000</span></span><span class="cs-watch__vals"><span>221.64 <span class="cs-chg cs-chg--down"><span class="cs-chg__g" aria-hidden="true">▼</span>−0.9%</span></span><span class="cs-watch__thru">through 28 Oct</span></span></li><li class="cs-watch__row" aria-disabled="true"><span class="cs-stack" style="gap:0"><span class="cs-watch__sym cs-muted">PLTR</span><span class="cs-watch__name">Palantir</span></span><span class="cs-watch__vals"><span class="cs-watch__thru" style="color:var(--refusal)">Not stored</span></span></li></ul></div>
+        <div class="cs-row" style="justify-content: space-between; padding: 8px 8px 0;"><span class="cs-result__label">Alerts · 4</span><button class="cs-btn cs-btn--compact"><span class="cs-btn__glyph" aria-hidden="true">+</span>New alert</button></div>
+        <ul class="cs-alerts cs-list" aria-label="Alerts"><li class="cs-alert"><span class="cs-alert__cond">NVDA daily close crosses above SMA 50</span><span class="cs-alert__state cs-alert__state--triggered"><span aria-hidden="true">!</span>Triggered</span><span class="cs-alert__meta">On the 28 Oct close (138.42 vs 136.90) · checked 21:04 ET</span></li><li class="cs-alert"><span class="cs-alert__cond">SPY daily close below 590.00</span><span class="cs-alert__state "><span aria-hidden="true">◷</span>Waiting</span><span class="cs-alert__meta">Next check after the 29 Oct close is stored · expires 30 Jan</span></li><li class="cs-alert"><span class="cs-alert__cond">QQQ RSI 14 above 70</span><span class="cs-alert__state cs-alert__state--cant"><span aria-hidden="true">⨯</span>Can't check</span><span class="cs-alert__meta">QQQ is stored through 3 Oct, so this alert is paused. It won't fire on old data.</span></li><li class="cs-alert"><span class="cs-alert__cond">IWM daily close above 230.00</span><span class="cs-alert__state "><span aria-hidden="true">–</span>Expired</span><span class="cs-alert__meta">Ended 15 Oct without triggering</span></li></ul>
+        <span class="caption cs-muted" style="padding: 0 8px;">Values are the last stored daily close. Alerts are checked after each daily update, not in real time.</span>
+      </div>
+    </aside>
+    <main class="cs-wpane cs-wpane--chart" aria-label="Chart">
       <section class="cs-panel" aria-label="Chart">
         <div class="cs-toolbar" role="toolbar" aria-label="Chart">
           <span class="cs-toolbar__sym">NVDA</span>
@@ -62,17 +121,6 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
         </div>
       </section>
     </main>
-    <aside class="cs-rail" aria-label="Watchlist">
-      <div class="cs-rail__head">
-        <div class="cs-tabs cs-tabs--switch" role="tablist" aria-label="Rail" style="flex: 1;"><button class="cs-tab" role="tab" aria-selected="false">Assistant</button><button class="cs-tab" role="tab" aria-selected="true">Watchlist<span class="cs-tab__count">1</span></button></div>
-      </div>
-      <div class="cs-rail__body" role="tabpanel">
-        <div class="cs-watch" aria-label="Watchlist"><div class="cs-watch__head"><span class="cs-result__label">Watchlist · 5</span><span class="caption cs-muted">Last stored close, not real-time</span></div><ul class="cs-list" style="gap:0"><li class="cs-watch__row" aria-current="true"><span class="cs-stack" style="gap:0;min-width:0"><span class="cs-watch__sym">NVDA</span><span class="cs-watch__name">NVIDIA</span></span><span class="cs-watch__vals"><span>138.42 <span class="cs-chg cs-chg--up"><span class="cs-chg__g" aria-hidden="true">▲</span>+1.8%</span></span><span class="cs-watch__thru">through 28 Oct</span></span></li><li class="cs-watch__row"><span class="cs-stack" style="gap:0;min-width:0"><span class="cs-watch__sym">SPY</span><span class="cs-watch__name">SPDR S&amp;P 500 ETF</span></span><span class="cs-watch__vals"><span>598.11 <span class="cs-chg cs-chg--up"><span class="cs-chg__g" aria-hidden="true">▲</span>+0.4%</span></span><span class="cs-watch__thru">through 28 Oct</span></span></li><li class="cs-watch__row"><span class="cs-stack" style="gap:0;min-width:0"><span class="cs-watch__sym">QQQ</span><span class="cs-watch__name">Invesco QQQ</span></span><span class="cs-watch__vals"><span>512.07 <span class="cs-chg cs-chg--down"><span class="cs-chg__g" aria-hidden="true">▼</span>−0.3%</span></span><span class="cs-watch__thru cs-watch__thru--stale">! through 3 Oct</span></span></li><li class="cs-watch__row"><span class="cs-stack" style="gap:0;min-width:0"><span class="cs-watch__sym">IWM</span><span class="cs-watch__name">iShares Russell 2000</span></span><span class="cs-watch__vals"><span>221.64 <span class="cs-chg cs-chg--down"><span class="cs-chg__g" aria-hidden="true">▼</span>−0.9%</span></span><span class="cs-watch__thru">through 28 Oct</span></span></li><li class="cs-watch__row" aria-disabled="true"><span class="cs-stack" style="gap:0"><span class="cs-watch__sym cs-muted">PLTR</span><span class="cs-watch__name">Palantir</span></span><span class="cs-watch__vals"><span class="cs-watch__thru" style="color:var(--refusal)">Not stored</span></span></li></ul></div>
-        <div class="cs-row" style="justify-content: space-between; padding: 8px 8px 0;"><span class="cs-result__label">Alerts · 4</span><button class="cs-btn cs-btn--compact"><span class="cs-btn__glyph" aria-hidden="true">+</span>New alert</button></div>
-        <ul class="cs-alerts cs-list" aria-label="Alerts"><li class="cs-alert"><span class="cs-alert__cond">NVDA daily close crosses above SMA 50</span><span class="cs-alert__state cs-alert__state--triggered"><span aria-hidden="true">!</span>Triggered</span><span class="cs-alert__meta">On the 28 Oct close (138.42 vs 136.90) · checked 21:04 ET</span></li><li class="cs-alert"><span class="cs-alert__cond">SPY daily close below 590.00</span><span class="cs-alert__state "><span aria-hidden="true">◷</span>Waiting</span><span class="cs-alert__meta">Next check after the 29 Oct close is stored · expires 30 Jan</span></li><li class="cs-alert"><span class="cs-alert__cond">QQQ RSI 14 above 70</span><span class="cs-alert__state cs-alert__state--cant"><span aria-hidden="true">⨯</span>Can't check</span><span class="cs-alert__meta">QQQ is stored through 3 Oct, so this alert is paused. It won't fire on old data.</span></li><li class="cs-alert"><span class="cs-alert__cond">IWM daily close above 230.00</span><span class="cs-alert__state "><span aria-hidden="true">–</span>Expired</span><span class="cs-alert__meta">Ended 15 Oct without triggering</span></li></ul>
-        <span class="caption cs-muted" style="padding: 0 8px;">Values are the last stored daily close. Alerts are checked after each daily update, not in real time.</span>
-      </div>
-    </aside>
   </div>
   <footer class="cs-footer" role="status" aria-live="polite"><span class="cs-footer__msg cs-footer__msg--caution">! Alert triggered: NVDA closed above SMA 50 on 28 Oct</span></footer>
 </div>

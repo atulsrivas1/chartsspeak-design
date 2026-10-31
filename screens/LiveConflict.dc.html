@@ -16,7 +16,7 @@ body{margin:0}
 a{color:var(--accent-text)}a:hover{color:var(--ink)}
 </style>
 </helmet>
-<div class="cs-shell" data-theme="{{theme}}" style="width: 100%; height: 100vh; min-height: 760px;">
+<div class="cs-shell cs-shell--panes" data-theme="{{theme}}" style="width: 100%; height: 100vh; min-height: 760px;">
   <header class="cs-topbar">
     <span class="cs-wordmark" role="img" aria-label="ChartsSpeak"><span aria-hidden="true">Charts</span><b aria-hidden="true">Speak</b></span>
     <span class="cs-topbar__sep" aria-hidden="true"></span>
@@ -32,39 +32,40 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
       <span class="cs-avatar-wrap"><span class="cs-avatar cs-avatar--lg cs-avatar--agent" aria-hidden="true">G</span><span class="cs-avatar__via" aria-hidden="true">AR</span></span>
     </span>
   </header>
-  <div class="cs-shell__body">
-    <main class="cs-shell__main">
-      <section class="cs-panel" aria-label="Chart">
-        <div class="cs-notice cs-notice--caution" role="alert" style="border-radius: 0; border-bottom: 1px solid var(--border-200);">
-          <span class="cs-notice__glyph" aria-hidden="true">!</span>
-          <span class="cs-notice__title"><span class="cs-notice__kind">Changed while you were editing.</span> Your move of the trend line was not applied.</span>
-          <span class="cs-notice__body" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px;"><span>You started from <span class="cs-revs"><b>r14</b></span>; the chart is now <span class="cs-revs"><b>r16</b></span>. Ana R. removed SMA 200 and Grace added a review note in between.</span><span class="cs-row"><button class="cs-btn cs-btn--compact cs-btn--primary">Review and reapply</button><button class="cs-btn cs-btn--compact cs-btn--quiet">Discard my edit</button></span></span>
+  <div class="cs-wpanes">
+    <nav class="cs-wpane cs-wpane--menu" data-collapsed="false" aria-label="Workspace menu">
+      <div class="cs-wpane__head">
+        <button class="cs-iconbtn" aria-expanded="true" aria-label="Collapse menu" title="Menu ( [ )"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h9"/></svg></button>
+        <h2 class="cs-wpane__title">Workspace</h2>
+        <button class="cs-iconbtn cs-wpane__hide" aria-label="Collapse menu"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12 4 6 10l6 6"/></svg></button>
+        <span class="cs-wpane__railtitle">Menu</span>
+      </div>
+      <div class="cs-wpane__body">
+        <div class="cs-menusec"><span class="label">Charts</span>
+          <button class="cs-navrow" aria-current="true"><span class="cs-navrow__sym">NVDA</span><span class="cs-navrow__sub">NVIDIA</span><span class="cs-navrow__end"><b>151.38</b>−0.21%</span></button>
+          <button class="cs-navrow"><span class="cs-navrow__sym">QQQ</span><span class="cs-navrow__sub">Invesco QQQ</span><span class="cs-navrow__end"><b>512.40</b>+0.34%</span></button>
+          <button class="cs-navrow"><span class="cs-navrow__sym">SPY</span><span class="cs-navrow__sub">SPDR S&amp;P 500</span><span class="cs-navrow__end"><b>618.22</b>+0.18%</span></button>
+          <div class="cs-menunote">Closes on 28 Oct, stored daily.</div>
         </div>
-        <div class="cs-toolbar" role="toolbar" aria-label="Chart">
-          <span class="cs-toolbar__sym">NVDA</span>
-          <button class="cs-btn cs-btn--compact" aria-haspopup="listbox" aria-label="Interval: 1 day">1D<span class="cs-caret" aria-hidden="true"></span></button>
-          <span class="cs-badge"><span class="cs-badge__glyph" aria-hidden="true">▤</span>Stored daily · through 28 Oct</span>
-          <span class="cs-toolbar__spacer"></span>
-          <button class="cs-btn cs-btn--compact cs-btn--quiet" disabled aria-describedby="undo-why"><span class="cs-btn__glyph" aria-hidden="true">↶</span>Undo add EMA 21</button>
-          <span id="undo-why" class="caption" style="color: var(--caution);">Can't undo: Ana R. changed EMA 21 after you (20:44 ET)</span>
+        <div class="cs-menusec"><span class="label">On this chart</span>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 3h7l3 3v11H5z"/><path d="M12 3v3h3M8 10h4M8 13h4"/></svg>Evidence<span class="cs-navrow__n cs-navrow__n--agent">1</span></button>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2 10h3l2-6 3 12 2.5-8L14 10h4"/></svg>Activity</button>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 3 7 4-7 4-7-4zM3 11l7 4 7-4"/></svg>Layers<span class="cs-navrow__n">2</span></button>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><ellipse cx="10" cy="5" rx="6" ry="2.5"/><path d="M4 5v10c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5V5M4 10c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5"/></svg>Data</button>
         </div>
-        <div class="cs-meta cs-meta--split">
-          <div class="cs-legend">
-            <span class="cs-legend__item" style="color: var(--chart-series-1);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 50</span><span class="cs-legend__val">128.06</span></span>
-            <span class="cs-legend__item" style="color: var(--chart-series-3);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">EMA 21</span><span class="cs-legend__val">130.40</span></span>
-          </div>
-          <span>Rendered r16 · 20:46:11 ET</span>
+        <div class="cs-menusec"><span class="label">Alerts</span>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 14V9a5 5 0 0 1 10 0v5l1.5 2h-13zM8.5 18h3"/></svg>Close above 135<span class="cs-navrow__n">Armed</span></button>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 14V9a5 5 0 0 1 10 0v5l1.5 2h-13zM8.5 18h3"/></svg>Close below 120<span class="cs-navrow__n">Armed</span></button>
         </div>
-        <div class="cs-chart" tabindex="0" aria-label="Price chart at revision 16.">
-          <dc-import name="ChartFrame" crosshair="{{no}}" hint-size="100%,100%"></dc-import>
-          <span class="cs-ghost-tag" style="position: absolute; top: 12px; left: 12px;"><span class="cs-avatar cs-avatar--agent" aria-hidden="true" style="width: 16px; height: 16px; font-size: 9px; border-width: 1.5px;">M</span>Mat is drawing a comparison · proposal, not applied</span>
-        </div>
-      </section>
-    </main>
-    <aside class="cs-rail" aria-label="Assistant">
-      <div class="cs-rail__head">
-        <span class="cs-rail__title">Agents at work</span>
-        <span class="caption cs-muted">2 working</span>
+      </div>
+    </nav>
+    <aside class="cs-wpane cs-wpane--chat cs-rail" aria-label="Assistant" data-collapsed="false">
+      <div class="cs-wpane__head">
+        <button class="cs-iconbtn" aria-expanded="true" aria-label="Collapse chat" title="Chat ( ] )"><svg viewBox="0 0 20 20" aria-hidden="true">PhoneConversation</svg></button>
+        <span class="cs-avatar cs-avatar--lg cs-avatar--agent cs-wpane__hide" aria-hidden="true">M</span>
+        <h2 class="cs-wpane__title">Agents at work <span class="caption cs-muted">2 working</span></h2>
+        <button class="cs-iconbtn cs-wpane__hide" aria-label="Collapse chat"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m8 4 6 6-6 6"/></svg></button>
+        <span class="cs-wpane__railtitle">Chat</span>
       </div>
       <div class="cs-tabs" role="tablist" aria-label="Rail">
         <button class="cs-tab" role="tab" aria-selected="true">Conversation</button>
@@ -100,6 +101,34 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
         <div class="cs-composer__foot"><span class="cs-composer__hint">Writing to everyone in this workspace.</span><button class="cs-btn cs-btn--primary cs-btn--compact">Send</button></div>
       </div>
     </aside>
+    <main class="cs-wpane cs-wpane--chart" aria-label="Chart">
+      <section class="cs-panel" aria-label="Chart">
+        <div class="cs-notice cs-notice--caution" role="alert" style="border-radius: 0; border-bottom: 1px solid var(--border-200);">
+          <span class="cs-notice__glyph" aria-hidden="true">!</span>
+          <span class="cs-notice__title"><span class="cs-notice__kind">Changed while you were editing.</span> Your move of the trend line was not applied.</span>
+          <span class="cs-notice__body" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px;"><span>You started from <span class="cs-revs"><b>r14</b></span>; the chart is now <span class="cs-revs"><b>r16</b></span>. Ana R. removed SMA 200 and Grace added a review note in between.</span><span class="cs-row"><button class="cs-btn cs-btn--compact cs-btn--primary">Review and reapply</button><button class="cs-btn cs-btn--compact cs-btn--quiet">Discard my edit</button></span></span>
+        </div>
+        <div class="cs-toolbar" role="toolbar" aria-label="Chart">
+          <span class="cs-toolbar__sym">NVDA</span>
+          <button class="cs-btn cs-btn--compact" aria-haspopup="listbox" aria-label="Interval: 1 day">1D<span class="cs-caret" aria-hidden="true"></span></button>
+          <span class="cs-badge"><span class="cs-badge__glyph" aria-hidden="true">▤</span>Stored daily · through 28 Oct</span>
+          <span class="cs-toolbar__spacer"></span>
+          <button class="cs-btn cs-btn--compact cs-btn--quiet" disabled aria-describedby="undo-why"><span class="cs-btn__glyph" aria-hidden="true">↶</span>Undo add EMA 21</button>
+          <span id="undo-why" class="caption" style="color: var(--caution);">Can't undo: Ana R. changed EMA 21 after you (20:44 ET)</span>
+        </div>
+        <div class="cs-meta cs-meta--split">
+          <div class="cs-legend">
+            <span class="cs-legend__item" style="color: var(--chart-series-1);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 50</span><span class="cs-legend__val">128.06</span></span>
+            <span class="cs-legend__item" style="color: var(--chart-series-3);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">EMA 21</span><span class="cs-legend__val">130.40</span></span>
+          </div>
+          <span>Rendered r16 · 20:46:11 ET</span>
+        </div>
+        <div class="cs-chart" tabindex="0" aria-label="Price chart at revision 16.">
+          <dc-import name="ChartFrame" crosshair="{{no}}" hint-size="100%,100%"></dc-import>
+          <span class="cs-ghost-tag" style="position: absolute; top: 12px; left: 12px;"><span class="cs-avatar cs-avatar--agent" aria-hidden="true" style="width: 16px; height: 16px; font-size: 9px; border-width: 1.5px;">M</span>Mat is drawing a comparison · proposal, not applied</span>
+        </div>
+      </section>
+    </main>
   </div>
   <footer class="cs-footer" role="status" aria-live="polite"><span class="cs-footer__msg cs-footer__msg--caution">! Outcome unknown: "Rename workspace" may not have been saved.</span><button class="cs-btn cs-btn--compact">Check again</button><button class="cs-btn cs-btn--compact cs-btn--quiet">Resolve</button></footer>
 </div>
