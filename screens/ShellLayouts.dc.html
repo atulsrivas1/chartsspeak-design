@@ -29,8 +29,8 @@ body{margin:0}
 </helmet>
 <div data-theme="dark" style="width: 1200px; height: 760px; box-sizing: border-box; padding: 28px 40px; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; gap: 16px; background: var(--surface-000); color: var(--ink); font-family: var(--font-sans);">
   <div style="display:flex;flex-direction:column;gap:6px;">
-    <span class="cs-eyebrow" style="display:block">Common shell · the one frame for every work page</span>
-    <h1 class="disp" style="font-size:27px;line-height:32px;margin:0">Every work page uses one of these four shells</h1>
+    <span class="cs-eyebrow" style="display:block">Common shell · required for every page that shows a chart</span>
+    <h1 class="disp" style="font-size:27px;line-height:32px;margin:0">Every page with a chart follows this common shell</h1>
     <span class="body cs-muted">The shell sets where the menu, chat and chart sit. Pages only fill the panes. The pane order is each person's own view setting and never changes what others see.</span>
   </div>
   <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;min-height:0;">
@@ -40,7 +40,7 @@ body{margin:0}
     <section class="opt"><div class="hd"><span class="cs-eyebrow" style="display:block">4 · Menu as a drawer</span><h2 class="disp">Chart | Chat + drawer</h2></div><div class="wire"><div class="bar"></div><div class="row"><div class="p chart" style="flex:1"><span>Chart</span></div><div class="p chat" style="width:34%"><span>Chat</span></div><div class="p drawer" style="position:absolute;left:3%;top:6%;bottom:6%;width:34%;"><span>Menu drawer</span></div></div></div><p class="small cs-muted" style="margin:0">Most room for chart and chat. Menu opens from the top bar.</p></section>
   </div>
   <div class="rules">
-    <div><b>Rules for all four</b><span class="small cs-muted">Chart pane never collapses. Menu and chat each collapse to a 56px rail. People row stays on top and collapses.</span></div>
+    <div><b>Everything but the chart collapses</b><span class="small cs-muted">Menu and chat each fold to a 56px rail with a badge for anything needing review. The people row folds to its button. In layout 4 the menu closes instead. The chart never collapses.</span></div>
     <div><b>Focus order = visual order</b><span class="small cs-muted">Reorder the panes in the DOM, not with CSS only, so Tab follows what people see.</span></div>
     <div><b>Small screens ignore the setting</b><span class="small cs-muted">Tablet keeps the drawer for chat. Phone shows one pane at a time with the Menu / Chat / Chart switch.</span></div>
   </div>
