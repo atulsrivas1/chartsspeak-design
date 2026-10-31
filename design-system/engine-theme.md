@@ -18,26 +18,26 @@ Colours are resolved hex/rgba strings; lengths are CSS px at 1× (the engine mul
   "version": 1,
   "id": "dark",
   "candleMode": "blue-orange",
-  "background": "#0c0f13",
-  "grid": { "color": "#1a2128", "width": 1, "lines": "horizontal" },
-  "axis": { "text": "#89969f", "font": "500 11px Inter, system-ui, sans-serif", "tickLength": 4 },
-  "crosshair": { "color": "#c5ced4", "width": 1, "dash": [3, 3], "tagFill": "#c5ced4", "tagText": "#0c0f13" },
+  "background": "#0b0f15",
+  "grid": { "color": "#19212b", "width": 1, "lines": "horizontal" },
+  "axis": { "text": "#97a3b1", "font": "500 11px "IBM Plex Sans", system-ui, sans-serif", "tickLength": 4 },
+  "crosshair": { "color": "#c5ced4", "width": 1, "dash": [3, 3], "tagFill": "#c5ced4", "tagText": "#0b0f15" },
   "candle": {
     "up":   { "stroke": "#56b4e9", "fill": "background", "wickWidth": 1, "bodyStroke": 1.2 },
     "down": { "stroke": "#e69f00", "fill": "#e69f00",    "wickWidth": 1 }
   },
-  "series": ["#e4e9ed", "#cc79a7", "#f0e442", "#009e73", "#9aa6ff"],
+  "series": ["#e7ebf1", "#cc79a7", "#f0e442", "#009e73", "#9aa6ff"],
   "seriesWidth": 1.5,
   "benchmark": { "order": [4, 1, 2, 3], "dash": [6, 4], "width": 1.5 },
   "events": {
     "split":    { "color": "#9aa6ae", "glyph": "S" },
     "dividend": { "color": "#6bd4a8", "glyph": "D" },
     "earnings": { "color": "#f2a07b", "glyph": "E" },
-    "marker":   { "size": 18, "radius": 4, "glyphColor": "background", "font": "600 11px Inter, system-ui, sans-serif" }
+    "marker":   { "size": 18, "radius": 4, "glyphColor": "background", "font": "600 11px "IBM Plex Sans", system-ui, sans-serif" }
   },
-  "selection": { "color": "#72ded5", "width": 1.5, "dash": [4, 3] },
+  "selection": { "color": "#8fa6ff", "width": 1.5, "dash": [4, 3] },
   "drawing": { "color": "#a351f6" },
-  "anchor": { "color": "#e4e9ed", "radius": 5, "hitRadius": 22 },
+  "anchor": { "color": "#e7ebf1", "radius": 5, "hitRadius": 22 },
   "reference": { "color": "#303940", "dash": [2, 3], "width": 1 }
 }
 ```

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
 /* ChartsSpeak components: framework-agnostic classes (cs-*). Values come only from tokens.css. */
 
 html { color-scheme: dark; }
@@ -355,7 +355,7 @@ body { margin: 0; background: var(--surface-000); color: var(--ink); font-family
 .cs-swatchpair i { display: block; width: 8px; height: 14px; border-radius: 1px; }
 
 /* ================= Wordmark: the name with the woven SS (top bar and display) ================= */
-.cs-wordmark { display: inline-flex; align-items: baseline; font: 600 15px/20px var(--font-sans); letter-spacing: -0.005em; color: var(--ink); white-space: nowrap; --halo: var(--surface-100); }
+.cs-wordmark { display: inline-flex; align-items: baseline; font: 700 17px/20px var(--font-display); letter-spacing: -0.01em; color: var(--ink); white-space: nowrap; --halo: var(--surface-100); }
 .cs-wordmark__ss { height: 0.73em; width: 0.555em; margin: 0 0.03em; overflow: visible; fill: none; stroke: var(--ink); stroke-width: 16; stroke-linecap: round; stroke-linejoin: round; }
 .cs-wordmark__ss .acc { stroke: var(--accent-text); }
 .cs-wordmark__ss .halo { stroke: var(--halo); stroke-width: 27; stroke-linecap: butt; }
@@ -667,3 +667,126 @@ kbd.cs-kbd { display: inline-grid; place-items: center; min-width: 22px; height:
 .cs-kbdline { display: inline-flex; align-items: center; gap: 4px; font: 500 12px/16px var(--font-sans); color: var(--ink-muted); }
 .cs-sronly-note { display: inline-flex; gap: 6px; align-items: baseline; padding: 4px 8px; border-radius: var(--radius-xs); border: 1px dashed var(--border-control); font: 500 12px/16px var(--font-sans); color: var(--ink-muted); }
 .cs-overlay { color: var(--ink); }
+
+/* ================= v3: three-pane workspace (menu | chat | chart) ================= */
+.cs-topbar__title, .cs-toolbar__sym, .cs-rail__title, .cs-wpane__title { font-family: var(--font-display); }
+.cs-shell--panes { background: var(--surface-000); }
+.cs-avstack { display: inline-flex; align-items: center; gap: var(--space-4); }
+.cs-peoplebtn { display: inline-flex; align-items: center; gap: var(--space-8); min-height: var(--size-target-compact); padding: 0 var(--space-8); border: 1px solid var(--border-control); border-radius: var(--radius-control); background: transparent; color: var(--ink); font: 600 12px/16px var(--font-sans); cursor: pointer; }
+.cs-peoplebtn:hover { background: var(--surface-200); }
+.cs-peoplebtn[aria-expanded="true"] { background: var(--surface-200); box-shadow: inset 0 -2px 0 var(--ink); }
+.cs-people { flex: none; display: flex; flex-direction: column; gap: var(--space-12); padding: var(--space-12) var(--space-30); background: var(--surface-100); border-bottom: 1px solid var(--border-200); }
+.cs-people[hidden] { display: none; }
+.cs-people__row { display: flex; align-items: center; gap: var(--space-24); flex-wrap: wrap; }
+.cs-person { display: flex; align-items: center; gap: var(--space-8); min-width: 0; }
+.cs-person__name { font: 600 13px/16px var(--font-sans); }
+.cs-person__sub { font: 500 12px/16px var(--font-sans); color: var(--ink-muted); }
+.cs-teamvideo { margin-left: auto; display: inline-flex; align-items: center; gap: var(--space-8); font: 500 12px/16px var(--font-sans); color: var(--ink-muted); }
+.cs-teamvideo b { color: var(--ink); font-weight: 600; }
+.cs-teamvideo__sw { position: relative; flex: none; width: 36px; height: 22px; padding: 0; border: 1px solid var(--border-control); border-radius: var(--radius-round); background: var(--surface-200); cursor: pointer; }
+.cs-teamvideo__sw::after { content: ""; position: absolute; top: 3px; left: 3px; width: 14px; height: 14px; border-radius: var(--radius-round); background: var(--ink-muted); }
+.cs-teamvideo__sw[aria-checked="true"] { background: var(--surface-200); border-color: var(--ink); }
+.cs-teamvideo__sw[aria-checked="true"]::after { transform: translateX(14px); background: var(--ink); }
+.cs-tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-8); }
+.cs-tiles[hidden] { display: none; }
+.cs-tile { position: relative; display: grid; place-items: center; height: 88px; border: 1px solid var(--border-200); border-radius: var(--radius-panel); background: var(--surface-150); overflow: hidden; }
+.cs-tile__label { position: absolute; left: var(--space-8); bottom: var(--space-6); font: 500 11px/16px var(--font-sans); color: var(--ink-muted); }
+
+.cs-wpanes { flex: 1; min-height: 0; display: flex; gap: var(--space-8); padding: var(--space-8) var(--space-16) var(--space-8); }
+.cs-wpane { display: flex; flex-direction: column; min-width: 0; min-height: 0; overflow: hidden; background: var(--surface-100); border: 1px solid var(--border-200); border-radius: var(--radius-panel); }
+.cs-wpane--menu { flex: none; width: 252px; }
+.cs-wpane--chat { flex: none; width: var(--size-rail); background: var(--surface-150); }
+.cs-wpane--chart { flex: 1; }
+.cs-wpane--chat.cs-rail { border-left: 1px solid var(--border-200); }
+.cs-wpane[data-collapsed="true"] { width: var(--size-railbar); }
+.cs-wpane__head { flex: none; display: flex; align-items: center; gap: var(--space-8); min-height: 48px; padding: var(--space-8) var(--space-12); border-bottom: 1px solid var(--border-100); }
+.cs-wpane__title { margin: 0; flex: 1; min-width: 0; font: 600 15px/20px var(--font-sans); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cs-wpane__body { flex: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; }
+.cs-iconbtn { position: relative; flex: none; display: inline-grid; place-items: center; width: var(--size-target-compact); height: var(--size-target-compact); padding: 0; border: 0; border-radius: var(--radius-control); background: transparent; color: var(--ink-muted); cursor: pointer; }
+.cs-iconbtn:hover { background: var(--surface-200); color: var(--ink); }
+.cs-iconbtn svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.cs-iconbtn__count { position: absolute; top: -3px; right: -4px; min-width: 16px; height: 16px; padding: 0 4px; box-sizing: border-box; border-radius: var(--radius-round); background: var(--accent); color: var(--on-accent); font: 600 10px/16px var(--font-sans); text-align: center; }
+.cs-wpane__railtitle { display: none; writing-mode: vertical-rl; font: 600 12px/16px var(--font-display); letter-spacing: 0.04em; color: var(--ink-muted); }
+.cs-wpane[data-collapsed="true"] .cs-wpane__body,
+.cs-wpane[data-collapsed="true"] .cs-composer,
+.cs-wpane[data-collapsed="true"] .cs-wpane__title,
+.cs-wpane[data-collapsed="true"] .cs-wpane__hide { display: none; }
+.cs-wpane[data-collapsed="true"] .cs-wpane__head { flex-direction: column; justify-content: flex-start; padding: var(--space-8) 0; border-bottom: 0; }
+.cs-wpane[data-collapsed="true"] .cs-wpane__railtitle { display: block; margin-top: var(--space-8); }
+
+.cs-menusec { padding: var(--space-12) var(--space-8) var(--space-4); }
+.cs-menusec + .cs-menusec { border-top: 1px solid var(--border-100); }
+.cs-menusec .label { display: block; padding: 0 var(--space-8) var(--space-6); color: var(--ink-muted); }
+.cs-navrow { display: flex; align-items: center; gap: var(--space-8); width: 100%; min-height: var(--size-target-compact); padding: var(--space-4) var(--space-8); border: 0; border-radius: var(--radius-control); background: transparent; color: var(--ink); text-align: left; font: 500 13px/20px var(--font-sans); cursor: pointer; }
+.cs-navrow:hover { background: var(--surface-200); }
+.cs-navrow[aria-current="true"] { background: var(--surface-200); box-shadow: inset 2px 0 0 var(--ink); }
+.cs-navrow__sym { width: 44px; font-weight: 600; }
+.cs-navrow__sub { color: var(--ink-muted); font-size: 12px; }
+.cs-navrow__end { margin-left: auto; text-align: right; font: 500 12px/16px var(--font-sans); font-variant-numeric: tabular-nums; color: var(--ink-muted); }
+.cs-navrow__end b { display: block; color: var(--ink); font-weight: 500; }
+.cs-navrow svg { width: 16px; height: 16px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; color: var(--ink-muted); }
+.cs-navrow__n { margin-left: auto; min-width: 20px; padding: 0 6px; border-radius: var(--radius-round); background: var(--surface-200); color: var(--ink); text-align: center; font: 600 11px/18px var(--font-sans); }
+.cs-navrow__n--agent { background: var(--accent); color: var(--on-accent); }
+.cs-menunote { padding: var(--space-4) var(--space-8) var(--space-8); font: 500 12px/16px var(--font-sans); color: var(--ink-muted); }
+.cs-wpane--chart .cs-chart { flex: 1; min-height: 0; border-radius: 0; }
+.cs-wpane--chart .cs-chart__frame { position: absolute; inset: 0; width: 100%; height: 100%; }
+.cs-wpane--chart > .cs-toolbar { flex-wrap: wrap; overflow: visible; row-gap: var(--space-4); border-radius: var(--radius-panel) var(--radius-panel) 0 0; }
+.cs-tabbar3 { display: none; }
+@media (pointer: coarse) { .cs-iconbtn { width: var(--size-target); height: var(--size-target); } }
+
+@container shell (max-width: 1439px) { .cs-wpane--menu { width: 220px; } .cs-wpane--chat { width: var(--size-rail-small); } .cs-people { padding-inline: var(--space-16); } }
+@container shell (max-width: 1023px) { .cs-wpanes { padding-inline: var(--space-12); } .cs-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@container shell (max-width: 760px) {
+  .cs-wpanes { padding: 0; gap: 0; }
+  .cs-wpane, .cs-wpane[data-collapsed="true"] { width: auto; flex: 1; border-radius: 0; border-width: 1px 0; }
+  .cs-wpane--menu, .cs-wpane--chat { flex: 1; }
+  .cs-wpane[data-collapsed="true"] .cs-wpane__body, .cs-wpane[data-collapsed="true"] .cs-composer, .cs-wpane[data-collapsed="true"] .cs-wpane__title { display: flex; }
+  .cs-wpane[data-collapsed="true"] .cs-wpane__head { flex-direction: row; padding: var(--space-8) var(--space-12); border-bottom: 1px solid var(--border-100); }
+  .cs-wpane[data-collapsed="true"] .cs-wpane__railtitle { display: none; }
+  .cs-wpane__hide { display: none; }
+  .cs-shell--panes[data-screen="menu"] .cs-wpane--chat, .cs-shell--panes[data-screen="menu"] .cs-wpane--chart,
+  .cs-shell--panes[data-screen="chat"] .cs-wpane--menu, .cs-shell--panes[data-screen="chat"] .cs-wpane--chart,
+  .cs-shell--panes[data-screen="chart"] .cs-wpane--menu, .cs-shell--panes[data-screen="chart"] .cs-wpane--chat { display: none; }
+  .cs-tabbar3 { display: grid; grid-template-columns: repeat(3, 1fr); flex: none; background: var(--surface-100); border-top: 1px solid var(--border-200); padding-bottom: env(safe-area-inset-bottom, 0px); }
+  .cs-tabbar3 button { position: relative; min-height: var(--size-target); border: 0; background: transparent; color: var(--ink-muted); font: 600 12px/16px var(--font-sans); cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; }
+  .cs-tabbar3 button svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  .cs-tabbar3 button[aria-selected="true"] { color: var(--ink); box-shadow: inset 0 2px 0 var(--ink); background: var(--surface-200); }
+  .cs-tabbar3 .cs-iconbtn__count { top: 2px; right: calc(50% - 26px); }
+  .cs-people { padding-inline: var(--space-16); }
+  .cs-teamvideo { margin-left: 0; }
+  .cs-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.cs-chatlog { flex: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column-reverse; }
+.cs-chatlog__in { display: flex; flex-direction: column; gap: var(--space-12); padding: var(--space-12); }
+.cs-toolbar__group { display: inline-flex; align-items: center; gap: var(--space-8); flex: none; }
+.cs-wpane[data-collapsed="true"] .cs-chatlog { display: none; }
+@container shell (max-width: 760px) { .cs-wpane[data-collapsed="true"] .cs-chatlog { display: flex; } }
+@container shell (max-width: 760px) {
+  .cs-shell--panes .cs-topbar > .cs-badge, .cs-shell--panes .cs-topbar > .cs-tag, .cs-shell--panes .cs-topbar > .cs-topbar__sep, .cs-shell--panes .cs-topbar > .cs-btn, .cs-shell--panes .cs-topbar__title { display: none; }
+  .cs-shell--panes .cs-wpane__title .caption { display: none; }
+  .cs-shell--panes .cs-menusec { padding-inline: var(--space-12); }
+  .cs-tabbar3 a { position: relative; min-height: var(--size-target); color: var(--ink-muted); font: 600 12px/16px var(--font-sans); text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; }
+  .cs-tabbar3 a svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  .cs-tabbar3 a[aria-selected="true"] { color: var(--ink); box-shadow: inset 0 2px 0 var(--ink); background: var(--surface-200); }
+}
+.cs-shell--panes .cs-wpane--chat.cs-rail { position: static; display: flex; box-shadow: none; }
+@container shell (max-width: 1023px) {
+  .cs-shell--panes .cs-wpane--chat.cs-rail { display: flex; position: static; width: var(--size-rail-small); }
+  .cs-shell--panes .cs-wpane--chat.cs-rail[data-collapsed="true"] { width: var(--size-railbar); }
+}
+@container shell (max-width: 760px) {
+  .cs-shell--panes .cs-wpane--chat.cs-rail, .cs-shell--panes .cs-wpane--chat.cs-rail[data-collapsed="true"] { width: auto; }
+}
+@container shell (max-width: 760px) {
+  .cs-shell--panes[data-screen="chart"] .cs-wpane--chat.cs-rail, .cs-shell--panes[data-screen="menu"] .cs-wpane--chat.cs-rail { display: none; }
+  .cs-wpane--chart > .cs-toolbar { flex-wrap: nowrap; overflow-x: auto; }
+  .cs-wpane--chart .cs-meta > .cs-legend:first-child, .cs-wpane--chart .cs-meta > span { display: none; }
+  .cs-wpane--chart .cs-toolbar .cs-badge { white-space: nowrap; }
+}
+@container shell (max-width: 760px) {
+  .cs-wpane--chart > .cs-toolbar { flex-wrap: wrap; overflow: visible; }
+  .cs-wpane--chart .cs-toolbar > .cs-badge { flex: 1 1 100%; white-space: normal; }
+}
+
+.cs-wordmark b { color: var(--accent-text); font-weight: 700; }

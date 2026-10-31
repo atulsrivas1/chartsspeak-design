@@ -1,48 +1,48 @@
 /* ChartsSpeak — generated from tokens.json */
 :root, [data-theme="dark"] {
-  --surface-000: #0c0f13; --surface-100: #101216; --surface-150: #11171c; --surface-200: #172027;
-  --border-100: #222a31; --border-200: #303940; --border-control: #5f6c76;
-  --ink: #e4e9ed; --ink-muted: #89969f;
-  --accent: #72ded5; --accent-soft: #a5e7df; --accent-text: #72ded5; --accent-wash: #132d2c; --on-accent: #062220; --focus: #72ded5;
+  --surface-000: #0b0f15; --surface-100: #141a22; --surface-150: #10161d; --surface-200: #1a222c;
+  --border-100: #212a35; --border-200: #2b3643; --border-control: #66768a;
+  --ink: #e7ebf1; --ink-muted: #97a3b1;
+  --accent: #8fa6ff; --accent-soft: #b4c3ff; --accent-text: #8fa6ff; --accent-wash: #1d2850; --on-accent: #0b0f15; --focus: #8fa6ff;
   --caution: #f1c76b; --caution-wash: #2a2414; --good: #6bd4a8; --good-wash: #12271d; --refusal: #f2a07b; --refusal-wash: #2c1915;
-  --anchor: #f1c76b; --scrim: rgba(5, 7, 9, 0.64); --veil-retained: rgba(12, 15, 19, 0.58);
-  --chart-bg: #0c0f13; --chart-grid: #1a2128; --chart-axis: #89969f; --chart-crosshair: #c5ced4;
+  --anchor: #f1c76b; --scrim: rgba(5, 7, 9, 0.64); --veil-retained: rgba(11, 15, 21, 0.58);
+  --chart-bg: #0b0f15; --chart-grid: #19212b; --chart-axis: #97a3b1; --chart-crosshair: #c5ced4;
   --chart-up: #56b4e9; --chart-down: #e69f00;
   --chart-up-conventional: #3fb68b; --chart-down-conventional: #f0616d;
-  --presence-1: #9aa6ff; --presence-2: #cc79a7; --presence-3: #f0e442; --presence-4: #f6745a;
-  --chart-series-1: #e4e9ed; --chart-series-2: #cc79a7; --chart-series-3: #f0e442; --chart-series-4: #009e73; --chart-series-5: #9aa6ff;
+  --presence-1: #3fd0b0; --presence-2: #cc79a7; --presence-3: #f0e442; --presence-4: #f6745a;
+  --chart-series-1: #e7ebf1; --chart-series-2: #cc79a7; --chart-series-3: #f0e442; --chart-series-4: #009e73; --chart-series-5: #8a97a6;
   --chart-event-split: #9aa6ae; --chart-event-dividend: #6bd4a8; --chart-event-earnings: #f2a07b;
-  --chart-selection: #72ded5; --chart-drawing: #a351f6; --chart-anchor: #e4e9ed;
+  --chart-selection: #8fa6ff; --chart-drawing: #a351f6; --chart-anchor: #e7ebf1;
   --shadow-dialog: 0 16px 48px rgba(0, 0, 0, 0.55); --shadow-overlay: 0 4px 16px rgba(0, 0, 0, 0.45);
 }
 [data-theme="light"] {
-  --surface-000: #f4f6f7; --surface-100: #ffffff; --surface-150: #f9fafb; --surface-200: #eaeef0;
-  --border-100: #e3e8eb; --border-200: #d3dade; --border-control: #7b8790;
-  --ink: #12171c; --ink-muted: #55616a;
-  --accent: #0b7a71; --accent-soft: #0a6d65; --accent-text: #0a6d65; --accent-wash: #e1f4f2; --on-accent: #ffffff; --focus: #0b7a71;
+  --surface-000: #e9ecf1; --surface-100: #ffffff; --surface-150: #f6f8fa; --surface-200: #eceff4;
+  --border-100: #e4e8ee; --border-200: #d5dbe3; --border-control: #7a8798;
+  --ink: #12171f; --ink-muted: #566170;
+  --accent: #3452d6; --accent-soft: #2a44b8; --accent-text: #2a44b8; --accent-wash: #e6ebff; --on-accent: #ffffff; --focus: #3452d6;
   --caution: #8a5a00; --caution-wash: #fbf1d9; --good: #1a7a4c; --good-wash: #e3f4ea; --refusal: #a2402a; --refusal-wash: #f9e7e2;
-  --anchor: #8a5a00; --scrim: rgba(18, 23, 28, 0.40); --veil-retained: rgba(244, 246, 247, 0.62);
-  --chart-bg: #ffffff; --chart-grid: #e9edf0; --chart-axis: #55616a; --chart-crosshair: #3a444c;
+  --anchor: #8a5a00; --scrim: rgba(18, 23, 28, 0.40); --veil-retained: rgba(233, 236, 241, 0.62);
+  --chart-bg: #ffffff; --chart-grid: #e8ecf1; --chart-axis: #566170; --chart-crosshair: #3a444c;
   --chart-up: #0072b2; --chart-down: #d55e00;
   --chart-up-conventional: #13855e; --chart-down-conventional: #c43d3d;
-  --presence-1: #4a55c8; --presence-2: #a8507f; --presence-3: #7a6f00; --presence-4: #7d0624;
-  --chart-series-1: #12171c; --chart-series-2: #a8507f; --chart-series-3: #7a6f00; --chart-series-4: #007a59; --chart-series-5: #4a55c8;
+  --presence-1: #0b7a71; --presence-2: #a8507f; --presence-3: #7a6f00; --presence-4: #7d0624;
+  --chart-series-1: #12171f; --chart-series-2: #a8507f; --chart-series-3: #7a6f00; --chart-series-4: #007a59; --chart-series-5: #66727f;
   --chart-event-split: #6b7780; --chart-event-dividend: #1a7a4c; --chart-event-earnings: #a2402a;
-  --chart-selection: #0b7a71; --chart-drawing: #850aff; --chart-anchor: #12171c;
+  --chart-selection: #3452d6; --chart-drawing: #850aff; --chart-anchor: #12171f;
   --shadow-dialog: 0 16px 40px rgba(18, 23, 28, 0.18); --shadow-overlay: 0 4px 14px rgba(18, 23, 28, 0.14);
 }
 :root {
   --space-4: 4px; --space-6: 6px; --space-8: 8px; --space-12: 12px; --space-16: 16px; --space-18: 18px; --space-24: 24px; --space-30: 30px;
-  --radius-xs: 4px; --radius-control: 7px; --radius-panel: 10px; --radius-dialog: 12px; --radius-round: 9999px;
+  --radius-xs: 4px; --radius-control: 8px; --radius-panel: 12px; --radius-dialog: 14px; --radius-round: 9999px;
   --size-target: 44px; --size-target-compact: 32px; --size-rail-wide: 390px; --size-rail: 356px; --size-rail-small: 320px;
   --size-tablet-max: 1023px; --size-railbar: 56px; --size-phone-max: 760px; --size-focus-ring: 2px;
   --opacity-disabled: 0.45;
-  --font-sans: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --font-display: "Bricolage Grotesque", "IBM Plex Sans", system-ui, sans-serif; --font-sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 }
-.title-page { font-size: 27px; line-height: 32px; font-weight: 600; letter-spacing: -0.01em; }
-.title-panel { font-size: 19px; line-height: 24px; font-weight: 600; }
-.heading { font-size: 15px; line-height: 20px; font-weight: 600; }
+.title-page { font-family: var(--font-display); font-size: 27px; line-height: 32px; font-weight: 600; letter-spacing: -0.01em; }
+.title-panel { font-family: var(--font-display); font-size: 19px; line-height: 24px; font-weight: 600; }
+.heading { font-family: var(--font-display); font-size: 15px; line-height: 20px; font-weight: 600; }
 .body { font-size: 13px; line-height: 20px; font-weight: 400; }
 .body-strong { font-size: 13px; line-height: 20px; font-weight: 600; }
 .small { font-size: 12px; line-height: 16px; font-weight: 400; }

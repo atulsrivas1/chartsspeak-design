@@ -47,7 +47,7 @@ Data class and connection are **different axes in different places**. A healthy 
 
 **The chart canvas is not CSS.** The engine draws candles, axes, grid, crosshair and indicator lines. Hand the engine/pack the `chart-*` tokens (resolved per theme) as its theme. Up candles are `chart-up`, drawn hollow; down candles are `chart-down`, drawn filled. The pair is blue/orange so that red-green colour blindness does not hide direction, and the hollow/filled shape carries direction without colour. Indicator lines take `chart-series-1…5` in order. Benchmarks reuse series 5, 2, 3, 4 **dashed**, so a benchmark never reads as an indicator. Event markers are `chart-event-split|dividend|earnings`, and each carries its letter (S, D, E), because the old grey/green/red key was colour-only. Someone who prefers green/red can switch to `chart-up-conventional` / `chart-down-conventional` in `ChartSettings`; it is opt-in only, and hollow/filled stays. The exact object the engine receives is in the Engine theme hand-off section.
 
-**Type.** Use one family, `sans` (Inter, falling back to the system stack). `mono` is for evidence and data-run ids only. The scale is `title-page` 27, `title-panel` 19, `heading` 15, `body` 13 (base), `small` 12, `caption` 11, `label` 11 uppercase +0.06em, `numeric` 12 tabular, `code` 12 mono. **Nothing is smaller than 11px**, which retires the 7–9px labels. Density comes from tight line heights and spacing, not from tiny type. Phone uses the same scale; `title-page` drops to 21/26.
+**Type.** Two families. `sans` is IBM Plex Sans for everything you read, and `display` is Bricolage Grotesque, used only for the logo, the workspace title, pane titles and the chart symbol (`title-page`, `title-panel` and `heading` use it). `mono` is for evidence and data-run ids only. The scale is `title-page` 27, `title-panel` 19, `heading` 15, `body` 13 (base), `small` 12, `caption` 11, `label` 11 uppercase +0.06em, `numeric` 12 tabular, `code` 12 mono. **Nothing is smaller than 11px**, which retires the 7–9px labels. Density comes from tight line heights and spacing, not from tiny type. Phone uses the same scale; `title-page` drops to 21/26.
 
 **Spacing.** Use only `space-4 … space-30`. Page gutter is `space-30` on desktop and `space-16` on tablet and phone. Panel padding is `space-16`, card padding `space-12` and gaps between panels `space-18`.
 
@@ -124,14 +124,22 @@ Nothing in this section appears until a second person is invited. The single-per
 - **Watchlist and alerts are stored data only:** `Watchlist` shows the last stored close and its date, never a sparkline or an estimate. `AlertEditor` builds a condition that reads back as one sentence and always states "Checked after each daily update, not real-time". `AlertList` says "Can't check" rather than staying silent when data is stale. The rail switches between Assistant and Watchlist at the top, so the assistant's five tabs stay as they are. Live data is an owner decision; real-time alerts would be a separate pattern.
 - **Replay is chosen, not stale:** `ReplayBar` and `ReplayCurtain` show past bars at full strength and hide the rest behind a hatched curtain, with "Replaying · not current" in words. Unlike the retained-frame veil, nothing is dimmed. Replay is personal, hides later drawings, and the assistant sees only revealed bars.
 
+## Workspace layout: menu, chat, chart
+
+The working screen is three side-by-side panes under the top bar: **menu** (charts, what is on this chart, alerts), **chat** (the assistant), and **chart**. Menu and chat collapse to a 56px rail with a vertical label (`WorkspacePanes`). The chart pane never collapses; it takes the width the others give up. `[` toggles the menu, `]` toggles chat, and `Focus` collapses both.
+
+- **A collapsed chat still shows when the assistant needs you.** The rail icon carries a count badge (`cs-iconbtn__count`) for items awaiting review. A person must never lose a proposal by tidying the screen.
+- **People live in the top bar** as a stack of avatars. The stack opens the people row (`cs-people`) under the bar, and collapses again. The row shows who is looking at what and where the assistant is.
+- **Team video is a workspace setting, off by default.** When the owner turns it on, the people row also shows a tile row (`cs-tiles`). Anyone can keep their camera off, and the assistant has no tile.
+- **Phone:** one pane at a time with a bottom switch (Menu, Chat, Chart). Collapse controls disappear.
+- The five rail tabs of earlier versions are now menu entries (Evidence, Activity, Layers, Data). Other screens still use the older right-hand rail until they are moved.
+
 ## Iconography
 
-There is no icon set yet. The five rail icons (Conversation, Evidence, Activity, Layers, Data) are inline SVGs in `AppShell`: 20px, 1.5px stroke, round caps, coloured with `currentColor`. Each always has an `aria-label`, and a tooltip with the tab name. Elsewhere, use the few glyphs defined in `bundle.css` as text characters: ● dot for connection, ✓ good, ! caution, ⨯ refusal, ↶ ↷ undo/redo, and the S/D/E marker letters. Any icon set you add later must be single-weight outline icons at 16px with a 1.5px stroke, coloured by the text token beside them. **Brand:** the name is the logo. Write it as `cs-wordmark`: "ChartsSpeak" in `sans` weight 600, with the "sS" drawn as two interwoven S's. The S of "Charts" is in `ink`, the mirrored S of "Speak" in `accent-text`, and it passes under at the crossing with a gap.
+There is no icon set yet. The five rail icons (Conversation, Evidence, Activity, Layers, Data) are inline SVGs in `AppShell`: 20px, 1.5px stroke, round caps, coloured with `currentColor`. Each always has an `aria-label`, and a tooltip with the tab name. Elsewhere, use the few glyphs defined in `bundle.css` as text characters: ● dot for connection, ✓ good, ! caution, ⨯ refusal, ↶ ↷ undo/redo, and the S/D/E marker letters. Any icon set you add later must be single-weight outline icons at 16px with a 1.5px stroke, coloured by the text token beside them. **Brand:** the name is the logo. Write it as `cs-wordmark`: "Charts" in `ink` and "Speak" in `accent-text`, set in `display` at weight 700, 17px in the top bar.
 
-- Use it in every page header (`TopBar`) at 15px, and in display headings with `cs-wordmark--display` (40px and up: cover, landing hero, title cards).
-- Always use two colours: in one colour the SS reads as an "8". The crossing gap takes the colour of the surface behind it (`--halo`), which is `surface-100` in the top bar and `surface-000` for display.
-- Keep `role="img"` and `aria-label="ChartsSpeak"` on the wrapper, so screen readers and search read the real name.
-- In running text, alt text, page titles and anything typed, the name is plain "ChartsSpeak". Never use the woven SS on its own as an icon, favicon or avatar.
+- Use it in every page header (`TopBar`). Keep `role="img"` and `aria-label="ChartsSpeak"` on the wrapper, so screen readers and search read the real name.
+- In running text, alt text, page titles and anything typed, the name is plain "ChartsSpeak".
 
 ## Accessibility floor
 
