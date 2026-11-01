@@ -438,7 +438,7 @@
    "y": 24300,
    "w": 1440,
    "h": 900,
-   "title": "50 · Chat pane view: Layers",
+   "title": "50 · Layers live in the expanded legend (pinned): show, hide, remove",
    "expand": "fill"
   },
   "ChatData.dc.html": {
@@ -446,7 +446,7 @@
    "y": 24300,
    "w": 1440,
    "h": 900,
-   "title": "51 · Chat pane view: Data",
+   "title": "51 · Data panel opens from the data badge in the chart foot",
    "expand": "fill"
   },
   "ChatEvidence.dc.html": {
@@ -565,8 +565,8 @@
    "x": 1520,
    "y": 26340,
    "w": 1440,
-   "h": 900,
-   "title": "57 · First-use consent and the @mention picker",
+   "h": 980,
+   "title": "57 · First-use consent and choosing who to ask (the To chip)",
    "expand": "fill"
   },
   "AgentErrors.dc.html": {
@@ -710,7 +710,7 @@
    "y": 33100,
    "w": 1440,
    "h": 900,
-   "title": "50L · Light · Chat pane view: Layers",
+   "title": "50L · Light · Layers live in the expanded legend (pinned): show, hide, remove",
    "expand": "fill"
   },
   "LightChatData.dc.html": {
@@ -718,7 +718,7 @@
    "y": 33100,
    "w": 1440,
    "h": 900,
-   "title": "51L · Light · Chat pane view: Data",
+   "title": "51L · Light · Data panel opens from the data badge in the chart foot",
    "expand": "fill"
   },
   "LightChatEvidence.dc.html": {
@@ -765,8 +765,8 @@
    "x": 0,
    "y": 36300,
    "w": 1440,
-   "h": 900,
-   "title": "57L · Light · First-use consent and the @mention picker",
+   "h": 980,
+   "title": "57L · Light · First-use consent and choosing who to ask",
    "expand": "fill"
   },
   "LightAgentErrors.dc.html": {
@@ -791,6 +791,54 @@
    "w": 1440,
    "h": 900,
    "title": "61L · Light · Remove an agent",
+   "expand": "fill"
+  },
+  "Recipients.dc.html": {
+   "x": 0,
+   "y": 36400,
+   "w": 1280,
+   "h": 800,
+   "title": "72 · Who to ask: one chip for agents and people; a request to a person",
+   "expand": "fill"
+  },
+  "ProposalGroup.dc.html": {
+   "x": 1360,
+   "y": 36400,
+   "w": 1280,
+   "h": 800,
+   "title": "73 · One proposal per task, a checklist, and the offer to apply without asking",
+   "expand": "fill"
+  },
+  "AskSelection.dc.html": {
+   "x": 2720,
+   "y": 36400,
+   "w": 1280,
+   "h": 800,
+   "title": "74 · Ask about a selection: Shift+drag, Ask, chip in the composer",
+   "expand": "fill"
+  },
+  "Palette.dc.html": {
+   "x": 4080,
+   "y": 36400,
+   "w": 1280,
+   "h": 800,
+   "title": "76 · Command palette: charts, actions, Ask",
+   "expand": "fill"
+  },
+  "SinceLast.dc.html": {
+   "x": 0,
+   "y": 37400,
+   "w": 1280,
+   "h": 800,
+   "title": "77 · Since you were last here: status line and the list",
+   "expand": "fill"
+  },
+  "AskSelectionPhone.dc.html": {
+   "x": 1360,
+   "y": 37400,
+   "w": 390,
+   "h": 844,
+   "title": "75 · Phone: Ask from the held read-out",
    "expand": "fill"
   }
  },
@@ -893,7 +941,13 @@
   "LightAgentConsent.dc.html",
   "LightAgentErrors.dc.html",
   "LightAddAgentEdit.dc.html",
-  "LightAddAgentRemove.dc.html"
+  "LightAddAgentRemove.dc.html",
+  "Recipients.dc.html",
+  "ProposalGroup.dc.html",
+  "AskSelection.dc.html",
+  "Palette.dc.html",
+  "SinceLast.dc.html",
+  "AskSelectionPhone.dc.html"
  ],
  "notes": {
   "t1": {
@@ -1026,6 +1080,13 @@
    "x": 0,
    "y": 32980,
    "text": "Light versions of boards 49 to 58, 60 and 61. Widths we guarantee: 320 to 1920; phone boards are drawn at 390 and use the same rules at 375 and 320",
+   "kind": "title1",
+   "maxW": 6000
+  },
+  "t_dec": {
+   "x": 0,
+   "y": 36280,
+   "text": "Product decisions, 1 Nov 2026: one way to ask anyone, grouped proposals, ask about a selection, palette, since last visit",
    "kind": "title1",
    "maxW": 6000
   }

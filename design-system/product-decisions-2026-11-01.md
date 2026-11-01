@@ -1,0 +1,65 @@
+# Product decisions, 1 Nov 2026
+
+Seven decisions from the product and design review. Each lists what changes and the boards that show it.
+
+## 1. Layers and Data belong to the chart
+The chat pane keeps three views: Chat, Activity and Evidence.
+- **Layers** move to the expanded legend. It opens on hover or focus, and a click pins it. Each row can show, hide or remove its layer, and "+ Indicator" sits at the bottom.
+- **Data** moves to a panel that opens from the data badge in the chart foot. It holds coverage, adjustment, data run and the last bars, with Copy as CSV.
+
+Boards 50 and 51 now show these panels. Board 68 is the hover form.
+
+## 2. One home per action
+- **Menu:** switch what you look at (charts, watchlist, alerts). The "On this chart" rows are gone.
+- **Chart:** change what you see. The Options toolbar, the legend and the data badge are the homes; the context menu and phone sheet are the same toolbar.
+- **Chat:** ask and approve.
+- **Undo** stays in two places on purpose. The toolbar undoes your last edit; a task card undoes that agent's change.
+- **Shortcuts:** the command palette (6) is the keyboard copy of all three, not a new home.
+
+## 3. One way to ask anyone
+- **Recipient chip:** the composer has a chip, **To: Mat ▾**, listing agents, people, and Everyone in this workspace. Plain messages go to the chip's recipient, and `@name` sets the chip. The chip remembers your last recipient per chart. With no agent, the default is Everyone.
+- **The line under the composer** says where the message goes. For an agent: "Sent to Anthropic". For a person: "Notifies Atul · stays in this workspace". For Everyone: "Stays in this workspace".
+- **Asking a person** makes the same request card as an agent: Asked, then Working, then Answered, and "Waiting for Atul · seen 2 min ago". A person acting as an assistant sends changes as proposals, into the same approvals list.
+
+Board 72.
+
+## 4. Fewer approvals, same safety
+- **Grouped proposals:** one task makes one proposal. It's drawn dashed on the chart with a checklist: Apply all, or untick items.
+- **Apply without asking:** per agent, and off by default. It covers only adding markers, highlights and indicators on charts private to you; a toast with Undo and an Activity line follow every auto-applied change. It is offered once, after three proposals from that agent were applied unchanged.
+- **Always asks:** shared charts, anything that removes or changes existing work, alerts, and anything a person proposed.
+- **Contract:** one proposal per task, plus a per-agent auto-apply flag.
+
+Board 73.
+
+## 5. Ask about a selection
+- **Mouse:** Shift+drag selects a range (plain drag still pans), and an "Ask about this" button appears beside it.
+- **Right-click:** a bar, marker or drawing gives "Ask about this…".
+- **Touch:** the held read-out has an Ask button, and dragging its edge widens it into a range.
+- **Keyboard:** Shift+arrows extend a range, and Enter asks.
+- **Result:** chat opens with a selection chip in the composer, "NVDA · 14 Mar – 2 Apr (14 bars)". The range stays shaded, and the sent-to line says only the selected bars are sent.
+- **Voice, next round:**
+  - Push-to-talk by default.
+  - Opt-in hands-free on an on-device wake word ("Hey Charts"). Nothing is sent before the wake word. The mic indicator is always visible, there's a one-key mute, and it switches itself off after an idle time.
+  - Voice can ask, select and navigate, but changes to shared work, or any order, need a visible confirm.
+  - Spoken announcements: Off (default), Important only, or Everything. Never prices on a timer. A screen reader's live region comes first.
+  - A mic slot is reserved in the composer now.
+
+Boards 74 and 75.
+
+## 6. Command palette
+- **Opens with** Ctrl+K (Cmd+K on Mac) or `/`.
+- **Typing a ticker** puts charts first. A symbol that isn't stored shows "not stored" and why.
+- **Typing an action** finds actions and settings, and each row shows its shortcut.
+- **The last row** is always "Ask Mat: …", using the recipient chip.
+- **On phone,** a search field at the top of the Menu tab opens it.
+- **One action registry** feeds the toolbar, context menu, palette and, later, voice.
+
+Board 76.
+
+## 7. Since you were last here
+- **One line** in the chart foot's status slot after anything changed. For example: "Since Fri 16:02: 1 new bar · 1 alert fired · 2 proposals waiting · Atul changed SMA 200".
+- **Opening it** shows the list in chat's Activity view, and each line jumps to its place. It clears once opened or after your first action.
+- **Built from the event log:** no AI, exact and free.
+- **Opt-in later:** an agent-written brief after each data run, with calculated fact and interpretation kept apart and counted against the agent's USD limit.
+
+Board 77.
