@@ -17,7 +17,7 @@ Colours are resolved hex/rgba strings; lengths are CSS px at 1× (the engine mul
 {
   "version": 1,
   "id": "dark",
-  "candleMode": "blue-orange",
+  "candleMode": "green-red",
   "background": "#0b0f15",
   "grid": {
     "color": "#19212b",
@@ -41,14 +41,14 @@ Colours are resolved hex/rgba strings; lengths are CSS px at 1× (the engine mul
   },
   "candle": {
     "up": {
-      "stroke": "#56b4e9",
+      "stroke": "#3fb68b",
       "fill": "background",
       "wickWidth": 1,
       "bodyStroke": 1.2
     },
     "down": {
-      "stroke": "#e69f00",
-      "fill": "#e69f00",
+      "stroke": "#f0616d",
+      "fill": "#f0616d",
       "wickWidth": 1
     }
   },
@@ -126,7 +126,7 @@ The light object (same shape, resolved from the same tokens) is what a person in
 {
   "version": 1,
   "id": "light",
-  "candleMode": "blue-orange",
+  "candleMode": "green-red",
   "background": "#ffffff",
   "grid": {
     "color": "#e8ecf1",
@@ -150,14 +150,14 @@ The light object (same shape, resolved from the same tokens) is what a person in
   },
   "candle": {
     "up": {
-      "stroke": "#0072b2",
+      "stroke": "#13855e",
       "fill": "background",
       "wickWidth": 1,
       "bodyStroke": 1.2
     },
     "down": {
-      "stroke": "#d55e00",
-      "fill": "#d55e00",
+      "stroke": "#c43d3d",
+      "fill": "#c43d3d",
       "wickWidth": 1
     }
   },
@@ -231,7 +231,7 @@ The light object (same shape, resolved from the same tokens) is what a person in
 
 Rules the engine must keep:
 
-- `candle.up.fill: "background"` means up candles are **hollow**. `candleMode: "green-red"` swaps the two stroke/fill colours for `chart-up-conventional` and `chart-down-conventional`, and nothing else: up stays hollow, down stays filled.
+- `candle.up.fill: "background"` means up candles are **hollow**. The default is `candleMode: "green-red"`. `"blue-orange"` (the colour-blind friendly opt-in) swaps the two stroke/fill colours for `chart-up-cvd` and `chart-down-cvd`, and nothing else: up stays hollow, down stays filled.
 - `series` is consumed in order. Benchmarks reuse `series[benchmark.order[i]]` **dashed**, so a benchmark never looks like an indicator.
 - Event markers always draw their glyph, because colour alone is not enough.
 - `reference` covers fixed guide lines such as RSI 30/70; it is quieter than the grid's meaning, not louder.

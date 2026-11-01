@@ -82,3 +82,11 @@ Board 77.
   - A spoken change to shared work shows a confirm card ("Remove SMA 200 for everyone?"). It accepts "confirm"/"cancel" by voice, or Enter/Esc.
 - **81:** the opt-in agent brief tops the "since you were last here" list. Calculated fact and interpretation are kept apart, with the cost and sent-to shown and a link to turn it off.
 - **Phone boards:** menu and chat are never folded on phone; tabs replace folding.
+
+## Owner decisions
+1. **Candles: green/red by default.** Blue/orange (`chart-up-cvd` / `chart-down-cvd`) is one click away in Settings and is offered at first run with a preview. Up stays hollow and down stays filled, so direction never depends on colour. The interface's "good" colour moves to teal (`#5fd3c8` dark, `#0f766e` light), so it doesn't read as an up candle. Its colour difference from the up candle roughly doubled (ΔE about 20, against 11 before), including under deutan and protan vision.
+2. **People:**
+   - **Release 1:** presence only (online/away, and "seen" on requests), which the To chip and request cards need.
+   - **Release 2:** the people row with follow.
+   - **Team video:** dropped. "Start a call" opens the team's own call tool with a link to the chart.
+3. **Chart canvas follows the theme in Release 1.1.** Release 1 ships with it disabled ("arrives in Release 1.1"). Image exports should use the canvas the person sees, or offer dark or light in the export dialog.

@@ -34,13 +34,7 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
         <div class="cs-person"><span class="cs-avatar cs-avatar--person cs-avatar--lg cs-avatar--p2" aria-hidden="true">AS</span><div><div class="cs-person__name">Atul</div><div class="cs-person__sub">Looking at QQQ</div></div></div>
         <div class="cs-person"><span class="cs-avatar cs-avatar--person cs-avatar--lg cs-avatar--p3" aria-hidden="true">PK</span><div><div class="cs-person__name">Priya</div><div class="cs-person__sub">Idle for 12 min</div></div></div>
         <div class="cs-person"><span class="cs-avatar cs-avatar--agent cs-avatar--lg" aria-hidden="true">M</span><div><div class="cs-person__name">Mat</div><div class="cs-person__sub">Assistant · watching 2 alerts</div></div></div>
-        <span class="cs-teamvideo"><span id="vl">Team video</span><button class="cs-teamvideo__sw" role="switch" aria-checked="false" aria-labelledby="vl"></button><span><b>Off.</b> Set by the workspace owner.</span></span>
-      </div>
-      <div class="cs-tiles" aria-label="Sample video tiles. Camera off for everyone." hidden>
-        <div class="cs-tile"><span class="cs-avatar cs-avatar--person cs-avatar--lg cs-avatar--p1">MS</span><span class="cs-tile__label">Monika · camera off</span></div>
-        <div class="cs-tile"><span class="cs-avatar cs-avatar--person cs-avatar--lg cs-avatar--p2">AS</span><span class="cs-tile__label">Atul · camera off</span></div>
-        <div class="cs-tile"><span class="cs-avatar cs-avatar--person cs-avatar--lg cs-avatar--p3">PK</span><span class="cs-tile__label">Priya · camera off</span></div>
-        <div class="cs-tile"><span class="caption cs-muted" style="padding:0 12px;text-align:center">Mat has no camera.</span></div>
+        <button class="cs-btn cs-btn--compact" title="Opens your team's call tool with a link to this chart">Start a call ↗</button>
       </div>
     </section>
   <div class="cs-wpanes">
@@ -109,8 +103,9 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
         <div class="cs-chart" tabindex="0" aria-label="Price chart. Arrow keys pan, plus and minus zoom, Escape clears the crosshair.">
           <dc-import name="ChartFrame" hint-size="100%,100%" style="position: absolute; inset: 0; width: 100%; height: 100%;"></dc-import>
         </div>
-        <div class="cs-coach" role="dialog" aria-label="Tip" style="left:12px;top:8px">
+        <div class="cs-coach" role="dialog" aria-label="Tip" style="left:12px;top:8px;width:380px">
         <span><b>The chart gets the whole screen.</b> Menu and Chat are here when you need them. Press <kbd>[</kbd> or <kbd>]</kbd>, or <kbd>o</kbd> for chart options.</span>
+        <span style="display:flex;flex-direction:column;gap:6px"><b>Candle colours</b><span class="cs-seg" role="group" aria-label="Candle colours" style="background:var(--surface-000)"><button aria-pressed="true" style="color:var(--ink)"><span class="cs-swatchpair" aria-hidden="true"><i style="background: var(--chart-up);"></i><i style="background: var(--chart-down);"></i></span> Green / red</button><button aria-pressed="false" style="color:var(--ink)"><span class="cs-swatchpair" aria-hidden="true"><i style="background: var(--chart-up-cvd);"></i><i style="background: var(--chart-down-cvd);"></i></span> Blue / orange</button></span><span style="font-size:13px;line-height:18px;opacity:.85">Blue / orange is easier with red-green colour blindness. Up stays hollow and down filled either way. Change it later in Settings.</span></span>
         <div class="cs-coach__acts"><button>Got it</button></div>
       </div>
       </div>

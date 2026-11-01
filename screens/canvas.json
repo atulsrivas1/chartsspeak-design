@@ -374,7 +374,7 @@
    "y": 21008,
    "w": 1440,
    "h": 900,
-   "title": "46 · People row open, team video on (paused, not for Release 1)",
+   "title": "46 · Release 2: people row and follow. Team video removed; \"Start a call\" opens your own tool",
    "expand": "fill"
   },
   "WorkspaceFocus.dc.html": {
@@ -638,7 +638,7 @@
    "y": 30700,
    "w": 1280,
    "h": 800,
-   "title": "64F · First visit: one tip, then gone",
+   "title": "64F · First visit: one tip with the keys and the candle colour choice",
    "expand": "fill"
   },
   "Default768.dc.html": {
@@ -1108,13 +1108,6 @@
    "text": "Designer requests, Release 1: read-out row, chat pane views, agents, add-agent form, variants",
    "kind": "title1",
    "maxW": 6000
-  },
-  "t_pause": {
-   "x": 1520,
-   "y": 20950,
-   "text": "Board 46 shows the people row and team video. The owner has paused both, so Release 1 does not build them, and there is no light or 375 version on purpose.",
-   "kind": "body",
-   "maxW": 1440
   },
   "t_phone": {
    "x": 0,
