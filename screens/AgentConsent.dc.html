@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ChartsSpeak · first-use consent and mention picker</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/chartsspeak/tokens.css">
+<link rel="stylesheet" href="ds/chartsspeak/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div data-theme="{{theme}}" style="width:1440px;height:900px;box-sizing:border-box;padding:32px;background:var(--surface-000);color:var(--ink);font-family:var(--font-sans);overflow:hidden;display:flex;flex-direction:column;gap:16px">
+  <header style="display:flex;flex-direction:column;gap:4px;max-width:1000px"><h1 class="title-page" style="margin:0;font-family:var(--font-display)">First-use consent and the @mention picker</h1><p class="body cs-muted" style="margin:0">Consent is asked once per remote provider, in plain words, before anything leaves the machine. The picker lists enabled agents first and shows off agents as unavailable.</p></header>
+  <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:start;min-height:0"><section style="display:flex;flex-direction:column;gap:8px;min-width:0;"><span class="label cs-muted">Consent dialog, remote provider</span><div style="background:var(--surface-100);border:1px solid var(--border-200);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:12px;min-width:0"><div class="cs-dialog" role="dialog" aria-label="Send chart data to Claude" style="width:100%;box-sizing:border-box"><div style="display:flex;flex-direction:column;gap:6px"><span class="cs-eyebrow" style="display:block">First time with this provider</span><h2 class="cs-dialog__title">Send this chart's data to Claude?</h2></div>
+<div class="cs-result__part"><span class="cs-result__label">What is sent</span><span class="cs-result__text">Your question, the stored bars in view, the names of layers and markers, and this chart's conversation.</span></div>
+<div class="cs-result__part"><span class="cs-result__label">What is not sent</span><span class="cs-result__text">Your keys, other charts, other people's private messages, and files.</span></div>
+<div class="cs-result__part"><span class="cs-result__label">Where it goes</span><span class="cs-result__text">Claude, using your own account and key. Their terms and retention apply, not ours.</span></div>
+<p class="caption cs-muted" style="margin:0">Asked once per provider for this workspace. An owner can withdraw it in Agent grants.</p>
+<div class="cs-dialog__actions"><button class="cs-btn cs-btn--quiet">Don't send</button><button class="cs-btn cs-btn--primary">Allow for this workspace</button></div></div></div></section><section style="display:flex;flex-direction:column;gap:8px;min-width:0;"><span class="label cs-muted">@mention picker in the composer</span><div style="background:var(--surface-100);border:1px solid var(--border-200);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:12px;min-width:0"><textarea class="cs-textarea" rows="2">@</textarea><div class="cs-mentionlist" role="listbox" aria-label="Agents">
+<button role="option" aria-selected="true"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">M</span><span>Mat</span><span class="cs-state cs-state--work"><span class="cs-state__d"></span>Working</span><small>Claude · Sonnet · Sent to Claude</small></button>
+<button role="option" aria-selected="false"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">S</span><span>Sol</span><span class="cs-state"><span class="cs-state__d"></span>Idle</span><small>Local model · Stays on this machine</small></button>
+<button role="option" aria-disabled="true" aria-selected="false"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">R</span><span>Rey</span><span class="cs-state cs-state--off"><span class="cs-state__d"></span>Off</span><small>Unavailable. Turn on in Agent grants.</small></button></div><span class="caption cs-muted">One message goes to one agent. To ask two agents, send two messages.</span></div></section><section style="display:flex;flex-direction:column;gap:8px;min-width:0;"><span class="label cs-muted">After choosing an agent</span><div style="background:var(--surface-100);border:1px solid var(--border-200);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:12px;min-width:0"><textarea class="cs-textarea" rows="2">@Mat mark the closes below SMA 200</textarea><div class="cs-composer__foot" style="display:flex;justify-content:space-between;gap:8px;align-items:center"><span class="cs-row" style="gap:8px"><span class="cs-mention">@Mat</span><span class="cs-sentto" data-kind="remote"><span class="cs-sentto__g" aria-hidden="true">↗</span>Sent to Claude</span></span><button class="cs-btn cs-btn--primary cs-btn--compact">Send</button></div><span class="caption cs-muted">Typing a second @name moves the message to that agent. It never goes to both.</span></div></section></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["dark","light"],"default":"dark"},"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { theme: this.props.theme ?? 'dark' };
+  }
+}
+</script>
+</body>
+</html>

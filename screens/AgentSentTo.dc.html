@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ChartsSpeak · sent-to indicator</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/chartsspeak/tokens.css">
+<link rel="stylesheet" href="ds/chartsspeak/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div data-theme="{{theme}}" style="width:1440px;height:900px;box-sizing:border-box;padding:32px;background:var(--surface-000);color:var(--ink);font-family:var(--font-sans);overflow:hidden;display:flex;flex-direction:column;gap:16px">
+  <header style="display:flex;flex-direction:column;gap:4px;max-width:1000px"><h1 class="title-page" style="margin:0;font-family:var(--font-display)">Sent-to indicator: where each question goes</h1><p class="body cs-muted" style="margin:0">One line, three possible values, in the same place on every surface. The provider is plain text. Colour never carries it alone: each value also has its own glyph and wording.</p></header>
+  <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:start;min-height:0"><section style="display:flex;flex-direction:column;gap:8px;min-width:0;"><span class="label cs-muted">Roster rows</span><div style="background:var(--surface-100);border:1px solid var(--border-200);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:12px;min-width:0"><div class="cs-agentrow"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">M</span><span class="cs-agentrow__name">Mat</span><span class="cs-agentrow__act"><span class="cs-state cs-state--work"><span class="cs-state__d" aria-hidden="true"></span>Working</span></span><span class="cs-agentrow__line">Claude · Sonnet · for Monika</span></div>
+ <div style="margin:-4px 0 4px 36px"><span class="cs-sentto" data-kind="remote"><span class="cs-sentto__g" aria-hidden="true">↗</span>Sent to Claude</span></div>
+ <div class="cs-agentrow"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">S</span><span class="cs-agentrow__name">Sol</span><span class="cs-agentrow__act"><span class="cs-state "><span class="cs-state__d" aria-hidden="true"></span>Idle</span></span><span class="cs-agentrow__line">Local model · llama 8B · for Monika</span></div>
+ <div style="margin:-4px 0 4px 36px"><span class="cs-sentto" data-kind="local"><span class="cs-sentto__g" aria-hidden="true">⌂</span>Stays on this machine</span></div>
+ <div class="cs-agentrow"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">R</span><span class="cs-agentrow__name">Rey</span><span class="cs-agentrow__act"><span class="cs-state cs-state--off"><span class="cs-state__d" aria-hidden="true"></span>Off</span></span><span class="cs-agentrow__line">OpenAI · GPT mini · for Atul</span></div>
+ <div style="margin:-4px 0 4px 36px"><span class="cs-sentto" data-kind="none"><span class="cs-sentto__g" aria-hidden="true">–</span>Not sent anywhere</span></div></div></section><section style="display:flex;flex-direction:column;gap:8px;min-width:0;"><span class="label cs-muted">Composer, with and without a mention</span><div style="background:var(--surface-100);border:1px solid var(--border-200);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:12px;min-width:0"><textarea class="cs-textarea" rows="2">@Mat mark the closes below SMA 200 since June</textarea><div class="cs-composer__foot" style="display:flex;justify-content:space-between;gap:8px;align-items:center"><span style="display:flex;flex-direction:column;gap:2px"><span class="caption cs-muted">Claude · Sonnet · key found</span><span class="cs-sentto" data-kind="remote"><span class="cs-sentto__g" aria-hidden="true">↗</span>Sent to Claude when you send</span></span><button class="cs-btn cs-btn--primary cs-btn--compact">Send</button></div>
+<hr style="border:0;border-top:1px solid var(--border-100);width:100%;margin:0"><textarea class="cs-textarea" rows="2">Looks right to me</textarea><div class="cs-composer__foot" style="display:flex;justify-content:space-between;align-items:center"><span class="cs-sentto" data-kind="none"><span class="cs-sentto__g" aria-hidden="true">–</span>Chat only. Not sent to any agent</span><button class="cs-btn cs-btn--compact">Send</button></div></div></section><section style="display:flex;flex-direction:column;gap:8px;min-width:0;"><span class="label cs-muted">Task card (after sending)</span><div style="background:var(--surface-100);border:1px solid var(--border-200);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:12px;min-width:0"><div class="cs-card"><div class="cs-card__head"><span class="cs-task__state cs-task__state--done"><span aria-hidden="true">✓</span>Completed</span><span class="cs-card__title"></span><span class="cs-attr"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">M</span>Mat · 19:41 ET</span></div><span class="caption cs-muted">Claude · Sonnet · 1,820 tokens in, 240 out</span><div class="cs-result__part"><span class="cs-result__text">SMA 50 crossed above SMA 200 on 14 Mar 2026.</span></div><div class="cs-card__foot"><span class="cs-sentto" data-kind="remote"><span class="cs-sentto__g" aria-hidden="true">↗</span>Sent to Claude · 19:41 ET</span></div></div></div></section><section style="display:flex;flex-direction:column;gap:8px;min-width:0;"><span class="label cs-muted">Proposal card (local agent)</span><div style="background:var(--surface-100);border:1px solid var(--border-200);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:12px;min-width:0"><div class="cs-card"><div class="cs-card__head"><span class="cs-task__state cs-task__state--attention"><span aria-hidden="true">!</span>Awaiting your approval</span><span class="cs-card__title"></span><span class="cs-attr"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">S</span>Sol · 19:47 ET</span></div><span class="caption cs-muted">Local model · llama 8B</span><span class="caption cs-muted">4 closes shown dashed as "Proposed". Based on r12.</span><div class="cs-card__foot"><span class="cs-sentto" data-kind="local"><span class="cs-sentto__g" aria-hidden="true">⌂</span>Stays on this machine</span><span style="flex:1"></span><button class="cs-btn cs-btn--compact cs-btn--primary">Apply</button><button class="cs-btn cs-btn--compact cs-btn--quiet">Decline</button></div></div></div></section></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["dark","light"],"default":"dark"},"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { theme: this.props.theme ?? 'dark' };
+  }
+}
+</script>
+</body>
+</html>

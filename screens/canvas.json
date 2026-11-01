@@ -211,7 +211,7 @@
    "y": 9504,
    "w": 1440,
    "h": 900,
-   "title": "25 · Settings: appearance, data defaults, notifications",
+   "title": "25 · Settings: appearance, pane order, data defaults, notifications",
    "expand": "fill"
   },
   "Shortcuts.dc.html": {
@@ -219,7 +219,7 @@
    "y": 9504,
    "w": 1440,
    "h": 900,
-   "title": "26 · Keyboard shortcuts",
+   "title": "26 · Keyboard shortcuts, with panes and views",
    "expand": "fill"
   },
   "IndicatorStyleScreen.dc.html": {
@@ -366,7 +366,7 @@
    "y": 21008,
    "w": 1440,
    "h": 900,
-   "title": "2 · Chat collapsed, review badge on the rail",
+   "title": "45 · Chat collapsed, review badge on the rail",
    "expand": "fill"
   },
   "WorkspacePeople.dc.html": {
@@ -374,7 +374,7 @@
    "y": 21008,
    "w": 1440,
    "h": 900,
-   "title": "3 · People row open, team video on, menu collapsed",
+   "title": "46 · People row open, team video on (paused, not for Release 1)",
    "expand": "fill"
   },
   "WorkspaceFocus.dc.html": {
@@ -382,7 +382,7 @@
    "y": 21008,
    "w": 1440,
    "h": 900,
-   "title": "4 · Focus mode (light), both panes collapsed",
+   "title": "47 · Focus mode (light), both panes collapsed",
    "expand": "fill"
   },
   "PhoneMenu.dc.html": {
@@ -392,6 +392,230 @@
    "h": 844,
    "title": "9b · Phone · Menu",
    "is_interactive": true
+  },
+  "LayoutChartMiddle.dc.html": {
+   "x": 0,
+   "y": 23028,
+   "w": 1280,
+   "h": 800,
+   "title": "48A · Menu | Chart | Chat",
+   "expand": "fill"
+  },
+  "LayoutChatLeft.dc.html": {
+   "x": 1360,
+   "y": 23028,
+   "w": 1280,
+   "h": 800,
+   "title": "48B · Chat | Chart | Menu",
+   "expand": "fill"
+  },
+  "LayoutDrawerClosed.dc.html": {
+   "x": 2720,
+   "y": 23028,
+   "w": 1280,
+   "h": 800,
+   "title": "48C · Chart | Chat, menu as a drawer (closed)",
+   "expand": "fill"
+  },
+  "LayoutDrawerOpen.dc.html": {
+   "x": 4080,
+   "y": 23028,
+   "w": 1280,
+   "h": 800,
+   "title": "48D · Same, drawer open",
+   "expand": "fill"
+  },
+  "ShellLayouts.dc.html": {
+   "x": 0,
+   "y": 22148,
+   "w": 1200,
+   "h": 760,
+   "title": "48 · Common shell: four layouts, every work page uses one",
+   "expand": "fill"
+  },
+  "ChatLayers.dc.html": {
+   "x": 1520,
+   "y": 24300,
+   "w": 1440,
+   "h": 900,
+   "title": "50 · Chat pane view: Layers",
+   "expand": "fill"
+  },
+  "ChatData.dc.html": {
+   "x": 3040,
+   "y": 24300,
+   "w": 1440,
+   "h": 900,
+   "title": "51 · Chat pane view: Data",
+   "expand": "fill"
+  },
+  "ChatEvidence.dc.html": {
+   "x": 4560,
+   "y": 24300,
+   "w": 1440,
+   "h": 900,
+   "title": "52 · Chat pane view: Evidence",
+   "expand": "fill"
+  },
+  "MenuSparse.dc.html": {
+   "x": 0,
+   "y": 25320,
+   "w": 1440,
+   "h": 900,
+   "title": "53 · Menu pane, one chart and no alerts",
+   "expand": "fill"
+  },
+  "Tablet768.dc.html": {
+   "x": 470,
+   "y": 28380,
+   "w": 768,
+   "h": 1024,
+   "title": "63 · Tablet 768, menu collapsed, chat open",
+   "expand": "fill"
+  },
+  "LightChatCollapsed.dc.html": {
+   "x": 1320,
+   "y": 28380,
+   "w": 1440,
+   "h": 900,
+   "title": "45L · Light · Chat collapsed",
+   "expand": "fill"
+  },
+  "LightSignIn.dc.html": {
+   "x": 2840,
+   "y": 28380,
+   "w": 1440,
+   "h": 900,
+   "title": "5L · Light · Sign-in needed",
+   "expand": "fill"
+  },
+  "LocalCrosshairLight.dc.html": {
+   "x": 1680,
+   "y": 18188,
+   "w": 1600,
+   "h": 2560,
+   "title": "44L · Light · Local crosshair and keyboard edges",
+   "expand": "fill"
+  },
+  "LightLayoutChartMiddle.dc.html": {
+   "x": 0,
+   "y": 29600,
+   "w": 1280,
+   "h": 800,
+   "title": "48A-L · Light · Menu | Chart | Chat",
+   "expand": "fill"
+  },
+  "LightLayoutChatLeft.dc.html": {
+   "x": 1360,
+   "y": 29600,
+   "w": 1280,
+   "h": 800,
+   "title": "48B-L · Light · Chat | Chart | Menu",
+   "expand": "fill"
+  },
+  "LightLayoutDrawerClosed.dc.html": {
+   "x": 2720,
+   "y": 29600,
+   "w": 1280,
+   "h": 800,
+   "title": "48C-L · Light · Chart | Chat, drawer closed",
+   "expand": "fill"
+  },
+  "LightLayoutDrawerOpen.dc.html": {
+   "x": 4080,
+   "y": 29600,
+   "w": 1280,
+   "h": 800,
+   "title": "48D-L · Light · drawer open",
+   "expand": "fill"
+  },
+  "ReadoutStates.dc.html": {
+   "x": 0,
+   "y": 24300,
+   "w": 1440,
+   "h": 900,
+   "title": "49 · Read-out row: hover, held, empty, and derived-chart labels",
+   "expand": "fill"
+  },
+  "AgentsThread.dc.html": {
+   "x": 1520,
+   "y": 25320,
+   "w": 1440,
+   "h": 900,
+   "title": "54 · Several agents in one thread",
+   "expand": "fill"
+  },
+  "AgentsEmpty.dc.html": {
+   "x": 3040,
+   "y": 25320,
+   "w": 1440,
+   "h": 900,
+   "title": "55 · No agents yet, and not configured",
+   "expand": "fill"
+  },
+  "AgentSentTo.dc.html": {
+   "x": 0,
+   "y": 26340,
+   "w": 1440,
+   "h": 900,
+   "title": "56 · Sent-to indicator on roster, composer, task and proposal",
+   "expand": "fill"
+  },
+  "AgentConsent.dc.html": {
+   "x": 1520,
+   "y": 26340,
+   "w": 1440,
+   "h": 900,
+   "title": "57 · First-use consent and the @mention picker",
+   "expand": "fill"
+  },
+  "AgentErrors.dc.html": {
+   "x": 3040,
+   "y": 26340,
+   "w": 1440,
+   "h": 900,
+   "title": "58 · Agent errors and agent off, one notice pattern",
+   "expand": "fill"
+  },
+  "AddAgent.dc.html": {
+   "x": 0,
+   "y": 27360,
+   "w": 1440,
+   "h": 900,
+   "title": "59 · Add an agent",
+   "expand": "fill"
+  },
+  "AddAgentLight.dc.html": {
+   "x": 1520,
+   "y": 27360,
+   "w": 1440,
+   "h": 900,
+   "title": "59L · Add an agent, light",
+   "expand": "fill"
+  },
+  "AddAgentEdit.dc.html": {
+   "x": 3040,
+   "y": 27360,
+   "w": 1440,
+   "h": 900,
+   "title": "60 · Edit an agent",
+   "expand": "fill"
+  },
+  "AddAgentRemove.dc.html": {
+   "x": 4560,
+   "y": 27360,
+   "w": 1440,
+   "h": 900,
+   "title": "61 · Remove an agent",
+   "expand": "fill"
+  },
+  "AddAgentPhone.dc.html": {
+   "x": 0,
+   "y": 28380,
+   "w": 390,
+   "h": 1240,
+   "title": "62 · Add an agent, phone",
+   "expand": "fill"
   }
  },
  "order": [
@@ -443,7 +667,35 @@
   "WorkspaceChatCollapsed.dc.html",
   "WorkspacePeople.dc.html",
   "WorkspaceFocus.dc.html",
-  "PhoneMenu.dc.html"
+  "PhoneMenu.dc.html",
+  "LayoutChartMiddle.dc.html",
+  "LayoutChatLeft.dc.html",
+  "LayoutDrawerClosed.dc.html",
+  "LayoutDrawerOpen.dc.html",
+  "ShellLayouts.dc.html",
+  "ChatLayers.dc.html",
+  "ChatData.dc.html",
+  "ChatEvidence.dc.html",
+  "MenuSparse.dc.html",
+  "Tablet768.dc.html",
+  "LightChatCollapsed.dc.html",
+  "LightSignIn.dc.html",
+  "LocalCrosshairLight.dc.html",
+  "LightLayoutChartMiddle.dc.html",
+  "LightLayoutChatLeft.dc.html",
+  "LightLayoutDrawerClosed.dc.html",
+  "LightLayoutDrawerOpen.dc.html",
+  "ReadoutStates.dc.html",
+  "AgentsThread.dc.html",
+  "AgentsEmpty.dc.html",
+  "AgentSentTo.dc.html",
+  "AgentConsent.dc.html",
+  "AgentErrors.dc.html",
+  "AddAgent.dc.html",
+  "AddAgentLight.dc.html",
+  "AddAgentEdit.dc.html",
+  "AddAgentRemove.dc.html",
+  "AddAgentPhone.dc.html"
  ],
  "notes": {
   "t1": {
@@ -529,6 +781,41 @@
    "text": "ChartsSpeak · three-pane workspace (menu, chat, chart) and the new look",
    "kind": "title1",
    "maxW": 4480
+  },
+  "t_layouts": {
+   "x": 0,
+   "y": 22908,
+   "text": "Pane order is a per-person view setting: three orderings and a drawer layout",
+   "kind": "title1",
+   "maxW": 5360
+  },
+  "t_shell": {
+   "x": 0,
+   "y": 22028,
+   "text": "Common shell: every page with a chart must follow this board and use one of its four layouts",
+   "kind": "title1",
+   "maxW": 5360
+  },
+  "t_r1": {
+   "x": 0,
+   "y": 24180,
+   "text": "Designer requests, Release 1: read-out row, chat pane views, agents, add-agent form, variants",
+   "kind": "title1",
+   "maxW": 6000
+  },
+  "t_pause": {
+   "x": 1520,
+   "y": 20950,
+   "text": "Board 46 shows the people row and team video. The owner has paused both, so Release 1 does not build them, and there is no light or 375 version on purpose.",
+   "kind": "body",
+   "maxW": 1440
+  },
+  "t_phone": {
+   "x": 0,
+   "y": 29420,
+   "text": "Boards 45 and 46 have no 375 version on purpose: at 760 and below the three panes become three tabs, so there is no collapsed state to draw.",
+   "kind": "body",
+   "maxW": 1440
   }
  },
  "designSystems": [

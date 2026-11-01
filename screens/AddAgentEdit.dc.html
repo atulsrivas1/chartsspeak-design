@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ChartsSpeak · edit an agent</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/chartsspeak/tokens.css">
+<link rel="stylesheet" href="ds/chartsspeak/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0}
+a{color:var(--accent-text)}a:hover{color:var(--ink)}
+</style>
+</helmet>
+<div class="cs-shell cs-shell--panes" data-theme="{{theme}}" style="width: 100%; height: 100vh; min-height: 760px;">
+  <header class="cs-topbar">
+    <span class="cs-wordmark" role="img" aria-label="ChartsSpeak"><span aria-hidden="true">Charts</span><b aria-hidden="true">Speak</b></span>
+    <span class="cs-topbar__sep" aria-hidden="true"></span>
+    <h1 class="cs-topbar__title">NVDA · 2 Jan – 28 Oct 2026</h1>
+    <span class="cs-badge cs-badge--good"><span class="cs-badge__glyph" aria-hidden="true">✓</span>Saved</span>
+    <span class="cs-tag">Private</span>
+    <span class="cs-topbar__spacer"></span>
+    <span class="cs-conn" role="status"><span class="cs-conn__dot" aria-hidden="true"></span>Connected</span>
+    <button class="cs-peoplebtn" aria-expanded="false" aria-controls="people" aria-label="People in this workspace: Monika, Atul, Priya and Mat"><span class="cs-avstack" aria-hidden="true"><span class="cs-avatar cs-avatar--person cs-avatar--p1">MS</span><span class="cs-avatar cs-avatar--person cs-avatar--p2">AS</span><span class="cs-avatar cs-avatar--person cs-avatar--p3">PK</span><span class="cs-avatar cs-avatar--agent">M</span></span><span class="cs-peoplebtn__label">People</span></button>
+    <button class="cs-btn cs-btn--compact" aria-pressed="false" title="Hide menu and chat"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 8V3h5M12 3h5v5M17 12v5h-5M8 17H3v-5"/></svg>Focus</button>
+  </header>
+  <section class="cs-people" id="people" aria-label="People in this workspace" hidden>
+      <div class="cs-people__row">
+        <div class="cs-person"><span class="cs-avatar cs-avatar--person cs-avatar--lg cs-avatar--p1" aria-hidden="true">MS</span><div><div class="cs-person__name">Monika (you)</div><div class="cs-person__sub">Looking at NVDA</div></div></div>
+        <div class="cs-person"><span class="cs-avatar cs-avatar--person cs-avatar--lg cs-avatar--p2" aria-hidden="true">AS</span><div><div class="cs-person__name">Atul</div><div class="cs-person__sub">Looking at QQQ</div></div></div>
+        <div class="cs-person"><span class="cs-avatar cs-avatar--person cs-avatar--lg cs-avatar--p3" aria-hidden="true">PK</span><div><div class="cs-person__name">Priya</div><div class="cs-person__sub">Idle for 12 min</div></div></div>
+        <div class="cs-person"><span class="cs-avatar cs-avatar--agent cs-avatar--lg" aria-hidden="true">M</span><div><div class="cs-person__name">Mat</div><div class="cs-person__sub">Assistant · watching 2 alerts</div></div></div>
+        <span class="cs-teamvideo"><span id="vl">Team video</span><button class="cs-teamvideo__sw" role="switch" aria-checked="false" aria-labelledby="vl"></button><span><b>Off.</b> Set by the workspace owner.</span></span>
+      </div>
+      <div class="cs-tiles" aria-label="Sample video tiles. Camera off for everyone." hidden>
+        <div class="cs-tile"><span class="cs-avatar cs-avatar--person cs-avatar--lg cs-avatar--p1">MS</span><span class="cs-tile__label">Monika · camera off</span></div>
+        <div class="cs-tile"><span class="cs-avatar cs-avatar--person cs-avatar--lg cs-avatar--p2">AS</span><span class="cs-tile__label">Atul · camera off</span></div>
+        <div class="cs-tile"><span class="cs-avatar cs-avatar--person cs-avatar--lg cs-avatar--p3">PK</span><span class="cs-tile__label">Priya · camera off</span></div>
+        <div class="cs-tile"><span class="caption cs-muted" style="padding:0 12px;text-align:center">Mat has no camera.</span></div>
+      </div>
+    </section>
+  <div class="cs-wpanes">
+    <nav class="cs-wpane cs-wpane--menu" data-collapsed="false" aria-label="Workspace menu">
+      <div class="cs-wpane__head">
+        <button class="cs-iconbtn" aria-expanded="true" aria-label="Collapse menu" title="Menu ( [ )"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h9"/></svg></button>
+        <h2 class="cs-wpane__title">Workspace</h2>
+        <button class="cs-iconbtn cs-wpane__hide" aria-label="Collapse menu"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12 4 6 10l6 6"/></svg></button>
+        <span class="cs-wpane__railtitle">Menu</span>
+      </div>
+      <div class="cs-wpane__body">
+        <div class="cs-menusec"><span class="label">Charts</span>
+          <button class="cs-navrow" aria-current="true"><span class="cs-navrow__sym">NVDA</span><span class="cs-navrow__sub">NVIDIA</span><span class="cs-navrow__end"><b>151.38</b>−0.21%</span></button>
+          <button class="cs-navrow"><span class="cs-navrow__sym">QQQ</span><span class="cs-navrow__sub">Invesco QQQ</span><span class="cs-navrow__end"><b>512.40</b>+0.34%</span></button>
+          <button class="cs-navrow"><span class="cs-navrow__sym">SPY</span><span class="cs-navrow__sub">SPDR S&amp;P 500</span><span class="cs-navrow__end"><b>618.22</b>+0.18%</span></button>
+          <div class="cs-menunote">Closes on 28 Oct, stored daily.</div>
+        </div>
+        <div class="cs-menusec"><span class="label">On this chart</span>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 3h7l3 3v11H5z"/><path d="M12 3v3h3M8 10h4M8 13h4"/></svg>Evidence<span class="cs-navrow__n cs-navrow__n--agent">1</span></button>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2 10h3l2-6 3 12 2.5-8L14 10h4"/></svg>Activity</button>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 3 7 4-7 4-7-4zM3 11l7 4 7-4"/></svg>Layers<span class="cs-navrow__n">2</span></button>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><ellipse cx="10" cy="5" rx="6" ry="2.5"/><path d="M4 5v10c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5V5M4 10c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5"/></svg>Data</button>
+        </div>
+        <div class="cs-menusec"><span class="label">Alerts</span>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 14V9a5 5 0 0 1 10 0v5l1.5 2h-13zM8.5 18h3"/></svg>Close above 135<span class="cs-navrow__n">Armed</span></button>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 14V9a5 5 0 0 1 10 0v5l1.5 2h-13zM8.5 18h3"/></svg>Close below 120<span class="cs-navrow__n">Armed</span></button>
+        </div>
+      </div>
+    </nav>
+    <aside class="cs-wpane cs-wpane--chat cs-rail" data-collapsed="false" aria-label="Assistant">
+      <div class="cs-wpane__head">
+        <button class="cs-iconbtn" aria-expanded="true" aria-label="Collapse chat" title="Chat ( ] )"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 4.5h13v9h-7.5l-3.5 3v-3h-2z"/></svg></button>
+        <span class="cs-avatar cs-avatar--lg cs-avatar--agent cs-wpane__hide" aria-hidden="true">M</span>
+        <h2 class="cs-wpane__title">Mat <span class="caption cs-muted">Workspace assistant</span></h2>
+        <button class="cs-iconbtn cs-wpane__hide" aria-label="Collapse chat"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m8 4 6 6-6 6"/></svg></button>
+        <span class="cs-wpane__railtitle">Chat</span>
+      </div>
+      <div class="cs-chatlog"><div class="cs-chatlog__in">
+        <div class="cs-msg cs-msg--person"><span class="cs-attr">You · 19:40 ET</span><span class="cs-msg__body"><span class="cs-mention">@Mat</span> where did SMA 50 cross SMA 200 this year?</span></div>
+        <div class="cs-card">
+          <div class="cs-card__head"><span class="cs-task__state cs-task__state--done"><span aria-hidden="true">✓</span>Completed</span><span class="cs-card__title"></span><span class="cs-attr"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">M</span>Mat · 19:41 ET</span></div>
+          <div class="cs-result__part"><span class="cs-result__label">Calculated fact</span><span class="cs-result__text">On the stored daily series, SMA 50 closed above SMA 200 on 14 Mar 2026 (128.06 vs 127.91).</span></div>
+          <div class="cs-result__part"><span class="cs-result__label">Interpretation</span><span class="cs-result__text">The only upward cross in 2026. I marked it on the chart.</span></div>
+          <div class="cs-card__foot"><button class="cs-btn cs-btn--compact">Open evidence</button><button class="cs-btn cs-btn--compact cs-btn--quiet">Undo add cross marker</button></div>
+        </div>
+        <div class="cs-msg cs-msg--person"><span class="cs-attr">You · 19:46 ET</span><span class="cs-msg__body"><span class="cs-mention">@Mat</span> mark the closes below SMA 200 since June</span></div>
+        <div class="cs-card">
+          <div class="cs-card__head"><span class="cs-task__state cs-task__state--attention"><span aria-hidden="true">!</span>Awaiting your approval</span><span class="cs-card__title"></span><span class="cs-attr"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">M</span>Mat · 19:47 ET</span></div>
+          <span class="caption cs-muted">4 closes: 5, 6, 7 Aug and 12 Sep. Shown dashed on the chart as "Proposed". Based on r12, the current revision.</span>
+          <div class="cs-card__foot"><button class="cs-btn cs-btn--compact cs-btn--primary">Apply</button><button class="cs-btn cs-btn--compact cs-btn--quiet">Decline</button></div>
+        </div>
+      </div></div>
+      <div class="cs-composer">
+        <label class="cs-sr" for="msg">Message</label>
+        <textarea id="msg" class="cs-textarea" rows="2" placeholder="Ask @Mat about this chart"></textarea>
+        <div class="cs-composer__foot"><span class="cs-composer__hint">Mention <span class="cs-mention">@Mat</span> to start a task. Other messages are chat only.</span><button class="cs-btn cs-btn--primary cs-btn--compact">Send</button></div>
+      </div>
+    </aside>
+    <main class="cs-wpane cs-wpane--chart" aria-label="Chart">
+      <div class="cs-toolbar" role="toolbar" aria-label="Chart">
+          <span class="cs-toolbar__sym">NVDA</span>
+          <button class="cs-btn cs-btn--compact" aria-haspopup="listbox" aria-label="Interval: 1 day">1D<span class="cs-caret" aria-hidden="true"></span></button>
+          <button class="cs-btn cs-btn--compact" aria-haspopup="listbox" aria-label="Chart type: candles">Candles<span class="cs-caret" aria-hidden="true"></span></button>
+          <span class="cs-badge" title="Data run 2026-10-28T21:04Z"><span class="cs-badge__glyph" aria-hidden="true">▤</span>Stored daily · through 28 Oct · split-adjusted, not dividend-adjusted</span>
+          <span class="cs-toolbar__group"><button class="cs-btn cs-btn--compact"><span class="cs-btn__glyph" aria-hidden="true">+</span>Indicator</button><button class="cs-btn cs-btn--compact">Compare</button></span>
+          <span class="cs-toolbar__spacer"></span>
+          <button class="cs-btn cs-btn--compact cs-btn--quiet cs-btn--icon" aria-label="Undo add cross marker" title="Undo add cross marker"><span class="cs-btn__glyph" aria-hidden="true">↶</span></button>
+          <button class="cs-btn cs-btn--compact cs-btn--quiet cs-btn--icon" disabled aria-label="Redo, nothing to redo">↷</button>
+        </div>
+        <div class="cs-meta cs-meta--split">
+          <div class="cs-legend">
+            <span class="cs-legend__item" style="color: var(--chart-series-1);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 50</span><span class="cs-legend__val">128.06</span></span>
+            <span class="cs-legend__item" style="color: var(--chart-series-2);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 200</span><span class="cs-legend__val">121.70</span></span><span class="cs-legend__item"><span class="cs-marker cs-marker--split" aria-hidden="true">S</span><span class="cs-legend__name">Split</span></span></div><div class="cs-legend cs-legend__ohlc" style="margin-right: auto;"><span class="cs-muted">14 Mar 2026</span><span><b>O</b>131.42</span><span><b>H</b>134.10</span><span><b>L</b>130.88</span><span><b>C</b>133.97</span></div>
+          <span>Rendered r12 · 19:58:02 ET</span>
+        </div>
+        <div class="cs-chart" tabindex="0" aria-label="Price chart. Arrow keys pan, plus and minus zoom, Escape clears the crosshair.">
+          <dc-import name="ChartFrame" hint-size="100%,100%"></dc-import>
+        </div>
+        <div class="cs-strip cs-strip--timeline" aria-label="On this chart. Choose an item to move the chart to it.">
+          <div class="cs-eventtrack" aria-hidden="true"><span class="cs-eventtrack__tick" data-active="true" style="left: 55%;"></span><span class="cs-eventtrack__tick" style="left: 80%;"></span></div>
+          <span class="caption cs-muted cs-strip__label">On this chart</span>
+          <button class="cs-evchip" aria-pressed="true"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">M</span><span class="cs-evchip__date">14 Mar</span>Golden cross</button>
+          <button class="cs-evchip"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">M</span><span class="cs-evchip__date">Range</span>SMA 50 / SMA 200</button>
+          <button class="cs-evchip"><span class="cs-avatar cs-avatar--person" aria-hidden="true">MS</span><span class="cs-evchip__date">10 Jun</span>Split 10:1</button>
+        </div>
+    </main>
+  </div>
+  <footer class="cs-footer" role="status" aria-live="polite"><span class="cs-footer__msg">Mat added a cross marker · 19:41 ET</span></footer>
+  <div class="cs-scrim" style="z-index: 10;">
+    <div class="cs-dialog cs-dialog--wide" role="dialog" aria-modal="true" aria-labelledby="aa" style="gap:14px">
+      <div style="display:flex;flex-direction:column;gap:6px"><span class="cs-eyebrow" style="display:block">Agents</span><h2 class="cs-dialog__title" id="aa">Edit Mat</h2></div>
+      <div class="cs-fgrid">
+        <label class="cs-field"><span class="cs-field__label">Name</span><input class="cs-input" value="Mat" placeholder="A name people will @mention"><span class="cs-field__hint">Shown in the roster and on everything it does.</span></label>
+        <label class="cs-field"><span class="cs-field__label">Provider</span><select class="cs-select" style="width:100%"><option selected>Claude</option><option>ChatGPT</option><option>Local model</option><option>Other, OpenAI-compatible</option></select></label>
+        <label class="cs-field"><span class="cs-field__label">Model</span><select class="cs-select" style="width:100%"><option selected>Sonnet</option><option>Haiku</option></select><span class="cs-field__hint">About $3 in and $15 out per million tokens. You pay your provider directly.</span></label>
+        <label class="cs-field"><span class="cs-field__label">Key</span><span class="cs-row" style="gap:8px;align-items:center"><select class="cs-select" style="width:100%"><option selected>ANTHROPIC_API_KEY</option><option>OPENAI_API_KEY</option><option>No key (local model)</option></select></span><span class="cs-keyfound" data-ok="true"><span aria-hidden="true">✓</span>Found on this machine</span><span class="cs-field__hint">Keys are read by name from this machine. ChartsSpeak never asks you to type or paste one.</span></label>
+        <label class="cs-field"><span class="cs-field__label">Acts for</span><select class="cs-select" style="width:100%"><option selected>Monika (you)</option><option>Atul</option><option>Priya</option></select><span class="cs-field__hint">Its proposals need this person's approval.</span></label>
+        <label class="cs-field"><span class="cs-field__label">Where it runs</span><span class="cs-seg" role="group" aria-label="Where it runs"><button aria-pressed="true">Provider's servers</button><button aria-pressed="false">This machine</button></span><span class="cs-field__hint">Decides which line shows under its messages: Sent to or Stays on this machine.</span></label>
+      </div>
+      <fieldset class="cs-field" style="border:0;padding:0;margin:0;min-width:0"><legend class="cs-field__label" style="margin-bottom:6px">Tools <span class="cs-tag">Propose only</span></legend><div class="cs-fgrid" style="gap:6px 16px"><label class="cs-check" style="min-height:0"><input type="checkbox" checked disabled> Read stored data</label><label class="cs-check" style="min-height:0"><input type="checkbox" checked > Calculate on stored data</label><label class="cs-check" style="min-height:0"><input type="checkbox" checked > Propose markers and lines</label><label class="cs-check" style="min-height:0"><input type="checkbox"  > Propose indicator changes</label><label class="cs-check" style="min-height:0"><input type="checkbox"  > Propose alerts</label></div></fieldset>
+      <div class="cs-fgrid">
+        <label class="cs-field"><span class="cs-field__label">Per task limit (tokens)</span><input class="cs-input" value="8,000"><span class="cs-field__hint">Ceiling set by the workspace owner: 20,000.</span></label>
+        <label class="cs-field"><span class="cs-field__label">Per day limit (tasks)</span><input class="cs-input" value="20"><span class="cs-field__hint">Ceiling set by the workspace owner: 50.</span></label>
+      </div>
+      <div class="cs-slotbox"><span class="label">What is sent</span><span class="small">Your question, the stored bars in view, the names of layers and markers, and this chart's conversation. Not your keys, other charts, private messages, or files.</span></div>
+      <div class="cs-dialog__actions" style="justify-content:space-between"><button class="cs-btn cs-btn--quiet" style="color:var(--refusal)">Remove agent…</button><span class="cs-row" style="gap:8px"><button class="cs-btn cs-btn--quiet">Cancel</button><button class="cs-btn cs-btn--primary">Save changes</button></span></div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["dark","light"],"default":"dark"},"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { theme: this.props.theme ?? 'dark' };
+  }
+}
+</script>
+</body>
+</html>

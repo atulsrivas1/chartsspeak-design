@@ -47,7 +47,7 @@ Data class and connection are **different axes in different places**. A healthy 
 
 **The chart canvas is not CSS.** The engine draws candles, axes, grid, crosshair and indicator lines. Hand the engine/pack the `chart-*` tokens (resolved per theme) as its theme. Up candles are `chart-up`, drawn hollow; down candles are `chart-down`, drawn filled. The pair is blue/orange so that red-green colour blindness does not hide direction, and the hollow/filled shape carries direction without colour. Indicator lines take `chart-series-1…5` in order. Benchmarks reuse series 5, 2, 3, 4 **dashed**, so a benchmark never reads as an indicator. Event markers are `chart-event-split|dividend|earnings`, and each carries its letter (S, D, E), because the old grey/green/red key was colour-only. Someone who prefers green/red can switch to `chart-up-conventional` / `chart-down-conventional` in `ChartSettings`; it is opt-in only, and hollow/filled stays. The exact object the engine receives is in the Engine theme hand-off section.
 
-**Type.** Two families. `sans` is IBM Plex Sans for everything you read, and `display` is Bricolage Grotesque, used only for the logo, the workspace title, pane titles and the chart symbol (`title-page`, `title-panel` and `heading` use it). `mono` is for evidence and data-run ids only. The scale is `title-page` 27, `title-panel` 19, `heading` 15, `body` 13 (base), `small` 12, `caption` 11, `label` 11 uppercase +0.06em, `numeric` 12 tabular, `code` 12 mono. **Nothing is smaller than 11px**, which retires the 7–9px labels. Density comes from tight line heights and spacing, not from tiny type. Phone uses the same scale; `title-page` drops to 21/26.
+**Type.** Two families. `sans` is IBM Plex Sans for everything you read, and `display` is Bricolage Grotesque, used only for the logo, the workspace title, pane titles and the chart symbol (`title-page`, `title-panel` and `heading` use it). `mono` is for evidence and data-run ids only. The scale is `title-page` 27, `title-panel` 19, `heading` 15, `body` 14 (base), `small` 13, `caption` 12, `label` 12 uppercase +0.06em, `numeric` 13 tabular, `code` 13 mono. **No running text is smaller than 12px** (only initials inside avatars and markers go lower), which retires the 7–9px labels. Density comes from tight line heights and spacing, not from tiny type. Phone uses the same scale; `title-page` drops to 21/26.
 
 **Spacing.** Use only `space-4 … space-30`. Page gutter is `space-30` on desktop and `space-16` on tablet and phone. Panel padding is `space-16`, card padding `space-12` and gaps between panels `space-18`.
 
@@ -146,3 +146,36 @@ There is no icon set yet. The five rail icons (Conversation, Evidence, Activity,
 - Text meets 4.5:1 on the surfaces its token note names, in both themes. `border-control`, `focus` and chart marks meet 3:1.
 - The canvas has an accessible name and a text description of its keyboard use (arrows pan, + and − zoom, Escape clears the crosshair). Every number on the chart is also available as text in the legend, the hover readout or Evidence.
 - Results and conflicts are announced through the polite live region in `StatusFooter`.
+
+### Common shell: four layouts
+
+Every page with a chart must follow the common shell board and use one of four shells, set per person with `data-layout` on `.cs-shell--panes`: `menu-chat-chart` (default, no attribute), `menu-chart-chat`, `chat-chart-menu`, and `chart-chat` (the menu becomes a drawer, opened with `data-menu="open"` from the `.cs-menutoggle` button in the top bar). Every pane except the chart collapses: menu and chat fold to a 56px rail (the menu closes in the drawer layout) and the people row folds to its button. The chart pane never collapses. Reorder the panes in the DOM, not only with CSS, so focus order matches what people see. Tablet and phone ignore the setting. See the "Common shell" board.
+
+## Fonts
+
+The three families, their weights, subsets and licences are in `fonts/FONTS.md`. The files are in `fonts/` with `fonts.css`; the app hosts them itself (all three are SIL Open Font License 1.1, which allows it). The boards load the same families from Google Fonts only for previewing.
+
+## Agents
+
+- **Identity (decided):** every agent keeps the accent ring, a squircle with its initial. Agents are told apart by name, initial and a provider line in plain text ("Claude · Sonnet", "Local model"). No agent has its own colour and no provider's name, logo or colour is a default. Violet is taken by drawing tools (`chart-drawing`), so a new agent colour would also clash there.
+- **Sent-to line:** one line, in the same place on the roster row, composer, task card and proposal card: `Sent to <provider>`, `Stays on this machine`, or `Not sent anywhere`. Each has its own glyph, so colour is never the only signal (`cs-sentto`).
+- **Consent:** asked once per remote provider and workspace, before the first send. Local agents never ask.
+- **Mention:** one message goes to one agent. The picker lists enabled agents first and shows off agents as unavailable.
+- **Several agents in a thread:** every message and card carries the agent's initial, name and who it acts for. Each working agent has its own Stop. When one agent's change is applied, other proposals drawn on the old revision get a "Base changed" notice with Ask to redo / Review anyway.
+- **Empty and not-configured:** "No agents yet" for owners (with Add an agent) and for everyone else (with Ask an owner); "Not configured" when the named key is not found.
+- **Notices:** key missing, over limit, provider declined, offline and agent off are one pattern (`cs-notice`: glyph, kind, title, body, actions). Off is quiet grey (`cs-notice--quiet`); over limit and offline are caution; the others use the refusal colour.
+- **Add, edit and remove:** the form shows only whether a key is found, never a field to type one. Limits show the owner's ceiling. Tools are all propose-only.
+
+## Chart pane details
+
+- **Read-out row:** the O H L C row in the legend row (desktop) and under the toolbar (phone) is the tile. States: on a bar, off the chart ("Latest · date"), a day with no stored bar (dashes plus the reason), and on the phone held ("Held · date · Release to clear") and empty ("Press and hold the chart to read a bar").
+- **Labelling derived charts:** the data badge says `Stored <interval>` only when the shown interval is the stored one. Otherwise it says `<Interval> · built from stored <source>`, plus `last bar partial` when the newest bucket is incomplete.
+- **Chat pane views:** Chat, Activity, Layers, Data and Evidence are views of the same pane (`cs-viewtabs`); the menu rows under "On this chart" open the same views. Layers' Shown/Hidden changes only your own view.
+- **Sparse menu:** with one chart and no alerts the menu shows the chart without a price, "Add a chart", and "No alerts yet" with "New alert".
+- **Shortcuts:** `[` menu, `]` chat, `f` Focus, `Esc` leaves Focus.
+
+## Pane order and chart canvas
+
+- **Where the control lives:** Settings, Appearance, "Pane order" (four cards). It is a per-person view setting. The only other control is the menu button in the top bar, which exists only in the drawer layout.
+- **Release 1:** fixed order Menu | Chat | Chart and an always-dark canvas. The Settings board shows the full control and "Chart canvas: Follow theme / Always dark" with Always dark selected.
+- **Light canvas:** the colours exist (`chart-*` tokens, light values, drawn on board 30) and `engine-theme.md` carries both the dark and the light theme object.

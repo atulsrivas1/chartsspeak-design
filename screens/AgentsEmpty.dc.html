@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ChartsSpeak · no agents yet and not configured</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/chartsspeak/tokens.css">
+<link rel="stylesheet" href="ds/chartsspeak/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div data-theme="{{theme}}" style="width:1440px;height:900px;box-sizing:border-box;padding:32px;background:var(--surface-000);color:var(--ink);font-family:var(--font-sans);overflow:hidden;display:flex;flex-direction:column;gap:16px">
+  <header style="display:flex;flex-direction:column;gap:4px;max-width:1000px"><h1 class="title-page" style="margin:0;font-family:var(--font-display)">No agents yet, and not configured</h1><p class="body cs-muted" style="margin:0">Replaces the "Mat, offline" card. The empty state is the same for every provider and never names one. Owners get the action; everyone else is told who can act.</p></header>
+  <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:start;min-height:0"><section style="display:flex;flex-direction:column;gap:8px;min-width:0;"><span class="label cs-muted">Owner · no agents</span><div style="background:var(--surface-100);border:1px solid var(--border-200);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:12px;min-width:0"><div style="display:flex;flex-direction:column;min-height:420px;background:var(--surface-150);border:1px solid var(--border-200);border-radius:var(--radius-panel);margin:-16px;overflow:hidden"><div class="cs-wpane__head" style="padding:12px 16px;display:flex;align-items:center;gap:8px"><h2 class="cs-wpane__title" style="margin:0;font:600 15px/20px var(--font-display)">Agents</h2></div><div style="padding:16px;display:flex;flex-direction:column;gap:12px;flex:1"><div class="cs-empty" style="padding:0"><span class="heading">No agents yet</span><span class="small cs-muted">Agents answer questions about this chart and propose changes you approve. Add one with your own provider account. Nothing is sent anywhere until you do.</span></div><div class="cs-row" style="gap:8px"><button class="cs-btn cs-btn--primary">Add an agent</button><button class="cs-btn cs-btn--quiet">How agents work</button></div><div style="flex:1"></div><textarea class="cs-textarea" rows="2" disabled placeholder="Add an agent to ask questions"></textarea></div></div></div></section><section style="display:flex;flex-direction:column;gap:8px;min-width:0;"><span class="label cs-muted">Editor or viewer · no agents</span><div style="background:var(--surface-100);border:1px solid var(--border-200);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:12px;min-width:0"><div style="display:flex;flex-direction:column;min-height:420px;background:var(--surface-150);border:1px solid var(--border-200);border-radius:var(--radius-panel);margin:-16px;overflow:hidden"><div class="cs-wpane__head" style="padding:12px 16px;display:flex;align-items:center;gap:8px"><h2 class="cs-wpane__title" style="margin:0;font:600 15px/20px var(--font-display)">Agents</h2></div><div style="padding:16px;display:flex;flex-direction:column;gap:12px;flex:1"><div class="cs-empty" style="padding:0"><span class="heading">No agents yet</span><span class="small cs-muted">An owner of this workspace adds agents. Until then, messages stay chat only and are not sent to any agent.</span></div><div class="cs-row" style="gap:8px"><button class="cs-btn">Ask an owner</button></div><div style="flex:1"></div><textarea class="cs-textarea" rows="2" placeholder="Message the people in this workspace"></textarea><span class="cs-sentto" data-kind="none"><span class="cs-sentto__g" aria-hidden="true">–</span>Not sent anywhere</span></div></div></div></section><section style="display:flex;flex-direction:column;gap:8px;min-width:0;"><span class="label cs-muted">An agent exists, key not found</span><div style="background:var(--surface-100);border:1px solid var(--border-200);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:12px;min-width:0"><div style="display:flex;flex-direction:column;min-height:420px;background:var(--surface-150);border:1px solid var(--border-200);border-radius:var(--radius-panel);margin:-16px;overflow:hidden"><div class="cs-wpane__head" style="padding:12px 16px;display:flex;align-items:center;gap:8px"><h2 class="cs-wpane__title" style="margin:0;font:600 15px/20px var(--font-display)">Agents</h2></div><div style="padding:16px;display:flex;flex-direction:column;gap:12px;flex:1"><div><div class="cs-agentrow"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">M</span><span class="cs-agentrow__name">Mat</span><span class="cs-agentrow__act"><span class="cs-state cs-state--off"><span class="cs-state__d" aria-hidden="true"></span>Not configured</span><button class="cs-btn cs-btn--compact">Set up</button></span><span class="cs-agentrow__line">Claude · Sonnet · for Monika</span></div></div><div class="cs-notice cs-notice--quiet" role="status"><span class="cs-notice__glyph" aria-hidden="true">i</span><span class="cs-notice__title"><span class="cs-notice__kind">Not configured.</span> Mat can't answer yet</span><span class="cs-notice__body">The key named ANTHROPIC_API_KEY was not found on this machine. Nothing is sent until it is. Messages that mention Mat are held, not lost.</span></div><div style="flex:1"></div><textarea class="cs-textarea" rows="2" disabled placeholder="Mat isn't set up"></textarea></div></div></div></section></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["dark","light"],"default":"dark"},"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { theme: this.props.theme ?? 'dark' };
+  }
+}
+</script>
+</body>
+</html>
