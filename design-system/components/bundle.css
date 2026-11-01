@@ -1042,3 +1042,6 @@ kbd.cs-kbd { display: inline-grid; place-items: center; min-width: 24px; height:
 .cs-uxrule h3 { margin: 0; font: 600 14px/19px var(--font-sans); color: var(--ink); }
 .cs-uxrule ul { margin: 0; padding-left: 16px; display: flex; flex-direction: column; gap: 3px; font: 400 13px/18px var(--font-sans); color: var(--ink); }
 .cs-uxrule kbd { font: 600 12px/1 var(--font-sans); padding: 1px 5px; border: 1px solid var(--border-control); border-radius: var(--radius-xs); }
+.cs-uxstory { display: inline-flex; align-items: center; min-height: 20px; padding: 0 6px; border-radius: var(--radius-xs); border: 1px solid var(--accent); color: var(--accent-text); font: 600 12px/16px var(--font-mono); }
+.cs-uxneed { display: inline-flex; align-items: center; min-height: 20px; padding: 0 6px; border-radius: var(--radius-xs); border: 1px dashed var(--caution); color: var(--caution); font: 600 12px/16px var(--font-sans); }
+.cs-uxstep--need { border-color: var(--caution); }

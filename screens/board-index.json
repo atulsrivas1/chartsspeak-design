@@ -1,0 +1,898 @@
+[
+ {
+  "board": "0",
+  "file": "UXMap.dc.html",
+  "title": "Experience map: every journey, step by step, with its boards (read this first)",
+  "theme": "dark",
+  "width": 2400,
+  "height": 1760
+ },
+ {
+  "board": "1",
+  "file": "Main.dc.html",
+  "title": "Working session, menu | chat | chart",
+  "theme": "dark",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "2",
+  "file": "Reconnecting.dc.html",
+  "title": "Reconnecting (retained frame)",
+  "theme": "dark",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "3",
+  "file": "Refusal.dc.html",
+  "title": "Refusal: not stored",
+  "theme": "light",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "4",
+  "file": "Snapshot.dc.html",
+  "title": "Evidence reopened as snapshot",
+  "theme": "light",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "5",
+  "file": "SignIn.dc.html",
+  "title": "Sign-in needed",
+  "theme": "dark",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "5L",
+  "file": "LightSignIn.dc.html",
+  "title": "Light · Sign-in needed",
+  "theme": "light",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "6",
+  "file": "ChartControls.dc.html",
+  "title": "Chart controls: symbol search, interval, type, range, scale, panes",
+  "theme": "dark",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "7",
+  "file": "DrawingTools.dc.html",
+  "title": "Drawing tools and object list",
+  "theme": "light",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "8",
+  "file": "Together.dc.html",
+  "title": "Working together (W2): presence, follow, shared vs private",
+  "theme": "dark",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "9",
+  "file": "PhoneChart.dc.html",
+  "title": "Phone · Chart",
+  "theme": "dark",
+  "width": 390,
+  "height": 844
+ },
+ {
+  "board": "9b",
+  "file": "PhoneMenu.dc.html",
+  "title": "Phone · Menu",
+  "theme": "dark",
+  "width": 390,
+  "height": 844
+ },
+ {
+  "board": "10",
+  "file": "PhoneConversation.dc.html",
+  "title": "Phone · Conversation",
+  "theme": "dark",
+  "width": 390,
+  "height": 844
+ },
+ {
+  "board": "11",
+  "file": "TabletDrawer.dc.html",
+  "title": "Tablet 960: chat open as a drawer over the chart",
+  "theme": "dark",
+  "width": 960,
+  "height": 720
+ },
+ {
+  "board": "12",
+  "file": "BrandF2.dc.html",
+  "title": "Brand: plain-type logo, woven SS for display headings",
+  "theme": "dark",
+  "width": 1200,
+  "height": 760
+ },
+ {
+  "board": "13",
+  "file": "Team.dc.html",
+  "title": "Team roster: people vs agents, status, author filter",
+  "theme": "dark",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "14",
+  "file": "Proposal.dc.html",
+  "title": "Proposal awaiting approval: what will change",
+  "theme": "light",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "15",
+  "file": "LiveConflict.dc.html",
+  "title": "Watching an agent work, stale-base and undo refusals",
+  "theme": "dark",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "16",
+  "file": "FirstRun.dc.html",
+  "title": "First run: only stored data",
+  "theme": "light",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "17",
+  "file": "NoData.dc.html",
+  "title": "Symbol not stored, and partial coverage",
+  "theme": "dark",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "18",
+  "file": "Invite.dc.html",
+  "title": "Invite and roles",
+  "theme": "dark",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "19",
+  "file": "AgentGrantsScreen.dc.html",
+  "title": "Agent grants and limits",
+  "theme": "light",
+  "width": 1440,
+  "height": 1080
+ },
+ {
+  "board": "20",
+  "file": "PhonePairingScreen.dc.html",
+  "title": "Phone pairing: QR on desktop, confirm on phone",
+  "theme": "dark",
+  "width": 1040,
+  "height": 900
+ },
+ {
+  "board": "21",
+  "file": "DemoWelcome.dc.html",
+  "title": "Demo visitor welcome",
+  "theme": "light",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "22",
+  "file": "Export.dc.html",
+  "title": "Export image: honesty stamp always on",
+  "theme": "dark",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "23",
+  "file": "Share.dc.html",
+  "title": "Share a link: snapshot, audience, expiry",
+  "theme": "light",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "24",
+  "file": "Activity.dc.html",
+  "title": "Activity feed, attention badge, toasts",
+  "theme": "dark",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "25",
+  "file": "Settings.dc.html",
+  "title": "Settings: appearance, pane order, data defaults, notifications",
+  "theme": "light",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "26",
+  "file": "Shortcuts.dc.html",
+  "title": "Keyboard shortcuts, with panes and views",
+  "theme": "dark",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "27",
+  "file": "IndicatorStyleScreen.dc.html",
+  "title": "Indicator style: palette only",
+  "theme": "light",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "28",
+  "file": "PhoneTouch.dc.html",
+  "title": "Phone: press-and-hold crosshair, gestures",
+  "theme": "dark",
+  "width": 390,
+  "height": 844
+ },
+ {
+  "board": "29",
+  "file": "PhoneLandscape.dc.html",
+  "title": "Phone landscape: chart only",
+  "theme": "dark",
+  "width": 844,
+  "height": 390
+ },
+ {
+  "board": "30",
+  "file": "LightMain.dc.html",
+  "title": "Light · Working session",
+  "theme": "light",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "31",
+  "file": "LightTogether.dc.html",
+  "title": "Light · Working together",
+  "theme": "light",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "32",
+  "file": "LightReconnecting.dc.html",
+  "title": "Light · Reconnecting",
+  "theme": "light",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "33",
+  "file": "LightPhoneChart.dc.html",
+  "title": "Light · Phone chart",
+  "theme": "light",
+  "width": 390,
+  "height": 844
+ },
+ {
+  "board": "34",
+  "file": "LightPhoneConversation.dc.html",
+  "title": "Light · Phone conversation",
+  "theme": "light",
+  "width": 390,
+  "height": 844
+ },
+ {
+  "board": "35",
+  "file": "Review.dc.html",
+  "title": "Agent review",
+  "theme": "dark",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "36",
+  "file": "Disagreement.dc.html",
+  "title": "Two answers, side by side",
+  "theme": "dark",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "37",
+  "file": "Handoff.dc.html",
+  "title": "Agent handoff",
+  "theme": "dark",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "38",
+  "file": "MultiChart.dc.html",
+  "title": "Four-chart layout",
+  "theme": "dark",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "39",
+  "file": "TemplatesScreen.dc.html",
+  "title": "Templates",
+  "theme": "dark",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "40",
+  "file": "PhoneLayout.dc.html",
+  "title": "Phone, one chart of four",
+  "theme": "dark",
+  "width": 390,
+  "height": 844
+ },
+ {
+  "board": "41",
+  "file": "WatchlistScreen.dc.html",
+  "title": "Watchlist and alerts",
+  "theme": "dark",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "42",
+  "file": "AlertScreen.dc.html",
+  "title": "New alert",
+  "theme": "dark",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "43",
+  "file": "Replay.dc.html",
+  "title": "Bar replay",
+  "theme": "dark",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "44",
+  "file": "LocalCrosshair.dc.html",
+  "title": "Local crosshair and keyboard edges (R1 A-G2, A-G4)",
+  "theme": "dark",
+  "width": 1600,
+  "height": 2560
+ },
+ {
+  "board": "44L",
+  "file": "LocalCrosshairLight.dc.html",
+  "title": "Light · Local crosshair and keyboard edges",
+  "theme": "light",
+  "width": 1600,
+  "height": 2560
+ },
+ {
+  "board": "45",
+  "file": "WorkspaceChatCollapsed.dc.html",
+  "title": "Chat collapsed, review badge on the rail",
+  "theme": "dark",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "45L",
+  "file": "LightChatCollapsed.dc.html",
+  "title": "Light · Chat collapsed",
+  "theme": "light",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "46",
+  "file": "WorkspacePeople.dc.html",
+  "title": "Release 2: people row and follow. Team video removed; \"Start a call\" opens your own tool",
+  "theme": "dark",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "47",
+  "file": "WorkspaceFocus.dc.html",
+  "title": "Focus mode (light), both panes collapsed",
+  "theme": "light",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "48",
+  "file": "ShellLayouts.dc.html",
+  "title": "Common shell: four layouts, every work page uses one",
+  "theme": "dark",
+  "width": 1200,
+  "height": 760
+ },
+ {
+  "board": "48A",
+  "file": "LayoutChartMiddle.dc.html",
+  "title": "Menu | Chart | Chat",
+  "theme": "dark",
+  "width": 1280,
+  "height": 800
+ },
+ {
+  "board": "48A-L",
+  "file": "LightLayoutChartMiddle.dc.html",
+  "title": "Light · Menu | Chart | Chat",
+  "theme": "light",
+  "width": 1280,
+  "height": 800
+ },
+ {
+  "board": "48B",
+  "file": "LayoutChatLeft.dc.html",
+  "title": "Chat | Chart | Menu",
+  "theme": "dark",
+  "width": 1280,
+  "height": 800
+ },
+ {
+  "board": "48B-L",
+  "file": "LightLayoutChatLeft.dc.html",
+  "title": "Light · Chat | Chart | Menu",
+  "theme": "light",
+  "width": 1280,
+  "height": 800
+ },
+ {
+  "board": "48C",
+  "file": "LayoutDrawerClosed.dc.html",
+  "title": "Chart | Chat, menu as a drawer (closed)",
+  "theme": "dark",
+  "width": 1280,
+  "height": 800
+ },
+ {
+  "board": "48C-L",
+  "file": "LightLayoutDrawerClosed.dc.html",
+  "title": "Light · Chart | Chat, drawer closed",
+  "theme": "light",
+  "width": 1280,
+  "height": 800
+ },
+ {
+  "board": "48D",
+  "file": "LayoutDrawerOpen.dc.html",
+  "title": "Same, drawer open",
+  "theme": "dark",
+  "width": 1280,
+  "height": 800
+ },
+ {
+  "board": "48D-L",
+  "file": "LightLayoutDrawerOpen.dc.html",
+  "title": "Light · drawer open",
+  "theme": "light",
+  "width": 1280,
+  "height": 800
+ },
+ {
+  "board": "49",
+  "file": "ReadoutStates.dc.html",
+  "title": "Read-out row: hover, held, empty, and derived-chart labels",
+  "theme": "dark",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "49L",
+  "file": "LightReadoutStates.dc.html",
+  "title": "Light · Read-out row: hover, held, empty, and derived-chart labels",
+  "theme": "light",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "50",
+  "file": "ChatLayers.dc.html",
+  "title": "Layers live in the expanded legend (pinned): show, hide, remove",
+  "theme": "dark",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "50L",
+  "file": "LightChatLayers.dc.html",
+  "title": "Light · Layers live in the expanded legend (pinned): show, hide, remove",
+  "theme": "light",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "51",
+  "file": "ChatData.dc.html",
+  "title": "Data panel opens from the data badge in the chart foot",
+  "theme": "dark",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "51L",
+  "file": "LightChatData.dc.html",
+  "title": "Light · Data panel opens from the data badge in the chart foot",
+  "theme": "light",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "52",
+  "file": "ChatEvidence.dc.html",
+  "title": "Chat pane view: Evidence",
+  "theme": "dark",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "52L",
+  "file": "LightChatEvidence.dc.html",
+  "title": "Light · Chat pane view: Evidence",
+  "theme": "light",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "53",
+  "file": "MenuSparse.dc.html",
+  "title": "Menu pane, one chart and no alerts",
+  "theme": "dark",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "53L",
+  "file": "LightMenuSparse.dc.html",
+  "title": "Light · Menu pane, one chart and no alerts",
+  "theme": "light",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "54",
+  "file": "AgentsThread.dc.html",
+  "title": "Several agents in one thread",
+  "theme": "dark",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "54L",
+  "file": "LightAgentsThread.dc.html",
+  "title": "Light · Several agents in one thread",
+  "theme": "light",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "55",
+  "file": "AgentsEmpty.dc.html",
+  "title": "No agents yet, and not configured",
+  "theme": "dark",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "55L",
+  "file": "LightAgentsEmpty.dc.html",
+  "title": "Light · No agents yet, and not configured",
+  "theme": "light",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "56",
+  "file": "AgentSentTo.dc.html",
+  "title": "Sent-to indicator on roster, composer, task and proposal",
+  "theme": "dark",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "56L",
+  "file": "LightAgentSentTo.dc.html",
+  "title": "Light · Sent-to indicator on roster, composer, task and proposal",
+  "theme": "light",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "57",
+  "file": "AgentConsent.dc.html",
+  "title": "First-use consent and choosing who to ask (the To chip)",
+  "theme": "dark",
+  "width": 1440,
+  "height": 980
+ },
+ {
+  "board": "57L",
+  "file": "LightAgentConsent.dc.html",
+  "title": "Light · First-use consent and choosing who to ask",
+  "theme": "light",
+  "width": 1440,
+  "height": 980
+ },
+ {
+  "board": "58",
+  "file": "AgentErrors.dc.html",
+  "title": "Agent errors and agent off, one notice pattern",
+  "theme": "dark",
+  "width": 1440,
+  "height": 1460
+ },
+ {
+  "board": "58L",
+  "file": "LightAgentErrors.dc.html",
+  "title": "Light · Agent errors and agent off, one notice pattern",
+  "theme": "light",
+  "width": 1440,
+  "height": 1460
+ },
+ {
+  "board": "59",
+  "file": "AddAgent.dc.html",
+  "title": "Add an agent",
+  "theme": "dark",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "59L",
+  "file": "AddAgentLight.dc.html",
+  "title": "Add an agent, light",
+  "theme": "light",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "60",
+  "file": "AddAgentEdit.dc.html",
+  "title": "Edit an agent",
+  "theme": "dark",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "60L",
+  "file": "LightAddAgentEdit.dc.html",
+  "title": "Light · Edit an agent",
+  "theme": "light",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "61",
+  "file": "AddAgentRemove.dc.html",
+  "title": "Remove an agent",
+  "theme": "dark",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "61L",
+  "file": "LightAddAgentRemove.dc.html",
+  "title": "Light · Remove an agent",
+  "theme": "light",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "62",
+  "file": "AddAgentPhone.dc.html",
+  "title": "Add an agent, phone",
+  "theme": "dark",
+  "width": 390,
+  "height": 1240
+ },
+ {
+  "board": "63",
+  "file": "Tablet768.dc.html",
+  "title": "Tablet 768: chat open as a drawer over the chart",
+  "theme": "dark",
+  "width": 768,
+  "height": 1024
+ },
+ {
+  "board": "64",
+  "file": "DefaultDesk.dc.html",
+  "title": "Default: chart first, menu and chat folded into the chart head",
+  "theme": "dark",
+  "width": 1280,
+  "height": 800
+ },
+ {
+  "board": "64F",
+  "file": "DefaultFirst.dc.html",
+  "title": "First visit: one tip with the keys and the candle colour choice",
+  "theme": "dark",
+  "width": 1280,
+  "height": 800
+ },
+ {
+  "board": "64L",
+  "file": "DefaultDeskLight.dc.html",
+  "title": "Light · Default, chart first",
+  "theme": "light",
+  "width": 1280,
+  "height": 800
+ },
+ {
+  "board": "64T",
+  "file": "Default768.dc.html",
+  "title": "Tablet 768 default: icon-only pane buttons",
+  "theme": "dark",
+  "width": 768,
+  "height": 1024
+ },
+ {
+  "board": "64T-L",
+  "file": "Default768Light.dc.html",
+  "title": "Light · Tablet 768 default",
+  "theme": "light",
+  "width": 768,
+  "height": 1024
+ },
+ {
+  "board": "65",
+  "file": "OptToolbar.dc.html",
+  "title": "Options: toolbar fades in at the top edge (pointer)",
+  "theme": "dark",
+  "width": 1280,
+  "height": 800
+ },
+ {
+  "board": "66",
+  "file": "OptKeyboard.dc.html",
+  "title": "Options opened with o: focus on the first control",
+  "theme": "dark",
+  "width": 1280,
+  "height": 800
+ },
+ {
+  "board": "67",
+  "file": "OptContext.dc.html",
+  "title": "Right-click (or Shift+F10) context menu",
+  "theme": "dark",
+  "width": 1280,
+  "height": 800
+ },
+ {
+  "board": "68",
+  "file": "OptLegendWarn.dc.html",
+  "title": "Legend expanded on hover or focus; a data warning is never hidden",
+  "theme": "dark",
+  "width": 1280,
+  "height": 800
+ },
+ {
+  "board": "69",
+  "file": "OptPhone.dc.html",
+  "title": "Phone: the Options button opens a sheet, 44px rows",
+  "theme": "dark",
+  "width": 390,
+  "height": 844
+ },
+ {
+  "board": "72",
+  "file": "Recipients.dc.html",
+  "title": "Who to ask: one chip for agents and people; a request to a person",
+  "theme": "dark",
+  "width": 1280,
+  "height": 800
+ },
+ {
+  "board": "73",
+  "file": "ProposalGroup.dc.html",
+  "title": "One proposal per task, a checklist, and the offer to apply without asking",
+  "theme": "dark",
+  "width": 1280,
+  "height": 800
+ },
+ {
+  "board": "74",
+  "file": "AskSelection.dc.html",
+  "title": "Ask about a selection: Shift+drag, Ask, chip in the composer",
+  "theme": "dark",
+  "width": 1280,
+  "height": 800
+ },
+ {
+  "board": "74K",
+  "file": "AskKeyboard.dc.html",
+  "title": "Keyboard: Shift+arrows extend a range, Enter asks",
+  "theme": "dark",
+  "width": 1280,
+  "height": 800
+ },
+ {
+  "board": "75",
+  "file": "AskSelectionPhone.dc.html",
+  "title": "Phone: Ask from the held read-out",
+  "theme": "dark",
+  "width": 390,
+  "height": 844
+ },
+ {
+  "board": "76",
+  "file": "Palette.dc.html",
+  "title": "Command palette: charts, actions, Ask",
+  "theme": "dark",
+  "width": 1280,
+  "height": 800
+ },
+ {
+  "board": "76P",
+  "file": "PalettePhone.dc.html",
+  "title": "Phone: search at the top of the Menu tab",
+  "theme": "dark",
+  "width": 390,
+  "height": 844
+ },
+ {
+  "board": "77",
+  "file": "SinceLast.dc.html",
+  "title": "Since you were last here: status line and the list",
+  "theme": "dark",
+  "width": 1280,
+  "height": 800
+ },
+ {
+  "board": "78",
+  "file": "VoicePTT.dc.html",
+  "title": "Voice: push-to-talk, words appear as you speak",
+  "theme": "dark",
+  "width": 1280,
+  "height": 800
+ },
+ {
+  "board": "79",
+  "file": "SettingsVoice.dc.html",
+  "title": "Settings: voice, hands-free, announcements",
+  "theme": "light",
+  "width": 1440,
+  "height": 900
+ },
+ {
+  "board": "80",
+  "file": "VoiceHandsFree.dc.html",
+  "title": "Hands-free: mic indicator, confirm before a change",
+  "theme": "dark",
+  "width": 1280,
+  "height": 800
+ },
+ {
+  "board": "81",
+  "file": "AgentBrief.dc.html",
+  "title": "Opt-in agent brief after the data run",
+  "theme": "dark",
+  "width": 1280,
+  "height": 800
+ },
+ {
+  "board": "",
+  "file": "ChartFrame.dc.html",
+  "title": "Chart stand-in (the engine draws the real canvas)",
+  "theme": "dark",
+  "width": 990,
+  "height": 495
+ }
+]
