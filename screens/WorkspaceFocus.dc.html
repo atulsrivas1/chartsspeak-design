@@ -17,7 +17,7 @@ body{margin:0}
 a{color:var(--accent-text)}a:hover{color:var(--ink)}
 </style>
 </helmet>
-<div class="cs-shell cs-shell--panes" data-theme="{{theme}}" style="width: 100%; height: 100vh; min-height: 760px;">
+<div class="cs-shell cs-shell--panes" data-fold="head" data-theme="{{theme}}" style="width: 100%; height: 100vh; min-height: 560px;">
   <header class="cs-topbar">
     <span class="cs-wordmark" role="img" aria-label="ChartsSpeak"><span aria-hidden="true">Charts</span><b aria-hidden="true">Speak</b></span>
     <span class="cs-topbar__sep" aria-hidden="true"></span>
@@ -27,7 +27,6 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
     <span class="cs-topbar__spacer"></span>
     <span class="cs-conn" role="status"><span class="cs-conn__dot" aria-hidden="true"></span>Connected</span>
     <button class="cs-peoplebtn" aria-expanded="false" aria-controls="people" aria-label="People in this workspace: Monika, Atul, Priya and Mat"><span class="cs-avstack" aria-hidden="true"><span class="cs-avatar cs-avatar--person cs-avatar--p1">MS</span><span class="cs-avatar cs-avatar--person cs-avatar--p2">AS</span><span class="cs-avatar cs-avatar--person cs-avatar--p3">PK</span><span class="cs-avatar cs-avatar--agent">M</span></span><span class="cs-peoplebtn__label">People</span></button>
-    <button class="cs-btn cs-btn--compact" aria-pressed="true" title="Hide menu and chat"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 8V3h5M12 3h5v5M17 12v5h-5M8 17H3v-5"/></svg>Focus</button>
   </header>
   <section class="cs-people" id="people" aria-label="People in this workspace" hidden>
       <div class="cs-people__row">
@@ -45,7 +44,7 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
       </div>
     </section>
   <div class="cs-wpanes">
-    <nav class="cs-wpane cs-wpane--menu" data-collapsed="true" aria-label="Workspace menu">
+    <nav id="menu-pane" class="cs-wpane cs-wpane--menu" data-collapsed="true" aria-label="Workspace menu">
       <div class="cs-wpane__head">
         <button class="cs-iconbtn" aria-expanded="false" aria-label="Open menu" title="Menu ( [ )"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h9"/></svg></button>
         <h2 class="cs-wpane__title">Workspace</h2>
@@ -71,7 +70,7 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
         </div>
       </div>
     </nav>
-    <aside class="cs-wpane cs-wpane--chat cs-rail" data-collapsed="true" aria-label="Assistant">
+    <aside id="chat-pane" class="cs-wpane cs-wpane--chat cs-rail" data-collapsed="true" aria-label="Assistant">
       <div class="cs-wpane__head">
         <button class="cs-iconbtn" aria-expanded="false" aria-label="Open chat, 1 item needs your review" title="Chat ( ] )"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 4.5h13v9h-7.5l-3.5 3v-3h-2z"/></svg><span class="cs-iconbtn__count" aria-label="1 item needs your review">1</span></button>
         <span class="cs-avatar cs-avatar--lg cs-avatar--agent cs-wpane__hide" aria-hidden="true">M</span>
@@ -101,35 +100,22 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
       </div>
     </aside>
     <main class="cs-wpane cs-wpane--chart" aria-label="Chart">
-      <div class="cs-toolbar" role="toolbar" aria-label="Chart">
-          <span class="cs-toolbar__sym">NVDA</span>
-          <button class="cs-btn cs-btn--compact" aria-haspopup="listbox" aria-label="Interval: 1 day">1D<span class="cs-caret" aria-hidden="true"></span></button>
-          <button class="cs-btn cs-btn--compact" aria-haspopup="listbox" aria-label="Chart type: candles">Candles<span class="cs-caret" aria-hidden="true"></span></button>
-          <span class="cs-badge" title="Data run 2026-10-28T21:04Z"><span class="cs-badge__glyph" aria-hidden="true">▤</span>Stored daily · through 28 Oct · split-adjusted, not dividend-adjusted</span>
-          <span class="cs-toolbar__group"><button class="cs-btn cs-btn--compact"><span class="cs-btn__glyph" aria-hidden="true">+</span>Indicator</button><button class="cs-btn cs-btn--compact">Compare</button></span>
-          <span class="cs-toolbar__spacer"></span>
-          <button class="cs-btn cs-btn--compact cs-btn--quiet cs-btn--icon" aria-label="Undo add cross marker" title="Undo add cross marker"><span class="cs-btn__glyph" aria-hidden="true">↶</span></button>
-          <button class="cs-btn cs-btn--compact cs-btn--quiet cs-btn--icon" disabled aria-label="Redo, nothing to redo">↷</button>
-        </div>
-        <div class="cs-meta cs-meta--split">
-          <div class="cs-legend">
-            <span class="cs-legend__item" style="color: var(--chart-series-1);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 50</span><span class="cs-legend__val">128.06</span></span>
-            <span class="cs-legend__item" style="color: var(--chart-series-2);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 200</span><span class="cs-legend__val">121.70</span></span><span class="cs-legend__item"><span class="cs-marker cs-marker--split" aria-hidden="true">S</span><span class="cs-legend__name">Split</span></span></div><div class="cs-legend cs-legend__ohlc" style="margin-right: auto;"><span class="cs-muted">14 Mar 2026</span><span><b>O</b>131.42</span><span><b>H</b>134.10</span><span><b>L</b>130.88</span><span><b>C</b>133.97</span></div>
-          <span>Rendered r12 · 19:58:02 ET</span>
-        </div>
+      <div class="cs-qhead">
+        <button class="cs-panebtn" aria-expanded="false" aria-controls="menu-pane" title="Menu ( [ )" aria-label="Open menu"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h9"/></svg><span class="cs-panebtn__label">Menu</span></button><button class="cs-panebtn" aria-expanded="false" aria-controls="chat-pane" title="Chat ( ] )" aria-label="Open chat, 1 proposal waiting for your approval"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 4.5h13v9h-7.5l-3.5 3v-3h-2z"/></svg><span class="cs-panebtn__label">Chat</span><span class="cs-iconbtn__count" aria-hidden="true">1</span><span class="cs-panebtn__state cs-panebtn__state--wait">Approve</span></button><span class="cs-qhead__sep" aria-hidden="true"></span><span class="cs-qhead__sym">NVDA</span><span class="cs-qhead__px">151.38</span><span class="cs-qhead__chg">−0.21%</span>
+        <button class="cs-legendline" aria-expanded="false"><span><i style="color:var(--chart-series-1)"></i>SMA 50 128.06</span><span><i style="color:var(--chart-series-2)"></i>SMA 200 121.70</span></button>
+        <span class="cs-qhead__spacer"></span>
+        <button class="cs-opthandle" aria-expanded="false" aria-keyshortcuts="o" aria-label="Chart options">⋯ Options <kbd aria-hidden="true">o</kbd></button>
+      </div>
+      
+        
         <div class="cs-chart" tabindex="0" aria-label="Price chart. Arrow keys pan, plus and minus zoom, Escape clears the crosshair.">
-          <dc-import name="ChartFrame" hint-size="100%,100%"></dc-import>
+          <dc-import name="ChartFrame" hint-size="100%,100%" style="position: absolute; inset: 0; width: 100%; height: 100%;"></dc-import>
         </div>
-        <div class="cs-strip cs-strip--timeline" aria-label="On this chart. Choose an item to move the chart to it.">
-          <div class="cs-eventtrack" aria-hidden="true"><span class="cs-eventtrack__tick" data-active="true" style="left: 55%;"></span><span class="cs-eventtrack__tick" style="left: 80%;"></span></div>
-          <span class="caption cs-muted cs-strip__label">On this chart</span>
-          <button class="cs-evchip" aria-pressed="true"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">M</span><span class="cs-evchip__date">14 Mar</span>Golden cross</button>
-          <button class="cs-evchip"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">M</span><span class="cs-evchip__date">Range</span>SMA 50 / SMA 200</button>
-          <button class="cs-evchip"><span class="cs-avatar cs-avatar--person" aria-hidden="true">MS</span><span class="cs-evchip__date">10 Jun</span>Split 10:1</button>
-        </div>
+        
+      <div class="cs-qfoot"><span class="cs-badge" title="Data run 2026-10-28T21:04Z"><span class="cs-badge__glyph" aria-hidden="true">▤</span>Stored daily · through 28 Oct · split-adjusted, not dividend-adjusted</span><span class="cs-statusline" role="status">Mat added a cross marker</span><span class="cs-qfoot__stamp">Rendered r12 · 23:58:02 UTC</span></div>
     </main>
   </div>
-  <footer class="cs-footer" role="status" aria-live="polite"><span class="cs-footer__msg">Mat added a cross marker · 19:41 ET</span></footer>
+  
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["dark","light"],"default":"light"},"$preview":{"width":1440,"height":900}}'>

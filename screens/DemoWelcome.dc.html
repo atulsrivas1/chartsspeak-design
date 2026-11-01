@@ -16,7 +16,7 @@ body{margin:0}
 a{color:var(--accent-text)}a:hover{color:var(--ink)}
 </style>
 </helmet>
-<div class="cs-shell cs-shell--panes" data-theme="{{theme}}" style="width: 100%; height: 100vh; min-height: 760px;">
+<div class="cs-shell cs-shell--panes" data-fold="head" data-theme="{{theme}}" style="width: 100%; height: 100vh; min-height: 560px;">
   <header class="cs-topbar">
     <span class="cs-wordmark" role="img" aria-label="ChartsSpeak"><span aria-hidden="true">Charts</span><b aria-hidden="true">Speak</b></span>
     <span class="cs-topbar__sep" aria-hidden="true"></span>
@@ -32,7 +32,7 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
     <label class="cs-row" style="gap: 6px; margin-left: auto;"><span class="cs-muted">Chart</span><select class="cs-select" style="min-height: 32px;"><option>NVDA</option><option>SPY</option><option>QQQ</option></select></label>
   </div>
   <div class="cs-wpanes">
-    <nav class="cs-wpane cs-wpane--menu" data-collapsed="false" aria-label="Workspace menu">
+    <nav id="menu-pane" class="cs-wpane cs-wpane--menu" data-collapsed="true" aria-label="Workspace menu">
       <div class="cs-wpane__head">
         <button class="cs-iconbtn" aria-expanded="true" aria-label="Collapse menu" title="Menu ( [ )"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h9"/></svg></button>
         <h2 class="cs-wpane__title">Workspace</h2>
@@ -58,7 +58,7 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
         </div>
       </div>
     </nav>
-    <aside class="cs-wpane cs-wpane--chat cs-rail" aria-label="Assistant" data-collapsed="false">
+    <aside id="chat-pane" class="cs-wpane cs-wpane--chat cs-rail" aria-label="Assistant" data-collapsed="false">
       <div class="cs-wpane__head">
         <button class="cs-iconbtn" aria-expanded="true" aria-label="Collapse chat" title="Chat ( ] )"><svg viewBox="0 0 20 20" aria-hidden="true">PhoneConversation</svg></button>
         <span class="cs-avatar cs-avatar--lg cs-avatar--agent cs-wpane__hide" aria-hidden="true">M</span>
@@ -93,27 +93,23 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
       <div class="cs-rail__readonly">Messaging is off in the read-only demo. Sign in to ask your own questions.</div>
     </aside>
     <main class="cs-wpane cs-wpane--chart" aria-label="Chart">
+      <div class="cs-qhead">
+        <button class="cs-panebtn" aria-expanded="false" aria-controls="menu-pane" title="Menu ( [ )" aria-label="Open menu"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h9"/></svg><span class="cs-panebtn__label">Menu</span></button><span class="cs-qhead__sep" aria-hidden="true"></span><span class="cs-qhead__sym">NVDA</span><span class="cs-qhead__px">151.38</span><span class="cs-qhead__chg">−0.21%</span>
+        <button class="cs-legendline" aria-expanded="false"><span><i style="color:var(--chart-series-1)"></i>SMA 50 128.06</span><span><i style="color:var(--chart-series-2)"></i>SMA 200 121.70</span></button>
+        <span class="cs-qhead__spacer"></span>
+        <button class="cs-opthandle" aria-expanded="false" aria-keyshortcuts="o" aria-label="Chart options">⋯ Options <kbd aria-hidden="true">o</kbd></button>
+      </div>
       <section class="cs-panel" aria-label="Chart">
-        <div class="cs-toolbar" role="toolbar" aria-label="Chart">
-          <span class="cs-toolbar__sym">NVDA</span>
-          <button class="cs-btn cs-btn--compact" aria-haspopup="listbox" aria-label="Interval: 1 day" disabled>1D<span class="cs-caret" aria-hidden="true"></span></button>
-          <span class="cs-badge"><span class="cs-badge__glyph" aria-hidden="true">◷</span>Delayed</span>
-          <span class="cs-badge">Split-adjusted, not dividend-adjusted</span>
-        </div>
-        <div class="cs-meta cs-meta--split">
-          <div class="cs-legend">
-            <span class="cs-legend__item" style="color: var(--chart-series-1);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 50</span><span class="cs-legend__val">128.06</span></span>
-            <span class="cs-legend__item" style="color: var(--chart-series-2);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 200</span><span class="cs-legend__val">121.70</span></span>
-          </div>
-          <span>Rendered r12 · 19:58:02 ET</span>
-        </div>
+        
+        
         <div class="cs-chart" tabindex="0" aria-label="Demo price chart. Hover, drag to pan, scroll to zoom.">
-          <dc-import name="ChartFrame" hint-size="100%,100%"></dc-import>
+          <dc-import name="ChartFrame" hint-size="100%,100%" style="position: absolute; inset: 0; width: 100%; height: 100%;"></dc-import>
         </div>
       </section>
+      <div class="cs-qfoot"><span class="cs-badge"><span class="cs-badge__glyph" aria-hidden="true">▤</span>Stored daily · through 28 Oct</span><span class="cs-statusline" role="status">Read-only. Nothing you do here is saved.</span><span class="cs-qfoot__stamp">Rendered r12 · 23:58:02 UTC</span></div>
     </main>
   </div>
-  <footer class="cs-footer" role="status" aria-live="polite"><span class="cs-footer__msg">Read-only. Nothing you do here is saved.</span></footer>
+  
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["dark","light"],"default":"light"},"$preview":{"width":1440,"height":900}}'>

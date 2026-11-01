@@ -616,6 +616,14 @@
    "h": 1240,
    "title": "62 · Add an agent, phone",
    "expand": "fill"
+  },
+  "DefaultDesk.dc.html": {
+   "x": 0,
+   "y": 30700,
+   "w": 1280,
+   "h": 800,
+   "title": "64 · Default: chart first, menu and chat folded into the chart head",
+   "expand": "fill"
   }
  },
  "order": [
@@ -695,7 +703,8 @@
   "AddAgentLight.dc.html",
   "AddAgentEdit.dc.html",
   "AddAgentRemove.dc.html",
-  "AddAgentPhone.dc.html"
+  "AddAgentPhone.dc.html",
+  "DefaultDesk.dc.html"
  ],
  "notes": {
   "t1": {
@@ -816,6 +825,13 @@
    "text": "Boards 45 and 46 have no 375 version on purpose: at 760 and below the three panes become three tabs, so there is no collapsed state to draw.",
    "kind": "body",
    "maxW": 1440
+  },
+  "t_r2": {
+   "x": 0,
+   "y": 30580,
+   "text": "Round 2: chart-first default. Folded panes are buttons in the chart head; the menu floats, chat docks",
+   "kind": "title1",
+   "maxW": 6000
   }
  },
  "designSystems": [

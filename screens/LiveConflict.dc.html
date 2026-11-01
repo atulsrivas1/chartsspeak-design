@@ -16,7 +16,7 @@ body{margin:0}
 a{color:var(--accent-text)}a:hover{color:var(--ink)}
 </style>
 </helmet>
-<div class="cs-shell cs-shell--panes" data-theme="{{theme}}" style="width: 100%; height: 100vh; min-height: 760px;">
+<div class="cs-shell cs-shell--panes" data-fold="head" data-theme="{{theme}}" style="width: 100%; height: 100vh; min-height: 560px;">
   <header class="cs-topbar">
     <span class="cs-wordmark" role="img" aria-label="ChartsSpeak"><span aria-hidden="true">Charts</span><b aria-hidden="true">Speak</b></span>
     <span class="cs-topbar__sep" aria-hidden="true"></span>
@@ -33,7 +33,7 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
     </span>
   </header>
   <div class="cs-wpanes">
-    <nav class="cs-wpane cs-wpane--menu" data-collapsed="false" aria-label="Workspace menu">
+    <nav id="menu-pane" class="cs-wpane cs-wpane--menu" data-collapsed="true" aria-label="Workspace menu">
       <div class="cs-wpane__head">
         <button class="cs-iconbtn" aria-expanded="true" aria-label="Collapse menu" title="Menu ( [ )"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h9"/></svg></button>
         <h2 class="cs-wpane__title">Workspace</h2>
@@ -59,7 +59,7 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
         </div>
       </div>
     </nav>
-    <aside class="cs-wpane cs-wpane--chat cs-rail" aria-label="Assistant" data-collapsed="false">
+    <aside id="chat-pane" class="cs-wpane cs-wpane--chat cs-rail" aria-label="Assistant" data-collapsed="false">
       <div class="cs-wpane__head">
         <button class="cs-iconbtn" aria-expanded="true" aria-label="Collapse chat" title="Chat ( ] )"><svg viewBox="0 0 20 20" aria-hidden="true">PhoneConversation</svg></button>
         <span class="cs-avatar cs-avatar--lg cs-avatar--agent cs-wpane__hide" aria-hidden="true">M</span>
@@ -102,35 +102,29 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
       </div>
     </aside>
     <main class="cs-wpane cs-wpane--chart" aria-label="Chart">
+      <div class="cs-qhead">
+        <button class="cs-panebtn" aria-expanded="false" aria-controls="menu-pane" title="Menu ( [ )" aria-label="Open menu"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h9"/></svg><span class="cs-panebtn__label">Menu</span></button><span class="cs-qhead__sep" aria-hidden="true"></span><span class="cs-qhead__sym">NVDA</span><span class="cs-qhead__px">151.38</span><span class="cs-qhead__chg">−0.21%</span>
+        <button class="cs-legendline" aria-expanded="false"><span><i style="color:var(--chart-series-1)"></i>SMA 50 128.06</span><span><i style="color:var(--chart-series-3)"></i>EMA 21 130.40</span></button>
+        <span class="cs-qhead__spacer"></span>
+        <button class="cs-opthandle" aria-expanded="false" aria-keyshortcuts="o" aria-label="Chart options">⋯ Options <kbd aria-hidden="true">o</kbd></button>
+      </div>
       <section class="cs-panel" aria-label="Chart">
         <div class="cs-notice cs-notice--caution" role="alert" style="border-radius: 0; border-bottom: 1px solid var(--border-200);">
           <span class="cs-notice__glyph" aria-hidden="true">!</span>
           <span class="cs-notice__title"><span class="cs-notice__kind">Changed while you were editing.</span> Your move of the trend line was not applied.</span>
           <span class="cs-notice__body" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px;"><span>You started from <span class="cs-revs"><b>r14</b></span>; the chart is now <span class="cs-revs"><b>r16</b></span>. Ana R. removed SMA 200 and Grace added a review note in between.</span><span class="cs-row"><button class="cs-btn cs-btn--compact cs-btn--primary">Review and reapply</button><button class="cs-btn cs-btn--compact cs-btn--quiet">Discard my edit</button></span></span>
         </div>
-        <div class="cs-toolbar" role="toolbar" aria-label="Chart">
-          <span class="cs-toolbar__sym">NVDA</span>
-          <button class="cs-btn cs-btn--compact" aria-haspopup="listbox" aria-label="Interval: 1 day">1D<span class="cs-caret" aria-hidden="true"></span></button>
-          <span class="cs-badge"><span class="cs-badge__glyph" aria-hidden="true">▤</span>Stored daily · through 28 Oct</span>
-          <span class="cs-toolbar__spacer"></span>
-          <button class="cs-btn cs-btn--compact cs-btn--quiet" disabled aria-describedby="undo-why"><span class="cs-btn__glyph" aria-hidden="true">↶</span>Undo add EMA 21</button>
-          <span id="undo-why" class="caption" style="color: var(--caution);">Can't undo: Ana R. changed EMA 21 after you (20:44 ET)</span>
-        </div>
-        <div class="cs-meta cs-meta--split">
-          <div class="cs-legend">
-            <span class="cs-legend__item" style="color: var(--chart-series-1);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 50</span><span class="cs-legend__val">128.06</span></span>
-            <span class="cs-legend__item" style="color: var(--chart-series-3);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">EMA 21</span><span class="cs-legend__val">130.40</span></span>
-          </div>
-          <span>Rendered r16 · 20:46:11 ET</span>
-        </div>
+        
+        
         <div class="cs-chart" tabindex="0" aria-label="Price chart at revision 16.">
           <dc-import name="ChartFrame" crosshair="{{no}}" hint-size="100%,100%"></dc-import>
           <span class="cs-ghost-tag" style="position: absolute; top: 12px; left: 12px;"><span class="cs-avatar cs-avatar--agent" aria-hidden="true" style="width: 16px; height: 16px; font-size: 9px; border-width: 1.5px;">M</span>Mat is drawing a comparison · proposal, not applied</span>
         </div>
       </section>
+      <div class="cs-qfoot"><span class="cs-badge"><span class="cs-badge__glyph" aria-hidden="true">▤</span>Stored daily · through 28 Oct</span><span class="cs-qfoot__stamp">Rendered r16 · 00:46:11 UTC</span></div>
     </main>
   </div>
-  <footer class="cs-footer" role="status" aria-live="polite"><span class="cs-footer__msg cs-footer__msg--caution">! Outcome unknown: "Rename workspace" may not have been saved.</span><button class="cs-btn cs-btn--compact">Check again</button><button class="cs-btn cs-btn--compact cs-btn--quiet">Resolve</button></footer>
+  
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["dark","light"],"default":"dark"},"$preview":{"width":1440,"height":900}}'>

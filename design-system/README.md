@@ -179,3 +179,12 @@ The three families, their weights, subsets and licences are in `fonts/FONTS.md`.
 - **Where the control lives:** Settings, Appearance, "Pane order" (four cards). It is a per-person view setting. The only other control is the menu button in the top bar, which exists only in the drawer layout.
 - **Release 1:** fixed order Menu | Chat | Chart and an always-dark canvas. The Settings board shows the full control and "Chart canvas: Follow theme / Always dark" with Always dark selected.
 - **Light canvas:** the colours exist (`chart-*` tokens, light values, drawn on board 30) and `engine-theme.md` carries both the dark and the light theme object.
+
+## Chart-first default (owner decision, 2026-11-01)
+
+- **Every page with a chart opens chart-first.** Menu and chat start folded. A folded pane takes no width: it becomes a labelled button at the left of the chart head (Menu, Chat). With both folded, the chart pane runs edge to edge with no gutter or frame. This replaces the 56px rails.
+- **Opening:** the menu floats over the chart (opaque, shadow) and folds back after a pick. Chat docks and pushes the chart narrower on desktop. On tablet (761 to 1023) both open as opaque drawers over the chart and the chart never resizes; one drawer at a time; pane buttons are icon-only. Phone keeps the Menu, Chat and Chart tabs.
+- **Badges live on the Chat button:** a count plus "Approve" for a proposal waiting, a dot for a new message, "Mat working" with a pulsing icon while an agent works. The chart head is always visible, so an approval can't be hidden.
+- **Chart head (always visible):** pane buttons, symbol, last price and change, interval and type, any stale / delayed / partial warning chip (never hidden behind a gesture), the one-line legend summary, and the Options handle (`o`).
+- **Chart foot:** data-class badge, the status line (replaces the app footer), and the render stamp in UTC.
+- **Folding keys:** `[` menu, `]` chat, `f` folds both. The top-bar Focus button is gone: folded is the default.

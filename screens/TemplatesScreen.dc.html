@@ -17,7 +17,7 @@ body{margin:0}
 a{color:var(--accent-text)}a:hover{color:var(--ink)}
 </style>
 </helmet>
-<div class="cs-shell cs-shell--panes" data-theme="{{theme}}" style="width: 100%; height: 100vh; min-height: 760px;">
+<div class="cs-shell cs-shell--panes" data-fold="head" data-theme="{{theme}}" style="width: 100%; height: 100vh; min-height: 560px;">
   <header class="cs-topbar">
     <span class="cs-wordmark" role="img" aria-label="ChartsSpeak"><span aria-hidden="true">Charts</span><b aria-hidden="true">Speak</b></span>
     <span class="cs-topbar__sep" aria-hidden="true"></span>
@@ -27,7 +27,6 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
     <span class="cs-topbar__spacer"></span>
     <span class="cs-conn" role="status"><span class="cs-conn__dot" aria-hidden="true"></span>Connected</span>
     <button class="cs-peoplebtn" aria-expanded="false" aria-controls="people" aria-label="People in this workspace: Monika, Atul, Priya and Mat"><span class="cs-avstack" aria-hidden="true"><span class="cs-avatar cs-avatar--person cs-avatar--p1">MS</span><span class="cs-avatar cs-avatar--person cs-avatar--p2">AS</span><span class="cs-avatar cs-avatar--person cs-avatar--p3">PK</span><span class="cs-avatar cs-avatar--agent">M</span></span><span class="cs-peoplebtn__label">People</span></button>
-    <button class="cs-btn cs-btn--compact" aria-pressed="false" title="Hide menu and chat"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 8V3h5M12 3h5v5M17 12v5h-5M8 17H3v-5"/></svg>Focus</button>
   </header>
   <section class="cs-people" id="people" aria-label="People in this workspace" hidden>
       <div class="cs-people__row">
@@ -45,7 +44,7 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
       </div>
     </section>
   <div class="cs-wpanes">
-    <nav class="cs-wpane cs-wpane--menu" data-collapsed="false" aria-label="Workspace menu">
+    <nav id="menu-pane" class="cs-wpane cs-wpane--menu" data-collapsed="true" aria-label="Workspace menu">
       <div class="cs-wpane__head">
         <button class="cs-iconbtn" aria-expanded="true" aria-label="Collapse menu" title="Menu ( [ )"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h9"/></svg></button>
         <h2 class="cs-wpane__title">Workspace</h2>
@@ -71,7 +70,7 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
         </div>
       </div>
     </nav>
-    <aside class="cs-wpane cs-wpane--chat cs-rail" aria-label="Assistant" data-collapsed="false">
+    <aside id="chat-pane" class="cs-wpane cs-wpane--chat cs-rail" aria-label="Assistant" data-collapsed="false">
       <div class="cs-wpane__head">
         <button class="cs-iconbtn" aria-expanded="true" aria-label="Collapse chat" title="Chat ( ] )"><svg viewBox="0 0 20 20" aria-hidden="true">PhoneConversation</svg></button>
         <span class="cs-avatar cs-avatar--lg cs-avatar--agent cs-wpane__hide" aria-hidden="true">M</span>
@@ -101,6 +100,12 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
       </div>
     </aside>
     <main class="cs-wpane cs-wpane--chart" aria-label="Chart">
+      <div class="cs-qhead">
+        <button class="cs-panebtn" aria-expanded="false" aria-controls="menu-pane" title="Menu ( [ )" aria-label="Open menu"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h9"/></svg><span class="cs-panebtn__label">Menu</span></button><span class="cs-qhead__sep" aria-hidden="true"></span><span class="cs-qhead__sym">NVDA</span><span class="cs-qhead__px">151.38</span><span class="cs-qhead__chg">−0.21%</span>
+        
+        <span class="cs-qhead__spacer"></span>
+        <button class="cs-opthandle" aria-expanded="false" aria-keyshortcuts="o" aria-label="Chart options">⋯ Options <kbd aria-hidden="true">o</kbd></button>
+      </div>
       <section class="cs-stack" style="flex: 1; min-height: 0; gap: 8px;" aria-label="Charts">
         <div class="cs-panel" style="flex: none;"><div class="cs-toolbar" role="toolbar" aria-label="Layout"><div class="cs-layouts" role="group" aria-label="Layout"><button aria-pressed="false" aria-label="One chart" title="One chart"><svg viewBox="0 0 20 14" aria-hidden="true"><rect x="1" y="1" width="18" height="12" rx="1.5"/></svg></button><button aria-pressed="false" aria-label="Two charts side by side" title="Two charts side by side"><svg viewBox="0 0 20 14" aria-hidden="true"><rect x="1" y="1" width="18" height="12" rx="1.5"/><path d="M10 1v12"/></svg></button><button aria-pressed="false" aria-label="Two charts stacked" title="Two charts stacked"><svg viewBox="0 0 20 14" aria-hidden="true"><rect x="1" y="1" width="18" height="12" rx="1.5"/><path d="M1 7h18"/></svg></button><button aria-pressed="true" aria-label="Four charts" title="Four charts"><svg viewBox="0 0 20 14" aria-hidden="true"><rect x="1" y="1" width="18" height="12" rx="1.5"/><path d="M10 1v12M1 7h18"/></svg></button></div><span class="cs-toolbar__sep" aria-hidden="true"></span><div class="cs-row" role="group" aria-label="Sync across charts" style="gap:6px"><span class="caption cs-muted">Sync</span><button class="cs-chip cs-chip--compact" aria-pressed="true"><span class="cs-chip__box" aria-hidden="true">✓</span>Crosshair</button><button class="cs-chip cs-chip--compact" aria-pressed="true"><span class="cs-chip__box" aria-hidden="true">✓</span>Interval</button><button class="cs-chip cs-chip--compact" aria-pressed="true"><span class="cs-chip__box" aria-hidden="true">✓</span>Date range</button><button class="cs-chip cs-chip--compact" aria-pressed="false"><span class="cs-chip__box" aria-hidden="true"></span>Symbol</button></div><span class="cs-toolbar__spacer"></span><button class="cs-btn cs-btn--compact" aria-haspopup="dialog" aria-expanded="true">Templates<span class="cs-caret" aria-hidden="true"></span></button></div></div>
         <div class="cs-mgrid cs-mgrid--4">
@@ -110,6 +115,7 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
           <div class="cs-slot" aria-label="PLTR"><div class="cs-slot__head"><span class="cs-slot__sym">PLTR</span><span>1D</span><span class="cs-slot__spacer"></span><span class="cs-badge cs-badge--refusal"><span class="cs-badge__glyph" aria-hidden="true">⨯</span>Not stored</span></div><div class="cs-empty" style="padding: 16px;"><span class="cs-empty__title">PLTR has no stored daily data</span><span class="cs-empty__body">Nothing is drawn or estimated in this slot. The other charts are unaffected.</span><span class="cs-cmd"><span class="cs-cmd__prompt" aria-hidden="true">$</span><code>chartsspeak-data add PLTR --daily</code></span></div></div>
         </div>
       </section>
+      <div class="cs-qfoot"><span class="cs-badge"><span class="cs-badge__glyph" aria-hidden="true">▤</span>Stored daily · through 28 Oct</span><span class="cs-statusline" role="status">Layout changed to 4 charts · Undo</span></div>
     </main>
   </div>
   <div class="cs-popover" role="dialog" aria-label="Templates" style="position: absolute; top: 216px; right: 510px; z-index: 10;">
@@ -123,7 +129,7 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
 </ul>
 <div class="cs-popover__foot"><span>Indicators, panes and layout. Never data or drawings.</span><button class="cs-btn cs-btn--compact cs-btn--quiet">Save current…</button></div>
 </div>
-  <footer class="cs-footer" role="status" aria-live="polite"><span class="cs-footer__msg">Layout changed to 4 charts · Undo</span></footer>
+  
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["dark","light"],"default":"dark"},"$preview":{"width":1440,"height":900}}'>

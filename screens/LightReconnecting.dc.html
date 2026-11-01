@@ -16,7 +16,7 @@ body{margin:0}
 a{color:var(--accent-text)}a:hover{color:var(--ink)}
 </style>
 </helmet>
-<div class="cs-shell cs-shell--panes" data-theme="{{theme}}" style="width: 100%; height: 100vh; min-height: 760px;">
+<div class="cs-shell cs-shell--panes" data-fold="head" data-theme="{{theme}}" style="width: 100%; height: 100vh; min-height: 560px;">
   <header class="cs-topbar">
     <span class="cs-wordmark" role="img" aria-label="ChartsSpeak"><span aria-hidden="true">Charts</span><b aria-hidden="true">Speak</b></span>
     <span class="cs-topbar__sep" aria-hidden="true"></span>
@@ -28,7 +28,7 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
     <span class="cs-avatar cs-avatar--person cs-avatar--lg" aria-label="You">MS</span>
   </header>
   <div class="cs-wpanes">
-    <nav class="cs-wpane cs-wpane--menu" data-collapsed="false" aria-label="Workspace menu">
+    <nav id="menu-pane" class="cs-wpane cs-wpane--menu" data-collapsed="true" aria-label="Workspace menu">
       <div class="cs-wpane__head">
         <button class="cs-iconbtn" aria-expanded="true" aria-label="Collapse menu" title="Menu ( [ )"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h9"/></svg></button>
         <h2 class="cs-wpane__title">Workspace</h2>
@@ -54,7 +54,7 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
         </div>
       </div>
     </nav>
-    <aside class="cs-wpane cs-wpane--chat cs-rail" aria-label="Assistant" data-collapsed="false">
+    <aside id="chat-pane" class="cs-wpane cs-wpane--chat cs-rail" aria-label="Assistant" data-collapsed="false">
       <div class="cs-wpane__head">
         <button class="cs-iconbtn" aria-expanded="true" aria-label="Collapse chat" title="Chat ( ] )"><svg viewBox="0 0 20 20" aria-hidden="true">PhoneConversation</svg></button>
         <span class="cs-avatar cs-avatar--lg cs-avatar--agent cs-wpane__hide" aria-hidden="true">M</span>
@@ -86,26 +86,15 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
       </div>
     </aside>
     <main class="cs-wpane cs-wpane--chart" aria-label="Chart">
+      <div class="cs-qhead">
+        <button class="cs-panebtn" aria-expanded="false" aria-controls="menu-pane" title="Menu ( [ )" aria-label="Open menu"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h9"/></svg><span class="cs-panebtn__label">Menu</span></button><span class="cs-qhead__sep" aria-hidden="true"></span><span class="cs-qhead__sym">NVDA</span><span class="cs-qhead__px">151.38</span><span class="cs-qhead__chg">−0.21%</span><span class="cs-warnchip">Reconnecting, attempt 2</span>
+        <button class="cs-legendline" aria-expanded="false"><span><i style="color:var(--chart-series-1)"></i>SMA 50 128.06</span><span><i style="color:var(--chart-series-2)"></i>SMA 200 121.70</span></button>
+        <span class="cs-qhead__spacer"></span>
+        <button class="cs-opthandle" aria-expanded="false" aria-keyshortcuts="o" aria-label="Chart options">⋯ Options <kbd aria-hidden="true">o</kbd></button>
+      </div>
       <section class="cs-panel" aria-label="Chart">
-        <div class="cs-toolbar" role="toolbar" aria-label="Chart">
-          <span class="cs-toolbar__sym">NVDA</span>
-          <button class="cs-btn cs-btn--compact" aria-haspopup="listbox" aria-label="Interval: 1 day" disabled>1D<span class="cs-caret" aria-hidden="true"></span></button>
-          <button class="cs-btn cs-btn--compact" aria-haspopup="listbox" aria-label="Chart type: candles" disabled>Candles<span class="cs-caret" aria-hidden="true"></span></button>
-          <span class="cs-badge"><span class="cs-badge__glyph" aria-hidden="true">▤</span>Stored daily · through 28 Oct</span>
-          <span class="cs-badge" title="Data run 2026-10-28T21:04Z">Split-adjusted, not dividend-adjusted</span>
-          <span class="cs-toolbar__sep" aria-hidden="true"></span>
-          <button class="cs-btn cs-btn--compact" disabled aria-describedby="why"><span class="cs-btn__glyph" aria-hidden="true">+</span>Indicator</button>
-          <button class="cs-btn cs-btn--compact" disabled aria-describedby="why">Compare</button>
-          <span class="cs-toolbar__spacer"></span>
-          <button class="cs-btn cs-btn--compact cs-btn--quiet" disabled aria-label="Undo add cross marker, paused while reconnecting"><span class="cs-btn__glyph" aria-hidden="true">↶</span>Undo marker</button>
-          <button class="cs-btn cs-btn--compact cs-btn--quiet cs-btn--icon" disabled aria-label="Redo, nothing to redo">↷</button>
-        </div>
-        <div class="cs-meta cs-meta--split">
-          <div class="cs-legend">
-            <span class="cs-legend__item" style="color: var(--chart-series-1);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 50</span><span class="cs-legend__val">128.06</span></span>
-            <span class="cs-legend__item" style="color: var(--chart-series-2);"><span class="cs-legend__swatch"></span><span class="cs-legend__name">SMA 200</span><span class="cs-legend__val">121.70</span></span><span class="cs-legend__item"><span class="cs-marker cs-marker--split" aria-hidden="true">S</span><span class="cs-legend__name">Split</span></span></div><div class="cs-legend cs-legend__ohlc" style="margin-right: auto;"><span class="cs-muted">Last bar 28 Oct 2026</span><span><b>O</b>146.20</span><span><b>H</b>148.02</span><span><b>L</b>145.11</span><span><b>C</b>147.36</span></div>
-          <span><span class="cs-meta__status--stale">Reconnecting, attempt 2</span> · <span id="why">editing paused</span> · frame from 19:58:02 ET, not current</span>
-        </div>
+        
+        
         <div class="cs-chart" tabindex="0" aria-label="Price chart, last drawn at 19:58:02 ET, not current.">
           <dc-import name="ChartFrame" crosshair="{{no}}" hint-size="100%,100%"></dc-import>
           <div class="cs-chart__veil"></div>
@@ -115,17 +104,12 @@ a{color:var(--accent-text)}a:hover{color:var(--ink)}
             <span class="cs-overlay__frame-time">Showing the frame from 19:58:02 ET · attempt 2</span>
           </div>
         </div>
-        <div class="cs-strip cs-strip--timeline" aria-label="On this chart. Choose an item to move the chart to it.">
-          <div class="cs-eventtrack" aria-hidden="true"><span class="cs-eventtrack__tick" data-active="true" style="left: 55%;"></span><span class="cs-eventtrack__tick" style="left: 80%;"></span></div>
-          <span class="caption cs-muted cs-strip__label">On this chart</span>
-          <button class="cs-evchip" aria-pressed="true"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">M</span><span class="cs-evchip__date">14 Mar</span>Golden cross</button>
-          <button class="cs-evchip"><span class="cs-avatar cs-avatar--agent" aria-hidden="true">M</span><span class="cs-evchip__date">Range</span>SMA 50 / SMA 200</button>
-          <button class="cs-evchip"><span class="cs-avatar cs-avatar--person" aria-hidden="true">MS</span><span class="cs-evchip__date">10 Jun</span>Split 10:1</button>
-        </div>
+        
       </section>
+      <div class="cs-qfoot"><span class="cs-badge"><span class="cs-badge__glyph" aria-hidden="true">▤</span>Stored daily · through 28 Oct</span><span class="cs-statusline" role="status">! Reconnecting. Your analysis is kept on this device until the connection returns.</span></div>
     </main>
   </div>
-  <footer class="cs-footer" role="status" aria-live="polite"><span class="cs-footer__msg cs-footer__msg--caution">! Reconnecting. Your analysis is kept on this device until the connection returns.</span></footer>
+  
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["dark","light"],"default":"light"},"$preview":{"width":1440,"height":900}}'>
