@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ChartsSpeak · chat pane, Layers</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/chartsspeak/tokens.css">
+<link rel="stylesheet" href="ds/chartsspeak/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0}
+a{color:var(--accent-text)}a:hover{color:var(--ink)}
+</style>
+</helmet>
+<div class="cs-shell cs-shell--panes" data-fold="head" data-theme="{{theme}}" style="width: 100%; height: 100vh; min-height: 560px;">
+  <header class="cs-topbar">
+    <span class="cs-wordmark" role="img" aria-label="ChartsSpeak"><span aria-hidden="true">Charts</span><b aria-hidden="true">Speak</b></span>
+    <span class="cs-topbar__sep" aria-hidden="true"></span>
+    <h1 class="cs-topbar__title">NVDA · 2 Jan – 28 Oct 2026</h1>
+    <span class="cs-badge cs-badge--good"><span class="cs-badge__glyph" aria-hidden="true">✓</span>Saved</span>
+    <span class="cs-tag">Private</span>
+    <span class="cs-topbar__spacer"></span>
+    <span class="cs-conn" role="status"><span class="cs-conn__dot" aria-hidden="true"></span>Connected</span>
+    <button class="cs-peoplebtn" aria-expanded="false" aria-controls="people" aria-label="People in this workspace: Monika, Atul, Priya and Mat"><span class="cs-avstack" aria-hidden="true"><span class="cs-avatar cs-avatar--person cs-avatar--p1">MS</span><span class="cs-avatar cs-avatar--person cs-avatar--p2">AS</span><span class="cs-avatar cs-avatar--person cs-avatar--p3">PK</span><span class="cs-avatar cs-avatar--agent">M</span></span><span class="cs-peoplebtn__label">People</span></button>
+  </header>
+  <section class="cs-people" id="people" aria-label="People in this workspace" hidden>
+      <div class="cs-people__row">
+        <div class="cs-person"><span class="cs-avatar cs-avatar--person cs-avatar--lg cs-avatar--p1" aria-hidden="true">MS</span><div><div class="cs-person__name">Monika (you)</div><div class="cs-person__sub">Looking at NVDA</div></div></div>
+        <div class="cs-person"><span class="cs-avatar cs-avatar--person cs-avatar--lg cs-avatar--p2" aria-hidden="true">AS</span><div><div class="cs-person__name">Atul</div><div class="cs-person__sub">Looking at QQQ</div></div></div>
+        <div class="cs-person"><span class="cs-avatar cs-avatar--person cs-avatar--lg cs-avatar--p3" aria-hidden="true">PK</span><div><div class="cs-person__name">Priya</div><div class="cs-person__sub">Idle for 12 min</div></div></div>
+        <div class="cs-person"><span class="cs-avatar cs-avatar--agent cs-avatar--lg" aria-hidden="true">M</span><div><div class="cs-person__name">Mat</div><div class="cs-person__sub">Assistant · watching 2 alerts</div></div></div>
+        <span class="cs-teamvideo"><span id="vl">Team video</span><button class="cs-teamvideo__sw" role="switch" aria-checked="false" aria-labelledby="vl"></button><span><b>Off.</b> Set by the workspace owner.</span></span>
+      </div>
+      <div class="cs-tiles" aria-label="Sample video tiles. Camera off for everyone." hidden>
+        <div class="cs-tile"><span class="cs-avatar cs-avatar--person cs-avatar--lg cs-avatar--p1">MS</span><span class="cs-tile__label">Monika · camera off</span></div>
+        <div class="cs-tile"><span class="cs-avatar cs-avatar--person cs-avatar--lg cs-avatar--p2">AS</span><span class="cs-tile__label">Atul · camera off</span></div>
+        <div class="cs-tile"><span class="cs-avatar cs-avatar--person cs-avatar--lg cs-avatar--p3">PK</span><span class="cs-tile__label">Priya · camera off</span></div>
+        <div class="cs-tile"><span class="caption cs-muted" style="padding:0 12px;text-align:center">Mat has no camera.</span></div>
+      </div>
+    </section>
+  <div class="cs-wpanes">
+    <nav id="menu-pane" class="cs-wpane cs-wpane--menu" data-collapsed="true" aria-label="Workspace menu">
+      <div class="cs-wpane__head">
+        <button class="cs-iconbtn" aria-expanded="true" aria-label="Collapse menu" title="Menu ( [ )"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h9"/></svg></button>
+        <h2 class="cs-wpane__title">Workspace</h2>
+        <button class="cs-iconbtn cs-wpane__hide" aria-label="Collapse menu"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12 4 6 10l6 6"/></svg></button>
+        <span class="cs-wpane__railtitle">Menu</span>
+      </div>
+      <div class="cs-wpane__body">
+        <div class="cs-menusec"><span class="label">Charts</span>
+          <button class="cs-navrow" aria-current="true"><span class="cs-navrow__sym">NVDA</span><span class="cs-navrow__sub">NVIDIA</span><span class="cs-navrow__end"><b>151.38</b>−0.21%</span></button>
+          <button class="cs-navrow"><span class="cs-navrow__sym">QQQ</span><span class="cs-navrow__sub">Invesco QQQ</span><span class="cs-navrow__end"><b>512.40</b>+0.34%</span></button>
+          <button class="cs-navrow"><span class="cs-navrow__sym">SPY</span><span class="cs-navrow__sub">SPDR S&amp;P 500</span><span class="cs-navrow__end"><b>618.22</b>+0.18%</span></button>
+          <div class="cs-menunote">Closes on 28 Oct, stored daily.</div>
+        </div>
+        <div class="cs-menusec"><span class="label">On this chart</span>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 3h7l3 3v11H5z"/><path d="M12 3v3h3M8 10h4M8 13h4"/></svg>Evidence<span class="cs-navrow__n cs-navrow__n--agent">1</span></button>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2 10h3l2-6 3 12 2.5-8L14 10h4"/></svg>Activity</button>
+          <button class="cs-navrow" aria-current="true"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 3 7 4-7 4-7-4zM3 11l7 4 7-4"/></svg>Layers<span class="cs-navrow__n">2</span></button>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><ellipse cx="10" cy="5" rx="6" ry="2.5"/><path d="M4 5v10c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5V5M4 10c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5"/></svg>Data</button>
+        </div>
+        <div class="cs-menusec"><span class="label">Alerts</span>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 14V9a5 5 0 0 1 10 0v5l1.5 2h-13zM8.5 18h3"/></svg>Close above 135<span class="cs-navrow__n">Armed</span></button>
+          <button class="cs-navrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 14V9a5 5 0 0 1 10 0v5l1.5 2h-13zM8.5 18h3"/></svg>Close below 120<span class="cs-navrow__n">Armed</span></button>
+        </div>
+      </div>
+    </nav>
+    <aside id="chat-pane" class="cs-wpane cs-wpane--chat cs-rail" data-collapsed="false" aria-label="Assistant">
+      <div class="cs-wpane__head">
+        <button class="cs-iconbtn" aria-expanded="true" aria-label="Collapse chat" title="Chat ( ] )"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 4.5h13v9h-7.5l-3.5 3v-3h-2z"/></svg></button>
+        <span class="cs-avatar cs-avatar--lg cs-avatar--agent cs-wpane__hide" aria-hidden="true">M</span>
+        <h2 class="cs-wpane__title">Mat <span class="caption cs-muted">Workspace assistant</span></h2>
+        <button class="cs-iconbtn cs-wpane__hide" aria-label="Collapse chat"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m8 4 6 6-6 6"/></svg></button>
+        <span class="cs-wpane__railtitle">Chat</span>
+      </div>
+      <div class="cs-viewtabs" role="tablist" aria-label="Chat pane views"><button role="tab" aria-selected="false">Chat</button><button role="tab" aria-selected="false">Activity</button><button role="tab" aria-selected="true">Layers</button><button role="tab" aria-selected="false">Data</button><button role="tab" aria-selected="false">Evidence</button></div>
+      <div class="cs-viewbody">
+      <div class="cs-viewbody__h"><h3 class="heading" style="margin:0">Layers <span class="cs-muted">· 5</span></h3><button class="cs-btn cs-btn--compact"><span class="cs-btn__glyph" aria-hidden="true">+</span>Indicator</button></div>
+      <div>
+        <div class="cs-lrow" data-off="false"><span class="cs-lrow__sw cs-lrow__sw--hollow" style="color:var(--chart-up)" aria-hidden="true"></span><span><span class="cs-lrow__name">NVDA price</span><br><span class="cs-lrow__sub">Candles · stored daily · you</span></span><button class="cs-btn cs-btn--compact cs-btn--quiet" aria-pressed="true" aria-label="Hide NVDA price">Shown</button></div>
+        <div class="cs-lrow" data-off="false"><span class="cs-lrow__sw" style="color:var(--chart-series-1)" aria-hidden="true"></span><span><span class="cs-lrow__name">SMA 50</span><br><span class="cs-lrow__sub">Added by Mat · 19:41 ET</span></span><button class="cs-btn cs-btn--compact cs-btn--quiet" aria-pressed="true" aria-label="Hide SMA 50">Shown</button></div>
+        <div class="cs-lrow" data-off="false"><span class="cs-lrow__sw" style="color:var(--chart-series-2)" aria-hidden="true"></span><span><span class="cs-lrow__name">SMA 200</span><br><span class="cs-lrow__sub">Added by Mat · 19:41 ET</span></span><button class="cs-btn cs-btn--compact cs-btn--quiet" aria-pressed="true" aria-label="Hide SMA 200">Shown</button></div>
+        <div class="cs-lrow" data-off="true"><span class="cs-lrow__sw cs-lrow__sw--hollow" style="color:var(--chart-selection)" aria-hidden="true"></span><span><span class="cs-lrow__name">Golden cross, 14 Mar</span><br><span class="cs-lrow__sub">Marker · Mat · 19:41 ET</span></span><button class="cs-btn cs-btn--compact cs-btn--quiet" aria-pressed="false" aria-label="Show Golden cross, 14 Mar">Hidden</button></div>
+        <div class="cs-lrow" data-off="false"><span class="cs-lrow__sw cs-lrow__sw--hollow" style="color:var(--chart-event-split)" aria-hidden="true"></span><span><span class="cs-lrow__name">Split 10:1, 10 Jun</span><br><span class="cs-lrow__sub">Event marker · stored data</span></span><button class="cs-btn cs-btn--compact cs-btn--quiet" aria-pressed="true" aria-label="Hide Split 10:1, 10 Jun">Shown</button></div>
+      </div>
+      <p class="caption cs-muted" style="margin:0">Shown and Hidden change only your view. Everyone else still sees the layer, and nothing the assistant drew is removed. To remove one, use Undo on its task.</p>
+    </div>
+      <div class="cs-composer"><span class="caption cs-muted">Ask the assistant from the Chat view. This view is read-only.</span></div>
+    </aside>
+    <main class="cs-wpane cs-wpane--chart" aria-label="Chart">
+      <div class="cs-qhead">
+        <button class="cs-panebtn" aria-expanded="false" aria-controls="menu-pane" title="Menu ( [ )" aria-label="Open menu"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h9"/></svg><span class="cs-panebtn__label">Menu</span></button><span class="cs-qhead__sep" aria-hidden="true"></span><span class="cs-qhead__sym">NVDA</span><span class="cs-qhead__px">151.38</span><span class="cs-qhead__chg">−0.21%</span>
+        <button class="cs-legendline" aria-expanded="false"><span><i style="color:var(--chart-series-1)"></i>SMA 50 128.06</span><span><i style="color:var(--chart-series-2)"></i>SMA 200 121.70</span></button>
+        <span class="cs-qhead__spacer"></span>
+        <button class="cs-opthandle" aria-expanded="false" aria-keyshortcuts="o" aria-label="Chart options">⋯ Options <kbd aria-hidden="true">o</kbd></button>
+      </div>
+      
+        
+        <div class="cs-chart" tabindex="0" aria-label="Price chart. Arrow keys pan, plus and minus zoom, Escape clears the crosshair.">
+          <dc-import name="ChartFrame" hint-size="100%,100%" style="position: absolute; inset: 0; width: 100%; height: 100%;"></dc-import>
+        </div>
+        
+      <div class="cs-qfoot"><span class="cs-badge" title="Data run 2026-10-28T21:04Z"><span class="cs-badge__glyph" aria-hidden="true">▤</span>Stored daily · through 28 Oct · split-adjusted, not dividend-adjusted</span><span class="cs-statusline" role="status">Mat added a cross marker</span><span class="cs-qfoot__stamp">Rendered r12 · 23:58:02 UTC</span></div>
+    </main>
+  </div>
+  
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["dark","light"],"default":"light"},"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { theme: this.props.theme ?? 'light' };
+  }
+}
+</script>
+</body>
+</html>

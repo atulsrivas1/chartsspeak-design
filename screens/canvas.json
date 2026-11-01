@@ -102,7 +102,7 @@
    "y": 3660,
    "w": 960,
    "h": 720,
-   "title": "11 · Tablet · assistant drawer open"
+   "title": "11 · Tablet 960: chat open as a drawer over the chart"
   },
   "BrandF2.dc.html": {
    "x": 1980,
@@ -470,7 +470,7 @@
    "y": 28380,
    "w": 768,
    "h": 1024,
-   "title": "63 · Tablet 768, menu collapsed, chat open",
+   "title": "63 · Tablet 768: chat open as a drawer over the chart",
    "expand": "fill"
   },
   "LightChatCollapsed.dc.html": {
@@ -573,7 +573,7 @@
    "x": 3040,
    "y": 26340,
    "w": 1440,
-   "h": 900,
+   "h": 1460,
    "title": "58 · Agent errors and agent off, one notice pattern",
    "expand": "fill"
   },
@@ -623,6 +623,174 @@
    "w": 1280,
    "h": 800,
    "title": "64 · Default: chart first, menu and chat folded into the chart head",
+   "expand": "fill"
+  },
+  "DefaultDeskLight.dc.html": {
+   "x": 1360,
+   "y": 30700,
+   "w": 1280,
+   "h": 800,
+   "title": "64L · Light · Default, chart first",
+   "expand": "fill"
+  },
+  "DefaultFirst.dc.html": {
+   "x": 2720,
+   "y": 30700,
+   "w": 1280,
+   "h": 800,
+   "title": "64F · First visit: one tip, then gone",
+   "expand": "fill"
+  },
+  "Default768.dc.html": {
+   "x": 4080,
+   "y": 30700,
+   "w": 768,
+   "h": 1024,
+   "title": "64T · Tablet 768 default: icon-only pane buttons",
+   "expand": "fill"
+  },
+  "Default768Light.dc.html": {
+   "x": 4928,
+   "y": 30700,
+   "w": 768,
+   "h": 1024,
+   "title": "64T-L · Light · Tablet 768 default",
+   "expand": "fill"
+  },
+  "OptToolbar.dc.html": {
+   "x": 0,
+   "y": 31900,
+   "w": 1280,
+   "h": 800,
+   "title": "65 · Options: toolbar fades in at the top edge (pointer)",
+   "expand": "fill"
+  },
+  "OptKeyboard.dc.html": {
+   "x": 1360,
+   "y": 31900,
+   "w": 1280,
+   "h": 800,
+   "title": "66 · Options opened with o: focus on the first control",
+   "expand": "fill"
+  },
+  "OptContext.dc.html": {
+   "x": 2720,
+   "y": 31900,
+   "w": 1280,
+   "h": 800,
+   "title": "67 · Right-click (or Shift+F10) context menu",
+   "expand": "fill"
+  },
+  "OptLegendWarn.dc.html": {
+   "x": 4080,
+   "y": 31900,
+   "w": 1280,
+   "h": 800,
+   "title": "68 · Legend expanded on hover or focus; a data warning is never hidden",
+   "expand": "fill"
+  },
+  "OptPhone.dc.html": {
+   "x": 5440,
+   "y": 31900,
+   "w": 390,
+   "h": 844,
+   "title": "69 · Phone: the Options button opens a sheet, 44px rows",
+   "expand": "fill"
+  },
+  "LightReadoutStates.dc.html": {
+   "x": 0,
+   "y": 33100,
+   "w": 1440,
+   "h": 900,
+   "title": "49L · Light · Read-out row: hover, held, empty, and derived-chart labels",
+   "expand": "fill"
+  },
+  "LightChatLayers.dc.html": {
+   "x": 1520,
+   "y": 33100,
+   "w": 1440,
+   "h": 900,
+   "title": "50L · Light · Chat pane view: Layers",
+   "expand": "fill"
+  },
+  "LightChatData.dc.html": {
+   "x": 3040,
+   "y": 33100,
+   "w": 1440,
+   "h": 900,
+   "title": "51L · Light · Chat pane view: Data",
+   "expand": "fill"
+  },
+  "LightChatEvidence.dc.html": {
+   "x": 4560,
+   "y": 33100,
+   "w": 1440,
+   "h": 900,
+   "title": "52L · Light · Chat pane view: Evidence",
+   "expand": "fill"
+  },
+  "LightMenuSparse.dc.html": {
+   "x": 0,
+   "y": 34700,
+   "w": 1440,
+   "h": 900,
+   "title": "53L · Light · Menu pane, one chart and no alerts",
+   "expand": "fill"
+  },
+  "LightAgentsThread.dc.html": {
+   "x": 1520,
+   "y": 34700,
+   "w": 1440,
+   "h": 900,
+   "title": "54L · Light · Several agents in one thread",
+   "expand": "fill"
+  },
+  "LightAgentsEmpty.dc.html": {
+   "x": 3040,
+   "y": 34700,
+   "w": 1440,
+   "h": 900,
+   "title": "55L · Light · No agents yet, and not configured",
+   "expand": "fill"
+  },
+  "LightAgentSentTo.dc.html": {
+   "x": 4560,
+   "y": 34700,
+   "w": 1440,
+   "h": 900,
+   "title": "56L · Light · Sent-to indicator on roster, composer, task and proposal",
+   "expand": "fill"
+  },
+  "LightAgentConsent.dc.html": {
+   "x": 0,
+   "y": 36300,
+   "w": 1440,
+   "h": 900,
+   "title": "57L · Light · First-use consent and the @mention picker",
+   "expand": "fill"
+  },
+  "LightAgentErrors.dc.html": {
+   "x": 1520,
+   "y": 36300,
+   "w": 1440,
+   "h": 1460,
+   "title": "58L · Light · Agent errors and agent off, one notice pattern",
+   "expand": "fill"
+  },
+  "LightAddAgentEdit.dc.html": {
+   "x": 3040,
+   "y": 36300,
+   "w": 1440,
+   "h": 900,
+   "title": "60L · Light · Edit an agent",
+   "expand": "fill"
+  },
+  "LightAddAgentRemove.dc.html": {
+   "x": 4560,
+   "y": 36300,
+   "w": 1440,
+   "h": 900,
+   "title": "61L · Light · Remove an agent",
    "expand": "fill"
   }
  },
@@ -704,7 +872,28 @@
   "AddAgentEdit.dc.html",
   "AddAgentRemove.dc.html",
   "AddAgentPhone.dc.html",
-  "DefaultDesk.dc.html"
+  "DefaultDesk.dc.html",
+  "DefaultDeskLight.dc.html",
+  "DefaultFirst.dc.html",
+  "Default768.dc.html",
+  "Default768Light.dc.html",
+  "OptToolbar.dc.html",
+  "OptKeyboard.dc.html",
+  "OptContext.dc.html",
+  "OptLegendWarn.dc.html",
+  "OptPhone.dc.html",
+  "LightReadoutStates.dc.html",
+  "LightChatLayers.dc.html",
+  "LightChatData.dc.html",
+  "LightChatEvidence.dc.html",
+  "LightMenuSparse.dc.html",
+  "LightAgentsThread.dc.html",
+  "LightAgentsEmpty.dc.html",
+  "LightAgentSentTo.dc.html",
+  "LightAgentConsent.dc.html",
+  "LightAgentErrors.dc.html",
+  "LightAddAgentEdit.dc.html",
+  "LightAddAgentRemove.dc.html"
  ],
  "notes": {
   "t1": {
@@ -830,6 +1019,13 @@
    "x": 0,
    "y": 30580,
    "text": "Round 2: chart-first default. Folded panes are buttons in the chart head; the menu floats, chat docks",
+   "kind": "title1",
+   "maxW": 6000
+  },
+  "t_r2l": {
+   "x": 0,
+   "y": 32980,
+   "text": "Light versions of boards 49 to 58, 60 and 61. Widths we guarantee: 320 to 1920; phone boards are drawn at 390 and use the same rules at 375 and 320",
    "kind": "title1",
    "maxW": 6000
   }

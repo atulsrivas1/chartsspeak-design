@@ -974,3 +974,6 @@ kbd.cs-kbd { display: inline-grid; place-items: center; min-width: 24px; height:
 .cs-shell--panes[data-fold="head"] .cs-wpanes:not(:has(.cs-wpane[data-collapsed="false"]:not(.cs-wpane--chart))) { padding: 0; gap: 0; }
 .cs-shell--panes[data-fold="head"] .cs-wpanes:not(:has(.cs-wpane[data-collapsed="false"]:not(.cs-wpane--chart))) .cs-wpane--chart { border: 0; border-radius: 0; }
 .cs-wpane--chart .cs-chart > dc-import, .cs-qwrap > .cs-chart > :first-child:not(.cs-readout):not(.cs-xhair) { position: absolute; inset: 0; width: 100%; height: 100%; }
+.cs-dtable--text { font-family: var(--font-sans); }
+.cs-dtable--text th, .cs-dtable--text td { text-align: left; vertical-align: top; }
+.cs-opthandle, .cs-panebtn { white-space: nowrap; }
