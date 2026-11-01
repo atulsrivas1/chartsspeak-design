@@ -888,9 +888,18 @@
    "h": 844,
    "title": "76P · Phone: search at the top of the Menu tab",
    "expand": "fill"
+  },
+  "UXMap.dc.html": {
+   "x": -2600,
+   "y": 0,
+   "w": 2400,
+   "h": 1760,
+   "title": "0 · Experience map: every journey, step by step, with its boards (read this first)",
+   "expand": "fill"
   }
  },
  "order": [
+  "UXMap.dc.html",
   "Main.dc.html",
   "Reconnecting.dc.html",
   "Refusal.dc.html",
