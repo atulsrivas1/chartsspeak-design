@@ -63,3 +63,22 @@ Board 76.
 - **Opt-in later:** an agent-written brief after each data run, with calculated fact and interpretation kept apart and counted against the agent's USD limit.
 
 Board 77.
+
+## Added the same day
+- **74K:** select a range with the keyboard. With the crosshair on a bar, Shift+arrows extend the range, Enter asks and Esc clears.
+- **67:** the context menu now starts with "Ask about this bar…", showing who it goes to.
+- **76P:** on phone, the palette is a search field at the top of the Menu tab.
+- **78:** push-to-talk. Hold the mic button, or Space while the message box is empty. The words appear in the message box as you speak, and a line says where speech is processed.
+- **79:** Settings, Voice.
+  - Talk to ChartsSpeak: Off or Push-to-talk.
+  - Hands-free: off by default.
+  - Auto-off time.
+  - Where speech is processed.
+  - Announcements: Off, Important only, Everything.
+  - Quiet hours.
+  - "Changes by voice: always confirm."
+- **80:** hands-free.
+  - A mic indicator shows in the top bar, with a mute key (Ctrl+Shift+M).
+  - A spoken change to shared work shows a confirm card ("Remove SMA 200 for everyone?"). It accepts "confirm"/"cancel" by voice, or Enter/Esc.
+- **81:** the opt-in agent brief tops the "since you were last here" list. Calculated fact and interpretation are kept apart, with the cost and sent-to shown and a link to turn it off.
+- **Phone boards:** menu and chat are never folded on phone; tabs replace folding.

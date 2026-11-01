@@ -840,6 +840,54 @@
    "h": 844,
    "title": "75 · Phone: Ask from the held read-out",
    "expand": "fill"
+  },
+  "AskKeyboard.dc.html": {
+   "x": 0,
+   "y": 38500,
+   "w": 1280,
+   "h": 800,
+   "title": "74K · Keyboard: Shift+arrows extend a range, Enter asks",
+   "expand": "fill"
+  },
+  "VoicePTT.dc.html": {
+   "x": 1520,
+   "y": 38500,
+   "w": 1280,
+   "h": 800,
+   "title": "78 · Voice: push-to-talk, words appear as you speak",
+   "expand": "fill"
+  },
+  "SettingsVoice.dc.html": {
+   "x": 3040,
+   "y": 38500,
+   "w": 1440,
+   "h": 900,
+   "title": "79 · Settings: voice, hands-free, announcements",
+   "expand": "fill"
+  },
+  "VoiceHandsFree.dc.html": {
+   "x": 4560,
+   "y": 38500,
+   "w": 1280,
+   "h": 800,
+   "title": "80 · Hands-free: mic indicator, confirm before a change",
+   "expand": "fill"
+  },
+  "AgentBrief.dc.html": {
+   "x": 0,
+   "y": 39600,
+   "w": 1280,
+   "h": 800,
+   "title": "81 · Opt-in agent brief after the data run",
+   "expand": "fill"
+  },
+  "PalettePhone.dc.html": {
+   "x": 1520,
+   "y": 39600,
+   "w": 390,
+   "h": 844,
+   "title": "76P · Phone: search at the top of the Menu tab",
+   "expand": "fill"
   }
  },
  "order": [
@@ -947,7 +995,13 @@
   "AskSelection.dc.html",
   "Palette.dc.html",
   "SinceLast.dc.html",
-  "AskSelectionPhone.dc.html"
+  "AskSelectionPhone.dc.html",
+  "AskKeyboard.dc.html",
+  "VoicePTT.dc.html",
+  "SettingsVoice.dc.html",
+  "VoiceHandsFree.dc.html",
+  "AgentBrief.dc.html",
+  "PalettePhone.dc.html"
  ],
  "notes": {
   "t1": {
@@ -1087,6 +1141,13 @@
    "x": 0,
    "y": 36280,
    "text": "Product decisions, 1 Nov 2026: one way to ask anyone, grouped proposals, ask about a selection, palette, since last visit",
+   "kind": "title1",
+   "maxW": 6000
+  },
+  "t_voice": {
+   "x": 0,
+   "y": 38380,
+   "text": "Voice (next round, designed now): push-to-talk by default, opt-in hands-free, confirm before any change, announcements by preference",
    "kind": "title1",
    "maxW": 6000
   }

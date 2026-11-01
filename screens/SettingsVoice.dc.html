@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ChartsSpeak · settings, voice</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/chartsspeak/tokens.css">
+<link rel="stylesheet" href="ds/chartsspeak/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0}
+a{color:var(--accent-text)}a:hover{color:var(--ink)}
+</style>
+</helmet>
+<div data-theme="{{theme}}" style="width: 100%; min-height: 100vh; display: flex; flex-direction: column; background: var(--surface-000); color: var(--ink); font-family: var(--font-sans);">
+  <header class="cs-topbar">
+    <span class="cs-wordmark" role="img" aria-label="ChartsSpeak"><span aria-hidden="true">Charts</span><b aria-hidden="true">Speak</b></span>
+    <a href="#" class="cs-btn cs-btn--compact cs-btn--quiet" style="text-decoration: none;">← Back to workspace</a>
+    <span class="cs-topbar__spacer"></span>
+    <span class="cs-avatar cs-avatar--person cs-avatar--lg" aria-label="You">MS</span>
+  </header>
+  <main style="flex: 1; width: 100%; max-width: 1040px; margin: 0 auto; box-sizing: border-box; padding: 30px; display: flex; flex-direction: column; gap: 24px;">
+    <div class="cs-titleblock"><span class="cs-eyebrow">Your account</span><h1 class="cs-title">Settings</h1><span class="small cs-muted">These change only your view. Nobody else's chart or settings change.</span></div>
+    <div class="cs-settings">
+      <nav class="cs-settings__nav" aria-label="Settings"><a href="#">Profile</a><a href="#">Appearance</a><a href="#" aria-current="page">Voice</a><a href="#">Data defaults</a><a href="#">Notifications</a><a href="#">Shortcuts</a><a href="#">Phones</a></nav>
+      <div class="cs-stack" style="gap: 28px;">
+        <section class="cs-settings__section" aria-labelledby="s-voice">
+          <h2 class="cs-settings__h" id="s-voice">Voice</h2>
+          <div class="cs-setting"><span class="cs-setting__text"><span class="cs-setting__name">Talk to ChartsSpeak</span><span class="cs-setting__hint">Hold the mic button, or Space while the message box is empty, then speak. Release to send.</span></span><div class="cs-seg" role="group" aria-label="Talk"><button aria-pressed="false">Off</button><button aria-pressed="true">Push-to-talk</button></div></div>
+          <div class="cs-setting"><span class="cs-setting__text"><span class="cs-setting__name">Hands-free</span><span class="cs-setting__hint">Listens on this device for "Hey Charts" only. Nothing is recorded or sent before you say it. The mic indicator stays on in the top bar; Ctrl+Shift+M mutes it at once.</span></span><label class="cs-check" style="min-height:0"><input type="checkbox"> On</label></div>
+          <div class="cs-setting"><span class="cs-setting__text"><span class="cs-setting__name">Turn hands-free off after</span><span class="cs-setting__hint">Also turns off when the screen locks.</span></span><select class="cs-select" style="width:160px"><option>15 minutes idle</option><option>1 hour idle</option><option>Until I turn it off</option></select></div>
+          <div class="cs-setting"><span class="cs-setting__text"><span class="cs-setting__name">Speech processed</span><span class="cs-setting__hint">Where your words become text. Shown under the message box while you speak.</span></span><div class="cs-seg" role="group" aria-label="Speech processed"><button aria-pressed="true">On this device</button><button aria-pressed="false">Provider</button></div></div>
+          <div class="cs-setting"><span class="cs-setting__text"><span class="cs-setting__name">Announcements</span><span class="cs-setting__hint">The chart speaks only about events, never prices on a timer. A screen reader, if you use one, gets them instead.</span></span><div class="cs-seg" role="group" aria-label="Announcements"><button aria-pressed="true">Off</button><button aria-pressed="false">Important only</button><button aria-pressed="false">Everything</button></div></div>
+          <div class="cs-setting"><span class="cs-setting__text"><span class="cs-setting__name">Quiet hours</span><span class="cs-setting__hint">No announcements in this window.</span></span><select class="cs-select" style="width:160px"><option>20:00 – 07:00</option><option>None</option></select></div>
+          <div class="cs-setting"><span class="cs-setting__text"><span class="cs-setting__name">Changes by voice</span><span class="cs-setting__hint">Voice can ask, select and move around. Anything that changes shared work, or places an order, always shows a confirm first.</span></span><span class="cs-tag">Always confirm</span></div>
+        </section>
+        <section class="cs-settings__section" aria-labelledby="s-data">
+          <h2 class="cs-settings__h" id="s-data">Data defaults for new charts</h2>
+          <div class="cs-setting"><span class="cs-setting__text"><span class="cs-setting__name">Price adjustment</span><span class="cs-setting__hint">If a symbol isn't stored with this basis, the chart opens with what is stored and says so</span></span><div class="cs-seg" role="group" aria-label="Adjustment"><button aria-pressed="true">Split-adjusted</button><button aria-pressed="false">Raw</button></div></div>
+          <div class="cs-setting"><span class="cs-setting__text"><span class="cs-setting__name">Default range</span></span><select class="cs-select" style="width: 160px;"><option>YTD</option><option>1Y</option><option>All stored</option></select></div>
+          <div class="cs-setting"><span class="cs-setting__text"><span class="cs-setting__name">Show event markers</span><span class="cs-setting__hint">Split · dividend · earnings, each with its letter</span></span><label class="cs-check" style="min-height: 0;"><input type="checkbox" checked> On</label></div>
+        </section>
+        <section class="cs-settings__section" aria-labelledby="s-not">
+          <h2 class="cs-settings__h" id="s-not">Notifications</h2>
+          <div class="cs-setting"><span class="cs-setting__text"><span class="cs-setting__name">Quiet mode</span><span class="cs-setting__hint">Only things that need you: approvals, paused agents, conflicts on your edits</span></span><label class="cs-check" style="min-height: 0;"><input type="checkbox"> On</label></div>
+          <div class="cs-setting"><span class="cs-setting__text"><span class="cs-setting__name">Toasts for my agents finishing</span></span><label class="cs-check" style="min-height: 0;"><input type="checkbox" checked> On</label></div>
+          <div class="cs-setting"><span class="cs-setting__text"><span class="cs-setting__name">Daily digest email</span><span class="cs-setting__hint">Who changed what in shared workspaces. Never data values.</span></span><label class="cs-check" style="min-height: 0;"><input type="checkbox"> On</label></div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="cs-footer" role="status" aria-live="polite"><span class="cs-footer__msg cs-footer__msg--good">✓ Theme set to System</span></footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"theme":{"editor":"enum","options":["dark","light"],"default":"light"},"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { theme: this.props.theme ?? 'light' };
+  }
+}
+</script>
+</body>
+</html>
